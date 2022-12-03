@@ -42,16 +42,23 @@ touch cypress/support/step_definitions/**/*.{js,ts}
 
 > Replace `**/*.{js,ts}` with your filename.
 
-Then require the module with CommonJS:
+Require the module with TypeScript:
+
+```ts
+import 'cypress-cucumber-steps';
+```
+
+Or require the module with CommonJS:
 
 ```js
 require('cypress-cucumber-steps');
 ```
 
-Or require the module with TypeScript:
+The step definition can be used in the feature file:
 
-```ts
-import 'cypress-cucumber-steps';
+```feature
+# cypress/e2e/example.feature
+When I visit "https://example.com/"
 ```
 
 ## Release
