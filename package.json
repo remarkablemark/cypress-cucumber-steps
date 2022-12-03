@@ -1,0 +1,55 @@
+{
+  "name": "cypress-cucumber-steps",
+  "version": "1.0.0-alpha",
+  "description": "Cypress Cucumber step definitions",
+  "author": "Mark <mark@remarkablemark.org>",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rm -rf coverage lib",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:tsc": "tsc",
+    "postinstall": "husky install",
+    "postpublish": "pinst --enable",
+    "prepublishOnly": "pinst --disable && npm run lint && npm run lint:tsc && npm run test:ci && npm run clean && npm run build",
+    "test": "jest",
+    "test:ci": "CI=true jest --ci --colors --coverage",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/cypress-cucumber-steps"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/cypress-cucumber-steps/issues"
+  },
+  "keywords": [
+    "cypress-cucumber-steps"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
+    "@types/jest": "29.2.3",
+    "@types/node": "18.11.10",
+    "@typescript-eslint/eslint-plugin": "5.45.0",
+    "@typescript-eslint/parser": "5.45.0",
+    "eslint": "8.29.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-simple-import-sort": "8.0.0",
+    "eslint-plugin-tsdoc": "0.2.17",
+    "husky": "8.0.2",
+    "jest": "29.3.1",
+    "lint-staged": "13.0.4",
+    "pinst": "3.0.0",
+    "prettier": "2.8.0",
+    "standard-version": "9.5.0",
+    "ts-jest": "29.0.3",
+    "typescript": "4.9.3"
+  },
+  "files": [
+    "lib/"
+  ],
+  "license": "MIT"
+}
