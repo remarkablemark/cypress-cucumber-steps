@@ -31,7 +31,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install --prefer-offline
+        run: npm install
 
       - name: Lint commit message
         run: npx commitlint --from=HEAD~1
@@ -44,9 +44,6 @@ jobs:
 
       - name: Build package
         run: npm run build
-
-      - name: Run tests
-        run: npm run test:ci
 
       - name: Codecov
         uses: codecov/codecov-action@v3
