@@ -59,7 +59,10 @@ The step definition can be used in the feature file:
 ```gherkin
 # cypress/e2e/example.feature
 When I visit "https://example.com/"
+Then I see text "Example Domain"
 ```
+
+See [docs](https://remarkabl.org/cypress-cucumber-steps).
 
 ## Release
 
