@@ -9,9 +9,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate package-lock.json
-        run: npm install --package-lock
-
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
