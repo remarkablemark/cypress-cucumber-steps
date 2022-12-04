@@ -2,4 +2,4 @@
 
 ### example
 
-- [example.feature](e2e/example/example.feature)
+- [example.feature](example/example.feature)
