@@ -9,11 +9,13 @@
 
 ## Prerequisites
 
-Install and set up [cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) and [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md):
+Install peerDependencies:
 
 ```sh
 npm install --save-dev cypress @badeball/cypress-cucumber-preprocessor
 ```
+
+Set up [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) and [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md).
 
 ## Installation
 
