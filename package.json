@@ -6,7 +6,9 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf lib",
+    "clean": "rm -rf docs lib",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
@@ -49,6 +51,7 @@
     "lint-staged": "13.0.4",
     "pinst": "3.0.0",
     "prettier": "2.8.0",
+    "typedoc": "0.23.21",
     "typescript": "4.9.3"
   },
   "peerDependencies": {

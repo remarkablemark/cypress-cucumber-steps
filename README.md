@@ -56,7 +56,7 @@ require('cypress-cucumber-steps');
 
 The step definition can be used in the feature file:
 
-```feature
+```gherkin
 # cypress/e2e/example.feature
 When I visit "https://example.com/"
 ```
