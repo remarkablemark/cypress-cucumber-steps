@@ -4,6 +4,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/cypress-cucumber-steps.svg)](https://www.npmjs.com/package/cypress-cucumber-steps)
 [![build](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml)
+[![cypress](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml)
 
 [Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions. See [docs](https://remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
 
