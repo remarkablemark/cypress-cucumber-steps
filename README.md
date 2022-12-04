@@ -5,15 +5,14 @@
 [![NPM version](https://img.shields.io/npm/v/cypress-cucumber-steps.svg)](https://www.npmjs.com/package/cypress-cucumber-steps)
 [![build](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml)
 
-[Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions. See [docs](https://remarkabl.org/cypress-cucumber-steps).
+[Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions. See [docs](https://remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
 
-## Quick Start
+## Prerequisites
 
-With [cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) and [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md) installed and set up:
+Install and set up [cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) and [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md):
 
-```ts
-// cypress/support/step_definitions/index.ts
-import 'cypress-cucumber-steps';
+```sh
+npm install --save-dev cypress @badeball/cypress-cucumber-preprocessor
 ```
 
 ## Installation
@@ -32,7 +31,11 @@ yarn add --dev cypress-cucumber-steps
 
 ## Usage
 
-Install and set up [cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) and [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md).
+Create a directory for the common step definitions:
+
+```sh
+mkdir -p cypress/support/step_definitions/
+```
 
 Create a [step definition](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/step-definitions.md) file:
 
@@ -40,7 +43,7 @@ Create a [step definition](https://github.com/badeball/cypress-cucumber-preproce
 touch cypress/support/step_definitions/**/*.{js,ts}
 ```
 
-> Replace `**/*.{js,ts}` with your filename.
+> Replace `**/*.{js,ts}` with a filename like `index.ts`.
 
 Require the module with TypeScript:
 
@@ -54,7 +57,7 @@ Or require the module with CommonJS:
 require('cypress-cucumber-steps');
 ```
 
-The step definition can be used in the feature file:
+The step definition can now be used in feature files:
 
 ```gherkin
 # cypress/e2e/example.feature
@@ -62,7 +65,7 @@ When I visit "https://example.com/"
 Then I see text "Example Domain"
 ```
 
-See [docs](https://remarkabl.org/cypress-cucumber-steps).
+See [docs](https://remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
 
 ## Release
 
