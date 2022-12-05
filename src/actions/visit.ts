@@ -22,14 +22,15 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * When I visit "/"
  * ```
  *
- * > Cypress `baseUrl` must be configured.
+ * > Cypress [`baseUrl`](https://docs.cypress.io/guides/references/configuration#e2e) must be defined for relative URL.
  *
  * @remarks
  *
- * This will fail if the page does not respond with a 200 status code:
+ * If the page does not respond with a 200 status code, then this step will fail:
  *
  * ```gherkin
- * When I visit "/404" # fail
+ * # fail
+ * When I visit "/404"
  * ```
  */
 /* eslint-enable tsdoc/syntax */
