@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.2.0...v1.3.0) (2022-12-05)
+
+
+### Features
+
+* **actions:** add "When I click on text" ([050b5a0](https://github.com/remarkablemark/cypress-cucumber-steps/commit/050b5a09f0ca925bbc1bd7719d64bfe20cdf9f83))
+* **actions:** add "When I reload the page" ([21a3ca9](https://github.com/remarkablemark/cypress-cucumber-steps/commit/21a3ca916fd32c318b73f93a55197e183b6147bc))
+* **actions:** add "When I wait seconds" and "When I wait milliseconds" ([1d6d5cb](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1d6d5cbef04ab4e74459c9fecaaf23417e62a72f))
+
 ## [1.2.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.1.0...v1.2.0) (2022-12-05)
 
 
