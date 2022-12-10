@@ -10,7 +10,8 @@
     "strict": true,
     "outDir": "lib",
     "skipLibCheck": true,
-    "types": ["cypress", "node"]
+    "types": ["cypress", "node"],
+    "noImplicitThis": false
   },
   "include": ["src"]
 }
