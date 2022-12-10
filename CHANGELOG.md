@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.3.0...v1.4.0) (2022-12-10)
+
+
+### Features
+
+* **actions:** add "When I type" ([fa95e54](https://github.com/remarkablemark/cypress-cucumber-steps/commit/fa95e5410497f082563199f491eda0c9057b8072))
+* **queries:** add "When I get element by label text" ([dfe6c77](https://github.com/remarkablemark/cypress-cucumber-steps/commit/dfe6c77c2f4bb050e05ed79769cc19ab163fdb2b))
+* **utils:** add helpers to get and set Cypress element ([94a14a5](https://github.com/remarkablemark/cypress-cucumber-steps/commit/94a14a5da85cf9613b33d135a80b475481012c7c))
+
 ## [1.3.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.2.0...v1.3.0) (2022-12-05)
 
 
