@@ -20,7 +20,7 @@ import { setCypressElement } from '../utils';
  *
  * @remarks
  *
- * This is a preceding step for actions like {@link When_I_type | "When I type"}. E.g.:
+ * This precedes steps like {@link When_I_type | "When I type"}. For example:
  *
  * ```gherkin
  * When I get element by label text "Email"
