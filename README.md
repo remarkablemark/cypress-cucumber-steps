@@ -1,3 +1,7 @@
+<!-- readme-start -->
+
+<!-- readme-content-start -->
+
 # cypress-cucumber-steps
 
 [![NPM](https://nodei.co/npm/cypress-cucumber-steps.png)](https://nodei.co/npm/cypress-cucumber-steps/)
@@ -77,3 +81,9 @@ Release is automated with [Release Please](https://github.com/googleapis/release
 ## License
 
 [MIT](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/LICENSE)
+
+<!-- readme-content-end -->
+
+<!-- readme-content-placeholder -->
+
+<!-- readme-end -->
