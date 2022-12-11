@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.4.0...v1.4.1) (2022-12-11)
+
+
+### Bug Fixes
+
+* **assertions:** assert "Then I see text" is also visible ([f208ee1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f208ee1f6de6fa0cf36ee83fb3d8124d08c44469))
+
 ## [1.4.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.3.0...v1.4.0) (2022-12-10)
 
 
