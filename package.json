@@ -9,7 +9,7 @@
     "clean": "rm -rf docs lib",
     "cypress:open": "cypress open",
     "docs": "typedoc",
-    "docs:watch": "typedoc --watch",
+    "docs:watch": "npm run docs -- --watch",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
