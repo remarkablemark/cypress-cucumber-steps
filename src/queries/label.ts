@@ -10,7 +10,7 @@ import { setCypressElement } from '../utils';
  * When I get element by label text {string}
  * ```
  *
- * > This query will throw an error if no element is found not will not wait and retry.
+ * > This query will throw an error if no element is found and will not wait and retry.
  *
  * @example
  *
