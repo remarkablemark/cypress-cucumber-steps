@@ -15,7 +15,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  *
  * @remarks
  *
- * Cypress [`baseUrl`](https://docs.cypress.io/guides/references/configuration#e2e) will be prepended to the URL (if defined):
+ * Cypress [`baseUrl`](https://docs.cypress.io/guides/references/configuration#e2e) will be prepended to the URL if defined:
  *
  * ```gherkin
  * # baseUrl is 'https://example.com'
