@@ -17,7 +17,7 @@ import { getCypressElement } from '../utils';
  *
  * @remarks
  *
- * This requires a preceding step like query {@link When_I_get_element_by_label_text | "When I get element by label text"}. E.g.:
+ * This requires a preceding step like {@link When_I_get_element_by_label_text | "When I get element by label text"}. For example:
  *
  * ```gherkin
  * When I get element by label text "Email"
