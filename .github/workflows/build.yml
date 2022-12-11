@@ -34,6 +34,8 @@ jobs:
 
       - name: Build docs
         run: scripts/docs.sh
+        env:
+          BASE_URL: /${{ github.event.repository.name }}/
 
       - name: Deploy
         if: github.ref == 'refs/heads/master'
