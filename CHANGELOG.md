@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.4.1...v1.5.0) (2022-12-11)
+
+
+### Features
+
+* **actions:** add "When I click" ([ecd381d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ecd381d17f837834b91d3bcf83b38ad4a83e01d3))
+* **queries:** add "When I find element by text" ([9a0af3d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9a0af3d91d91c00e269bd5b07b65aecc6870d827))
+
 ## [1.4.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.4.0...v1.4.1) (2022-12-11)
 
 
