@@ -10,6 +10,8 @@ Feature: Cypress
     When I visit "https://example.cypress.io/commands/actions"
       And I get element by label text "Email address"
       And I type "user@example.com"
+    When I find element by placeholder text "Password"
+      And I type "password"
 
   Scenario: Click submit
     When I visit "https://example.cypress.io/commands/actions"
