@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.5.0...v1.6.0) (2022-12-12)
+
+
+### Features
+
+* **assertions:** add "Then I do not see visible text" ([dff3018](https://github.com/remarkablemark/cypress-cucumber-steps/commit/dff3018e1489d3e5eb9ff415549b66b4d4e19d4e))
+
 ## [1.5.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.4.1...v1.5.0) (2022-12-11)
 
 
