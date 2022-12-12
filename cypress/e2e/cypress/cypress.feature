@@ -17,3 +17,7 @@ Feature: Cypress
     When I find element by text "Click to toggle popover"
       And I click
     Then I see text "This popover shows up on click"
+
+  Scenario: See visible text
+    When I visit "https://example.cypress.io/commands/actions"
+    Then I do not see visible text "I'm Here"
