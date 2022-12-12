@@ -23,6 +23,13 @@ import { getCypressElement } from '../utils';
  * When I get element by label text "Email"
  *   And I type "user@example.com"
  * ```
+ *
+ * Text may include [special character sequences](https://docs.cypress.io/api/commands/type#Syntax). For example:
+ *
+ * ```gherkin
+ * # types the Enter key
+ * When I type "{enter}"
+ * ```
  */
 export function When_I_type(text: string) {
   getCypressElement(this).type(text);
