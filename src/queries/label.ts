@@ -41,7 +41,7 @@ export function When_I_get_element_by_label_text(text: string) {
     } else if ($body.find(`[aria-label='${text}']`).length) {
       cypressElement = cy.get(`[aria-label='${text}']`);
     } else {
-      throw new Error(`Unable to get a label with the text of: ${text}`);
+      throw new Error(`Unable to get element by label text: ${text}`);
     }
 
     setCypressElement(this, cypressElement);
