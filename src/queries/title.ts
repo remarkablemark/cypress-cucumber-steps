@@ -10,7 +10,7 @@ import { setCypressElement } from '../utils';
  * When I get element by title {string}
  * ```
  *
- * Gets the element that has the matching `title` attribute and will also find a `title` element within an SVG.
+ * Gets the element that has the matching `title` attribute. This will also find a `title` element within an SVG.
  *
  * > This query will throw an error if no element is found and will not wait and retry.
  *
