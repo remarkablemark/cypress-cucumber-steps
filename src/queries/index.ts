@@ -1,3 +1,3 @@
 export * from './label';
-export * from './placeholder-text';
+export * from './placeholder';
 export * from './text';
