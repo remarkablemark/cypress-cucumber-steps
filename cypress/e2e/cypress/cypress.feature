@@ -23,3 +23,9 @@ Feature: Cypress
   Scenario: See visible text
     When I visit "https://example.cypress.io/commands/actions"
     Then I do not see visible text "I'm Here"
+
+  Scenario: Alt text
+    When I visit "https://docs.cypress.io/plugins/directory"
+      And I find element by alt text "Cypress Docs Logo"
+      And I click
+    Then I see URL "https://docs.cypress.io/"
