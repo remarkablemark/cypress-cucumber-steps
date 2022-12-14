@@ -6,6 +6,13 @@ Feature: Cypress
     When I click on text "get"
     Then I see text "cy.get()"
 
+  Scenario: Double-click text
+    When I visit "https://example.cypress.io/commands/actions"
+      And I double-click on text "Double click to edit"
+    When I reload the page
+      And I find element by text "Double click to edit"
+      And I double-click
+
   Scenario: Type input
     When I visit "https://example.cypress.io/commands/actions"
       And I get element by label text "Email address"
