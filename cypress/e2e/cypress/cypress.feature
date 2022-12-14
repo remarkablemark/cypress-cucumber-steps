@@ -13,6 +13,13 @@ Feature: Cypress
       And I find element by text "Double click to edit"
       And I double-click
 
+  Scenario: Right-click text
+    When I visit "https://example.cypress.io/commands/actions"
+      And I right-click on text "Right click to edit"
+    When I reload the page
+      And I find element by text "Right click to edit"
+      And I right-click
+
   Scenario: Type input
     When I visit "https://example.cypress.io/commands/actions"
       And I get element by label text "Email address"
