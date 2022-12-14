@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.8.0...v1.9.0) (2022-12-14)
+
+
+### Features
+
+* **queries:** add "When I get element by title" ([1403b4a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1403b4a14294287ef1319e76ce92811e8c0692d9))
+
 ## [1.8.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.7.0...v1.8.0) (2022-12-13)
 
 
