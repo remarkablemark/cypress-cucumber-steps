@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.10.0...v1.11.0) (2022-12-14)
+
+
+### Features
+
+* **actions:** add "When I double click" & "When I double click on text" ([2b9f45c](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2b9f45c2318b649f600915109337b04163d8f6c6))
+
 ## [1.10.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.9.0...v1.10.0) (2022-12-14)
 
 
