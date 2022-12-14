@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.11.0...v1.12.0) (2022-12-14)
+
+
+### Features
+
+* **actions:** add "When I right click" & "When I right click on text" ([5667df7](https://github.com/remarkablemark/cypress-cucumber-steps/commit/5667df7d007d5d1f54e8eb8e7b01be458c6c4366))
+
 ## [1.11.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.10.0...v1.11.0) (2022-12-14)
 
 
