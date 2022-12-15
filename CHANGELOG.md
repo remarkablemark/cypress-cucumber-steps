@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.12.0...v1.13.0) (2022-12-15)
+
+
+### Features
+
+* **actions:** add "When I clear" ([e4d4f4d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e4d4f4d6f4bbf1ee780436d040526cc08e13e891))
+
 ## [1.12.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.11.0...v1.12.0) (2022-12-14)
 
 
