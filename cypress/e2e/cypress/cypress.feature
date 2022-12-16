@@ -34,6 +34,12 @@ Feature: Cypress
       And I click on text 'Radio one has value "radio1"'
       And I click on text 'Radio two has value "radio2". When checked, it will uncheck Radio one.'
 
+  Scenario: Select option
+    When I visit "https://example.cypress.io/commands/actions"
+      And I select option "bananas"
+      And I select option "bananas"
+    Then I see text "bananas"
+
   Scenario: Type and clear input
     When I visit "https://example.cypress.io/commands/actions"
       And I get element by label text "Email address"
@@ -42,7 +48,7 @@ Feature: Cypress
       And I type "password"
       And I clear
 
-  Scenario: See visible text
+  Scenario: Visible text
     When I visit "https://example.cypress.io/commands/actions"
     Then I do not see visible text "I'm Here"
 
