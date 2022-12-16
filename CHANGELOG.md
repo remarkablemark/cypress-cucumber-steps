@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.13.0...v1.14.0) (2022-12-16)
+
+
+### Features
+
+* **actions:** add "When I select option" ([c98e218](https://github.com/remarkablemark/cypress-cucumber-steps/commit/c98e2188b1e38e1372ae20ff22fd07a458d36b26))
+
 ## [1.13.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.12.0...v1.13.0) (2022-12-15)
 
 
