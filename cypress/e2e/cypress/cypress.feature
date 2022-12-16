@@ -6,6 +6,13 @@ Feature: Cypress
     When I click on text "get"
     Then I see text "cy.get()"
 
+  Scenario: Click submit
+    When I visit "https://example.cypress.io/commands/actions"
+    Then I do not see text "This popover shows up on click"
+    When I find element by text "Click to toggle popover"
+      And I click
+    Then I see text "This popover shows up on click"
+
   Scenario: Double-click text
     When I visit "https://example.cypress.io/commands/actions"
       And I double-click on text "Double click to edit"
@@ -20,6 +27,13 @@ Feature: Cypress
       And I find element by text "Right click to edit"
       And I right-click
 
+  Scenario: Checkbox and radio
+    When I visit "https://example.cypress.io/commands/actions"
+      And I click on text 'Checkbox one has value "checkbox1"'
+      And I click on text 'Checkbox one has value "checkbox1"'
+      And I click on text 'Radio one has value "radio1"'
+      And I click on text 'Radio two has value "radio2". When checked, it will uncheck Radio one.'
+
   Scenario: Type and clear input
     When I visit "https://example.cypress.io/commands/actions"
       And I get element by label text "Email address"
@@ -27,13 +41,6 @@ Feature: Cypress
     When I find element by placeholder text "Password"
       And I type "password"
       And I clear
-
-  Scenario: Click submit
-    When I visit "https://example.cypress.io/commands/actions"
-    Then I do not see text "This popover shows up on click"
-    When I find element by text "Click to toggle popover"
-      And I click
-    Then I see text "This popover shows up on click"
 
   Scenario: See visible text
     When I visit "https://example.cypress.io/commands/actions"
