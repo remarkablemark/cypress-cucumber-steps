@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.14.0...v1.15.0) (2022-12-17)
+
+
+### Features
+
+* **actions:** add "When I blur" ([cbdd0a1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/cbdd0a181c1ddc57652bad06eb41b8ceee7cc8cc))
+
 ## [1.14.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.13.0...v1.14.0) (2022-12-16)
 
 
