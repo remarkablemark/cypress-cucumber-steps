@@ -48,6 +48,12 @@ Feature: Cypress
       And I type "password"
       And I clear
 
+  Scenario: Blur
+    When I visit "https://example.cypress.io/commands/actions"
+      And I find element by text "Full Name"
+      And I type "About to blur"
+      And I blur
+
   Scenario: Visible text
     When I visit "https://example.cypress.io/commands/actions"
     Then I do not see visible text "I'm Here"
