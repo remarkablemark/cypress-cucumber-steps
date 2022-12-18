@@ -32,7 +32,10 @@
 <p>Install peerDependencies:</p>
 <pre><code class="language-sh"><span class="hl-0">npm install --save-dev cypress @badeball/cypress-cucumber-preprocessor</span>
 </code></pre>
-<p>Set up <a href="https://docs.cypress.io/guides/getting-started/installing-cypress">Cypress</a> and <a href="https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md">cypress-cucumber-preprocessor</a>.</p>
+<p>Or using Yarn:</p>
+<pre><code class="language-sh"><span class="hl-0">yarn add --dev cypress @badeball/cypress-cucumber-preprocessor</span>
+</code></pre>
+<p>Then set up <a href="https://docs.cypress.io/guides/getting-started/installing-cypress">Cypress</a> and <a href="https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md">cypress-cucumber-preprocessor</a>.</p>
 
 <a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
   <h2>Installation</h2>
@@ -62,7 +65,7 @@
 <p>Or require the module with CommonJS:</p>
 <pre><code class="language-js"><span class="hl-3">require</span><span class="hl-0">(</span><span class="hl-2">&#39;cypress-cucumber-steps&#39;</span><span class="hl-0">);</span>
 </code></pre>
-<p>The step definition can now be used in feature files:</p>
+<p>Now the step definition can be used in feature files:</p>
 <pre><code class="language-gherkin"><span class="hl-4"># cypress/e2e/example.feature</span><br/><span class="hl-5">When </span><span class="hl-0">I visit </span><span class="hl-2">&quot;https://example.com/&quot;</span><br/><span class="hl-5">Then </span><span class="hl-0">I see text </span><span class="hl-2">&quot;Example Domain&quot;</span>
 </code></pre>
 <p>See <a href="https://remarkabl.org/cypress-cucumber-steps">docs</a> and <a href="https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e">examples</a>.</p>
