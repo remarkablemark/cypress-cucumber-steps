@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.20.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.19.0...v1.20.0) (2022-12-18)
+
+
+### Features
+
+* **actions:** add "When I scroll window to" ([3e67637](https://github.com/remarkablemark/cypress-cucumber-steps/commit/3e67637982668e5a1d55c35d0a32ed260f1ea70d))
+* **utils:** create private helper camelCase ([2830fca](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2830fcaf98d6447fef88b079852f71cbf2b30328))
+
 ## [1.19.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.18.0...v1.19.0) (2022-12-18)
 
 
