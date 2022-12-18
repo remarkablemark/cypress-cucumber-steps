@@ -1,4 +1,4 @@
-Feature: Cypress
+Feature: Cypress example
   Scenario: Click and see text
     When I visit "https://example.cypress.io/"
     Then I see text "Kitchen Sink"
@@ -57,9 +57,3 @@ Feature: Cypress
   Scenario: Visible text
     When I visit "https://example.cypress.io/commands/actions"
     Then I do not see visible text "I'm Here"
-
-  Scenario: Alt text
-    When I visit "https://docs.cypress.io/plugins/directory"
-      And I find element by alt text "Cypress Docs Logo"
-      And I click
-    Then I see URL "https://docs.cypress.io/"
