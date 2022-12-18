@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.16.0...v1.17.0) (2022-12-18)
+
+
+### Features
+
+* **actions:** add "When I click on button" & "When I click on link" ([1567765](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1567765ec50ebabf24fbda044140bae08b994649))
+
 ## [1.16.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.15.0...v1.16.0) (2022-12-18)
 
 
