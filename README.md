@@ -10,7 +10,7 @@
 [![build](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml)
 [![cypress](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml)
 
-[Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions. See [docs](https://remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
+[Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions. See [docs](https://b.remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
 
 ## Prerequisites
 
@@ -78,7 +78,7 @@ When I visit "https://example.com/"
 Then I see text "Example Domain"
 ```
 
-See [docs](https://remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
+See [docs](https://b.remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
 
 ## Release
 
