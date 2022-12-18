@@ -56,3 +56,10 @@ Feature: Cypress example
   Scenario: Visible text
     When I visit "https://example.cypress.io/commands/actions"
     Then I do not see visible text "I'm Here"
+
+  Scenario: Scroll
+    When I visit "https://example.cypress.io/commands/actions"
+      And I scroll window to 0, 500
+      And I scroll window to "bottom-right"
+      And I scroll window to "center"
+      And I scroll window to "top-left"
