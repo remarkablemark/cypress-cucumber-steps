@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.20.0...v1.21.0) (2022-12-18)
+
+
+### Features
+
+* **actions:** add "When I screenshot" ([6ef2798](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6ef27983bb1ce0337fed97b095d174e9c3c7c2b4))
+
 ## [1.20.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.19.0...v1.20.0) (2022-12-18)
 
 
