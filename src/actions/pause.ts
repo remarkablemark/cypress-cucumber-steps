@@ -16,6 +16,10 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * @remarks
  *
  * Stops `cy` commands from running and allow interaction with the application under test.
+ *
+ * @see
+ *
+ * - {@link When_I_debug | When I debug}
  */
 export function When_I_pause() {
   cy.pause();
