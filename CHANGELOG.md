@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.15.0...v1.16.0) (2022-12-18)
+
+
+### Features
+
+* **actions:** add "When I go", "When I go back", "When I go forward" ([338f23d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/338f23d83f86ce72baffae032bcc37d52c33dd5c))
+
 ## [1.15.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.14.0...v1.15.0) (2022-12-17)
 
 
