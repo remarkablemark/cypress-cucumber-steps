@@ -7,7 +7,7 @@ Feature: Cypress docs
 
   Scenario: Go back and forward
     When I visit "https://docs.cypress.io/api/commands/go"
-      And I click on text "cy.reload()"
+      And I click on link "cy.reload()"
     Then I see URL "https://docs.cypress.io/api/commands/reload"
     When I go back
     Then I see URL contains "go"
