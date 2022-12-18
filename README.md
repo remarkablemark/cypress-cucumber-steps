@@ -20,7 +20,13 @@ Install peerDependencies:
 npm install --save-dev cypress @badeball/cypress-cucumber-preprocessor
 ```
 
-Set up [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) and [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md).
+Or using Yarn:
+
+```sh
+yarn add --dev cypress @badeball/cypress-cucumber-preprocessor
+```
+
+Then set up [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) and [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md).
 
 ## Installation
 
@@ -64,7 +70,7 @@ Or require the module with CommonJS:
 require('cypress-cucumber-steps');
 ```
 
-The step definition can now be used in feature files:
+Now the step definition can be used in feature files:
 
 ```gherkin
 # cypress/e2e/example.feature
