@@ -10,7 +10,7 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * @example
  *
  * ```gherkin
- * When I set cookie "cookie_name" to "cookie_value"
+ * When I set cookie "name" to "value"
  * ```
  *
  * @remarks
