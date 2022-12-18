@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.18.0...v1.19.0) (2022-12-18)
+
+
+### Features
+
+* **actions:** add "When I debug" ([bda5ce8](https://github.com/remarkablemark/cypress-cucumber-steps/commit/bda5ce863c4e4a782708e929747a71ab96fadb54))
+
 ## [1.18.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.17.0...v1.18.0) (2022-12-18)
 
 
