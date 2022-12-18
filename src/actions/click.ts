@@ -24,7 +24,7 @@ import { getCypressElement } from '../utils';
  * This requires a preceding step like {@link When_I_find_element_by_text | "When I find element by text"}. For example:
  *
  * ```gherkin
- * When I find element by text "Click Me Once"
+ * When I find element by text "Text"
  *   And I click
  * ```
  *
@@ -42,6 +42,54 @@ export function When_I_click() {
 When('I click', When_I_click);
 
 /**
+ * When I click on button:
+ *
+ * ```gherkin
+ * When I click on button {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I click on button "Button"
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_click_on_link | When I click on link}
+ * - {@link When_I_click_on_text | When I click on text}
+ */
+export function When_I_click_on_button(text: string) {
+  cy.contains('button', text).click();
+}
+
+When('I click on button {string}', When_I_click_on_button);
+
+/**
+ * When I click on link:
+ *
+ * ```gherkin
+ * When I click on link {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I click on link "Link"
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_click_on_button | When I click on button}
+ * - {@link When_I_click_on_text | When I click on text}
+ */
+export function When_I_click_on_link(text: string) {
+  cy.contains('a', text).click();
+}
+
+When('I click on link {string}', When_I_click_on_link);
+
+/**
  * When I click on text:
  *
  * ```gherkin
@@ -55,7 +103,7 @@ When('I click', When_I_click);
  * @example
  *
  * ```gherkin
- * When I click on text "Click Me Once"
+ * When I click on text "Text"
  * ```
  *
  * @see
@@ -93,7 +141,7 @@ When('I click on text {string}', When_I_click_on_text);
  * This requires a preceding step like {@link When_I_find_element_by_text | "When I find element by text"}. For example:
  *
  * ```gherkin
- * When I find element by text "Click Me Twice"
+ * When I find element by text "Text"
  *   And I double-click
  * ```
  *
@@ -124,7 +172,7 @@ When('I double-click', When_I_double_click);
  * @example
  *
  * ```gherkin
- * When I double-click on text "Click Me Twice"
+ * When I double-click on text "Text"
  * ```
  *
  * @see
@@ -162,7 +210,7 @@ When('I double-click on text {string}', When_I_double_click_on_text);
  * This requires a preceding step like {@link When_I_find_element_by_text | "When I find element by text"}. For example:
  *
  * ```gherkin
- * When I find element by text "Right-Click Me"
+ * When I find element by text "Text"
  *   And I right-click
  * ```
  *
@@ -193,7 +241,7 @@ When('I right-click', When_I_right_click);
  * @example
  *
  * ```gherkin
- * When I right-click on text "Right-Click Me"
+ * When I right-click on text "Text"
  * ```
  *
  * @see
