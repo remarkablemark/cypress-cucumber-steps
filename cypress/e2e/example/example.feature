@@ -11,3 +11,8 @@ Feature: Example
       And I wait 1 millisecond
     Then I see URL "https://example.com/index.html"
       And I see URL contains "/index.html"
+
+  Scenario: Screenshot
+    When I visit "https://example.com/index.html"
+      And I screenshot
+      And I screenshot "path/to/screenshot"

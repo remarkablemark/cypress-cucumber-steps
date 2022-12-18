@@ -6,7 +6,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc --target es5",
-    "clean": "rm -rf docs lib",
+    "clean": "rm -rf cypress/{screenshots,videos} docs lib",
     "cypress:open": "cypress open",
     "docs": "typedoc",
     "docs:watch": "npm run docs -- --watch",

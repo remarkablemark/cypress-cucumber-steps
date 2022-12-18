@@ -4,6 +4,7 @@ export * from './debug';
 export * from './go';
 export * from './pause';
 export * from './reload';
+export * from './screenshot';
 export * from './scroll';
 export * from './select';
 export * from './type';
