@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.17.0...v1.18.0) (2022-12-18)
+
+
+### Features
+
+* **actions:** add "When I pause" ([71136e8](https://github.com/remarkablemark/cypress-cucumber-steps/commit/71136e877c3117ed2280565b0a53b1b5893b7bea))
+
 ## [1.17.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.16.0...v1.17.0) (2022-12-18)
 
 
