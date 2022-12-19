@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.22.0...v1.23.0) (2022-12-19)
+
+
+### Features
+
+* **actions:** add "When I log" ([e207480](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e207480c205b739df22db6d3e3a13483c05e07f8))
+
 ## [1.22.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.21.0...v1.22.0) (2022-12-19)
 
 
