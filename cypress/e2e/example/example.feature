@@ -20,3 +20,6 @@ Feature: Example
   Scenario: Cookie
     When I visit "https://example.com/"
       And I set cookie "cookie_name" to "cookie_value"
+
+  Scenario: Log
+    When I log "Hello, world!"

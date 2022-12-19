@@ -3,6 +3,7 @@ export * from './click';
 export * from './cookie';
 export * from './debug';
 export * from './go';
+export * from './log';
 export * from './pause';
 export * from './reload';
 export * from './screenshot';
