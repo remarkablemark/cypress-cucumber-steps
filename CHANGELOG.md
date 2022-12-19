@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.21.0...v1.22.0) (2022-12-19)
+
+
+### Features
+
+* **actions:** add "When I set cookie" ([b7c6657](https://github.com/remarkablemark/cypress-cucumber-steps/commit/b7c665735f9d35318459e79301797c99edc25c77))
+
 ## [1.21.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.20.0...v1.21.0) (2022-12-18)
 
 
