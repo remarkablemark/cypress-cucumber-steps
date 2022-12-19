@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.23.0...v1.24.0) (2022-12-19)
+
+
+### Features
+
+* **actions:** update step for "When I scroll" x-y coordinates ([116752d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/116752d926846ab03a4889dc89cdfaa2da0b1084))
+
 ## [1.23.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.22.0...v1.23.0) (2022-12-19)
 
 
