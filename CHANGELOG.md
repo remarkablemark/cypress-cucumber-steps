@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.24.0...v1.25.0) (2022-12-19)
+
+
+### Features
+
+* **actions:** add "When I set viewport" ([654a712](https://github.com/remarkablemark/cypress-cucumber-steps/commit/654a712b406c5b1dcabaf6c2a1892b510cc82092))
+
 ## [1.24.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.23.0...v1.24.0) (2022-12-19)
 
 
