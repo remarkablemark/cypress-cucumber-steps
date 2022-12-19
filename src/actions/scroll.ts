@@ -57,7 +57,7 @@ When('I scroll window to {string}', When_I_scroll_window_to_position);
  * When I scroll window to x-y coordinates:
  *
  * ```gherkin
- * When I scroll window to {int}, {int}
+ * When I scroll window to {int}px and {int}px
  * ```
  *
  * @example
@@ -65,7 +65,7 @@ When('I scroll window to {string}', When_I_scroll_window_to_position);
  * Scroll the window 500px down:
  *
  * ```gherkin
- * When I scroll window to 0, 500
+ * When I scroll window to 0px and 500px
  * ```
  *
  * @remarks
@@ -73,7 +73,7 @@ When('I scroll window to {string}', When_I_scroll_window_to_position);
  * _Snapshots don't reflect scroll behavior._ To see the scrolling behavior in action, use {@link When_I_pause | "When I pause"}:
  *
  * ```gherkin
- * When I scroll window to 0, 500
+ * When I scroll window to 0px and 500px
  *   And I pause
  * ```
  *
@@ -86,6 +86,6 @@ export function When_I_scroll_window_to_x_y_coordinates(x: number, y: number) {
 }
 
 When(
-  'I scroll window to {int}, {int}',
+  'I scroll window to {int}px and {int}px',
   When_I_scroll_window_to_x_y_coordinates
 );
