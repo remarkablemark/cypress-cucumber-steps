@@ -13,6 +13,10 @@ Feature: Example
       And I see URL contains "/index.html"
 
   Scenario: Screenshot
-    When I visit "https://example.com/index.html"
+    When I visit "https://example.com/"
       And I screenshot
       And I screenshot "path/to/screenshot"
+
+  Scenario: Cookie
+    When I visit "https://example.com/"
+      And I set cookie "cookie_name" to "cookie_value"
