@@ -23,3 +23,9 @@ Feature: Example
 
   Scenario: Log
     When I log "Hello, world!"
+
+  Scenario: Viewport
+    When I visit "https://example.com/"
+      And I set viewport to "iphone-6"
+      And I set viewport to "ipad-mini" and "landscape"
+      And I set viewport to 800px by 600px
