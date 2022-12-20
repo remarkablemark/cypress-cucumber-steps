@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.25.0...v1.26.0) (2022-12-20)
+
+
+### Features
+
+* **queries:** add "When I get first element" & "When I get last element" ([6c99571](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6c995719898c691dedaec5d1a9870a4b08988fed))
+
 ## [1.25.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.24.0...v1.25.0) (2022-12-19)
 
 
