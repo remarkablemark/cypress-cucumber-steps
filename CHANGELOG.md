@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.28.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.27.0...v1.28.0) (2022-12-21)
+
+
+### Features
+
+* **queries:** add "When I find buttons by text" & "When I find links by text" ([69c7c9a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/69c7c9af0341ec2bdfd8a51c303980495473a97e))
+
 ## [1.27.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.26.1...v1.27.0) (2022-12-21)
 
 
