@@ -17,10 +17,10 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * @remarks
  *
- * This follows steps like {@link When_I_find_element_by_text | "When I find element by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
+ * This follows steps like {@link When_I_find_link_by_text | "When I find link by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
  *
  * ```gherkin
- * When I find element by text "Text"
+ * When I find link by text "Link"
  *   And I get first element
  *   And I click
  * ```
@@ -51,10 +51,10 @@ When('I get first element', When_I_get_first_element);
  *
  * @remarks
  *
- * This follows steps like {@link When_I_find_element_by_text | "When I find element by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
+ * This follows steps like {@link When_I_find_link_by_text | "When I find link by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
  *
  * ```gherkin
- * When I find element by text "Text"
+ * When I find link by text "Link"
  *   And I get last element
  *   And I click
  * ```
