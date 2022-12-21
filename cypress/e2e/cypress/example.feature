@@ -63,3 +63,12 @@ Feature: Cypress example
       And I scroll window to "bottom-right"
       And I scroll window to "center"
       And I scroll window to "top-left"
+
+  Scenario: First and last
+    When I visit "https://example.cypress.io/commands/aliasing"
+      And I find button by text "Change"
+      And I get first element
+      And I click
+      And I find button by text "Change"
+      And I get last element
+      And I click
