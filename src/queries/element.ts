@@ -17,10 +17,10 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * @remarks
  *
- * This follows steps like {@link When_I_find_link_by_text | "When I find link by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
+ * This follows steps like {@link When_I_find_links_by_text | "When I find links by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
  *
  * ```gherkin
- * When I find link by text "Link"
+ * When I find links by text "Link"
  *   And I get first element
  *   And I click
  * ```
@@ -28,6 +28,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * @see
  *
  * - {@link When_I_get_last_element | When I get last element}
+ * - {@link When_I_get_nth_element | When I get nth element}
  */
 export function When_I_get_first_element() {
   const cypressElement = getCypressElement(this);
@@ -51,10 +52,10 @@ When('I get first element', When_I_get_first_element);
  *
  * @remarks
  *
- * This follows steps like {@link When_I_find_link_by_text | "When I find link by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
+ * This follows steps like {@link When_I_find_links_by_text | "When I find links by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
  *
  * ```gherkin
- * When I find link by text "Link"
+ * When I find links by text "Link"
  *   And I get last element
  *   And I click
  * ```
@@ -62,6 +63,7 @@ When('I get first element', When_I_get_first_element);
  * @see
  *
  * - {@link When_I_get_first_element | When I get first element}
+ * - {@link When_I_get_nth_element | When I get nth element}
  */
 export function When_I_get_last_element() {
   const cypressElement = getCypressElement(this);
@@ -69,3 +71,50 @@ export function When_I_get_last_element() {
 }
 
 When('I get last element', When_I_get_last_element);
+
+/**
+ * When I get nth element:
+ *
+ * ```gherkin
+ * When I get {int}st element
+ * When I get {int}nd element
+ * When I get {int}rd element
+ * When I get {int}th element
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I get 1st element
+ * When I get 2nd element
+ * When I get 3rd element
+ * When I get 4th element
+ * ```
+ *
+ * @remarks
+ *
+ * This follows steps like {@link When_I_find_links_by_text | "When I find links by text"} and precedes steps like {@link When_I_click | "When I click"}. For example:
+ *
+ * ```gherkin
+ * When I find links by text "Link"
+ *   And I get 5th element
+ *   And I click
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_get_first_element | When I get first element}
+ * - {@link When_I_get_last_element | When I get last element}
+ *
+ * @param position - A number indicating the position to find the element within an array of elements (starts with 1). If negative, the number indicates the position from the end to find the element.
+ */
+export function When_I_get_nth_element(position: number) {
+  const cypressElement = getCypressElement(this);
+  const index = position > 0 ? position - 1 : position;
+  setCypressElement(this, cypressElement.eq(index));
+}
+
+When('I get {int}st element', When_I_get_nth_element);
+When('I get {int}nd element', When_I_get_nth_element);
+When('I get {int}rd element', When_I_get_nth_element);
+When('I get {int}th element', When_I_get_nth_element);

@@ -65,10 +65,20 @@ Feature: Cypress example
       And I scroll window to "top-left"
 
   Scenario: First and last
-    When I visit "https://example.cypress.io/commands/aliasing"
-      And I find button by text "Change"
+    Given I visit "https://example.cypress.io/commands/aliasing"
+    When I find buttons by text "Change"
       And I get first element
       And I click
-      And I find button by text "Change"
+    When I find buttons by text "Change"
+      And I get 2nd element
+      And I click
+    When I find buttons by text "Change"
+      And I get 3rd element
+      And I click
+    When I find buttons by text "Change"
       And I get last element
       And I click
+    When I find links by text "cypress"
+      And I get 1st element
+      And I click
+    Then I see URL "https://example.cypress.io/"
