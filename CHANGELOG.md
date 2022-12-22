@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.28.0...v1.29.0) (2022-12-22)
+
+
+### Features
+
+* **queries:** add "When I get nth element" ([949ba89](https://github.com/remarkablemark/cypress-cucumber-steps/commit/949ba8981a5e8d1e2e07301b6e4399fe165cb00b))
+
 ## [1.28.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.27.0...v1.28.0) (2022-12-21)
 
 
