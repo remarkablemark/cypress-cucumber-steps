@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.29.0...v1.30.0) (2022-12-24)
+
+
+### Features
+
+* **assertions:** add "Then I see hash" and "Then I see hash contains" ([87adae3](https://github.com/remarkablemark/cypress-cucumber-steps/commit/87adae3c0678f8982068379f0f0767cf3a1679f9))
+
 ## [1.29.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.28.0...v1.29.0) (2022-12-22)
 
 
