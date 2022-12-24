@@ -12,6 +12,11 @@ Feature: Example
     Then I see URL "https://example.com/index.html"
       And I see URL contains "/index.html"
 
+  Scenario: Hash
+    When I visit "https://example.com/#foobar"
+    Then I see hash "#foobar"
+      And I see hash contains "bar"
+
   Scenario: Screenshot
     When I visit "https://example.com/"
       And I screenshot
