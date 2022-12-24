@@ -23,7 +23,8 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * ```
  */
 export function Then_I_see_URL(url: string) {
-  cy.location('href').should('equal', (Cypress.config().baseUrl || '') + url);
+  const baseUrl = Cypress.config().baseUrl || '';
+  cy.url().should('equal', baseUrl + url);
 }
 
 Then('I see URL {string}', Then_I_see_URL);
@@ -42,7 +43,7 @@ Then('I see URL {string}', Then_I_see_URL);
  * ```
  */
 export function Then_I_see_URL_contains(url: string) {
-  cy.location('href').should('contain', url);
+  cy.url().should('contain', url);
 }
 
 Then('I see URL contains {string}', Then_I_see_URL_contains);
