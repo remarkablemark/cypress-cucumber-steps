@@ -63,6 +63,8 @@ Feature: Cypress example
       And I scroll window to "bottom-right"
       And I scroll window to "center"
       And I scroll window to "top-left"
+    When I find button by text "I'm Here"
+      And I scroll into view
 
   Scenario: First and last
     Given I visit "https://example.cypress.io/commands/aliasing"
