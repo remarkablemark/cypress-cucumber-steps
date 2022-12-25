@@ -56,6 +56,8 @@ Feature: Cypress example
   Scenario: Visible text
     When I visit "https://example.cypress.io/commands/actions"
     Then I do not see visible text "I'm Here"
+    When I find element by text "I'm Here"
+    Then I see element is not visible
 
   Scenario: Scroll
     When I visit "https://example.cypress.io/commands/actions"
@@ -64,9 +66,11 @@ Feature: Cypress example
       And I scroll window to "center"
       And I scroll window to "top-left"
     When I find button by text "I'm Here"
-      And I scroll into view
+    Then I see element is not visible
+    When I scroll into view
+    Then I see element is visible
 
-  Scenario: First and last
+  Scenario: Get nth element
     Given I visit "https://example.cypress.io/commands/aliasing"
     When I find buttons by text "Change"
       And I get first element
