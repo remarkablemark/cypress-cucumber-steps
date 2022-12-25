@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.32.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.31.0...v1.32.0) (2022-12-25)
+
+
+### Features
+
+* **assertions:** add "Then I see element is not visible" ([1d9cc14](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1d9cc14a793690531de32552fcfee997f20ca547))
+* **assertions:** add "Then I see element is visible" ([13cb6a3](https://github.com/remarkablemark/cypress-cucumber-steps/commit/13cb6a32d851382cc90ebdcb8cd6e6f646973913))
+
 ## [1.31.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.30.0...v1.31.0) (2022-12-25)
 
 
