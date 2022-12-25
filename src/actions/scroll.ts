@@ -1,6 +1,39 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { camelCase } from '../utils';
+import { camelCase, getCypressElement } from '../utils';
+
+/**
+ * When I scroll element into view:
+ *
+ * ```gherkin
+ * When I scroll into view
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I scroll into view
+ * ```
+ *
+ * @remarks
+ *
+ * This requires a preceding step like {@link When_I_find_element_by_text | "When I find element by text"}. For example:
+ *
+ * ```gherkin
+ * When I find element by text "Text"
+ *   And I scroll into view
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_scroll_window_to_position | When I scroll window to position}
+ * - {@link When_I_scroll_window_to_x_y_coordinates | When I scroll window to x-y coordinates}
+ */
+export function When_I_scroll_into_view() {
+  getCypressElement(this).scrollIntoView();
+}
+
+When('I scroll into view', When_I_scroll_into_view);
 
 /**
  * When I scroll window to position:
@@ -34,6 +67,7 @@ import { camelCase } from '../utils';
  *
  * @see
  *
+ * - {@link When_I_scroll_into_view | When I scroll into view}
  * - {@link When_I_scroll_window_to_x_y_coordinates | When I scroll window to x-y coordinates}
  */
 export function When_I_scroll_window_to_position(
@@ -79,6 +113,7 @@ When('I scroll window to {string}', When_I_scroll_window_to_position);
  *
  * @see
  *
+ * - {@link When_I_scroll_into_view | When I scroll into view}
  * - {@link When_I_scroll_window_to_position | When I scroll window to position}
  */
 export function When_I_scroll_window_to_x_y_coordinates(x: number, y: number) {
