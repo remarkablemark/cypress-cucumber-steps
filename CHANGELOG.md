@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.31.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.30.0...v1.31.0) (2022-12-25)
+
+
+### Features
+
+* **actions:** add "When I scroll into view" ([bb244f3](https://github.com/remarkablemark/cypress-cucumber-steps/commit/bb244f3e3fee3cc12b0aaf0d671ee3ae4e4f4b5b))
+
 ## [1.30.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.29.0...v1.30.0) (2022-12-24)
 
 
