@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.32.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.32.0...v1.32.1) (2022-12-26)
+
+
+### Bug Fixes
+
+* **queries:** return 1st element in "When I get element by label text" ([4aca9bf](https://github.com/remarkablemark/cypress-cucumber-steps/commit/4aca9bf68b9defc2b9b88c0444685e4b3a8c17a8))
+
 ## [1.32.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.31.0...v1.32.0) (2022-12-25)
 
 
