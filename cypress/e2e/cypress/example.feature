@@ -88,3 +88,14 @@ Feature: Cypress example
       And I get 1st element
       And I click
     Then I see URL "https://example.cypress.io/"
+
+  Scenario: Find and set value
+    Given I visit "https://example.cypress.io/commands/actions"
+    When I double-click on text "Double click to edit"
+      And I get element by display value "Double click to edit"
+      And I set value "Double-click to edit"
+    When I get element by display value "0"
+      And I set value "42"
+    Then I see text "42"
+    When I get element by display value "apples"
+      And I set value "fr-oranges"
