@@ -5,3 +5,4 @@ export * from './placeholder';
 export * from './testid';
 export * from './text';
 export * from './title';
+export * from './value';
