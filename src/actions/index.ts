@@ -10,6 +10,7 @@ export * from './screenshot';
 export * from './scroll';
 export * from './select';
 export * from './type';
+export * from './value';
 export * from './viewport';
 export * from './visit';
 export * from './wait';
