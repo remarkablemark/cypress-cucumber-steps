@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.33.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.32.1...v1.33.0) (2022-12-27)
+
+
+### Features
+
+* **queries:** add "When I get element by display value" ([f9c081a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f9c081ada300d4590ea82f52b7afee46fa2ec235))
+
 ## [1.32.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.32.0...v1.32.1) (2022-12-26)
 
 
