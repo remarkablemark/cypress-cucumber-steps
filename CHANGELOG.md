@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.34.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.33.0...v1.34.0) (2022-12-27)
+
+
+### Features
+
+* **actions:** add "When I set value" ([9bc6ef1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9bc6ef10e2f8115fe6eda9dc3bb5dc2d25bfdb4d))
+
 ## [1.33.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.32.1...v1.33.0) (2022-12-27)
 
 
