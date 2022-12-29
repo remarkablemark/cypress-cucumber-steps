@@ -30,6 +30,10 @@ import { setCypressElement } from '../utils';
  * ```
  *
  * Inspired by Testing Library's [ByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue).
+ *
+ * @see
+ *
+ * - {@link When_I_find_input_by_display_value | When I find input by display value}
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_get_element_by_display_value(value: string) {
@@ -106,3 +110,42 @@ function getByDisplayValue(element: 'input' | 'textarea', value: string) {
     )
     .first();
 }
+
+/**
+ * When I find input by display value:
+ *
+ * ```gherkin
+ * When I find input by display value {string}
+ * ```
+ *
+ * Returns the `input` element that has the matching display value.
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I find input by display value "Input"
+ * ```
+ *
+ * @remarks
+ *
+ * This precedes steps like {@link When_I_set_value | "When I set value"}. For example:
+ *
+ * ```gherkin
+ * When I find input by display value "Display Value"
+ *   And I set value "Value"
+ * ```
+ *
+ * Inspired by Testing Library's [ByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue).
+ *
+ * @see
+ *
+ * - {@link When_I_get_element_by_display_value | When I get element by display value}
+ */
+export function When_I_find_input_by_display_value(value: string) {
+  setCypressElement(this, getByDisplayValue('input', value));
+}
+
+When(
+  'I find input by display value {string}',
+  When_I_find_input_by_display_value
+);
