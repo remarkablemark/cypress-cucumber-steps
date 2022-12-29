@@ -94,6 +94,8 @@ Feature: Cypress example
     When I double-click on text "Double click to edit"
       And I get element by display value "Double click to edit"
       And I set value "Double-click to edit"
+    When I find input by display value "Double-click to edit"
+      And I set value "Double-Click to Edit"
     When I get element by display value "0"
       And I set value "42"
     Then I see text "42"
