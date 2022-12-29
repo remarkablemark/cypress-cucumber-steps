@@ -22,12 +22,11 @@ import { setCypressElement } from '../utils';
  *
  * @remarks
  *
- * This precedes steps like {@link When_I_type | "When I type"}. For example:
+ * This precedes steps like {@link When_I_set_value | "When I set value"}. For example:
  *
  * ```gherkin
- * When I get element by display value "Hello World"
- *   And I clear
- *   And I type "user@example.com"
+ * When I get element by display value "Display Value"
+ *   And I set value "Value"
  * ```
  *
  * Inspired by Testing Library's [ByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue).
@@ -38,9 +37,9 @@ export function When_I_get_element_by_display_value(value: string) {
     let cypressElement;
 
     if (hasDisplayValue($body, 'input', value)) {
-      cypressElement = cy.get(`input[value='${value}']`).first();
+      cypressElement = getByDisplayValue('input', value);
     } else if (hasDisplayValue($body, 'textarea', value)) {
-      cypressElement = cy.contains('textarea', value);
+      cypressElement = getByDisplayValue('textarea', value);
     } else if (hasDisplayValue($body, 'option', value)) {
       cypressElement = cy.contains('option', value).closest('select');
     } else {
@@ -90,4 +89,20 @@ function hasDisplayValue(
   });
 
   return isFound;
+}
+
+/**
+ * Get Cypress element by display value.
+ *
+ * @param element - Element name.
+ * @param value - Display value.
+ */
+function getByDisplayValue(element: 'input' | 'textarea', value: string) {
+  return cy
+    .get(element)
+    .filter(
+      (index, element: HTMLInputElement) =>
+        Cypress.$(element).val()?.toString() === value
+    )
+    .first();
 }
