@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.34.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.34.0...v1.34.1) (2022-12-29)
+
+
+### Bug Fixes
+
+* **actions:** replace invoke with jQuery so trigger does not fail ([90f244f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/90f244f74d224a7d490f2286786909a46c8eb8bb))
+* **queries:** get input & textarea by display value & not default value ([a60b0b6](https://github.com/remarkablemark/cypress-cucumber-steps/commit/a60b0b65f7ba2c048c7c58fa063a64e2a7e54fbc))
+
 ## [1.34.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.33.0...v1.34.0) (2022-12-27)
 
 
