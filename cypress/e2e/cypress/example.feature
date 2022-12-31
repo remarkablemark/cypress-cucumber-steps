@@ -6,9 +6,10 @@ Feature: Cypress example
     When I click on text "get"
     Then I see text "cy.get()"
 
-  Scenario: Click button
+  Scenario: See and click button
     Given I visit "https://example.cypress.io/commands/actions"
     Then I do not see text "This popover shows up on click"
+      And I see button "Click to toggle popover"
     When I click on button "Click to toggle popover"
     Then I see text "This popover shows up on click"
 
