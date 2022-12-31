@@ -90,7 +90,7 @@ Feature: Cypress example
       And I click
     Then I see URL "https://example.cypress.io/"
 
-  Scenario: Find and set value
+  Scenario: Find and set input value
     Given I visit "https://example.cypress.io/commands/actions"
     When I double-click on text "Double click to edit"
       And I get element by display value "Double click to edit"
@@ -100,5 +100,10 @@ Feature: Cypress example
     When I get element by display value "0"
       And I set value "42"
     Then I see text "42"
+
+  Scenario: Find and select option
+    Given I visit "https://example.cypress.io/commands/actions"
     When I get element by display value "apples"
-      And I set value "fr-oranges"
+      And I set value "fr-apples"
+    When I find select by display value "bananas"
+      And I select option "bananas"
