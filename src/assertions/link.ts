@@ -19,6 +19,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  *
  * @see
  *
+ * - {@link Then_I_see_button | Then I see button}
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_link(text: string) {

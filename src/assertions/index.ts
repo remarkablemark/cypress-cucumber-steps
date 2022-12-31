@@ -1,3 +1,4 @@
+export * from './button';
 export * from './element';
 export * from './hash';
 export * from './link';
