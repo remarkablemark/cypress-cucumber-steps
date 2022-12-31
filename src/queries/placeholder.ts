@@ -33,7 +33,7 @@ import { setCypressElement } from '../utils';
 export function When_I_find_element_by_placeholder_text(
   placeholderText: string
 ) {
-  setCypressElement(this, cy.get(`[placeholder='${placeholderText}']`));
+  setCypressElement(cy.get(`[placeholder='${placeholderText}']`));
 }
 
 When(

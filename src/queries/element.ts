@@ -31,8 +31,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * - {@link When_I_get_nth_element | When I get nth element}
  */
 export function When_I_get_first_element() {
-  const cypressElement = getCypressElement(this);
-  setCypressElement(this, cypressElement.first());
+  setCypressElement(getCypressElement().first());
 }
 
 When('I get first element', When_I_get_first_element);
@@ -66,8 +65,7 @@ When('I get first element', When_I_get_first_element);
  * - {@link When_I_get_nth_element | When I get nth element}
  */
 export function When_I_get_last_element() {
-  const cypressElement = getCypressElement(this);
-  setCypressElement(this, cypressElement.last());
+  setCypressElement(getCypressElement().last());
 }
 
 When('I get last element', When_I_get_last_element);
@@ -109,9 +107,9 @@ When('I get last element', When_I_get_last_element);
  * @param position - A number indicating the position to find the element within an array of elements (starts with 1). If negative, the number indicates the position from the end to find the element.
  */
 export function When_I_get_nth_element(position: number) {
-  const cypressElement = getCypressElement(this);
+  const cypressElement = getCypressElement();
   const index = position > 0 ? position - 1 : position;
-  setCypressElement(this, cypressElement.eq(index));
+  setCypressElement(cypressElement.eq(index));
 }
 
 When('I get {int}st element', When_I_get_nth_element);

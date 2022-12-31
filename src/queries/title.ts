@@ -35,9 +35,9 @@ import { setCypressElement } from '../utils';
 export function When_I_get_element_by_title(title: string) {
   cy.get('body').then(($body) => {
     if ($body.find('svg title').text().includes(title)) {
-      setCypressElement(this, cy.get('svg title').contains(title));
+      setCypressElement(cy.get('svg title').contains(title));
     } else if ($body.find(`[title='${title}']`).length) {
-      setCypressElement(this, cy.get(`[title='${title}']`));
+      setCypressElement(cy.get(`[title='${title}']`));
     } else {
       throw new Error(`Unable to get element by title: ${title}`);
     }

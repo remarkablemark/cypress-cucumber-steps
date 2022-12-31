@@ -30,7 +30,7 @@ import { camelCase, getCypressElement } from '../utils';
  * - {@link When_I_scroll_window_to_x_y_coordinates | When I scroll window to x-y coordinates}
  */
 export function When_I_scroll_into_view() {
-  getCypressElement(this).scrollIntoView();
+  getCypressElement().scrollIntoView();
 }
 
 When('I scroll into view', When_I_scroll_into_view);

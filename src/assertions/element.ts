@@ -30,7 +30,7 @@ import { getCypressElement } from '../utils';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_element_is_visible() {
-  getCypressElement(this).should('be.visible');
+  getCypressElement().should('be.visible');
 }
 
 Then('I see element is visible', Then_I_see_element_is_visible);
@@ -64,7 +64,7 @@ Then('I see element is visible', Then_I_see_element_is_visible);
  * - {@link Then_I_see_element_is_visible | Then I see element is visible}
  */
 export function Then_I_see_element_is_not_visible() {
-  getCypressElement(this).should('not.be.visible');
+  getCypressElement().should('not.be.visible');
 }
 
 Then('I see element is not visible', Then_I_see_element_is_not_visible);

@@ -29,7 +29,7 @@ import { setCypressElement } from '../utils';
  * Inspired by Testing Library's [ByAltText](https://testing-library.com/docs/queries/byalttext).
  */
 export function When_I_find_element_by_alt_text(altText: string) {
-  setCypressElement(this, cy.get(`[alt='${altText}']`));
+  setCypressElement(cy.get(`[alt='${altText}']`));
 }
 
 When('I find element by alt text {string}', When_I_find_element_by_alt_text);
