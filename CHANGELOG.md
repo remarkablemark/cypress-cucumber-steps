@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.38.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.37.0...v1.38.0) (2022-12-31)
+
+
+### Features
+
+* **queries:** add "When I find textarea by display value" ([2aeeafd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2aeeafde95474c0c4c4d4ecc52781f00696cdeff))
+
 ## [1.37.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.36.0...v1.37.0) (2022-12-31)
 
 
