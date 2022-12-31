@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.36.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.35.0...v1.36.0) (2022-12-31)
+
+
+### Features
+
+* **assertions:** add "Then I see link" ([278a44c](https://github.com/remarkablemark/cypress-cucumber-steps/commit/278a44c95db4b9332fc378ba7367026642dd5b09))
+
 ## [1.35.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.34.1...v1.35.0) (2022-12-29)
 
 
