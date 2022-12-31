@@ -10,17 +10,16 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * @example
  *
  * ```gherkin
- * Then I see text "Hello, world!"
+ * Then I see text "Text"
  * ```
  *
  * @remarks
  *
- * This asserts that the text _exists_ and is _visible_ in the screen.
+ * This asserts that an element with text **_exists_** and is **_visible_** in the screen.
  *
  * @see
  *
- * - {@link Then_I_do_not_see_text | Then I do not see text}
- * - {@link Then_I_do_not_see_visible_text | Then I do not see visible text}
+ * - {@link Then_I_see_link | Then I see link}
  */
 export function Then_I_see_text(text: string) {
   cy.contains(text).should('exist').and('be.visible');
@@ -43,11 +42,10 @@ Then('I see text {string}', Then_I_see_text);
  *
  * @remarks
  *
- * This asserts that the text _does not exist_ in the screen.
+ * This asserts that the text **_does not exist_** in the screen.
  *
  * @see
  *
- * - {@link Then_I_see_text | Then I see text}
  * - {@link Then_I_do_not_see_visible_text | Then I do not see visible text}
  */
 export function Then_I_do_not_see_text(text: string) {
@@ -71,11 +69,10 @@ Then('I do not see text {string}', Then_I_do_not_see_text);
  *
  * @remarks
  *
- * This asserts that the text _exists_ in the screen but is _hidden_.
+ * This asserts that the text **_exists_** in the screen but is **_hidden_**.
  *
  * @see
  *
- * - {@link Then_I_see_text | Then I see text}
  * - {@link Then_I_do_not_see_text | Then I do not see text}
  */
 export function Then_I_do_not_see_visible_text(text: string) {
