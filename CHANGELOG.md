@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.39.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.38.0...v1.39.0) (2022-12-31)
+
+
+### Features
+
+* **queries:** add "When I find select by display value" ([d9be0f5](https://github.com/remarkablemark/cypress-cucumber-steps/commit/d9be0f5b91d3bd7388c85a427146e7b82a2cd245))
+
 ## [1.38.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.37.0...v1.38.0) (2022-12-31)
 
 
