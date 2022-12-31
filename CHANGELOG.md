@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.40.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.39.0...v1.40.0) (2022-12-31)
+
+
+### Features
+
+* **utils:** remove context from getCypressElement & setCypressElement ([4a8cfaf](https://github.com/remarkablemark/cypress-cucumber-steps/commit/4a8cfaf8fed035cc8da131f62f02671a3d6b89fd))
+
 ## [1.39.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.38.0...v1.39.0) (2022-12-31)
 
 
