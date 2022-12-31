@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.37.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.36.0...v1.37.0) (2022-12-31)
+
+
+### Features
+
+* **assertions:** add "Then I see button" ([89d6415](https://github.com/remarkablemark/cypress-cucumber-steps/commit/89d6415aced13825114108028ecd832ef0401e75))
+
 ## [1.36.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.35.0...v1.36.0) (2022-12-31)
 
 
