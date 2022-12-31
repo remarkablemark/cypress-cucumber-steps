@@ -10,7 +10,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * @example
  *
  * ```gherkin
- * Then I see text "Hello, world!"
+ * Then I see text "Text"
  * ```
  *
  * @remarks
