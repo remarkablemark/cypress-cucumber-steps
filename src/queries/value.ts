@@ -34,24 +34,25 @@ import { setCypressElement } from '../utils';
  * @see
  *
  * - {@link When_I_find_input_by_display_value | When I find input by display value}
+ * - {@link When_I_find_select_by_display_value | When I find select by display value}
  * - {@link When_I_find_textarea_by_display_value | When I find textarea by display value}
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_get_element_by_display_value(value: string) {
   cy.get('body').then(($body) => {
-    let cypressElement;
-
     if (hasDisplayValue($body, 'input', value)) {
-      cypressElement = getByDisplayValue('input', value);
-    } else if (hasDisplayValue($body, 'textarea', value)) {
-      cypressElement = getByDisplayValue('textarea', value);
-    } else if (hasDisplayValue($body, 'option', value)) {
-      cypressElement = cy.contains('option', value).closest('select');
-    } else {
-      throw new Error(`Unable to get element by display value: ${value}`);
+      return When_I_find_input_by_display_value.call(this, value);
     }
 
-    setCypressElement(this, cypressElement);
+    if (hasDisplayValue($body, 'textarea', value)) {
+      return When_I_find_textarea_by_display_value.call(this, value);
+    }
+
+    if (hasDisplayValue($body, 'option', value)) {
+      return When_I_find_select_by_display_value.call(this, value);
+    }
+
+    throw new Error(`Unable to get element by display value: ${value}`);
   });
 }
 
@@ -132,7 +133,7 @@ function getByDisplayValue(element: 'input' | 'textarea', value: string) {
  * This precedes steps like {@link When_I_set_value | "When I set value"}. For example:
  *
  * ```gherkin
- * When I find input by display value "Display Value"
+ * When I find input by display value "Input"
  *   And I set value "Value"
  * ```
  *
@@ -140,7 +141,6 @@ function getByDisplayValue(element: 'input' | 'textarea', value: string) {
  *
  * @see
  *
- * - {@link When_I_find_textarea_by_display_value | When I find textarea by display value}
  * - {@link When_I_get_element_by_display_value | When I get element by display value}
  */
 export function When_I_find_input_by_display_value(value: string) {
@@ -172,7 +172,7 @@ When(
  * This precedes steps like {@link When_I_set_value | "When I set value"}. For example:
  *
  * ```gherkin
- * When I find textarea by display value "Display Value"
+ * When I find textarea by display value "Textarea"
  *   And I set value "Value"
  * ```
  *
@@ -180,7 +180,6 @@ When(
  *
  * @see
  *
- * - {@link When_I_find_input_by_display_value | When I find input by display value}
  * - {@link When_I_get_element_by_display_value | When I get element by display value}
  */
 export function When_I_find_textarea_by_display_value(value: string) {
@@ -190,4 +189,43 @@ export function When_I_find_textarea_by_display_value(value: string) {
 When(
   'I find textarea by display value {string}',
   When_I_find_textarea_by_display_value
+);
+
+/**
+ * When I find select by display value:
+ *
+ * ```gherkin
+ * When I find select by display value {string}
+ * ```
+ *
+ * Returns the `select` element that has the matching display value.
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I find select by display value "Option"
+ * ```
+ *
+ * @remarks
+ *
+ * This precedes steps like {@link When_I_set_value | "When I set value"}. For example:
+ *
+ * ```gherkin
+ * When I find select by display value "Option"
+ *   And I set value "Value"
+ * ```
+ *
+ * Inspired by Testing Library's [ByDisplayValue](https://testing-library.com/docs/queries/bydisplayvalue).
+ *
+ * @see
+ *
+ * - {@link When_I_get_element_by_display_value | When I get element by display value}
+ */
+export function When_I_find_select_by_display_value(value: string) {
+  setCypressElement(this, cy.contains('option', value).closest('select'));
+}
+
+When(
+  'I find select by display value {string}',
+  When_I_find_select_by_display_value
 );
