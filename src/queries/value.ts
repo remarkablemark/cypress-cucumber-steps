@@ -41,15 +41,15 @@ import { setCypressElement } from '../utils';
 export function When_I_get_element_by_display_value(value: string) {
   cy.get('body').then(($body) => {
     if (hasDisplayValue($body, 'input', value)) {
-      return When_I_find_input_by_display_value.call(this, value);
+      return When_I_find_input_by_display_value(value);
     }
 
     if (hasDisplayValue($body, 'textarea', value)) {
-      return When_I_find_textarea_by_display_value.call(this, value);
+      return When_I_find_textarea_by_display_value(value);
     }
 
     if (hasDisplayValue($body, 'option', value)) {
-      return When_I_find_select_by_display_value.call(this, value);
+      return When_I_find_select_by_display_value(value);
     }
 
     throw new Error(`Unable to get element by display value: ${value}`);
@@ -144,7 +144,7 @@ function getByDisplayValue(element: 'input' | 'textarea', value: string) {
  * - {@link When_I_get_element_by_display_value | When I get element by display value}
  */
 export function When_I_find_input_by_display_value(value: string) {
-  setCypressElement(this, getByDisplayValue('input', value));
+  setCypressElement(getByDisplayValue('input', value));
 }
 
 When(
@@ -183,7 +183,7 @@ When(
  * - {@link When_I_get_element_by_display_value | When I get element by display value}
  */
 export function When_I_find_textarea_by_display_value(value: string) {
-  setCypressElement(this, getByDisplayValue('textarea', value));
+  setCypressElement(getByDisplayValue('textarea', value));
 }
 
 When(
@@ -222,7 +222,7 @@ When(
  * - {@link When_I_get_element_by_display_value | When I get element by display value}
  */
 export function When_I_find_select_by_display_value(value: string) {
-  setCypressElement(this, cy.contains('option', value).closest('select'));
+  setCypressElement(cy.contains('option', value).closest('select'));
 }
 
 When(

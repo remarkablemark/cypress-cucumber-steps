@@ -44,7 +44,7 @@ export function When_I_get_element_by_label_text(text: string) {
       throw new Error(`Unable to get element by label text: ${text}`);
     }
 
-    setCypressElement(this, cypressElement);
+    setCypressElement(cypressElement);
   });
 }
 

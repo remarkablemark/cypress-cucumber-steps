@@ -31,7 +31,7 @@ import { getCypressElement } from '../utils';
  * ```
  */
 export function When_I_clear() {
-  getCypressElement(this).clear();
+  getCypressElement().clear();
 }
 
 When('I clear', When_I_clear);
@@ -66,7 +66,7 @@ When('I clear', When_I_clear);
  * ```
  */
 export function When_I_type(text: string) {
-  getCypressElement(this).type(text);
+  getCypressElement().type(text);
 }
 
 When('I type {string}', When_I_type);

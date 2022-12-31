@@ -36,7 +36,7 @@ import { getCypressElement } from '../utils';
  * - {@link When_I_right_click_on_text | When I right-click on text}
  */
 export function When_I_click() {
-  getCypressElement(this).click();
+  getCypressElement().click();
 }
 
 When('I click', When_I_click);
@@ -161,7 +161,7 @@ When('I click on text {string}', When_I_click_on_text);
  * - {@link When_I_right_click_on_text | When I right-click on text}
  */
 export function When_I_double_click() {
-  getCypressElement(this).dblclick();
+  getCypressElement().dblclick();
 }
 
 When('I double-click', When_I_double_click);
@@ -230,7 +230,7 @@ When('I double-click on text {string}', When_I_double_click_on_text);
  * - {@link When_I_double_click_on_text | When I double-click on text}
  */
 export function When_I_right_click() {
-  getCypressElement(this).rightclick();
+  getCypressElement().rightclick();
 }
 
 When('I right-click', When_I_right_click);
