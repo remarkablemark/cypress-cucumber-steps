@@ -93,10 +93,11 @@ Feature: Cypress example
   Scenario: Find and set input value
     Given I visit "https://example.cypress.io/commands/actions"
     When I double-click on text "Double click to edit"
-      And I get element by display value "Double click to edit"
-      And I set value "Double-click to edit"
-    When I find input by display value "Double-click to edit"
-      And I set value "Double-Click to Edit"
+      And I get focused element
+      And I clear
+      And I type "Lorem ipsum"
+    When I find input by display value "Lorem ipsum"
+      And I set value "Dolor sit amet"
     When I get element by display value "0"
       And I set value "42"
     Then I see text "42"
