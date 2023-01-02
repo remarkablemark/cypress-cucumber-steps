@@ -1,4 +1,10 @@
 Feature: Cypress example
+  Scenario: See heading and link
+    Given I visit "https://example.cypress.io/"
+    Then I see heading "Kitchen Sink"
+      And I see heading "Commands"
+      And I see link "Querying"
+
   Scenario: Click and see text
     Given I visit "https://example.cypress.io/"
     Then I see text "Kitchen Sink"
