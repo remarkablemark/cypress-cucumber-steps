@@ -117,3 +117,9 @@ Feature: Cypress example
       And I set value "fr-apples"
     When I find select by display value "bananas"
       And I select option "bananas"
+
+  Scenario: Trigger event
+    Given I visit "https://example.cypress.io/commands/actions"
+    When I find button by text "Click to toggle popover"
+      And I trigger event "click"
+    Then I see heading "Popover"
