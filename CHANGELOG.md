@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.42.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.41.1...v1.42.0) (2023-01-02)
+
+
+### Features
+
+* **assertions:** add "Then I see heading" ([0247ddf](https://github.com/remarkablemark/cypress-cucumber-steps/commit/0247ddfadc09308717fdaa9bf5a155de253a6a78))
+
 ## [1.41.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.41.0...v1.41.1) (2023-01-02)
 
 
