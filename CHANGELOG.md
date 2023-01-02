@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.41.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.41.0...v1.41.1) (2023-01-02)
+
+
+### Bug Fixes
+
+* **assertions:** query for visible elements in link, button, & label ([a2535ea](https://github.com/remarkablemark/cypress-cucumber-steps/commit/a2535ead27afc5e7a377cb92538cf5f432cdac79))
+
 ## [1.41.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.40.0...v1.41.0) (2023-01-01)
 
 
