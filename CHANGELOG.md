@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.44.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.43.0...v1.44.0) (2023-01-02)
+
+
+### Features
+
+* **actions:** add "When I trigger event" ([6f628fc](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6f628fc78530a9e0c0a0f48a3fe33cfeb2cfcfb1))
+
 ## [1.43.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.42.0...v1.43.0) (2023-01-02)
 
 
