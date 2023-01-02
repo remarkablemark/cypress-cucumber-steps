@@ -1,16 +1,19 @@
 Feature: Cypress example
-  Scenario: See heading and link
-    Given I visit "https://example.cypress.io/"
-    Then I see heading "Kitchen Sink"
-      And I see heading "Commands"
-      And I see link "Querying"
-
   Scenario: Click and see text
     Given I visit "https://example.cypress.io/"
     Then I see text "Kitchen Sink"
       And I do not see text "cy.get()"
     When I click on text "get"
     Then I see text "cy.get()"
+
+  Scenario: See button, heading, link, and label
+    Given I visit "https://example.cypress.io/commands/actions"
+    Then I see heading "Actions"
+      And I see heading ".type()"
+      And I see heading "Canvas to Illustrate Click Positions"
+      And I see link ".type()"
+      And I see label "Email address"
+      And I see button "Submit"
 
   Scenario: See and click button
     Given I visit "https://example.cypress.io/commands/actions"
