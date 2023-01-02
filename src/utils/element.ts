@@ -9,30 +9,51 @@ export type CypressChainableElement = Cypress.Chainable<any>;
 let cypressElement: CypressChainableElement;
 
 /**
- * Set Cypress element.
+ * Set Cypress element:
  *
- * @private
+ * ```ts
+ * setCypressElement(cy.get('...'));
+ * ```
+ *
+ * @example
+ *
+ * ```ts
+ * setCypressElement(cy.contains('Text'));
+ * ```
  *
  * @see
  *
  * - {@link getCypressElement}
+ * - {@link setCypressElementByLabelText}
  *
  * @param element - Cypress element.
+ *
+ * @private
  */
 export function setCypressElement(element: CypressChainableElement): void {
   cypressElement = element;
 }
 
 /**
- * Get Cypress element.
+ * Get Cypress element:
  *
- * @private
+ * ```ts
+ * getCypressElement();
+ * ```
+ *
+ * @example
+ *
+ * ```ts
+ * getCypressElement().should('exist');
+ * ```
  *
  * @see
  *
  * - {@link setCypressElement}
  *
  * @returns - Cypress element.
+ *
+ * @private
  */
 export function getCypressElement(): CypressChainableElement {
   if (!Cypress.isCy(cypressElement)) {
