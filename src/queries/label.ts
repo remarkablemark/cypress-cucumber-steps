@@ -1,6 +1,6 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { setCypressElement } from '../utils';
+import { setCypressElementByLabelText } from '../utils';
 
 /* eslint-disable tsdoc/syntax */
 /**
@@ -31,21 +31,10 @@ import { setCypressElement } from '../utils';
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_get_element_by_label_text(text: string) {
-  cy.get('body').then(($body) => {
-    let cypressElement;
-
-    if ($body.find('label:visible').text().includes(text)) {
-      cypressElement = cy.contains('label:visible', text);
-    } else if ($body.find(`[aria-labelledby='${text}']:visible`).length) {
-      cypressElement = cy.get(`[aria-labelledby='${text}']:visible`).first();
-    } else if ($body.find(`[aria-label='${text}']:visible`).length) {
-      cypressElement = cy.get(`[aria-label='${text}']:visible`).first();
-    } else {
-      throw new Error(`Unable to get element by label text: ${text}`);
-    }
-
-    setCypressElement(cypressElement);
-  });
+  setCypressElementByLabelText(
+    text,
+    `Unable to get element by label text: ${text}`
+  );
 }
 
 When('I get element by label text {string}', When_I_get_element_by_label_text);

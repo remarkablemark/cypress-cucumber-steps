@@ -1,6 +1,6 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement } from '../utils';
+import { getCypressElement, setCypressElementByLabelText } from '../utils';
 
 /**
  * When I click:
@@ -140,17 +140,9 @@ When('I click on text {string}', When_I_click_on_text);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_label(text: string) {
-  cy.get('body').then(($body) => {
-    if ($body.find('label:visible').text().includes(text)) {
-      cy.contains('label:visible', text).click();
-    } else if ($body.find(`[aria-labelledby='${text}']:visible`).length) {
-      cy.get(`[aria-labelledby='${text}']:visible`).click();
-    } else if ($body.find(`[aria-label='${text}']:visible`).length) {
-      cy.get(`[aria-label='${text}']:visible`).click();
-    } else {
-      throw new Error(`Unable to click label: ${text}`);
-    }
-  });
+  setCypressElementByLabelText(text, `Unable to click label: ${text}`).then(
+    () => getCypressElement().click()
+  );
 }
 
 When('I click on label {string}', When_I_click_on_label);
