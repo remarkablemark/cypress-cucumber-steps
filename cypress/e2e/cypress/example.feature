@@ -22,6 +22,12 @@ Feature: Cypress example
     When I click on button "Click to toggle popover"
     Then I see text "This popover shows up on click"
 
+  Scenario: See and click label
+    Given I visit "https://example.cypress.io/commands/actions"
+    Then I see label "Email address"
+    When I click on label "Email address"
+      And I type "test@example.com"
+
   Scenario: Double-click text
     Given I visit "https://example.cypress.io/commands/actions"
       And I double-click on text "Double click to edit"
