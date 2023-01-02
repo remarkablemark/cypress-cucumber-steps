@@ -34,12 +34,12 @@ export function When_I_get_element_by_label_text(text: string) {
   cy.get('body').then(($body) => {
     let cypressElement;
 
-    if ($body.find('label').text().includes(text)) {
-      cypressElement = cy.contains('label', text);
-    } else if ($body.find(`[aria-labelledby='${text}']`).length) {
-      cypressElement = cy.get(`[aria-labelledby='${text}']`).first();
-    } else if ($body.find(`[aria-label='${text}']`).length) {
-      cypressElement = cy.get(`[aria-label='${text}']`).first();
+    if ($body.find('label:visible').text().includes(text)) {
+      cypressElement = cy.contains('label:visible', text);
+    } else if ($body.find(`[aria-labelledby='${text}']:visible`).length) {
+      cypressElement = cy.get(`[aria-labelledby='${text}']:visible`).first();
+    } else if ($body.find(`[aria-label='${text}']:visible`).length) {
+      cypressElement = cy.get(`[aria-label='${text}']:visible`).first();
     } else {
       throw new Error(`Unable to get element by label text: ${text}`);
     }
