@@ -23,7 +23,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_button(text: string) {
-  cy.contains('button', text).should('exist').and('be.visible');
+  cy.contains('button:visible', text).should('exist');
 }
 
 Then('I see button {string}', Then_I_see_button);
