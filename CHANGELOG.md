@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.43.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.42.0...v1.43.0) (2023-01-02)
+
+
+### Features
+
+* **assertions:** add "Then I see label" ([9c4cb65](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9c4cb65c6e7f36b08885197747abb8255baf2843))
+
 ## [1.42.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.41.1...v1.42.0) (2023-01-02)
 
 
