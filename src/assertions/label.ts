@@ -27,10 +27,10 @@ export function Then_I_see_label(text: string) {
   cy.get('body').then(($body) => {
     if ($body.find('label:visible').text().includes(text)) {
       cy.contains('label:visible', text).should('exist');
-    } else if (!$body.find(`[aria-labelledby='${text}']:visible`).length) {
-      cy.contains(`[aria-labelledby='${text}']:visible`, text).should('exist');
-    } else if (!$body.find(`[aria-label='${text}']:visible`).length) {
-      cy.contains(`[aria-label='${text}']:visible`, text).should('exist');
+    } else if ($body.find(`[aria-labelledby='${text}']:visible`).length) {
+      cy.get(`[aria-labelledby='${text}']:visible`).should('exist');
+    } else if ($body.find(`[aria-label='${text}']:visible`).length) {
+      cy.get(`[aria-label='${text}']:visible`).should('exist');
     } else {
       throw new Error(`Unable to see label: ${text}`);
     }
