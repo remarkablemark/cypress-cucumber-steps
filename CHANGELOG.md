@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.44.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.44.0...v1.44.1) (2023-01-02)
+
+
+### Bug Fixes
+
+* **assertions:** correct find label logic in "Then I see label" ([8a480fd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/8a480fd0af47bd1a6d7d9444d26706947d7665e2))
+
 ## [1.44.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.43.0...v1.44.0) (2023-01-02)
 
 
