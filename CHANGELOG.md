@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.45.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.44.1...v1.45.0) (2023-01-03)
+
+
+### Features
+
+* **actions:** add "When I click on label" ([b9e4a19](https://github.com/remarkablemark/cypress-cucumber-steps/commit/b9e4a197de02e68f5625bc6f1a377f009688406c))
+* **utils:** add setCypressElementByLabelText ([f60b099](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f60b09998befc46ee3e4fa2908f2b79cb98c8087))
+
 ## [1.44.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.44.0...v1.44.1) (2023-01-02)
 
 
