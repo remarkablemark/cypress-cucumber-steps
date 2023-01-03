@@ -1,6 +1,6 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement } from '../utils';
+import { getCypressElement, setCypressElementByLabelText } from '../utils';
 
 /**
  * When I click:
@@ -57,7 +57,6 @@ When('I click', When_I_click);
  *
  * @see
  *
- * - {@link When_I_click_on_link | When I click on link}
  * - {@link When_I_click_on_text | When I click on text}
  */
 /* eslint-enable tsdoc/syntax */
@@ -85,7 +84,6 @@ When('I click on button {string}', When_I_click_on_button);
  *
  * @see
  *
- * - {@link When_I_click_on_button | When I click on button}
  * - {@link When_I_click_on_text | When I click on text}
  */
 /* eslint-enable tsdoc/syntax */
@@ -114,11 +112,37 @@ When('I click on link {string}', When_I_click_on_link);
  *
  * @see
  *
- * - {@link When_I_double_click_on_text | When I double-click on text}
- * - {@link When_I_right_click_on_text | When I right-click on text}
+ * - {@link When_I_click_on_button | When I click on button}
+ * - {@link When_I_click_on_label | When I click on label}
+ * - {@link When_I_click_on_link | When I click on link}
  */
 export function When_I_click_on_text(text: string) {
   cy.contains(text).click();
 }
 
 When('I click on text {string}', When_I_click_on_text);
+
+/**
+ * When I click on label:
+ *
+ * ```gherkin
+ * When I click on label {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I click on label "Label"
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_click_on_text | When I click on text}
+ */
+export function When_I_click_on_label(text: string) {
+  setCypressElementByLabelText(text, `Unable to click label: ${text}`).then(
+    () => getCypressElement().click()
+  );
+}
+
+When('I click on label {string}', When_I_click_on_label);
