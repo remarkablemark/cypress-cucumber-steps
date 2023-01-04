@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.45.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.45.0...v1.45.1) (2023-01-04)
+
+
+### Bug Fixes
+
+* **queries:** ensure multiple elements are returned ([ac49e5e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ac49e5e2a0c1510e48701554d13cedd4b98072e1))
+
 ## [1.45.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.44.1...v1.45.0) (2023-01-03)
 
 
