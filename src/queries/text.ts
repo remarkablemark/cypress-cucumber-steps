@@ -67,7 +67,7 @@ When('I find button by text {string}', When_I_find_button_by_text);
  * - {@link When_I_find_links_by_text | When I find links by text}
  */
 export function When_I_find_buttons_by_text(text: string) {
-  setCypressElement(cy.get('button').contains(text));
+  setCypressElement(cy.get(`button:contains('${text}')`));
 }
 
 When('I find buttons by text {string}', When_I_find_buttons_by_text);
@@ -172,7 +172,7 @@ When('I find link by text {string}', When_I_find_link_by_text);
  * - {@link When_I_find_link_by_text | When I find link by text}
  */
 export function When_I_find_links_by_text(text: string) {
-  setCypressElement(cy.get('a').contains(text));
+  setCypressElement(cy.get(`a:contains('${text}')`));
 }
 
 When('I find links by text {string}', When_I_find_links_by_text);
