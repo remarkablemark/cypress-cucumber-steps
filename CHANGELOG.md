@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.45.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.45.2...v1.45.3) (2023-01-04)
+
+
+### Performance Improvements
+
+* **assertions:** improve get selector for heading ([15222b8](https://github.com/remarkablemark/cypress-cucumber-steps/commit/15222b8ce1f95724ba222745b43dac4eb528f63b))
+
 ## [1.45.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.45.1...v1.45.2) (2023-01-04)
 
 
