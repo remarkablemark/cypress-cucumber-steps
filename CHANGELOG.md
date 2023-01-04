@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.45.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.45.1...v1.45.2) (2023-01-04)
+
+
+### Bug Fixes
+
+* **assertions:** wait until text is found before heading assertion ([244318a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/244318a7ef3a1d28d783ec7c60e2165bc4b7a6a2))
+
 ## [1.45.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.45.0...v1.45.1) (2023-01-04)
 
 
