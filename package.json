@@ -1,6 +1,6 @@
 {
   "name": "cypress-cucumber-steps",
-  "version": "1.45.1",
+  "version": "1.45.2",
   "description": "Cypress Cucumber step definitions",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "lib/index.js",
