@@ -23,5 +23,7 @@ Feature: Cypress docs
     When I get element by label text "Search"
       And I click on label "Search"
       And I get focused element
-      And I type "label"
+      And I type "lab"
+      And I wait 1 second
+      And I type "el"
     Then I see link "label"
