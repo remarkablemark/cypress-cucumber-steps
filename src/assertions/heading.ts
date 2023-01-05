@@ -22,7 +22,10 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_heading(text: string) {
-  cy.get(`h1,h2,h3,h4,h5,h6:contains('${text}'):visible`).should('exist');
+  const selector = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+    .map((tag) => `${tag}:contains('${text}'):visible`)
+    .join(',');
+  cy.get(selector).should('exist');
 }
 
 Then('I see heading {string}', Then_I_see_heading);
