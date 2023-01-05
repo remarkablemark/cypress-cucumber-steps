@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.45.4](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.45.3...v1.45.4) (2023-01-05)
+
+
+### Bug Fixes
+
+* **assertions:** correct heading selector in "Then I see heading" ([0ba0898](https://github.com/remarkablemark/cypress-cucumber-steps/commit/0ba089897a3315291aae661095d765573e291d08))
+
 ## [1.45.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.45.2...v1.45.3) (2023-01-04)
 
 
