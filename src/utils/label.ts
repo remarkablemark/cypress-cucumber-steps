@@ -20,30 +20,18 @@ import { setCypressElement } from '../utils';
  * - {@link getCypressElement}
  * - {@link setCypressElement}
  *
- * @param labelText - Label text.
- * @param errorMessage - Error message.
+ * @param text - Label text.
  *
  * @private
  */
-export function setCypressElementByLabelText(
-  labelText: string,
-  errorMessage: string
-) {
-  return cy.get('body').then(($body) => {
-    let cypressElement;
-
-    if ($body.find('label:visible').text().includes(labelText)) {
-      cypressElement = cy.contains('label:visible', labelText);
-    } else if ($body.find(`[aria-labelledby='${labelText}']:visible`).length) {
-      cypressElement = cy
-        .get(`[aria-labelledby='${labelText}']:visible`)
-        .first();
-    } else if ($body.find(`[aria-label='${labelText}']:visible`).length) {
-      cypressElement = cy.get(`[aria-label='${labelText}']:visible`).first();
-    } else {
-      throw new Error(errorMessage);
-    }
-
-    setCypressElement(cypressElement);
-  });
+export function setCypressElementByLabelText(text: string) {
+  const cypressElement = cy.get(
+    [
+      `label:visible:contains('${text}')`,
+      `[aria-labelledby='${text}']`,
+      `[aria-label='${text}']`,
+    ].join(',')
+  );
+  setCypressElement(cypressElement.first());
+  return cypressElement;
 }
