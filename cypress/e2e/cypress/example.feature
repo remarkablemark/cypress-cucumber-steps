@@ -124,8 +124,8 @@ Feature: Cypress example
     When I find select by display value "bananas"
       And I select option "bananas"
 
-  Scenario: Trigger event
+  Scenario: Find title and trigger event
     Given I visit "https://example.cypress.io/commands/actions"
-    When I find button by text "Click to toggle popover"
+    When I find element by title ""
       And I trigger event "click"
     Then I see heading "Popover"
