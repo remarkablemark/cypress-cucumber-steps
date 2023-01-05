@@ -16,8 +16,10 @@ Feature: Cypress docs
     When I go -1
     Then I see URL contains "go"
 
-  Scenario: Find and click aria-label
+  Scenario: Set Cypress config and find and click aria-label
     Given I visit "https://docs.cypress.io/api/table-of-contents"
+      And I set Cypress config "baseUrl" to "null"
+      And I set Cypress config "defaultCommandTimeout" to "10000"
     Then I see label "Search"
     When I find element by label text "Search"
       And I click on label "Search"

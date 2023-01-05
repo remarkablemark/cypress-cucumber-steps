@@ -126,6 +126,7 @@ Feature: Cypress example
 
   Scenario: Find title and trigger event
     Given I visit "https://example.cypress.io/commands/actions"
+      And I set Cypress config "defaultCommandTimeout" to "10000"
     When I find element by title ""
       And I trigger event "click"
     Then I see heading "Popover"
