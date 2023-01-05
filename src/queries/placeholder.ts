@@ -10,7 +10,7 @@ import { setCypressElement } from '../utils';
  * When I find element by placeholder text {string}
  * ```
  *
- * > Placeholder is not a good substitute for label so prefer {@link When_I_get_element_by_label_text | "When I get element by label text "} instead.
+ * > Placeholder is not a good substitute for label so prefer {@link When_I_find_element_by_label_text | "When I find element by label text "} instead.
  *
  * @example
  *

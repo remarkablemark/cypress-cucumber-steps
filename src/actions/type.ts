@@ -23,10 +23,10 @@ import { getCypressElement } from '../utils';
  *
  * @remarks
  *
- * This requires a preceding step like {@link When_I_get_element_by_label_text | "When I get element by label text"}. For example:
+ * This requires a preceding step like {@link When_I_find_element_by_label_text | "When I find element by label text"}. For example:
  *
  * ```gherkin
- * When I get element by label text "Input"
+ * When I find element by label text "Input"
  *   And I clear
  * ```
  */
@@ -51,10 +51,10 @@ When('I clear', When_I_clear);
  *
  * @remarks
  *
- * This requires a preceding step like {@link When_I_get_element_by_label_text | "When I get element by label text"}. For example:
+ * This requires a preceding step like {@link When_I_find_element_by_label_text | "When I find element by label text"}. For example:
  *
  * ```gherkin
- * When I get element by label text "Email"
+ * When I find element by label text "Email"
  *   And I type "user@example.com"
  * ```
  *

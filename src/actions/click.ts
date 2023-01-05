@@ -140,9 +140,7 @@ When('I click on text {string}', When_I_click_on_text);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_label(text: string) {
-  setCypressElementByLabelText(text, `Unable to click label: ${text}`).then(
-    () => getCypressElement().click()
-  );
+  setCypressElementByLabelText(text).then(() => getCypressElement().click());
 }
 
 When('I click on label {string}', When_I_click_on_label);
