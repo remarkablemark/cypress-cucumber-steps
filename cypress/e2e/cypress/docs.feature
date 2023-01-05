@@ -18,12 +18,9 @@ Feature: Cypress docs
 
   Scenario: Find and click aria-label
     Given I visit "https://docs.cypress.io/api/table-of-contents"
-      And I wait 3 seconds
     Then I see label "Search"
-    When I get element by label text "Search"
+    When I find element by label text "Search"
       And I click on label "Search"
       And I get focused element
-      And I type "lab"
-      And I wait 1 second
-      And I type "el"
-    Then I see link "label"
+      And I type "get"
+    Then I see link "get"
