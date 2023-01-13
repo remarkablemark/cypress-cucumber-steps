@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.48.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.48.0...v1.48.1) (2023-01-13)
+
+
+### Bug Fixes
+
+* **queries:** find and return 1 visible alt text ([31230ec](https://github.com/remarkablemark/cypress-cucumber-steps/commit/31230ece7e585acdfffe2712cfecfad6cf4e59a4))
+* **queries:** find and return 1 visible placeholder text ([968000f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/968000f21aac5a401b6f42d8e81600c38ea0e081))
+* **queries:** find and return 1 visible test id ([a96b194](https://github.com/remarkablemark/cypress-cucumber-steps/commit/a96b194b80bc603eb3adecc1c956989dcc61ac69))
+
 ## [1.48.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.47.0...v1.48.0) (2023-01-05)
 
 
