@@ -37,7 +37,7 @@ import { setCypressElement } from '../utils';
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_find_element_by_testid(testId: string) {
-  setCypressElement(cy.get(`[data-testid='${testId}']`));
+  setCypressElement(cy.get(`[data-testid='${testId}']:visible`).first());
 }
 
 When('I find element by test ID {string}', When_I_find_element_by_testid);

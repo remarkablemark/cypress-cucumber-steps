@@ -1,9 +1,9 @@
 Feature: Cypress docs
   Scenario: Alt text
     Given I visit "https://docs.cypress.io/plugins/directory"
-      And I find element by alt text "Cypress Docs Logo"
+      And I find element by alt text "Cypress Logo"
       And I click
-    Then I see URL "https://docs.cypress.io/"
+    Then I see URL contains "https://docs.cypress.io/"
 
   Scenario: Go back and forward
     Given I visit "https://docs.cypress.io/api/commands/go"
@@ -17,12 +17,14 @@ Feature: Cypress docs
     Then I see URL contains "go"
 
   Scenario: Set Cypress config and find and click aria-label
-    Given I visit "https://docs.cypress.io/api/table-of-contents"
+    Given I visit "https://docs.cypress.io/plugins"
       And I set Cypress config "baseUrl" to "null"
       And I set Cypress config "defaultCommandTimeout" to "10000"
+      And I wait 1 second
     Then I see label "Search"
     When I find element by label text "Search"
       And I click on label "Search"
       And I get focused element
+      And I wait 300 milliseconds
       And I type "get"
     Then I see link "get"
