@@ -38,3 +38,7 @@ Feature: Example
     When I set viewport to "iphone-6"
       And I set viewport to "ipad-mini" and "landscape"
       And I set viewport to 800px by 600px
+
+  Scenario: Local storage
+    When I clear local storage
+      And I clear local storage "key"
