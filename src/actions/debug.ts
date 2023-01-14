@@ -1,5 +1,7 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
+import { getCypressElement } from '../utils';
+
 /* eslint-disable tsdoc/syntax */
 /**
  * When I debug:
@@ -25,8 +27,12 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * - {@link When_I_pause | When I pause}
  */
 /* eslint-enable tsdoc/syntax */
-export function When_I_debug() {
-  cy.debug();
+export async function When_I_debug() {
+  try {
+    getCypressElement().debug();
+  } catch (error) {
+    cy.debug();
+  }
 }
 
 When('I debug', When_I_debug);
