@@ -5,6 +5,7 @@ export * from './cookie';
 export * from './debug';
 export * from './double-click';
 export * from './go';
+export * from './local-storage';
 export * from './log';
 export * from './pause';
 export * from './reload';
