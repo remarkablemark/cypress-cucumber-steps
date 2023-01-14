@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.49.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.48.1...v1.49.0) (2023-01-14)
+
+
+### Features
+
+* **actions:** add "When I clear local storage" ([df2407b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/df2407b58cf982fab4fa9242cc015ba5da3bd2e8))
+* **actions:** debug current Cypress element if applicable ([0635759](https://github.com/remarkablemark/cypress-cucumber-steps/commit/0635759a785d5a8755b86696d13856e45aefa2bf))
+
 ## [1.48.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.48.0...v1.48.1) (2023-01-13)
 
 
