@@ -102,10 +102,11 @@ function hasDisplayValue(
  *
  * @param element - Element name.
  * @param value - Display value.
+ * @returns - Cypress element.
  */
 function getByDisplayValue(element: 'input' | 'textarea', value: string) {
   return cy
-    .get(element)
+    .get(`${element}:visible`)
     .filter(
       (index, element: HTMLInputElement) =>
         Cypress.$(element).val()?.toString() === value
@@ -222,7 +223,7 @@ When(
  * - {@link When_I_get_element_by_display_value | When I get element by display value}
  */
 export function When_I_find_select_by_display_value(value: string) {
-  setCypressElement(cy.contains('option', value).closest('select'));
+  setCypressElement(cy.contains('option', value).closest('select').first());
 }
 
 When(
