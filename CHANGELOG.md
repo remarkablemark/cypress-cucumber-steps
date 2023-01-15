@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.49.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.49.0...v1.49.1) (2023-01-15)
+
+
+### Bug Fixes
+
+* **queries:** get first visible element by display value ([3155cea](https://github.com/remarkablemark/cypress-cucumber-steps/commit/3155cea3dbce3438eaa6620645dc7a9a9fe77030))
+
 ## [1.49.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.48.1...v1.49.0) (2023-01-14)
 
 
