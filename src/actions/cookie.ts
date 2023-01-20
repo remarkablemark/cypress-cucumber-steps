@@ -1,5 +1,36 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
+/* eslint-disable tsdoc/syntax */
+/**
+ * When I clear cookie:
+ *
+ * ```gherkin
+ * When I clear cookie {string}
+ * ```
+ *
+ * @example
+ *
+ * Clear the `authId` cookie:
+ *
+ * ```gherkin
+ * When I clear cookie "authId"
+ * ```
+ *
+ * @remarks
+ *
+ * Clears a specific browser cookie.
+ *
+ * > Cypress automatically clears all cookies _before_ each test to prevent state from being shared across tests when [test isolation](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation) is enabled.
+ * >
+ * > You shouldn't need to use this command unless you're using it to clear a specific cookie inside a single test or test isolation is disabled.
+ */
+/* eslint-enable tsdoc/syntax */
+export function When_I_clear_cookie(name: string) {
+  cy.clearCookie(name);
+}
+
+When('I clear cookie {string}', When_I_clear_cookie);
+
 /**
  * When I set cookie:
  *
