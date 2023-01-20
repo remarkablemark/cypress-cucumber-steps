@@ -42,3 +42,6 @@ Feature: Example
   Scenario: Local storage
     When I clear local storage
       And I clear local storage "key"
+
+  Scenario: Cookie
+    When I clear cookie "authId"

@@ -27,7 +27,7 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  *
  * Clears [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage) data for current domain and subdomain.
  *
- * > Cypress automatically clears all local storage before each test to prevent state from being shared across tests when [test isolation](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation) is enabled.
+ * > Cypress automatically clears all local storage _before_ each test to prevent state from being shared across tests when [test isolation](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation) is enabled.
  * >
  * > You shouldn't need to use this command unless you're using it to clear localStorage inside a single test or test isolation is disabled.
  */
