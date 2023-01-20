@@ -32,7 +32,7 @@
 
 <h3>Remarks</h3><p>Clears <a href="https://developer.mozilla.org/docs/Web/API/Window/localStorage"><code>localStorage</code></a> data for current domain and subdomain.</p>
 <blockquote>
-<p>Cypress automatically clears all local storage before each test to prevent state from being shared across tests when <a href="https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation">test isolation</a> is enabled.</p>
+<p>Cypress automatically clears all local storage <em>before</em> each test to prevent state from being shared across tests when <a href="https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation">test isolation</a> is enabled.</p>
 <p>You shouldn&#39;t need to use this command unless you&#39;re using it to clear localStorage inside a single test or test isolation is disabled.</p>
 </blockquote>
 </div>
@@ -43,7 +43,7 @@
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> key: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/09c1272/src/actions/local-storage.ts#L35">actions/local-storage.ts:35</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/1b4c167/src/actions/local-storage.ts#L35">actions/local-storage.ts:35</a></li></ul></aside></li></ul></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -83,6 +83,7 @@
 <li class="tsd-kind-function"><a href="Then_I_see_text.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>Then_<wbr/>I_<wbr/>see_<wbr/>text</a></li>
 <li class="tsd-kind-function"><a href="When_I_blur.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>When_<wbr/>I_<wbr/>blur</a></li>
 <li class="tsd-kind-function"><a href="When_I_clear.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>When_<wbr/>I_<wbr/>clear</a></li>
+<li class="tsd-kind-function"><a href="When_I_clear_cookie.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>When_<wbr/>I_<wbr/>clear_<wbr/>cookie</a></li>
 <li class="current tsd-kind-function"><a href="When_I_clear_local_storage.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>When_<wbr/>I_<wbr/>clear_<wbr/>local_<wbr/>storage</a></li>
 <li class="tsd-kind-function"><a href="When_I_click.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>When_<wbr/>I_<wbr/>click</a></li>
 <li class="tsd-kind-function"><a href="When_I_click_on_button.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>When_<wbr/>I_<wbr/>click_<wbr/>on_<wbr/>button</a></li>
