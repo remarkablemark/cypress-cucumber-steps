@@ -40,7 +40,7 @@
 <h5>text: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/843b0a8/src/assertions/label.ts#L28">assertions/label.ts:28</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/1a7ac5c/src/assertions/label.ts#L28">assertions/label.ts:28</a></li></ul></aside></li></ul></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -138,4 +138,52 @@
 <li class="tsd-kind-function tsd-is-private"><a href="setCypressElementByLabelText.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>set<wbr/>Cypress<wbr/>Element<wbr/>By<wbr/>Label<wbr/>Text</a></li></ul></nav></div></div>
 <div class="container tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
-<div class="overlay"></div><script src="../assets/main.js"></script></body></html>
+<div class="overlay"></div><script src="../assets/main.js"></script><style>pre {
+  position: relative;
+}
+pre > button {
+  background: var(--code-background);
+  border-radius: 0.8em;
+  border: 0.1em solid var(--color-accent);
+  cursor: pointer;
+  height: 30px;
+  opacity: 0;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transition: all 0.2s ease-out;
+  user-select: none;
+}
+pre:hover > button {
+  opacity: 1;
+}
+pre > button:active,
+pre > button:focus,
+pre > button:hover {
+  background: var(--color-background);
+  border-color: var(--color-text-aside);
+  opacity: 1;
+  outline: 0;
+}</style><script>(function(){function init() {
+    var text = 'Copy';
+    var template = document.createElement('button');
+    template.type = 'button';
+    template.ariaLabel = 'Copy code to clipboard';
+    template.innerText = text;
+    document.querySelectorAll('pre').forEach(function (pre) {
+        var button = template.cloneNode(true);
+        button.addEventListener('click', function () {
+            var _a;
+            var code = (_a = pre.querySelector('code')) === null || _a === void 0 ? void 0 : _a.innerText;
+            if (code) {
+                navigator.clipboard.writeText(code.trim());
+            }
+            button.innerText = 'Copied';
+            setTimeout(function () {
+                button.blur();
+                button.innerText = text;
+            }, 2e3);
+        });
+        pre.appendChild(button);
+    });
+}init();})();</script></body></html>
