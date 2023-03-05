@@ -27,6 +27,10 @@ import { setCypressElement } from '../utils';
  * ```
  *
  * Inspired by Testing Library's [ByAltText](https://testing-library.com/docs/queries/byalttext).
+ *
+ * @see
+ *
+ * - {@link When_I_find_elements_by_alt_text | When I find elements by alt text}
  */
 export function When_I_find_element_by_alt_text(altText: string) {
   setCypressElement(cy.get(`[alt='${altText}']:visible`).first());

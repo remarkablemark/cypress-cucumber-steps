@@ -2,6 +2,7 @@ Feature: Cypress docs
   Scenario: Alt text
     Given I set viewport to "ipad-mini"
     When I visit "https://docs.cypress.io/plugins/directory"
+      And I find elements by alt text "Cypress Logo"
       And I find element by alt text "Cypress Logo"
       And I click
     Then I see URL contains "https://docs.cypress.io/"

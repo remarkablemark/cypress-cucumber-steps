@@ -1,4 +1,5 @@
 export * from './alt-text';
+export * from './alt-texts';
 export * from './button';
 export * from './buttons';
 export * from './element';
