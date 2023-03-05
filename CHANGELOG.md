@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.52.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.51.0...v1.52.0) (2023-03-05)
+
+
+### Features
+
+* **queries:** add "When I find elements by alt text" ([6449c07](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6449c072208775fa67bf91662bc60c53b2e88508))
+
 ## [1.51.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.50.0...v1.51.0) (2023-03-05)
 
 
