@@ -1,4 +1,9 @@
 Feature: Example
+  Scenario: See document title
+    Given I visit "https://example.com/"
+    Then I see document title "Example Domain"
+      And I see document title contains "Example"
+
   Scenario: See and not see text
     Given I visit "https://example.com/"
     Then I see text "Example Domain"

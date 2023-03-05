@@ -1,4 +1,5 @@
 export * from './button';
+export * from './document-title';
 export * from './element';
 export * from './hash';
 export * from './heading';
