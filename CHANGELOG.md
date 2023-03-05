@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.51.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.50.0...v1.51.0) (2023-03-05)
+
+
+### Features
+
+* **assertions:** add "I see document title" & "I see document contains" ([9fef794](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9fef794614fd175aa6e356e4deaa02b3296dceed))
+
 ## [1.50.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.49.1...v1.50.0) (2023-01-20)
 
 
