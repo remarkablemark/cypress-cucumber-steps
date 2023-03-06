@@ -13,6 +13,7 @@ Feature: Example
   Scenario: See and not see link
     Given I visit "https://example.com/"
     Then I see link "More information"
+      And I do not see link "Lorem ipsum"
 
   Scenario: Reload and assert URL
     Given I visit "https://example.com/index.html"
