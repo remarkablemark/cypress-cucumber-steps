@@ -49,3 +49,6 @@ lib/
 
 # Mac OS
 .DS_Store
+
+# Test
+cypress/screenshots/
