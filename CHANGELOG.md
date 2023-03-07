@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.54.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.53.0...v1.54.0) (2023-03-07)
+
+
+### Features
+
+* **assertions:** add "Then I see element has attribute containing" ([c6208d7](https://github.com/remarkablemark/cypress-cucumber-steps/commit/c6208d7c2c33a69cc776fc748c3f795ba68fe4a5))
+* **assertions:** add "Then I see element has attribute equal to" ([c7d8423](https://github.com/remarkablemark/cypress-cucumber-steps/commit/c7d84231f13ff57ad93b29dc900d290f3f023e4d))
+* **assertions:** add "Then I see element has attribute" ([d035c3c](https://github.com/remarkablemark/cypress-cucumber-steps/commit/d035c3cdabfa34c5931fa17852e2d373a59210cd))
+
 ## [1.53.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.52.0...v1.53.0) (2023-03-06)
 
 
