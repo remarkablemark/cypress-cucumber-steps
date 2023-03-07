@@ -17,8 +17,10 @@ Feature: Example
 
   Scenario: See attribute
     Given I visit "https://example.com/"
-    When I find link by text "More information"
+    When I find element by text "More information"
     Then I see element has attribute "href"
+    When I find link by text "More information"
+    Then I see element has attribute "href" equal to "https://www.iana.org/domains/example"
 
   Scenario: Reload and assert URL
     Given I visit "https://example.com/index.html"
