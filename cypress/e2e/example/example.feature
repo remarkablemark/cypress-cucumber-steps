@@ -15,6 +15,15 @@ Feature: Example
     Then I see link "More information"
       And I do not see link "Lorem ipsum"
 
+  Scenario: See attribute
+    Given I visit "https://example.com/"
+    When I find element by text "More information"
+    Then I see element has attribute "href"
+    When I find link by text "More information"
+    Then I see element has attribute "href" equal to "https://www.iana.org/domains/example"
+    When I find link by text "More information..."
+    Then I see element has attribute "href" containing "example"
+
   Scenario: Reload and assert URL
     Given I visit "https://example.com/index.html"
       And I reload the page
