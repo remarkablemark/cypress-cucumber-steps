@@ -1,3 +1,4 @@
+export * from './attribute';
 export * from './button';
 export * from './document-title';
 export * from './hash';
