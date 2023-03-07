@@ -21,6 +21,8 @@ Feature: Example
     Then I see element has attribute "href"
     When I find link by text "More information"
     Then I see element has attribute "href" equal to "https://www.iana.org/domains/example"
+    When I find link by text "More information..."
+    Then I see element has attribute "href" containing "example"
 
   Scenario: Reload and assert URL
     Given I visit "https://example.com/index.html"
