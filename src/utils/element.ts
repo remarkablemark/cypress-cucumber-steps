@@ -60,7 +60,7 @@ export function getCypressElement(): CypressChainableElement {
     throw new Error(
       `The element you are chaining off is ${cypressElement}.
 
-Add a preceding step "When I get element by ..." or "When I find element by ..."`
+Add a preceding step "When I find element by ..."`
     );
   }
   return cypressElement;
