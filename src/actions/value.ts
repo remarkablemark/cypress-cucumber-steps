@@ -17,7 +17,7 @@ import { getCypressElement } from '../utils';
  *
  * @remarks
  *
- * This requires a preceding step like {@link When_I_get_element_by_display_value | "When I get element by display value"}. For example:
+ * A preceding step like {@link When_I_get_element_by_display_value | "When I get element by display value"} is required. For example:
  *
  * ```gherkin
  * When I get element by display value "Input"
