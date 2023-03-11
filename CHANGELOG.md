@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.55.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.54.0...v1.55.0) (2023-03-11)
+
+
+### Features
+
+* **actions:** add "When I focus" ([af0fd84](https://github.com/remarkablemark/cypress-cucumber-steps/commit/af0fd8419ab14aa5336277437d06d7b32f199e27))
+
 ## [1.54.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.53.0...v1.54.0) (2023-03-07)
 
 
