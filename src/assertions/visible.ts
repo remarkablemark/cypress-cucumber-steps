@@ -17,7 +17,7 @@ import { getCypressElement } from '../utils';
  *
  * @remarks
  *
- * This requires a preceding step like {@link When_I_find_element_by_text | "When I find element by text"}. For example:
+ * A preceding step like {@link When_I_find_element_by_text | "When I find element by text"} is required. For example:
  *
  * ```gherkin
  * When I find element by text "Text"
@@ -50,7 +50,7 @@ Then('I see element is visible', Then_I_see_element_is_visible);
  *
  * @remarks
  *
- * This requires a preceding step like {@link When_I_find_element_by_text | "When I find element by text"}. For example:
+ * A preceding step like {@link When_I_find_element_by_text | "When I find element by text"} is required. For example:
  *
  * ```gherkin
  * When I find element by text "Text"
