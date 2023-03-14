@@ -105,6 +105,13 @@ Feature: Cypress example
       And I click
     Then I see URL "https://example.cypress.io/"
 
+  Scenario: Count elements length
+    Given I visit "https://example.cypress.io/commands/aliasing"
+    When I find buttons by text "Get Comment"
+    Then I count 1 element
+    When I find buttons by text "Change"
+    Then I count 4 elements
+
   Scenario: Find and set input value
     Given I visit "https://example.cypress.io/commands/actions"
     When I double-click on text "Double click to edit"
