@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.56.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.55.0...v1.56.0) (2023-03-14)
+
+
+### Features
+
+* **assertions:** add "Then I count elements length" ([dd71d46](https://github.com/remarkablemark/cypress-cucumber-steps/commit/dd71d4672684cc6aa5b2dc0a53fc4bf301ff5610))
+
 ## [1.55.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.54.0...v1.55.0) (2023-03-11)
 
 
