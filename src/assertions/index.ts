@@ -4,6 +4,7 @@ export * from './document-title';
 export * from './hash';
 export * from './heading';
 export * from './label';
+export * from './length';
 export * from './link';
 export * from './text';
 export * from './url';
