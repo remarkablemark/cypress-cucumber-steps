@@ -50,5 +50,7 @@ lib/
 # Mac OS
 .DS_Store
 
-# Test
+# Cypress
+cypress/downloads/
 cypress/screenshots/
+cypress/videos/
