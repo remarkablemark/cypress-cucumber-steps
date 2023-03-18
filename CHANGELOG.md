@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.58.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.57.0...v1.58.0) (2023-03-18)
+
+
+### Features
+
+* **queries:** add "When I find closest element" ([3e398f3](https://github.com/remarkablemark/cypress-cucumber-steps/commit/3e398f308375036a49b6faaee099a6b14cfd8103))
+
 ## [1.57.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.56.0...v1.57.0) (2023-03-18)
 
 
