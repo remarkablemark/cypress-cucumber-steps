@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.57.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.56.0...v1.57.0) (2023-03-18)
+
+
+### Features
+
+* **actions:** add "When I submit" ([55573af](https://github.com/remarkablemark/cypress-cucumber-steps/commit/55573afec3ae56fe89843d77ee15fe6d7e17e3e0))
+* **queries:** add "When I find form" ([21f1e96](https://github.com/remarkablemark/cypress-cucumber-steps/commit/21f1e96847f8d90d9d1ca1b496e8b178a68504ca))
+
 ## [1.56.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.55.0...v1.56.0) (2023-03-14)
 
 
