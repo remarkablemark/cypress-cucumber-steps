@@ -146,3 +146,10 @@ Feature: Cypress example
     Then I see element has attribute "type"
       And I get focused element
       And I see element has attribute "type" equal to "submit"
+
+  Scenario: Find and submit form
+    Given I visit "https://example.cypress.io/commands/actions"
+    When I find form
+      And I get 5th element
+      And I submit
+    Then I see text "Your form has been submitted!"
