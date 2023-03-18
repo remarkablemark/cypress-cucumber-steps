@@ -2,6 +2,7 @@ export * from './alt-text';
 export * from './alt-texts';
 export * from './button';
 export * from './buttons';
+export * from './closest';
 export * from './element';
 export * from './focused';
 export * from './form';
