@@ -60,3 +60,6 @@ Feature: Example
 
   Scenario: Cookie
     When I clear cookie "authId"
+
+  Scenario: Session storage
+    When I clear session storage

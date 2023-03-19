@@ -14,6 +14,7 @@ export * from './right-click';
 export * from './screenshot';
 export * from './scroll';
 export * from './select';
+export * from './session-storage';
 export * from './submit';
 export * from './trigger';
 export * from './type';
