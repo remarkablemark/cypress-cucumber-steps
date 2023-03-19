@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.59.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.58.0...v1.59.0) (2023-03-19)
+
+
+### Features
+
+* **actions:** add "When I clear session storage" ([bc91098](https://github.com/remarkablemark/cypress-cucumber-steps/commit/bc91098006e75237115d052a1d755683c4b02aef))
+
 ## [1.58.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.57.0...v1.58.0) (2023-03-18)
 
 
