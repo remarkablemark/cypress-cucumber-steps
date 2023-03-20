@@ -171,6 +171,10 @@ Feature: Cypress example
       And I set system time to "2020-02-02"
       And I click on text "Click for current time!"
     Then I see text "1580601600"
-    When I use real timers
+    When I advance timers by 300 milliseconds
+      And I advance timers by 1 millisecond
+      And I advance timers by 3 seconds
+      And I advance timers by 1 second
+      And I use real timers
       And I click on text "Click for current time!"
     Then I do not see text "15806016000"
