@@ -16,6 +16,7 @@ export * from './scroll';
 export * from './select';
 export * from './session-storage';
 export * from './submit';
+export * from './timer';
 export * from './trigger';
 export * from './type';
 export * from './value';
