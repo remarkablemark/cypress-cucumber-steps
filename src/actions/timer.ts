@@ -30,6 +30,7 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * @see
  *
  * - {@link When_I_use_real_timers | When I use real timers}
+ * - {@link When_I_set_system_time | When I set system time}
  */
 export function When_I_use_fake_timers() {
   cy.clock();
@@ -67,3 +68,44 @@ export function When_I_use_real_timers() {
 }
 
 When('I use real timers', When_I_use_real_timers);
+
+/**
+ * When I set system time:
+ *
+ * ```gherkin
+ * When I set system time to {int}
+ * When I set system time to {string}
+ * ```
+ *
+ * @example
+ *
+ * Change current system time to Unix epoch:
+ *
+ * ```gherkin
+ * When I set system time to 0
+ * ```
+ *
+ * Change current system time to `2020-02-02`:
+ *
+ * ```gherkin
+ * When I set system time to "2020-02-02"
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step {@link When_I_use_fake_timers | "When I use fake timers"} is required. For example:
+ *
+ * ```gherkin
+ * When I use fake timers
+ *   And I set system time to "2020-02-02"
+ * ```
+ */
+export function When_I_set_system_time(now: number | string) {
+  if (typeof now === 'string') {
+    now = new Date(now).getTime();
+  }
+  cy.clock().invoke('setSystemTime', now);
+}
+
+When('I set system time to {int}', When_I_set_system_time);
+When('I set system time to {string}', When_I_set_system_time);
