@@ -160,3 +160,11 @@ Feature: Cypress example
       And I find closest element "form"
       And I submit
     Then I see text "Your form has been submitted!"
+
+  Scenario: Timers
+    Given I visit "https://example.cypress.io/commands/spies-stubs-clocks"
+    When I use fake timers
+      And I click on text "Click for current time!"
+    Then I see text "0"
+    When I use real timers
+      And I click on text "Click for current time!"
