@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.60.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.59.0...v1.60.0) (2023-03-20)
+
+
+### Features
+
+* **actions:** add "When I advance timers by milliseconds" ([6a29f76](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6a29f76753e9fa59deeabcb8d149fada6dc4e225))
+* **actions:** add "When I advance timers by seconds" ([33c31c6](https://github.com/remarkablemark/cypress-cucumber-steps/commit/33c31c6712317cfb25e7d87fe32d794bb866f90a))
+* **actions:** add "When I set system time" ([44910fd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/44910fd56548697debfeb391fa2539625d43c527))
+* **actions:** add "When I use fake timers" ([9ea2e49](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9ea2e4948fe9c423dadcf5ba897c198f51ba3cd5))
+* **actions:** add "When I use real timers" ([cf65a6a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/cf65a6a9b391cd1917287517f64d11adf79dd0d3))
+
 ## [1.59.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.58.0...v1.59.0) (2023-03-19)
 
 
