@@ -31,6 +31,7 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  *
  * - {@link When_I_use_real_timers | When I use real timers}
  * - {@link When_I_set_system_time | When I set system time}
+ * - {@link When_I_advance_timers_by_milliseconds | When I advance timers by milliseconds}
  */
 export function When_I_use_fake_timers() {
   cy.clock();
@@ -109,3 +110,48 @@ export function When_I_set_system_time(now: number | string) {
 
 When('I set system time to {int}', When_I_set_system_time);
 When('I set system time to {string}', When_I_set_system_time);
+
+/**
+ * When I advance timers by milliseconds:
+ *
+ * ```gherkin
+ * When I advance timers by {int} milliseconds
+ * ```
+ *
+ * Moves the clock the specified number of `milliseconds`. Any timers within the affected range of time will be called.
+ *
+ * @example
+ *
+ * Tick the clock time by 300 milliseconds:
+ *
+ * ```gherkin
+ * When I advance timers by 300 milliseconds
+ * ```
+ *
+ * Tick the clock time by 1 millisecond:
+ *
+ * ```gherkin
+ * When I advance timers by 1 millisecond
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step {@link When_I_use_fake_timers | "When I use fake timers"} is required. For example:
+ *
+ * ```gherkin
+ * When I use fake timers
+ *   And I advance timers by 300 milliseconds
+ * ```
+ */
+export function When_I_advance_timers_by_milliseconds(milliseconds: number) {
+  cy.tick(milliseconds);
+}
+
+When(
+  'I advance timers by {int} milliseconds',
+  When_I_advance_timers_by_milliseconds
+);
+When(
+  'I advance timers by {int} millisecond',
+  When_I_advance_timers_by_milliseconds
+);
