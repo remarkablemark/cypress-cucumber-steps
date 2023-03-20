@@ -32,6 +32,7 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * - {@link When_I_use_real_timers | When I use real timers}
  * - {@link When_I_set_system_time | When I set system time}
  * - {@link When_I_advance_timers_by_milliseconds | When I advance timers by milliseconds}
+ * - {@link When_I_advance_timers_by_seconds | When I advance timers by seconds}
  */
 export function When_I_use_fake_timers() {
   cy.clock();
@@ -142,6 +143,10 @@ When('I set system time to {string}', When_I_set_system_time);
  * When I use fake timers
  *   And I advance timers by 300 milliseconds
  * ```
+ *
+ * @see
+ *
+ * - {@link When_I_advance_timers_by_seconds | When I advance timers by seconds}
  */
 export function When_I_advance_timers_by_milliseconds(milliseconds: number) {
   cy.tick(milliseconds);
@@ -155,3 +160,46 @@ When(
   'I advance timers by {int} millisecond',
   When_I_advance_timers_by_milliseconds
 );
+
+/**
+ * When I advance timers by seconds:
+ *
+ * ```gherkin
+ * When I advance timers by {int} seconds
+ * ```
+ *
+ * Moves the clock the specified number of `seconds`. Any timers within the affected range of time will be called.
+ *
+ * @example
+ *
+ * Tick the clock time by 3 seconds:
+ *
+ * ```gherkin
+ * When I advance timers by 3 seconds
+ * ```
+ *
+ * Tick the clock time by 1 second:
+ *
+ * ```gherkin
+ * When I advance timers by 1 second
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step {@link When_I_use_fake_timers | "When I use fake timers"} is required. For example:
+ *
+ * ```gherkin
+ * When I use fake timers
+ *   And I advance timers by 3 seconds
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_advance_timers_by_milliseconds | When I advance timers by milliseconds}
+ */
+export function When_I_advance_timers_by_seconds(seconds: number) {
+  cy.tick(seconds * 1000);
+}
+
+When('I advance timers by {int} seconds', When_I_advance_timers_by_seconds);
+When('I advance timers by {int} second', When_I_advance_timers_by_seconds);
