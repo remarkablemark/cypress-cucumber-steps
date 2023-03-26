@@ -24,49 +24,20 @@
 <p><a href="https://www.npmjs.com/package/cypress-cucumber-steps"><img src="https://img.shields.io/npm/v/cypress-cucumber-steps.svg" alt="NPM version"></a>
 <a href="https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml"><img src="https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml/badge.svg" alt="build"></a>
 <a href="https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml"><img src="https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml/badge.svg" alt="cypress"></a></p>
-<p><a href="https://www.cypress.io/">Cypress</a> <a href="https://github.com/badeball/cypress-cucumber-preprocessor">Cucumber</a> step definitions. See <a href="https://b.remarkabl.org/cypress-cucumber-steps">docs</a> and <a href="https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e">examples</a>.</p>
+<p><a href="https://www.cypress.io/">Cypress</a> <a href="https://github.com/badeball/cypress-cucumber-preprocessor">Cucumber</a> step definitions.</p>
 
-<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
-  <h2>Prerequisites</h2>
+<a href="#setup" id="setup" style="color: inherit; text-decoration: none;">
+  <h2>Setup</h2>
 </a>
-<p>Install peerDependencies:</p>
-<pre><code class="language-sh"><span class="hl-0">npm </span><span class="hl-1">install</span><span class="hl-0"> </span><span class="hl-1">--save-dev</span><span class="hl-0"> </span><span class="hl-1">cypress</span><span class="hl-0"> </span><span class="hl-1">@badeball/cypress-cucumber-preprocessor</span>
-</code></pre>
-<p>Or using Yarn:</p>
-<pre><code class="language-sh"><span class="hl-0">yarn </span><span class="hl-1">add</span><span class="hl-0"> </span><span class="hl-1">--dev</span><span class="hl-0"> </span><span class="hl-1">cypress</span><span class="hl-0"> </span><span class="hl-1">@badeball/cypress-cucumber-preprocessor</span>
-</code></pre>
-<p>Then set up <a href="https://docs.cypress.io/guides/getting-started/installing-cypress">Cypress</a> and <a href="https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md">cypress-cucumber-preprocessor</a>.</p>
-
-<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-  <h2>Installation</h2>
-</a>
-<p><a href="https://www.npmjs.com/package/cypress-cucumber-steps">NPM</a>:</p>
-<pre><code class="language-sh"><span class="hl-0">npm </span><span class="hl-1">install</span><span class="hl-0"> </span><span class="hl-1">--save-dev</span><span class="hl-0"> </span><span class="hl-1">cypress-cucumber-steps</span>
-</code></pre>
-<p><a href="https://yarnpkg.com/package/cypress-cucumber-steps">Yarn</a>:</p>
-<pre><code class="language-sh"><span class="hl-0">yarn </span><span class="hl-1">add</span><span class="hl-0"> </span><span class="hl-1">--dev</span><span class="hl-0"> </span><span class="hl-1">cypress-cucumber-steps</span>
-</code></pre>
+<p>Follow the <a href="https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Setup">setup instructions</a>.</p>
 
 <a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
   <h2>Usage</h2>
 </a>
-<p>Create a directory for the common step definitions:</p>
-<pre><code class="language-sh"><span class="hl-0">mkdir </span><span class="hl-1">-p</span><span class="hl-0"> </span><span class="hl-1">cypress/support/step_definitions/</span>
-</code></pre>
-<p>Create a <a href="https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/step-definitions.md">step definition</a> file:</p>
-<pre><code class="language-sh"><span class="hl-0">touch </span><span class="hl-1">cypress/support/step_definitions/</span><span class="hl-2">**</span><span class="hl-1">/</span><span class="hl-2">*</span><span class="hl-1">.{js,ts}</span>
-</code></pre>
-<blockquote>
-<p>Replace <code>**/*.{js,ts}</code> with a filename like <code>index.ts</code>.</p>
-</blockquote>
-<p>Require the module with TypeScript:</p>
-<pre><code class="language-ts"><span class="hl-3">import</span><span class="hl-0"> </span><span class="hl-1">&#39;cypress-cucumber-steps&#39;</span><span class="hl-0">;</span>
-</code></pre>
-<p>Or require the module with CommonJS:</p>
-<pre><code class="language-js"><span class="hl-4">require</span><span class="hl-0">(</span><span class="hl-1">&#39;cypress-cucumber-steps&#39;</span><span class="hl-0">);</span>
-</code></pre>
-<p>Now the step definition can be used in feature files:</p>
-<pre><code class="language-gherkin"><span class="hl-5"># cypress/e2e/example.feature</span><br/><span class="hl-2">When </span><span class="hl-0">I visit </span><span class="hl-1">&quot;https://example.com/&quot;</span><br/><span class="hl-2">Then </span><span class="hl-0">I see text </span><span class="hl-1">&quot;Example Domain&quot;</span>
+<p>Use cypress-cucumber-steps in your feature files:</p>
+<pre><code class="language-feature"># cypress/e2e/example.feature
+Given I visit &quot;https://example.com/&quot;
+Then I see text &quot;Example Domain&quot;
 </code></pre>
 <p>See <a href="https://b.remarkabl.org/cypress-cucumber-steps">docs</a> and <a href="https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e">examples</a>.</p>
 
