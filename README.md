@@ -10,71 +10,19 @@
 [![build](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml)
 [![cypress](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml)
 
-[Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions. See [docs](https://b.remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
+[Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions.
 
-## Prerequisites
+## Setup
 
-Install peerDependencies:
-
-```sh
-npm install --save-dev cypress @badeball/cypress-cucumber-preprocessor
-```
-
-Or using Yarn:
-
-```sh
-yarn add --dev cypress @badeball/cypress-cucumber-preprocessor
-```
-
-Then set up [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) and [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md).
-
-## Installation
-
-[NPM](https://www.npmjs.com/package/cypress-cucumber-steps):
-
-```sh
-npm install --save-dev cypress-cucumber-steps
-```
-
-[Yarn](https://yarnpkg.com/package/cypress-cucumber-steps):
-
-```sh
-yarn add --dev cypress-cucumber-steps
-```
+Follow the [setup instructions](https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Setup).
 
 ## Usage
 
-Create a directory for the common step definitions:
+Use cypress-cucumber-steps in your feature files:
 
-```sh
-mkdir -p cypress/support/step_definitions/
-```
-
-Create a [step definition](https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/step-definitions.md) file:
-
-```sh
-touch cypress/support/step_definitions/**/*.{js,ts}
-```
-
-> Replace `**/*.{js,ts}` with a filename like `index.ts`.
-
-Require the module with TypeScript:
-
-```ts
-import 'cypress-cucumber-steps';
-```
-
-Or require the module with CommonJS:
-
-```js
-require('cypress-cucumber-steps');
-```
-
-Now the step definition can be used in feature files:
-
-```gherkin
+```feature
 # cypress/e2e/example.feature
-When I visit "https://example.com/"
+Given I visit "https://example.com/"
 Then I see text "Example Domain"
 ```
 
