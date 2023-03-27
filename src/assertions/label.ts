@@ -17,7 +17,7 @@ import { getCypressElement, setCypressElementByLabelText } from '../utils';
  *
  * @remarks
  *
- * This asserts that a label with text **_exists_** and is **_visible_** in the screen.
+ * Assert that a label with text **_exists_** and is **_visible_** in the screen.
  *
  * Inspired by Testing Library's [ByLabelText](https://testing-library.com/docs/queries/bylabeltext).
  *
