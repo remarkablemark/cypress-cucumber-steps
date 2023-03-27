@@ -4,6 +4,7 @@ export * from './button';
 export * from './buttons';
 export * from './closest';
 export * from './element';
+export * from './find';
 export * from './focused';
 export * from './form';
 export * from './label';
