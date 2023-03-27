@@ -26,7 +26,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * A preceding step like {@link When_I_find_element_by_label_text | "When I find element by label text"} is required. For example:
  *
  * ```gherkin
- * When I get element by label text "Text"
+ * When I find element by label text "Text"
  *   And I find closest element "form"
  *   And I submit
  * ```
