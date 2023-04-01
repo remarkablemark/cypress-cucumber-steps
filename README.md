@@ -20,7 +20,7 @@ Follow the [setup instructions](https://github.com/remarkablemark/cypress-cucumb
 
 Use cypress-cucumber-steps in your feature files:
 
-```feature
+```gherkin
 # cypress/e2e/example.feature
 Given I visit "https://example.com/"
 Then I see text "Example Domain"
