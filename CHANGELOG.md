@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.62.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.61.0...v1.62.0) (2023-04-01)
+
+
+### Features
+
+* **actions:** pass options to "When I type" ([a2adaf0](https://github.com/remarkablemark/cypress-cucumber-steps/commit/a2adaf01f90a20ff264b58751d6df8023bd557fe))
+
 ## [1.61.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.60.0...v1.61.0) (2023-03-27)
 
 
