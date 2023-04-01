@@ -22,7 +22,7 @@ Feature: Cypress example
     When I click on button "Click to toggle popover"
     Then I see text "This popover shows up on click"
 
-  Scenario: See and click label
+  Scenario: See, click, and type label
     Given I visit "https://example.cypress.io/commands/actions"
     Then I see label "Email address"
     When I click on label "Email address"
@@ -59,6 +59,15 @@ Feature: Cypress example
     Given I visit "https://example.cypress.io/commands/actions"
       And I get element by label text "Email address"
       And I type "user@example.com"
+        | animationDistanceThreshold | 5 |
+        | delay | 10 |
+        | force | false |
+        | log | true |
+        | parseSpecialCharSequences | true |
+        | release | true |
+        | scrollBehavior | top |
+        | timeout | 4000 |
+        | waitForAnimations | true |
     When I find element by placeholder text "Password"
       And I type "password"
       And I clear

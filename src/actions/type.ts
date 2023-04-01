@@ -1,6 +1,6 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement } from '../utils';
+import { getCypressElement, getOptions } from '../utils';
 
 /**
  * When I clear:
@@ -49,6 +49,21 @@ When('I clear', When_I_clear);
  * When I type "Hello, world!"
  * ```
  *
+ * [Options](https://docs.cypress.io/api/commands/type#Arguments):
+ *
+ * ```gherkin
+ * When I type "Hello, world!"
+ *   | animationDistanceThreshold | 5 |
+ *   | delay | 10 |
+ *   | force | false |
+ *   | log | true |
+ *   | parseSpecialCharSequences | true |
+ *   | release | true |
+ *   | scrollBehavior | top |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ * ```
+ *
  * @remarks
  *
  * A preceding step like {@link When_I_find_element_by_label_text | "When I find element by label text"} is required. For example:
@@ -65,8 +80,8 @@ When('I clear', When_I_clear);
  * When I type "{enter}"
  * ```
  */
-export function When_I_type(text: string) {
-  getCypressElement().type(text);
+export function When_I_type(text: string, options?: DataTable) {
+  getCypressElement().type(text, getOptions(options));
 }
 
 When('I type {string}', When_I_type);
