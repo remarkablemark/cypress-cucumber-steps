@@ -28,9 +28,9 @@ Then I see text "Example Domain"
 
 See [docs](https://b.remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
 
-## Release
+## Contributing
 
-Release is automated with [Release Please](https://github.com/googleapis/release-please).
+We encourage contributions! Check out the [contributing guide](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md) on how to proceed.
 
 ## License
 
