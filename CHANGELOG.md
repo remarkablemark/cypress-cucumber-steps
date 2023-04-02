@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.63.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.62.0...v1.63.0) (2023-04-02)
+
+
+### Features
+
+* **queries:** add "When I get children" ([1c6e275](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1c6e275ca714303d7f69aabaf5a7c72aa4d4bbde))
+
 ## [1.62.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.61.0...v1.62.0) (2023-04-01)
 
 
