@@ -8,4 +8,5 @@ export * from './length';
 export * from './link';
 export * from './text';
 export * from './url';
+export * from './value';
 export * from './visible';
