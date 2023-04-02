@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.64.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.63.0...v1.64.0) (2023-04-02)
+
+
+### Features
+
+* **assertions:** add "Then I see textarea has value containing" ([7301e58](https://github.com/remarkablemark/cypress-cucumber-steps/commit/7301e58a68b39f36e7226922ea935185ba847f0d))
+* **assertions:** add "Then I see textarea has value" ([93bd4d2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/93bd4d29d878a1c7748e3648f7e6eea1852313ad))
+
 ## [1.63.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.62.0...v1.63.0) (2023-04-02)
 
 
