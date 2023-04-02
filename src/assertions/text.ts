@@ -7,7 +7,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * Then I see text {string}
  * ```
  *
- * Assert that an element with text **_exists_** and is **_visible_** in the screen.
+ * Assert element with text **_exists_** and is **_visible_** in the screen.
  *
  * @example
  *
@@ -35,7 +35,7 @@ Then('I see text {string}', Then_I_see_text);
  * Then I do not see text {string}
  * ```
  *
- * Assert that the text **_does not exist_** in the screen.
+ * Assert element with text **_does not exist_** in the screen.
  *
  * @example
  *
@@ -60,7 +60,7 @@ Then('I do not see text {string}', Then_I_do_not_see_text);
  * Then I do not see visible text {string}
  * ```
  *
- * Assert that the text **_exists_** in the screen but is **_hidden_**.
+ * Assert element with text **_exists_** in the screen but is **_hidden_**.
  *
  * @example
  *
