@@ -14,12 +14,44 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * ```gherkin
  * Then I see input has value "Value"
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_input_has_value_containing | Then I see input has value containing }
  */
 export function Then_I_see_input_has_value(value: string) {
   cy.get('input:visible').invoke('val').should('eq', value);
 }
 
 Then('I see input has value {string}', Then_I_see_input_has_value);
+
+/**
+ * Then I see input has value containing:
+ *
+ * ```gherkin
+ * Then I see input has value containing {string}
+ * ```
+ *
+ * Assert input with partial value is **_visible_** in the screen.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see input has value containing "Value"
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_input_has_value | Then I see input has value}
+ */
+export function Then_I_see_input_has_value_containing(value: string) {
+  cy.get('input:visible').invoke('val').should('include', value);
+}
+
+Then(
+  'I see input has value containing {string}',
+  Then_I_see_input_has_value_containing
+);
 
 /**
  * Then I see textarea has value:
@@ -63,7 +95,7 @@ Then('I see textarea has value {string}', Then_I_see_textarea_has_value);
  *
  * @see
  *
- * - {@link Then_I_see_textarea_has_value | Then I see textarea has value }
+ * - {@link Then_I_see_textarea_has_value | Then I see textarea has value}
  */
 export function Then_I_see_textarea_has_value_containing(value: string) {
   cy.get('textarea:visible').invoke('val').should('include', value);
