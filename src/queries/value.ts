@@ -1,6 +1,6 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { setCypressElement } from '../utils';
+import { getByDisplayValue, setCypressElement } from '../utils';
 
 /* eslint-disable tsdoc/syntax */
 /**
@@ -95,23 +95,6 @@ function hasDisplayValue(
   });
 
   return isFound;
-}
-
-/**
- * Get Cypress element by display value.
- *
- * @param element - Element name.
- * @param value - Display value.
- * @returns - Cypress element.
- */
-function getByDisplayValue(element: 'input' | 'textarea', value: string) {
-  return cy
-    .get(`${element}:visible`)
-    .filter(
-      (index, element: HTMLInputElement) =>
-        Cypress.$(element).val()?.toString() === value
-    )
-    .first();
 }
 
 /**
