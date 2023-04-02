@@ -2,6 +2,7 @@ export * from './alt-text';
 export * from './alt-texts';
 export * from './button';
 export * from './buttons';
+export * from './children';
 export * from './closest';
 export * from './element';
 export * from './find';

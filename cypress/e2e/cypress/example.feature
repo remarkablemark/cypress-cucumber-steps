@@ -170,6 +170,15 @@ Feature: Cypress example
       And I submit
     Then I see text "Your form has been submitted!"
 
+  Scenario: Get children
+    Given I visit "https://example.cypress.io/commands/misc"
+    When I find form
+      And I get children
+      And I get last element
+      And I click
+      And I type "children"
+    Then I find textarea by display value "children"
+
   Scenario: Timers
     Given I visit "https://example.cypress.io/commands/spies-stubs-clocks"
     When I use fake timers
