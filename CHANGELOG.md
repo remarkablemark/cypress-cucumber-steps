@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.65.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.64.0...v1.65.0) (2023-04-02)
+
+
+### Features
+
+* **assertions:** add "Then I see input has value containing" ([e47e1cf](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e47e1cf8995ef9dda6e13f47f30b86740cdfb416))
+* **assertions:** add "Then I see input has value" ([ae129d7](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ae129d7a73f9a322f5c695d86d05d5912beab119))
+
 ## [1.64.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.63.0...v1.64.0) (2023-04-02)
 
 
