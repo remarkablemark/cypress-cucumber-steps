@@ -180,6 +180,13 @@ Feature: Cypress example
     Then I see textarea has value "children"
       And I see textarea has value containing "child"
 
+  Scenario: Assert input value
+    Given I visit "https://example.cypress.io/commands/misc"
+    When I find element by label text "Name"
+      And I type "John Smith"
+    Then I see input has value "John Smith"
+      And I see input has value containing "John"
+
   Scenario: Timers
     Given I visit "https://example.cypress.io/commands/spies-stubs-clocks"
     When I use fake timers
