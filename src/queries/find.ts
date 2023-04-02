@@ -11,7 +11,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * Get the descendent DOM elements of a specific selector.
  *
- * The querying behavior of this command matches exactly how [`.find()`](https://api.jquery.com/find) works in jQuery.
+ * The querying behavior of this command matches exactly how [`.find()`](https://api.jquery.com/find/) works in jQuery.
  *
  * @example
  *

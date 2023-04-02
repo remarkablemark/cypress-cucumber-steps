@@ -11,7 +11,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * Get the first DOM element that matches the selector (whether it be itself or one of its ancestors).
  *
- * The querying behavior matches exactly how [`.closest()`](https://api.jquery.com/closest) works in jQuery.
+ * The querying behavior matches exactly how [`.closest()`](https://api.jquery.com/closest/) works in jQuery.
  *
  * @example
  *
