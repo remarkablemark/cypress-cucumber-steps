@@ -11,7 +11,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * Get the children of each DOM element within a set of DOM elements.
  *
- * The querying behavior of this command matches exactly how [`.children()`](https://api.jquery.com/children) works in jQuery.
+ * The querying behavior of this command matches exactly how [`.children()`](https://api.jquery.com/children/) works in jQuery.
  *
  * @example
  *
