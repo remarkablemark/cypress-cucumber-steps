@@ -6,4 +6,4 @@ pull_request_rules:
       - check-success=cypress
     actions:
       merge:
-        method: merge
+        method: squash
