@@ -30,7 +30,7 @@ See [docs](https://b.remarkabl.org/cypress-cucumber-steps) and [examples](https:
 
 ## Contributing
 
-We encourage contributions! Check out the [contributing guide](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md) on how to proceed.
+We encourage contributions! Check the [contributing guide](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md) on how to proceed.
 
 ## License
 
