@@ -53,8 +53,8 @@
     "lint-staged": "13.2.1",
     "pinst": "3.0.0",
     "prettier": "2.8.7",
-    "typedoc": "0.23.28",
-    "typedoc-plugin-copy-code-to-clipboard": "1.0.0",
+    "typedoc": "0.24.4",
+    "typedoc-plugin-copy-code-to-clipboard": "1.0.1",
     "typescript": "5.0.4"
   },
   "peerDependencies": {
