@@ -53,7 +53,7 @@
     "lint-staged": "13.2.1",
     "pinst": "3.0.0",
     "prettier": "2.8.8",
-    "typedoc": "0.24.4",
+    "typedoc": "0.24.6",
     "typedoc-plugin-copy-code-to-clipboard": "1.0.2",
     "typescript": "5.0.4"
   },
