@@ -21,17 +21,17 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>When I find closest element:</p>
 <pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find closest element {string}</span>
-</code></pre>
+</code><button>Copy</button></pre>
 <p>Get the first DOM element that matches the selector (whether it be itself or one of its ancestors).</p>
 <p>The querying behavior matches exactly how <a href="https://api.jquery.com/closest/"><code>.closest()</code></a> works in jQuery.</p>
 
 <h3>Example</h3><p>Find the closest element with the class <code>banner</code>:</p>
 <pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find closest element </span><span class="hl-3">&quot;.banner&quot;</span>
-</code></pre>
+</code><button>Copy</button></pre>
 
 <h3>Remarks</h3><p>A preceding step like <a href="When_I_find_element_by_label_text.html" class="tsd-kind-function">&quot;When I find element by label text&quot;</a> is required. For example:</p>
 <pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find element by label text </span><span class="hl-3">&quot;Text&quot;</span><br/><span class="hl-2">  </span><span class="hl-1">And </span><span class="hl-2">I find closest element </span><span class="hl-3">&quot;form&quot;</span><br/><span class="hl-2">  </span><span class="hl-1">And </span><span class="hl-2">I submit</span>
-</code></pre>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -40,7 +40,7 @@
 <h5><span class="tsd-kind-parameter">selector</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/b971d590/src/queries/closest.ts#L34">queries/closest.ts:34</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/9aa1c94d/src/queries/closest.ts#L34">queries/closest.ts:34</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
