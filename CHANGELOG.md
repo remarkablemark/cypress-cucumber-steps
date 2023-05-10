@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.67.0...v2.0.0) (2023-05-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove deprecated queries "When I get element by label text" and "When I get element by title"
+
+### Miscellaneous Chores
+
+* remove "I get element by label text" and "I get element by title" ([ee4e1a9](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ee4e1a95cb6cc095c034b5fa296780c02bed7e74))
+
 ## [1.67.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.66.0...v1.67.0) (2023-05-10)
 
 
