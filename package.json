@@ -62,7 +62,8 @@
     "cypress": "*"
   },
   "files": [
-    "lib/"
+    "lib/",
+    "src/"
   ],
   "license": "MIT"
 }
