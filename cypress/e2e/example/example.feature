@@ -30,6 +30,8 @@ Feature: Example
       And I wait 1 millisecond
     Then I see URL "https://example.com/index.html"
       And I see URL contains "/index.html"
+    Then I do not see URL "https://example.com/index.htm"
+      And I do not see URL contains "foo"
 
   Scenario: Hash
     Given I visit "https://example.com/#foobar"
