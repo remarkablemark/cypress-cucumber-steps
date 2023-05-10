@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.67.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.66.0...v1.67.0) (2023-05-10)
+
+
+### Features
+
+* **assertions:** add "I do not see URL" and "I do not see URL contains" ([155510b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/155510b7cf092bb0f4875b17805abbecfde41409))
+
 ## [1.66.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.65.0...v1.66.0) (2023-05-10)
 
 
