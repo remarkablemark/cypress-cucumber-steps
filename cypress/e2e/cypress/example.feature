@@ -57,7 +57,7 @@ Feature: Cypress example
 
   Scenario: Type and clear input
     Given I visit "https://example.cypress.io/commands/actions"
-      And I get element by label text "Email address"
+      And I find element by label text "Email address"
       And I type "user@example.com"
         | animationDistanceThreshold | 5 |
         | delay | 10 |
