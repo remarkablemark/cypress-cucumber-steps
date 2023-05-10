@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.66.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.65.0...v1.66.0) (2023-05-10)
+
+
+### Features
+
+* include files "src/" when package is published ([a7f10ef](https://github.com/remarkablemark/cypress-cucumber-steps/commit/a7f10ef7026cf32b1aa24a2e22ebfe2a3fa7d9e0))
+
 ## [1.65.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v1.64.0...v1.65.0) (2023-04-02)
 
 
