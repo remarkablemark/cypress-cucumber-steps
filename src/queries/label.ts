@@ -36,8 +36,3 @@ When(
   'I find element by label text {string}',
   When_I_find_element_by_label_text
 );
-
-/**
- * @deprecated Use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
- */
-When('I get element by label text {string}', When_I_find_element_by_label_text);
