@@ -38,7 +38,7 @@
 <h5><span class="tsd-kind-parameter">text</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/4c7cf524/src/assertions/text.ts#L75">assertions/text.ts:75</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/ea2c271f/src/assertions/text.ts#L75">assertions/text.ts:75</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -184,26 +184,4 @@ pre > button:hover {
   border-color: var(--color-text-aside);
   opacity: 1;
   outline: 0;
-}</style><script>(function(){function init() {
-    var text = 'Copy';
-    var template = document.createElement('button');
-    template.type = 'button';
-    template.ariaLabel = 'Copy code to clipboard';
-    template.innerText = text;
-    document.querySelectorAll('pre').forEach(function (pre) {
-        var button = template.cloneNode(true);
-        button.addEventListener('click', function () {
-            var _a;
-            var code = (_a = pre.querySelector('code')) === null || _a === void 0 ? void 0 : _a.innerText;
-            if (code) {
-                navigator.clipboard.writeText(code.trim());
-            }
-            button.innerText = 'Copied';
-            setTimeout(function () {
-                button.blur();
-                button.innerText = text;
-            }, 2e3);
-        });
-        pre.appendChild(button);
-    });
-}init();})();</script></body></html>
+}</style></body></html>
