@@ -20,6 +20,10 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * ```gherkin
  * Then I see URL "http://localhost:8080/index.html"
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_URL_contains | Then I see URL contains}
  */
 export function Then_I_see_URL(url: string) {
   cy.url().should('equal', (Cypress.config().baseUrl || '') + url);
@@ -47,6 +51,10 @@ Then('I see URL {string}', Then_I_see_URL);
  * ```gherkin
  * Then I see URL contains "http://localhost:8080/index.html"
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_URL | Then I see URL}
  */
 export function Then_I_see_URL_contains(url: string) {
   cy.url().should('contain', url);
@@ -74,6 +82,10 @@ Then('I see URL contains {string}', Then_I_see_URL_contains);
  * ```gherkin
  * Then I do not see URL "http://localhost:8080/index.html"
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_do_not_see_URL_contains | Then I do not see URL contains}
  */
 export function Then_I_do_not_see_URL(url: string) {
   cy.url().should('not.equal', (Cypress.config().baseUrl || '') + url);
@@ -101,6 +113,10 @@ Then('I do not see URL {string}', Then_I_do_not_see_URL);
  * ```gherkin
  * Then I do not see URL contains "http://localhost:8080/index.html"
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_do_not_see_URL | Then I do not see URL}
  */
 export function Then_I_do_not_see_URL_contains(url: string) {
   cy.url().should('not.contain', url);
