@@ -6,6 +6,7 @@ export * from './debug';
 export * from './double-click';
 export * from './focus';
 export * from './go';
+export * from './intercept';
 export * from './local-storage';
 export * from './log';
 export * from './pause';
