@@ -1,3 +1,4 @@
+/* eslint-disable tsdoc/syntax */
 import { DataTable } from '@badeball/cypress-cucumber-preprocessor';
 
 /**
@@ -5,6 +6,7 @@ import { DataTable } from '@badeball/cypress-cucumber-preprocessor';
  *
  * @param table - Table.
  * @returns - Options.
+ * @private
  */
 export function getOptions(table?: DataTable) {
   if (!table) {
@@ -12,13 +14,9 @@ export function getOptions(table?: DataTable) {
   }
 
   return Object.entries(table.rowsHash()).reduce((result, [key, value]) => {
-    if (value === 'true') {
-      result[key] = true;
-    } else if (value === 'false') {
-      result[key] = false;
-    } else if (!isNaN(Number(value))) {
-      result[key] = Number(value);
-    } else {
+    try {
+      result[key] = JSON.parse(value);
+    } catch (error) {
       result[key] = value;
     }
     return result;
