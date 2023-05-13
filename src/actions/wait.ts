@@ -20,6 +20,14 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * ```gherkin
  * When I wait 1 second
  * ```
+ *
+ * @remarks
+ *
+ * Prefer increasing Cypress config's [`defaultCommandTimeout`](https://docs.cypress.io/guides/core-concepts/retry-ability#Timeouts) instead of relying on [`wait`](https://docs.cypress.io/api/commands/wait).
+ *
+ * @see
+ *
+ * - {@link When_I_wait_milliseconds | When I wait milliseconds}
  */
 export function When_I_wait_seconds(seconds: number) {
   When_I_wait_milliseconds(seconds * 1000);
@@ -48,6 +56,14 @@ When('I wait {int} second', When_I_wait_seconds);
  * ```gherkin
  * When I wait 1 millisecond
  * ```
+ *
+ * @remarks
+ *
+ * Prefer increasing Cypress config's [`defaultCommandTimeout`](https://docs.cypress.io/guides/core-concepts/retry-ability#Timeouts) instead of relying on [`wait`](https://docs.cypress.io/api/commands/wait).
+ *
+ * @see
+ *
+ * - {@link When_I_wait_seconds | When I wait seconds}
  */
 export function When_I_wait_milliseconds(milliseconds: number) {
   cy.wait(milliseconds);
