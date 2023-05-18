@@ -29,4 +29,5 @@ Feature: Cypress docs
       And I get focused element
       And I wait 300 milliseconds
       And I type "get"
+      And I wait 300 milliseconds
     Then I see link "get"
