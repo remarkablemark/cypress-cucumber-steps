@@ -10,6 +10,10 @@
 
 - [example.feature](example/example.feature)
 
+### httpbin
+
+- [form.feature](httpbin/form.feature)
+
 ### remarkablemark
 
 - [textarea.feature](remarkablemark/textarea.feature)
