@@ -4,6 +4,7 @@ export * from './config';
 export * from './cookie';
 export * from './debug';
 export * from './double-click';
+export * from './env';
 export * from './focus';
 export * from './go';
 export * from './intercept';
