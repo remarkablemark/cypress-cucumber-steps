@@ -226,3 +226,7 @@ Feature: Cypress example
       | times | 1 |
       And I click on button "Get Comment"
     Then I see text "Test 2"
+
+  Scenario: Set environment variable
+    Given I visit "https://example.cypress.io/cypress-api"
+    When I set environment variable "api_server" to "http://localhost:8888/v2/"
