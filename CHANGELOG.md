@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.1.0...v2.2.0) (2023-06-25)
+
+
+### Features
+
+* **actions:** add "When I set environment variable" ([6f28951](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6f28951cf6363f2eeb86d8051f03e144c88d42f6))
+
 ## [2.1.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.0.0...v2.1.0) (2023-05-13)
 
 ### Features
