@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.2.0...v2.3.0) (2023-06-26)
+
+
+### Features
+
+* **queries:** add "When I get element by selector" ([8695b45](https://github.com/remarkablemark/cypress-cucumber-steps/commit/8695b454b7b85363f9b43c1313199dead6377eef))
+
 ## [2.2.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.1.0...v2.2.0) (2023-06-25)
 
 
