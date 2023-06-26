@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.3.0...v2.4.0) (2023-06-26)
+
+
+### Features
+
+* **actions:** add "When I select file" ([6354131](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6354131b80df4dbc7dac8a9715b3e901072e86f9))
+
 ## [2.3.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.2.0...v2.3.0) (2023-06-26)
 
 
