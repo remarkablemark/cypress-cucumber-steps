@@ -8,6 +8,7 @@ export * from './element';
 export * from './find';
 export * from './focused';
 export * from './form';
+export * from './get';
 export * from './label';
 export * from './link';
 export * from './links';

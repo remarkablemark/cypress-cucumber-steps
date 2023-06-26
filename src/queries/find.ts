@@ -30,6 +30,10 @@ import { getCypressElement, setCypressElement } from '../utils';
  *   And I find element by selector "input[type='checkbox']"
  *   And I click
  * ```
+ *
+ * @see
+ *
+ * - {@link When_I_get_element_by_selector | When I get element by selector}
  */
 export function When_I_find_element_by_selector(selector: string) {
   setCypressElement(getCypressElement().find(selector));

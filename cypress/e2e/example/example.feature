@@ -1,22 +1,22 @@
 Feature: Example
   Scenario: See document title
-    Given I visit "https://example.com/"
+    Given I visit "http://example.com/"
     Then I see document title "Example Domain"
       And I see document title contains "Example"
 
   Scenario: See and not see text
-    Given I visit "https://example.com/"
+    Given I visit "http://example.com/"
     Then I see text "Example Domain"
       And I see text "More information"
       And I do not see text "Lorem ipsum"
 
   Scenario: See and not see link
-    Given I visit "https://example.com/"
+    Given I visit "http://example.com/"
     Then I see link "More information"
       And I do not see link "Lorem ipsum"
 
   Scenario: See attribute
-    Given I visit "https://example.com/"
+    Given I visit "http://example.com/"
     When I find element by text "More information"
     Then I see element has attribute "href"
     When I find link by text "More information"
@@ -25,33 +25,33 @@ Feature: Example
     Then I see element has attribute "href" containing "example"
 
   Scenario: Reload and assert URL
-    Given I visit "https://example.com/index.html"
+    Given I visit "http://example.com/index.html"
       And I reload the page
       And I wait 1 millisecond
-    Then I see URL "https://example.com/index.html"
+    Then I see URL "http://example.com/index.html"
       And I see URL contains "/index.html"
-    Then I do not see URL "https://example.com/index.htm"
+    Then I do not see URL "http://example.com/index.htm"
       And I do not see URL contains "foo"
 
   Scenario: Hash
-    Given I visit "https://example.com/#foobar"
+    Given I visit "http://example.com/#foobar"
     Then I see hash "#foobar"
       And I see hash contains "bar"
 
   Scenario: Screenshot
-    Given I visit "https://example.com/"
+    Given I visit "http://example.com/"
     Then I screenshot
       And I screenshot "path/to/screenshot"
 
   Scenario: Cookie
-    Given I visit "https://example.com/"
+    Given I visit "http://example.com/"
     When I set cookie "cookie_name" to "cookie_value"
 
   Scenario: Log
     Then I log "Hello, world!"
 
   Scenario: Viewport
-    Given I visit "https://example.com/"
+    Given I visit "http://example.com/"
     When I set viewport to "iphone-6"
       And I set viewport to "ipad-mini" and "landscape"
       And I set viewport to 800px by 600px
@@ -65,3 +65,8 @@ Feature: Example
 
   Scenario: Session storage
     When I clear session storage
+
+  Scenario: Get selector
+    Given I visit "http://example.com/"
+    When I get element by selector "p"
+    Then I count 1 element
