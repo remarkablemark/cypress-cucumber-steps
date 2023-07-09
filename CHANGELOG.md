@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.7.0...v2.8.0) (2023-07-09)
+
+
+### Features
+
+* **assertions:** add value steps and mark steps for deprecation ([418c7bd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/418c7bd490e087405658bf89bdf6aa56aaaf1446))
+
 ## [2.7.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.6.0...v2.7.0) (2023-07-09)
 
 
