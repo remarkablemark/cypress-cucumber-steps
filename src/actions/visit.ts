@@ -1,6 +1,7 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-/* eslint-disable tsdoc/syntax */
+import { getOptions } from '../utils';
+
 /**
  * When I visit URL:
  *
@@ -22,20 +23,25 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * When I visit "/"
  * ```
  *
- * > Cypress [`baseUrl`](https://docs.cypress.io/guides/references/configuration#e2e) must be defined for relative URL.
+ * Cypress [`baseUrl`](https://docs.cypress.io/guides/references/configuration#e2e) must be defined for relative URL.
  *
  * @remarks
  *
- * If the page does not respond with a 200 status code, then this step will fail:
+ * If the page does not respond with a `2xx` status code, then this step will fail:
  *
  * ```gherkin
- * # fail
+ * When I visit "/404" # fail
+ * ```
+ *
+ * If you don't want status codes to cause failures, then pass the option:
+ *
+ * ```gherkin
  * When I visit "/404"
+ *   | failOnStatusCode | false |
  * ```
  */
-/* eslint-enable tsdoc/syntax */
-export function When_I_visit_URL(url: string) {
-  cy.visit(url);
+export function When_I_visit_URL(url: string, options?: DataTable) {
+  cy.visit(url, getOptions(options));
 }
 
 When('I visit {string}', When_I_visit_URL);
