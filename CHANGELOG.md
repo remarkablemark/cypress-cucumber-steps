@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.5.0...v2.6.0) (2023-07-09)
+
+
+### Features
+
+* **actions:** add "When I make a request" ([905585f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/905585f80d123069b4e3b81c0efda561ebaa98c5))
+
 ## [2.5.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.4.0...v2.5.0) (2023-07-09)
 
 
