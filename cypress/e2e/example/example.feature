@@ -19,10 +19,9 @@ Feature: Example
     Given I visit "http://example.com/"
     When I find element by text "More information"
     Then I see element has attribute "href"
-    When I find link by text "More information"
-    Then I see element has attribute "href" equal to "https://www.iana.org/domains/example"
+      And I see element attribute "href" equals "https://www.iana.org/domains/example"
     When I find link by text "More information..."
-    Then I see element has attribute "href" containing "example"
+    Then I see element attribute "href" contains "iana.org"
 
   Scenario: Reload and assert URL
     Given I visit "http://example.com/index.html"
