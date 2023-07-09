@@ -177,15 +177,15 @@ Feature: Cypress example
       And I get last element
       And I click
       And I type "children"
-    Then I see textarea has value "children"
-      And I see textarea has value containing "child"
+    Then I see textarea value "children"
+      And I see textarea value contains "child"
 
   Scenario: Assert input value
     Given I visit "https://example.cypress.io/commands/misc"
     When I find element by label text "Name"
       And I type "John Smith"
-    Then I see input has value "John Smith"
-      And I see input has value containing "John"
+    Then I see input value "John Smith"
+      And I see input value contains "John"
 
   Scenario: Timers
     Given I visit "https://example.cypress.io/commands/spies-stubs-clocks"

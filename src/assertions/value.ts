@@ -1,10 +1,10 @@
 import { Then } from '@badeball/cypress-cucumber-preprocessor';
 
 /**
- * Then I see input has value:
+ * Then I see input value:
  *
  * ```gherkin
- * Then I see input has value {string}
+ * Then I see input value {string}
  * ```
  *
  * Assert input with exact value is **_visible_** in the screen.
@@ -12,24 +12,29 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * @example
  *
  * ```gherkin
- * Then I see input has value "Value"
+ * Then I see input value "Value"
  * ```
  *
  * @see
  *
- * - {@link Then_I_see_input_has_value_containing | Then I see input has value containing }
+ * - {@link Then_I_see_input_value_contains | Then I see input value contains}
  */
-export function Then_I_see_input_has_value(value: string) {
+export function Then_I_see_input_value(value: string) {
   cy.get('input:visible').invoke('val').should('eq', value);
 }
 
-Then('I see input has value {string}', Then_I_see_input_has_value);
+Then('I see input value {string}', Then_I_see_input_value);
 
 /**
- * Then I see input has value containing:
+ * @deprecated Use {@link Then_I_see_input_value} instead.
+ */
+Then('I see input has value {string}', Then_I_see_input_value);
+
+/**
+ * Then I see input value contains:
  *
  * ```gherkin
- * Then I see input has value containing {string}
+ * Then I see input value contains {string}
  * ```
  *
  * Assert input with partial value is **_visible_** in the screen.
@@ -37,27 +42,32 @@ Then('I see input has value {string}', Then_I_see_input_has_value);
  * @example
  *
  * ```gherkin
- * Then I see input has value containing "Value"
+ * Then I see input value contains "Value"
  * ```
  *
  * @see
  *
- * - {@link Then_I_see_input_has_value | Then I see input has value}
+ * - {@link Then_I_see_input_value | Then I see input value}
  */
-export function Then_I_see_input_has_value_containing(value: string) {
+export function Then_I_see_input_value_contains(value: string) {
   cy.get('input:visible').invoke('val').should('include', value);
 }
 
+Then('I see input value contains {string}', Then_I_see_input_value_contains);
+
+/**
+ * @deprecated Use {@link Then_I_see_input_value_contains} instead.
+ */
 Then(
   'I see input has value containing {string}',
-  Then_I_see_input_has_value_containing
+  Then_I_see_input_value_contains
 );
 
 /**
- * Then I see textarea has value:
+ * Then I see textarea value:
  *
  * ```gherkin
- * Then I see textarea has value {string}
+ * Then I see textarea value {string}
  * ```
  *
  * Assert textarea with exact value is **_visible_** in the screen.
@@ -65,24 +75,29 @@ Then(
  * @example
  *
  * ```gherkin
- * Then I see textarea has value "Value"
+ * Then I see textarea value "Value"
  * ```
  *
  * @see
  *
- * - {@link Then_I_see_textarea_has_value_containing | Then I see textarea has value containing }
+ * - {@link Then_I_see_textarea_value_contains | Then I see textarea value contains}
  */
-export function Then_I_see_textarea_has_value(value: string) {
+export function Then_I_see_textarea_value(value: string) {
   cy.get('textarea:visible').invoke('val').should('eq', value);
 }
 
-Then('I see textarea has value {string}', Then_I_see_textarea_has_value);
+Then('I see textarea value {string}', Then_I_see_textarea_value);
 
 /**
- * Then I see textarea has value containing:
+ * @deprecated Use {@link Then_I_see_textarea_value} instead.
+ */
+Then('I see textarea has value {string}', Then_I_see_textarea_value);
+
+/**
+ * Then I see textarea value contains:
  *
  * ```gherkin
- * Then I see textarea has value containing {string}
+ * Then I see textarea value contains {string}
  * ```
  *
  * Assert textarea with partial value is **_visible_** in the screen.
@@ -90,18 +105,26 @@ Then('I see textarea has value {string}', Then_I_see_textarea_has_value);
  * @example
  *
  * ```gherkin
- * Then I see textarea has value containing "Value"
+ * Then I see textarea value contains "Value"
  * ```
  *
  * @see
  *
- * - {@link Then_I_see_textarea_has_value | Then I see textarea has value}
+ * - {@link Then_I_see_textarea_value | Then I see textarea value}
  */
-export function Then_I_see_textarea_has_value_containing(value: string) {
+export function Then_I_see_textarea_value_contains(value: string) {
   cy.get('textarea:visible').invoke('val').should('include', value);
 }
 
 Then(
+  'I see textarea value contains {string}',
+  Then_I_see_textarea_value_contains
+);
+
+/**
+ * @deprecated Use {@link Then_I_see_textarea_value_contains} instead.
+ */
+Then(
   'I see textarea has value containing {string}',
-  Then_I_see_textarea_has_value_containing
+  Then_I_see_textarea_value_contains
 );
