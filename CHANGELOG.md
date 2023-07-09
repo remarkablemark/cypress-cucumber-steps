@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.6.0...v2.7.0) (2023-07-09)
+
+
+### Features
+
+* **assertions:** add attribute steps and mark steps for deprecation ([19c87fa](https://github.com/remarkablemark/cypress-cucumber-steps/commit/19c87fae20a1351e81a4aba0486d81ff6cb4bf5d))
+
+
+### Bug Fixes
+
+* **assertions:** return element instead of value in attribute ([57b9ee0](https://github.com/remarkablemark/cypress-cucumber-steps/commit/57b9ee090e3b2ed2199e881abb3b6bd97957f2c7))
+
 ## [2.6.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.5.0...v2.6.0) (2023-07-09)
 
 
