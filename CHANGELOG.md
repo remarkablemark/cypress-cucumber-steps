@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.4.0...v2.5.0) (2023-07-09)
+
+
+### Features
+
+* **actions:** pass options to "When I visit URL" ([e3cecb2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e3cecb2d9671af56c76787cd37789a610f76fc7f))
+
 ## [2.4.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.3.0...v2.4.0) (2023-06-26)
 
 
