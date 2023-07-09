@@ -26,26 +26,26 @@ import { getCypressElement } from '../utils';
  *
  * @see
  *
- * - {@link Then_I_see_element_has_attribute_equal_to | Then I see element has attribute equal to}
- * - {@link Then_I_see_element_has_attribute_containing | Then I see element has attribute containing}
+ * - {@link Then_I_see_element_attribute_equals | Then I see element attribute equals}
+ * - {@link Then_I_see_element_attribute_contains | Then I see element attribute contains}
  */
-export function Then_I_see_element_has_attribute(attributeName: string) {
-  getCypressElement().should('have.attr', attributeName);
+export function Then_I_see_element_has_attribute(name: string) {
+  getCypressElement().should('have.attr', name);
 }
 
 Then('I see element has attribute {string}', Then_I_see_element_has_attribute);
 
 /**
- * Then I see element has attribute equal to:
+ * Then I see element attribute equals:
  *
  * ```gherkin
- * Then I see element has attribute {string} equal to {string}
+ * Then I see element attribute {string} equals {string}
  * ```
  *
  * @example
  *
  * ```gherkin
- * Then I see element has attribute "name" equal to "value"
+ * Then I see element attribute "name" equals "value"
  * ```
  *
  * @remarks
@@ -54,37 +54,45 @@ Then('I see element has attribute {string}', Then_I_see_element_has_attribute);
  *
  * ```gherkin
  * When I find link by text "Link"
- * Then I see element has attribute "href" equal to "/"
+ * Then I see element attribute "href" equals "/"
  * ```
  *
  * @see
  *
  * - {@link Then_I_see_element_has_attribute | Then I see element has attribute}
- * - {@link Then_I_see_element_has_attribute_containing | Then I see element has attribute containing}
+ * - {@link Then_I_see_element_attribute_contains | Then I see element attribute contains}
  */
-export function Then_I_see_element_has_attribute_equal_to(
-  attributeName: string,
-  attributeValue: string
+export function Then_I_see_element_attribute_equals(
+  name: string,
+  value: string
 ) {
-  getCypressElement().should('have.attr', attributeName, attributeValue);
+  getCypressElement().should('have.attr', name, value);
 }
 
 Then(
-  'I see element has attribute {string} equal to {string}',
-  Then_I_see_element_has_attribute_equal_to
+  'I see element attribute {string} equals {string}',
+  Then_I_see_element_attribute_equals
 );
 
 /**
- * Then I see element has attribute containing:
+ * @deprecated Use {@link Then_I_see_element_attribute_equals} instead.
+ */
+Then(
+  'I see element has attribute {string} equal to {string}',
+  Then_I_see_element_attribute_equals
+);
+
+/**
+ * Then I see element attribute contains:
  *
  * ```gherkin
- * Then I see element has attribute {string} containing {string}
+ * Then I see element attribute {string} contains {string}
  * ```
  *
  * @example
  *
  * ```gherkin
- * Then I see element has attribute "name" containing "value"
+ * Then I see element attribute "name" contains "value"
  * ```
  *
  * @remarks
@@ -93,24 +101,30 @@ Then(
  *
  * ```gherkin
  * When I find link by text "Link"
- * Then I see element has attribute "href" containing "/"
+ * Then I see element attribute "href" contains "/"
  * ```
  *
  * @see
  *
  * - {@link Then_I_see_element_has_attribute | Then I see element has attribute}
- * - {@link Then_I_see_element_has_attribute_equal_to | Then I see element has attribute equal to}
+ * - {@link Then_I_see_element_attribute_equals | Then I see element attribute equals}
  */
-export function Then_I_see_element_has_attribute_containing(
-  attributeName: string,
-  attributeValue: string
+export function Then_I_see_element_attribute_contains(
+  name: string,
+  value: string
 ) {
-  getCypressElement()
-    .should('have.attr', attributeName)
-    .and('include', attributeValue);
+  getCypressElement().should('have.attr', name).and('include', value);
 }
 
 Then(
+  'I see element attribute {string} contains {string}',
+  Then_I_see_element_attribute_contains
+);
+
+/**
+ * @deprecated Use {@link Then_I_see_element_attribute_contains} instead.
+ */
+Then(
   'I see element has attribute {string} containing {string}',
-  Then_I_see_element_has_attribute_containing
+  Then_I_see_element_attribute_contains
 );
