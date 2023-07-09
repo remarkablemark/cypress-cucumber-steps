@@ -30,7 +30,9 @@ import { getCypressElement } from '../utils';
  * - {@link Then_I_see_element_attribute_contains | Then I see element attribute contains}
  */
 export function Then_I_see_element_has_attribute(name: string) {
-  getCypressElement().should('have.attr', name);
+  getCypressElement().should(($element) => {
+    expect($element).to.have.attr(name);
+  });
 }
 
 Then('I see element has attribute {string}', Then_I_see_element_has_attribute);
@@ -66,7 +68,9 @@ export function Then_I_see_element_attribute_equals(
   name: string,
   value: string
 ) {
-  getCypressElement().should('have.attr', name, value);
+  getCypressElement().should(($element) => {
+    expect($element).to.have.attr(name, value);
+  });
 }
 
 Then(
@@ -113,7 +117,9 @@ export function Then_I_see_element_attribute_contains(
   name: string,
   value: string
 ) {
-  getCypressElement().should('have.attr', name).and('include', value);
+  getCypressElement().should(($element) => {
+    expect($element.attr(name)).to.include(value);
+  });
 }
 
 Then(
