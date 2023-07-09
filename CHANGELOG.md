@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.8.0...v2.9.0) (2023-07-09)
+
+
+### Features
+
+* **assertions:** add "Then I see response status" ([68fc49c](https://github.com/remarkablemark/cypress-cucumber-steps/commit/68fc49ce375fc1a498e289e17cbb0c5203ac4d25))
+
 ## [2.8.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.7.0...v2.8.0) (2023-07-09)
 
 
