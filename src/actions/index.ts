@@ -12,6 +12,7 @@ export * from './local-storage';
 export * from './log';
 export * from './pause';
 export * from './reload';
+export * from './request';
 export * from './right-click';
 export * from './screenshot';
 export * from './scroll';
