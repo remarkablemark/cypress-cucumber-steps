@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.9.0...v2.10.0) (2023-07-10)
+
+
+### Features
+
+* **assertions:** add "Then I see response body" ([18b8a91](https://github.com/remarkablemark/cypress-cucumber-steps/commit/18b8a91de205e66868da36b5985451b2fbf3eae7))
+
 ## [2.9.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.8.0...v2.9.0) (2023-07-09)
 
 
