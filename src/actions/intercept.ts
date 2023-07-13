@@ -111,5 +111,5 @@ export function When_I_intercept_URL_and_stub_body(url: string, body: string) {
 
 When(
   'I intercept URL {string} and stub body {string}',
-  When_I_intercept_URL_and_stub_body
+  When_I_intercept_URL_and_stub_body,
 );

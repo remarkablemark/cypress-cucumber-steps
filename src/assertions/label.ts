@@ -27,7 +27,7 @@ import { getCypressElement, setCypressElementByLabelText } from '../utils';
  */
 export function Then_I_see_label(text: string) {
   setCypressElementByLabelText(text).then(() =>
-    getCypressElement().should('exist')
+    getCypressElement().should('exist'),
   );
 }
 

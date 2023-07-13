@@ -33,5 +33,5 @@ export function When_I_set_environment_variable(key: string, value: string) {
 
 When(
   'I set environment variable {string} to {string}',
-  When_I_set_environment_variable
+  When_I_set_environment_variable,
 );

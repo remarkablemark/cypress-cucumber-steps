@@ -30,7 +30,7 @@ export function setCypressElementByLabelText(text: string) {
       `label:visible:contains('${text}')`,
       `[aria-labelledby='${text}']`,
       `[aria-label='${text}']`,
-    ].join(',')
+    ].join(','),
   );
   setCypressElement(cypressElement.first());
   return cypressElement;

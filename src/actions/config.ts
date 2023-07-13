@@ -31,7 +31,7 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
 /* eslint-enable tsdoc/syntax */
 export function When_I_set_Cypress_config(
   name: keyof Cypress.TestConfigOverrides,
-  value: string
+  value: string,
 ) {
   switch (value) {
     case 'true':

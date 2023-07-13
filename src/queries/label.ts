@@ -34,5 +34,5 @@ export function When_I_find_element_by_label_text(text: string) {
 
 When(
   'I find element by label text {string}',
-  When_I_find_element_by_label_text
+  When_I_find_element_by_label_text,
 );

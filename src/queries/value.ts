@@ -58,7 +58,7 @@ export function When_I_get_element_by_display_value(value: string) {
 
 When(
   'I get element by display value {string}',
-  When_I_get_element_by_display_value
+  When_I_get_element_by_display_value,
 );
 
 /**
@@ -71,7 +71,7 @@ When(
 function hasDisplayValue(
   $body: JQuery<HTMLBodyElement>,
   elementName: 'input' | 'option' | 'textarea',
-  value: string
+  value: string,
 ): boolean {
   let isFound = false;
 
@@ -133,7 +133,7 @@ export function When_I_find_input_by_display_value(value: string) {
 
 When(
   'I find input by display value {string}',
-  When_I_find_input_by_display_value
+  When_I_find_input_by_display_value,
 );
 
 /**
@@ -172,7 +172,7 @@ export function When_I_find_textarea_by_display_value(value: string) {
 
 When(
   'I find textarea by display value {string}',
-  When_I_find_textarea_by_display_value
+  When_I_find_textarea_by_display_value,
 );
 
 /**
@@ -211,5 +211,5 @@ export function When_I_find_select_by_display_value(value: string) {
 
 When(
   'I find select by display value {string}',
-  When_I_find_select_by_display_value
+  When_I_find_select_by_display_value,
 );

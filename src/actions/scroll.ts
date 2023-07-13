@@ -80,7 +80,7 @@ export function When_I_scroll_window_to_position(
     | 'bottom-left'
     | 'bottom-right'
     | 'top-left'
-    | 'top-right'
+    | 'top-right',
 ) {
   cy.scrollTo(camelCase(position) as Cypress.PositionType);
 }
@@ -122,5 +122,5 @@ export function When_I_scroll_window_to_x_y_coordinates(x: number, y: number) {
 
 When(
   'I scroll window to {int}px and {int}px',
-  When_I_scroll_window_to_x_y_coordinates
+  When_I_scroll_window_to_x_y_coordinates,
 );

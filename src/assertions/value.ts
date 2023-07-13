@@ -60,7 +60,7 @@ Then('I see input value contains {string}', Then_I_see_input_value_contains);
  */
 Then(
   'I see input has value containing {string}',
-  Then_I_see_input_value_contains
+  Then_I_see_input_value_contains,
 );
 
 /**
@@ -118,7 +118,7 @@ export function Then_I_see_textarea_value_contains(value: string) {
 
 Then(
   'I see textarea value contains {string}',
-  Then_I_see_textarea_value_contains
+  Then_I_see_textarea_value_contains,
 );
 
 /**
@@ -126,5 +126,5 @@ Then(
  */
 Then(
   'I see textarea has value containing {string}',
-  Then_I_see_textarea_value_contains
+  Then_I_see_textarea_value_contains,
 );

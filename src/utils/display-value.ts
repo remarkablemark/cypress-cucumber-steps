@@ -10,13 +10,13 @@
  */
 export function getAllByDisplayValue(
   element: 'input' | 'textarea',
-  value: string
+  value: string,
 ) {
   return cy
     .get(`${element}:visible`)
     .filter(
       (index, element: HTMLInputElement) =>
-        Cypress.$(element).val()?.toString() === value
+        Cypress.$(element).val()?.toString() === value,
     );
 }
 
@@ -30,7 +30,7 @@ export function getAllByDisplayValue(
  */
 export function getByDisplayValue(
   element: 'input' | 'textarea',
-  value: string
+  value: string,
 ) {
   return getAllByDisplayValue(element, value).first();
 }

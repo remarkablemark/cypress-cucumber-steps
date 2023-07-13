@@ -154,11 +154,11 @@ export function When_I_advance_timers_by_milliseconds(milliseconds: number) {
 
 When(
   'I advance timers by {int} milliseconds',
-  When_I_advance_timers_by_milliseconds
+  When_I_advance_timers_by_milliseconds,
 );
 When(
   'I advance timers by {int} millisecond',
-  When_I_advance_timers_by_milliseconds
+  When_I_advance_timers_by_milliseconds,
 );
 
 /**

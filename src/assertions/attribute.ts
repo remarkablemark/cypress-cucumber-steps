@@ -66,7 +66,7 @@ Then('I see element has attribute {string}', Then_I_see_element_has_attribute);
  */
 export function Then_I_see_element_attribute_equals(
   name: string,
-  value: string
+  value: string,
 ) {
   getCypressElement().should(($element) => {
     expect($element).to.have.attr(name, value);
@@ -75,7 +75,7 @@ export function Then_I_see_element_attribute_equals(
 
 Then(
   'I see element attribute {string} equals {string}',
-  Then_I_see_element_attribute_equals
+  Then_I_see_element_attribute_equals,
 );
 
 /**
@@ -83,7 +83,7 @@ Then(
  */
 Then(
   'I see element has attribute {string} equal to {string}',
-  Then_I_see_element_attribute_equals
+  Then_I_see_element_attribute_equals,
 );
 
 /**
@@ -115,7 +115,7 @@ Then(
  */
 export function Then_I_see_element_attribute_contains(
   name: string,
-  value: string
+  value: string,
 ) {
   getCypressElement().should(($element) => {
     expect($element.attr(name)).to.include(value);
@@ -124,7 +124,7 @@ export function Then_I_see_element_attribute_contains(
 
 Then(
   'I see element attribute {string} contains {string}',
-  Then_I_see_element_attribute_contains
+  Then_I_see_element_attribute_contains,
 );
 
 /**
@@ -132,5 +132,5 @@ Then(
  */
 Then(
   'I see element has attribute {string} containing {string}',
-  Then_I_see_element_attribute_contains
+  Then_I_see_element_attribute_contains,
 );

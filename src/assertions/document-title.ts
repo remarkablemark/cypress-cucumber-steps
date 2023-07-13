@@ -50,5 +50,5 @@ export function Then_I_see_document_title_contains(title: string) {
 
 Then(
   'I see document title contains {string}',
-  Then_I_see_document_title_contains
+  Then_I_see_document_title_contains,
 );

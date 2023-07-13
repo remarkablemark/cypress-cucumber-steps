@@ -82,7 +82,7 @@ export function When_I_set_viewport(
     | 'macbook-16'
     | 'samsung-note9'
     | 'samsung-s10',
-  orientation: 'portrait' | 'landscape' = 'portrait'
+  orientation: 'portrait' | 'landscape' = 'portrait',
 ) {
   cy.viewport(preset, orientation);
 }
@@ -115,7 +115,7 @@ When('I set viewport to {string} and {string}', When_I_set_viewport);
  */
 export function When_I_set_viewport_width_height(
   width: number,
-  height: number
+  height: number,
 ) {
   cy.viewport(width, height);
 }

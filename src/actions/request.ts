@@ -64,14 +64,14 @@ export function When_I_make_a_request(
     | 'SEARCH'
     | 'CONNECT',
   url: string,
-  options?: DataTable
+  options?: DataTable,
 ) {
   setCypressElement(
     cy.request({
       ...getOptions(options),
       method,
       url,
-    })
+    }),
   );
 }
 

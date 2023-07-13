@@ -13,12 +13,15 @@ export function getOptions(table?: DataTable) {
     return;
   }
 
-  return Object.entries(table.rowsHash()).reduce((result, [key, value]) => {
-    try {
-      result[key] = JSON.parse(value);
-    } catch (error) {
-      result[key] = value;
-    }
-    return result;
-  }, {} as Record<string, string | number | boolean>);
+  return Object.entries(table.rowsHash()).reduce(
+    (result, [key, value]) => {
+      try {
+        result[key] = JSON.parse(value);
+      } catch (error) {
+        result[key] = value;
+      }
+      return result;
+    },
+    {} as Record<string, string | number | boolean>,
+  );
 }

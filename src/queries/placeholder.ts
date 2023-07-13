@@ -31,14 +31,14 @@ import { setCypressElement } from '../utils';
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_find_element_by_placeholder_text(
-  placeholderText: string
+  placeholderText: string,
 ) {
   setCypressElement(
-    cy.get(`[placeholder='${placeholderText}']:visible`).first()
+    cy.get(`[placeholder='${placeholderText}']:visible`).first(),
   );
 }
 
 When(
   'I find element by placeholder text {string}',
-  When_I_find_element_by_placeholder_text
+  When_I_find_element_by_placeholder_text,
 );
