@@ -28,6 +28,10 @@ Then I see text "Example Domain"
 
 See [docs](https://b.remarkabl.org/cypress-cucumber-steps) and [examples](https://github.com/remarkablemark/cypress-cucumber-steps/tree/master/cypress/e2e).
 
+## Migration
+
+See [migration guide](https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Migration).
+
 ## Contributing
 
 We encourage contributions! Check the [contributing guide](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md) on how to proceed.
