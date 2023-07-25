@@ -19,15 +19,12 @@ Feature: Cypress docs
     Then I see URL contains "go"
 
   Scenario: Set Cypress config and find and click aria-label
-    Given I visit "https://docs.cypress.io/plugins"
+    Given I visit "https://docs.cypress.io/"
       And I set Cypress config "baseUrl" to "null"
       And I set Cypress config "defaultCommandTimeout" to "10000"
+      And I set viewport to "iphone-x"
       And I wait 1 second
-    Then I see label "Search"
-    When I find element by label text "Search"
-      And I click on label "Search"
-      And I get focused element
-      And I wait 300 milliseconds
-      And I type "get"
-      And I wait 300 milliseconds
-    Then I see link "get"
+    Then I see label "Toggle navigation bar"
+    When I find element by label text "Toggle navigation bar"
+      And I click on label "Toggle navigation bar"
+    Then I see text "Back to main menu"
