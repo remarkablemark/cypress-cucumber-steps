@@ -1,6 +1,5 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I set viewport to [preset](https://docs.cypress.io/api/commands/viewport#Arguments):
  *
@@ -37,6 +36,8 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * | `samsung-note9` | 414 | 846 |
  * | `samsung-s10` | 360 | 760 |
  *
+ * The _default orientation_ is `portrait`.
+ *
  * @example
  *
  * Resize viewport to iPhone 6 width and height (375px x 667px):
@@ -44,8 +45,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * ```gherkin
  * When I set viewport to "iphone-6"
  * ```
- *
- * > The _default orientation_ is `portrait`.
  *
  * Resize viewport to iPhone 6 width and height and change orientation to landscape:
  *
@@ -61,7 +60,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  *
  * - {@link When_I_set_viewport_width_height | When I set viewport width height}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_set_viewport(
   preset:
     | 'ipad-2'
