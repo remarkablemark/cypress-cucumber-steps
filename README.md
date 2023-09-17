@@ -34,7 +34,7 @@ See [migration guide](https://github.com/remarkablemark/cypress-cucumber-steps/w
 
 ## Contributing
 
-We encourage contributions! Check the [contributing guide](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md) on how to proceed.
+Contributions are welcome! Check out the [contributing guide](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md).
 
 ## License
 
