@@ -10,7 +10,7 @@
 [![build](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/build.yml)
 [![cypress](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml/badge.svg)](https://github.com/remarkablemark/cypress-cucumber-steps/actions/workflows/cypress.yml)
 
-[Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions.
+:cucumber: [Cypress](https://www.cypress.io/) [Cucumber](https://github.com/badeball/cypress-cucumber-preprocessor) step definitions.
 
 ## Setup
 
@@ -30,11 +30,11 @@ See [docs](https://b.remarkabl.org/cypress-cucumber-steps) and [examples](https:
 
 ## Migration
 
-See [migration guide](https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Migration).
+See the [migration guide](https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Migration).
 
 ## Contributing
 
-Contributions are welcome! Check out the [contributing guide](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md).
+Contributions are welcome! Check out [contributing](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md).
 
 ## License
 
