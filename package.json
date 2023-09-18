@@ -37,11 +37,11 @@
     "test"
   ],
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "18.0.5",
+    "@badeball/cypress-cucumber-preprocessor": "18.0.6",
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.0",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
-    "@types/node": "20.6.1",
+    "@types/node": "20.6.2",
     "@typescript-eslint/eslint-plugin": "6.7.0",
     "@typescript-eslint/parser": "6.7.0",
     "cypress": "13.2.0",
@@ -53,9 +53,9 @@
     "lint-staged": "14.0.1",
     "pinst": "3.0.0",
     "prettier": "3.0.3",
-    "typedoc": "0.24.8",
+    "typedoc": "0.25.1",
     "typedoc-plugin-copy-code-to-clipboard": "1.0.3",
-    "typescript": "5.1.6"
+    "typescript": "5.2.2"
   },
   "peerDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "*",
