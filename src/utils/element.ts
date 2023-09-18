@@ -27,11 +27,12 @@ let cypressElement: CypressChainableElement;
  * - {@link setCypressElementByLabelText}
  *
  * @param element - Cypress element.
+ * @returns - Cypress element.
  *
  * @private
  */
-export function setCypressElement(element: CypressChainableElement): void {
-  cypressElement = element;
+export function setCypressElement(element: CypressChainableElement) {
+  return (cypressElement = element);
 }
 
 /**
