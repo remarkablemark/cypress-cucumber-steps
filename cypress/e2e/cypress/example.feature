@@ -186,6 +186,8 @@ Feature: Cypress example
       And I type "John Smith"
     Then I see input value "John Smith"
       And I see input value contains "John"
+    When I find input by label text "Name"
+    Then I see value "John Smith"
 
   Scenario: Timers
     Given I visit "https://example.cypress.io/commands/spies-stubs-clocks"

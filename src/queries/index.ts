@@ -9,6 +9,7 @@ export * from './find';
 export * from './focused';
 export * from './form';
 export * from './get';
+export * from './input';
 export * from './label';
 export * from './link';
 export * from './links';
