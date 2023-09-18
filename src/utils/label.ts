@@ -21,17 +21,17 @@ import { setCypressElement } from '../utils';
  * - {@link setCypressElement}
  *
  * @param text - Label text.
+ * @returns - Cypress element.
  *
  * @private
  */
 export function setCypressElementByLabelText(text: string) {
-  const cypressElement = cy.get(
-    [
-      `label:visible:contains('${text}')`,
-      `[aria-labelledby='${text}']`,
-      `[aria-label='${text}']`,
-    ].join(','),
-  );
-  setCypressElement(cypressElement.first());
-  return cypressElement;
+  const selector = [
+    `label:visible:contains('${text}')`,
+    `[aria-labelledby='${text}']`,
+    `[aria-label='${text}']`,
+  ].join(',');
+  const label = cy.get(selector).first();
+  setCypressElement(label);
+  return label;
 }
