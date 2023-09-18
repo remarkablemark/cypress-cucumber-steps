@@ -27,6 +27,10 @@ import { setCypressElementByLabelText } from '../utils';
  * ```
  *
  * Inspired by Testing Library's [ByLabelText](https://testing-library.com/docs/queries/bylabeltext).
+ *
+ * @see
+ *
+ * - {@link When_I_find_input_by_label_text | When I find input by label text }
  */
 export function When_I_find_element_by_label_text(text: string) {
   setCypressElementByLabelText(text);
