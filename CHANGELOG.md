@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.11.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.10.0...v2.11.0) (2023-09-18)
+
+
+### Features
+
+* **utils:** return Cypress element in `setCypressElement` ([2af8e13](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2af8e13594e6062c28a7bb0a8db88495e5d05287))
+
+
+### Bug Fixes
+
+* **utils:** return first element in `setCypressElementByLabelText` ([f5f20cf](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f5f20cf8cbe8cfde0efaab66db5a250e841f69d8))
+
 ## [2.10.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.9.0...v2.10.0) (2023-07-10)
 
 
