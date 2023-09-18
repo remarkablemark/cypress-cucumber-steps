@@ -1,5 +1,35 @@
 import { Then } from '@badeball/cypress-cucumber-preprocessor';
 
+import { getCypressElement } from '../utils';
+
+/**
+ * Then I see value:
+ *
+ * ```gherkin
+ * Then I see value {string}
+ * ```
+ *
+ * Assert element with exact value is **_visible_** in the screen.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see value "Value"
+ * ```
+ *
+ * A preceding step like {@link When_I_find_element_by_label_text | "When I find element by label text"} is required. For example:
+ *
+ * ```gherkin
+ * When I find element by label text "Input"
+ * Then I see value "Value"
+ * ```
+ */
+export function Then_I_see_value(value: string) {
+  getCypressElement().invoke('val').should('eq', value);
+}
+
+Then('I see value {string}', Then_I_see_value);
+
 /**
  * Then I see input value:
  *
@@ -7,7 +37,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * Then I see input value {string}
  * ```
  *
- * Assert input with exact value is **_visible_** in the screen.
+ * Assert first visible input has exact value.
  *
  * @example
  *
