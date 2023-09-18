@@ -9,7 +9,7 @@ import { setCypressElement, setCypressElementByLabelText } from '../utils';
  * When I find input by label text {string}
  * ```
  *
- * Finds the first `input` that matches the label text.
+ * Finds the first input element that matches the label text.
  *
  * @example
  *

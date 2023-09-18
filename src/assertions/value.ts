@@ -17,10 +17,10 @@ import { getCypressElement } from '../utils';
  * Then I see value "Value"
  * ```
  *
- * A preceding step like {@link When_I_find_element_by_label_text | "When I find element by label text"} is required. For example:
+ * A preceding step like {@link When_I_find_input_by_label_text | "When I find input by label text"} is required. For example:
  *
  * ```gherkin
- * When I find element by label text "Input"
+ * When I find input by label text "Input"
  * Then I see value "Value"
  * ```
  */
