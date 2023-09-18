@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.12.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.11.0...v2.12.0) (2023-09-18)
+
+
+### Features
+
+* **assertions:** add "Then I see value" ([6b85504](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6b855041b1e2c7600973594e9f81d2390c0066b3))
+* **queries:** add "When I find input by label text" ([cf321f4](https://github.com/remarkablemark/cypress-cucumber-steps/commit/cf321f4def1dcddde91ca3a10f4c23fb44663b8c))
+
 ## [2.11.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.10.0...v2.11.0) (2023-09-18)
 
 
