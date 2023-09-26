@@ -15,25 +15,13 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  *
  * @remarks
  *
- * Selects the first unselected option found by display value.
+ * Selects the first option by display value.
  */
 export function When_I_select_option(displayValue: string) {
-  cy.get('select').then(($select) => {
-    if ($select.length > 1) {
-      $select.find('option').each((index, option) => {
-        const $option = Cypress.$(option);
-        if (
-          $option.text() === displayValue &&
-          $option.attr('selected') !== 'selected'
-        ) {
-          $option.attr('selected', 'selected');
-          return false;
-        }
-      });
-    } else {
-      cy.get('select').select(displayValue);
-    }
-  });
+  cy.get('option:visible')
+    .contains(displayValue)
+    .closest('select')
+    .select(displayValue);
 }
 
 When('I select option {string}', When_I_select_option);
