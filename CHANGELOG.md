@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.0...v2.12.1) (2023-09-26)
+
+
+### Bug Fixes
+
+* **actions:** fix and refactor "When I select option" ([04f0cc9](https://github.com/remarkablemark/cypress-cucumber-steps/commit/04f0cc912daa1310d9a301d04e29e443cf6c56fc))
+
 ## [2.12.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.11.0...v2.12.0) (2023-09-18)
 
 
