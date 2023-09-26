@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.1...v2.12.2) (2023-09-26)
+
+
+### Bug Fixes
+
+* **actions:** remove visible from "When I select option" ([6f46200](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6f46200eb7c33afed5c392016cf53d02c73aea5a))
+
 ## [2.12.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.0...v2.12.1) (2023-09-26)
 
 
