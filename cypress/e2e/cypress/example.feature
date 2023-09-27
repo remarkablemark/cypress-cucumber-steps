@@ -51,9 +51,12 @@ Feature: Cypress example
 
   Scenario: Select option
     Given I visit "https://example.cypress.io/commands/actions"
-    When I select option "bananas"
+    When I select option "apples"
       And I get element by selector "select"
-    Then I see value "fr-bananas"
+    Then I see value "fr-apples"
+    When I get elements by selector "select"
+      And I get 2nd element
+      And I select "bananas"
 
   Scenario: Type and clear input
     Given I visit "https://example.cypress.io/commands/actions"
