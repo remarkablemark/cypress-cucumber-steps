@@ -23,7 +23,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * - {@link Then_I_see_link | Then I see link}
  */
 export function Then_I_see_text(text: string) {
-  cy.contains(text).should('exist').and('be.visible');
+  cy.contains(text).filter(':visible').should('exist');
 }
 
 Then('I see text {string}', Then_I_see_text);
