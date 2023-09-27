@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.2...v2.12.3) (2023-09-27)
+
+
+### Bug Fixes
+
+* **assertions:** filter visible for "Then I see text" ([5ab1ea2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/5ab1ea22ac2996285803ed0eff17c718b5e77e33))
+
 ## [2.12.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.1...v2.12.2) (2023-09-26)
 
 
