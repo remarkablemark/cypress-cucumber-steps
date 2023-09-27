@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>When_I_clear_session_storage | cypress-cucumber-steps</title><meta name="description" content="Documentation for cypress-cucumber-steps"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css?cache=1695782608027"/><link rel="stylesheet" href="../assets/highlight.css?cache=1695782608027"/><script defer src="../assets/main.js?cache=1695782608027"></script><script async src="../assets/search.js?cache=1695782608027" id="tsd-search-script"></script><script async src="../assets/navigation.js?cache=1695782608027" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>When_I_select | cypress-cucumber-steps</title><meta name="description" content="Documentation for cypress-cucumber-steps"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css?cache=1695782608027"/><link rel="stylesheet" href="../assets/highlight.css?cache=1695782608027"/><script defer src="../assets/main.js?cache=1695782608027"></script><script async src="../assets/search.js?cache=1695782608027" id="tsd-search-script"></script><script async src="../assets/navigation.js?cache=1695782608027" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,28 +13,36 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">cypress-cucumber-steps</a></li>
-<li><a href="When_I_clear_session_storage.html">When_I_clear_session_storage</a></li></ul>
-<h1>Function When_I_clear_session_storage</h1></div>
+<li><a href="When_I_select.html">When_I_select</a></li></ul>
+<h1>Function When_I_select</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="When_I_clear_session_storage"><span class="tsd-kind-call-signature">When_<wbr/>I_<wbr/>clear_<wbr/>session_<wbr/>storage</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#When_I_clear_session_storage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="When_I_select"><span class="tsd-kind-call-signature">When_<wbr/>I_<wbr/>select</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">displayValue</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#When_I_select" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>When I clear session storage:</p>
-<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I clear session storage</span>
+<div class="tsd-comment tsd-typography"><p>When I select:</p>
+<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I select {string}</span>
 </code><button>Copy</button></pre>
-<p>Clears <a href="https://developer.mozilla.org/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> data for all origins with which the test has interacted.</p>
 </div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">displayValue</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography">
-<h4>Example</h4><p>Clear all sessionStorage:</p>
-<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I clear session storage</span>
+<h4>Example</h4><pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I select </span><span class="hl-3">&quot;Option&quot;</span>
 </code><button>Copy</button></pre>
 
-<h4>Remarks</h4><p>Cypress automatically clears all session storage <em>before</em> each test to prevent state from being shared across tests when <a href="https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation">test isolation</a> is enabled.</p>
-<p>You shouldn&#39;t need to use this command unless you&#39;re using it to clear sessionStorage inside a single test or test isolation is disabled.</p>
+<h4>Remarks</h4><p>A preceding step like <a href="When_I_get_element_by_selector.html" class="tsd-kind-function">&quot;When I get element by selector&quot;</a> is required. For example:</p>
+<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I get element by selector </span><span class="hl-3">&quot;select&quot;</span><br/><span class="hl-2">  </span><span class="hl-1">And </span><span class="hl-2">I select </span><span class="hl-3">&quot;Option&quot;</span>
+</code><button>Copy</button></pre>
+
+<h4>See</h4><ul>
+<li><a href="When_I_select_option.html" class="tsd-kind-function">When I select option</a></li>
+</ul>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/74957d7d/src/actions/session-storage.ts#L27">actions/session-storage.ts:27</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/74957d7d/src/actions/select.ts#L31">actions/select.ts:31</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
