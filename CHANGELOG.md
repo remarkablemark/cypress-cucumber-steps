@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.13.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.3...v2.13.0) (2023-09-27)
+
+
+### Features
+
+* **actions:** add "When I select" ([bbc2d10](https://github.com/remarkablemark/cypress-cucumber-steps/commit/bbc2d101cfcd27826c757163158785a197898aac))
+* **queries:** add "When I get elements by selector" ([925deee](https://github.com/remarkablemark/cypress-cucumber-steps/commit/925deee6f438faf29fa435b556df632f8b7bd532))
+
 ## [2.12.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.2...v2.12.3) (2023-09-27)
 
 
