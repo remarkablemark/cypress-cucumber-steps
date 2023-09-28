@@ -132,11 +132,3 @@ Then(
   'I see textarea value contains {string}',
   Then_I_see_textarea_value_contains,
 );
-
-/**
- * @deprecated Use {@link Then_I_see_textarea_value_contains} instead.
- */
-Then(
-  'I see textarea has value containing {string}',
-  Then_I_see_textarea_value_contains,
-);
