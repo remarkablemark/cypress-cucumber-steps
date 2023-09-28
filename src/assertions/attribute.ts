@@ -79,14 +79,6 @@ Then(
 );
 
 /**
- * @deprecated Use {@link Then_I_see_element_attribute_equals} instead.
- */
-Then(
-  'I see element has attribute {string} equal to {string}',
-  Then_I_see_element_attribute_equals,
-);
-
-/**
  * Then I see element attribute contains:
  *
  * ```gherkin
@@ -124,13 +116,5 @@ export function Then_I_see_element_attribute_contains(
 
 Then(
   'I see element attribute {string} contains {string}',
-  Then_I_see_element_attribute_contains,
-);
-
-/**
- * @deprecated Use {@link Then_I_see_element_attribute_contains} instead.
- */
-Then(
-  'I see element has attribute {string} containing {string}',
   Then_I_see_element_attribute_contains,
 );
