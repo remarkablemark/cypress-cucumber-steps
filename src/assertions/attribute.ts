@@ -79,14 +79,6 @@ Then(
 );
 
 /**
- * @deprecated Use {@link Then_I_see_element_attribute_equals} instead.
- */
-Then(
-  'I see element has attribute {string} equal to {string}',
-  Then_I_see_element_attribute_equals,
-);
-
-/**
  * Then I see element attribute contains:
  *
  * ```gherkin
