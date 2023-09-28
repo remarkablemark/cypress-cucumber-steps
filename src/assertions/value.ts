@@ -106,11 +106,6 @@ export function Then_I_see_textarea_value(value: string) {
 Then('I see textarea value {string}', Then_I_see_textarea_value);
 
 /**
- * @deprecated Use {@link Then_I_see_textarea_value} instead.
- */
-Then('I see textarea has value {string}', Then_I_see_textarea_value);
-
-/**
  * Then I see textarea value contains:
  *
  * ```gherkin
