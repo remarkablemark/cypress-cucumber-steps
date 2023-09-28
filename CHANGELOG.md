@@ -1,121 +1,124 @@
 # Changelog
 
-## [2.13.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.3...v2.13.0) (2023-09-27)
+## [3.0.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.13.0...v3.0.0) (2023-09-28)
 
+### ⚠ BREAKING CHANGES
+
+- **assertions:** remove "I see textarea has value containing"
+- **assertions:** remove "I see textarea has value"
+- **assertions:** remove "I see input has value containing"
+- **assertions:** remove "I see element has attribute containing"
+- **assertions:** remove "I see element has attribute equals"
+- **assertions:** remove "I see input has value"
+
+### Miscellaneous Chores
+
+- **assertions:** remove deprecated "I see element has attribute containing" ([d034630](https://github.com/remarkablemark/cypress-cucumber-steps/commit/d034630e015a83fbad80bc26f1cbb523e6e0bd0d))
+- **assertions:** remove deprecated "I see element has attribute equals" ([56803da](https://github.com/remarkablemark/cypress-cucumber-steps/commit/56803da8aff21cb261edf9bf11bb7fc7a910a5c2))
+- **assertions:** remove deprecated "I see input has value containing" ([201302e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/201302e6394f814d9a0e520977727b8fcd52d714))
+- **assertions:** remove deprecated "I see input has value" ([72a95e4](https://github.com/remarkablemark/cypress-cucumber-steps/commit/72a95e46827458c5ca05dd5635c05ff9965f5c0c))
+- **assertions:** remove deprecated "I see textarea has value containing" ([71b99b8](https://github.com/remarkablemark/cypress-cucumber-steps/commit/71b99b8d9ac087185f084cccb4b361332d100335))
+- **assertions:** remove deprecated "I see textarea has value" ([4f5af00](https://github.com/remarkablemark/cypress-cucumber-steps/commit/4f5af00625ee5c2745f9cd461e4613133f84a9db))
+
+## [2.13.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.3...v2.13.0) (2023-09-27)
 
 ### Features
 
-* **actions:** add "When I select" ([bbc2d10](https://github.com/remarkablemark/cypress-cucumber-steps/commit/bbc2d101cfcd27826c757163158785a197898aac))
-* **queries:** add "When I get elements by selector" ([925deee](https://github.com/remarkablemark/cypress-cucumber-steps/commit/925deee6f438faf29fa435b556df632f8b7bd532))
+- **actions:** add "When I select" ([bbc2d10](https://github.com/remarkablemark/cypress-cucumber-steps/commit/bbc2d101cfcd27826c757163158785a197898aac))
+- **queries:** add "When I get elements by selector" ([925deee](https://github.com/remarkablemark/cypress-cucumber-steps/commit/925deee6f438faf29fa435b556df632f8b7bd532))
 
 ## [2.12.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.2...v2.12.3) (2023-09-27)
 
-
 ### Bug Fixes
 
-* **assertions:** filter visible for "Then I see text" ([5ab1ea2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/5ab1ea22ac2996285803ed0eff17c718b5e77e33))
+- **assertions:** filter visible for "Then I see text" ([5ab1ea2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/5ab1ea22ac2996285803ed0eff17c718b5e77e33))
 
 ## [2.12.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.1...v2.12.2) (2023-09-26)
 
-
 ### Bug Fixes
 
-* **actions:** remove visible from "When I select option" ([6f46200](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6f46200eb7c33afed5c392016cf53d02c73aea5a))
+- **actions:** remove visible from "When I select option" ([6f46200](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6f46200eb7c33afed5c392016cf53d02c73aea5a))
 
 ## [2.12.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.0...v2.12.1) (2023-09-26)
 
-
 ### Bug Fixes
 
-* **actions:** fix and refactor "When I select option" ([04f0cc9](https://github.com/remarkablemark/cypress-cucumber-steps/commit/04f0cc912daa1310d9a301d04e29e443cf6c56fc))
+- **actions:** fix and refactor "When I select option" ([04f0cc9](https://github.com/remarkablemark/cypress-cucumber-steps/commit/04f0cc912daa1310d9a301d04e29e443cf6c56fc))
 
 ## [2.12.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.11.0...v2.12.0) (2023-09-18)
 
-
 ### Features
 
-* **assertions:** add "Then I see value" ([6b85504](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6b855041b1e2c7600973594e9f81d2390c0066b3))
-* **queries:** add "When I find input by label text" ([cf321f4](https://github.com/remarkablemark/cypress-cucumber-steps/commit/cf321f4def1dcddde91ca3a10f4c23fb44663b8c))
+- **assertions:** add "Then I see value" ([6b85504](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6b855041b1e2c7600973594e9f81d2390c0066b3))
+- **queries:** add "When I find input by label text" ([cf321f4](https://github.com/remarkablemark/cypress-cucumber-steps/commit/cf321f4def1dcddde91ca3a10f4c23fb44663b8c))
 
 ## [2.11.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.10.0...v2.11.0) (2023-09-18)
 
-
 ### Features
 
-* **utils:** return Cypress element in `setCypressElement` ([2af8e13](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2af8e13594e6062c28a7bb0a8db88495e5d05287))
-
+- **utils:** return Cypress element in `setCypressElement` ([2af8e13](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2af8e13594e6062c28a7bb0a8db88495e5d05287))
 
 ### Bug Fixes
 
-* **utils:** return first element in `setCypressElementByLabelText` ([f5f20cf](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f5f20cf8cbe8cfde0efaab66db5a250e841f69d8))
+- **utils:** return first element in `setCypressElementByLabelText` ([f5f20cf](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f5f20cf8cbe8cfde0efaab66db5a250e841f69d8))
 
 ## [2.10.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.9.0...v2.10.0) (2023-07-10)
 
-
 ### Features
 
-* **assertions:** add "Then I see response body" ([18b8a91](https://github.com/remarkablemark/cypress-cucumber-steps/commit/18b8a91de205e66868da36b5985451b2fbf3eae7))
+- **assertions:** add "Then I see response body" ([18b8a91](https://github.com/remarkablemark/cypress-cucumber-steps/commit/18b8a91de205e66868da36b5985451b2fbf3eae7))
 
 ## [2.9.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.8.0...v2.9.0) (2023-07-09)
 
-
 ### Features
 
-* **assertions:** add "Then I see response status" ([68fc49c](https://github.com/remarkablemark/cypress-cucumber-steps/commit/68fc49ce375fc1a498e289e17cbb0c5203ac4d25))
+- **assertions:** add "Then I see response status" ([68fc49c](https://github.com/remarkablemark/cypress-cucumber-steps/commit/68fc49ce375fc1a498e289e17cbb0c5203ac4d25))
 
 ## [2.8.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.7.0...v2.8.0) (2023-07-09)
 
-
 ### Features
 
-* **assertions:** add value steps and mark steps for deprecation ([418c7bd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/418c7bd490e087405658bf89bdf6aa56aaaf1446))
+- **assertions:** add value steps and mark steps for deprecation ([418c7bd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/418c7bd490e087405658bf89bdf6aa56aaaf1446))
 
 ## [2.7.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.6.0...v2.7.0) (2023-07-09)
 
-
 ### Features
 
-* **assertions:** add attribute steps and mark steps for deprecation ([19c87fa](https://github.com/remarkablemark/cypress-cucumber-steps/commit/19c87fae20a1351e81a4aba0486d81ff6cb4bf5d))
-
+- **assertions:** add attribute steps and mark steps for deprecation ([19c87fa](https://github.com/remarkablemark/cypress-cucumber-steps/commit/19c87fae20a1351e81a4aba0486d81ff6cb4bf5d))
 
 ### Bug Fixes
 
-* **assertions:** return element instead of value in attribute ([57b9ee0](https://github.com/remarkablemark/cypress-cucumber-steps/commit/57b9ee090e3b2ed2199e881abb3b6bd97957f2c7))
+- **assertions:** return element instead of value in attribute ([57b9ee0](https://github.com/remarkablemark/cypress-cucumber-steps/commit/57b9ee090e3b2ed2199e881abb3b6bd97957f2c7))
 
 ## [2.6.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.5.0...v2.6.0) (2023-07-09)
 
-
 ### Features
 
-* **actions:** add "When I make a request" ([905585f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/905585f80d123069b4e3b81c0efda561ebaa98c5))
+- **actions:** add "When I make a request" ([905585f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/905585f80d123069b4e3b81c0efda561ebaa98c5))
 
 ## [2.5.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.4.0...v2.5.0) (2023-07-09)
 
-
 ### Features
 
-* **actions:** pass options to "When I visit URL" ([e3cecb2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e3cecb2d9671af56c76787cd37789a610f76fc7f))
+- **actions:** pass options to "When I visit URL" ([e3cecb2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e3cecb2d9671af56c76787cd37789a610f76fc7f))
 
 ## [2.4.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.3.0...v2.4.0) (2023-06-26)
 
-
 ### Features
 
-* **actions:** add "When I select file" ([6354131](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6354131b80df4dbc7dac8a9715b3e901072e86f9))
+- **actions:** add "When I select file" ([6354131](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6354131b80df4dbc7dac8a9715b3e901072e86f9))
 
 ## [2.3.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.2.0...v2.3.0) (2023-06-26)
 
-
 ### Features
 
-* **queries:** add "When I get element by selector" ([8695b45](https://github.com/remarkablemark/cypress-cucumber-steps/commit/8695b454b7b85363f9b43c1313199dead6377eef))
+- **queries:** add "When I get element by selector" ([8695b45](https://github.com/remarkablemark/cypress-cucumber-steps/commit/8695b454b7b85363f9b43c1313199dead6377eef))
 
 ## [2.2.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.1.0...v2.2.0) (2023-06-25)
 
-
 ### Features
 
-* **actions:** add "When I set environment variable" ([6f28951](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6f28951cf6363f2eeb86d8051f03e144c88d42f6))
+- **actions:** add "When I set environment variable" ([6f28951](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6f28951cf6363f2eeb86d8051f03e144c88d42f6))
 
 ## [2.1.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.0.0...v2.1.0) (2023-05-13)
 
