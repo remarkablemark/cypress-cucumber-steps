@@ -56,11 +56,6 @@ export function Then_I_see_input_value(value: string) {
 Then('I see input value {string}', Then_I_see_input_value);
 
 /**
- * @deprecated Use {@link Then_I_see_input_value} instead.
- */
-Then('I see input has value {string}', Then_I_see_input_value);
-
-/**
  * Then I see input value contains:
  *
  * ```gherkin
