@@ -118,11 +118,3 @@ Then(
   'I see element attribute {string} contains {string}',
   Then_I_see_element_attribute_contains,
 );
-
-/**
- * @deprecated Use {@link Then_I_see_element_attribute_contains} instead.
- */
-Then(
-  'I see element has attribute {string} containing {string}',
-  Then_I_see_element_attribute_contains,
-);
