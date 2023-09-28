@@ -81,14 +81,6 @@ export function Then_I_see_input_value_contains(value: string) {
 Then('I see input value contains {string}', Then_I_see_input_value_contains);
 
 /**
- * @deprecated Use {@link Then_I_see_input_value_contains} instead.
- */
-Then(
-  'I see input has value containing {string}',
-  Then_I_see_input_value_contains,
-);
-
-/**
  * Then I see textarea value:
  *
  * ```gherkin
