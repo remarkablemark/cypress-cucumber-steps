@@ -1,5 +1,26 @@
 # Changelog
 
+## [3.0.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.13.0...v3.0.0) (2023-09-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **assertions:** remove "I see textarea has value containing"
+* **assertions:** remove "I see textarea has value"
+* **assertions:** remove "I see input has value containing"
+* **assertions:** remove "I see element has attribute containing"
+* **assertions:** remove "I see element has attribute equals"
+* **assertions:** remove "I see input has value"
+
+### Miscellaneous Chores
+
+* **assertions:** remove deprecated "I see element has attribute containing" ([d034630](https://github.com/remarkablemark/cypress-cucumber-steps/commit/d034630e015a83fbad80bc26f1cbb523e6e0bd0d))
+* **assertions:** remove deprecated "I see element has attribute equals" ([56803da](https://github.com/remarkablemark/cypress-cucumber-steps/commit/56803da8aff21cb261edf9bf11bb7fc7a910a5c2))
+* **assertions:** remove deprecated "I see input has value containing" ([201302e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/201302e6394f814d9a0e520977727b8fcd52d714))
+* **assertions:** remove deprecated "I see input has value" ([72a95e4](https://github.com/remarkablemark/cypress-cucumber-steps/commit/72a95e46827458c5ca05dd5635c05ff9965f5c0c))
+* **assertions:** remove deprecated "I see textarea has value containing" ([71b99b8](https://github.com/remarkablemark/cypress-cucumber-steps/commit/71b99b8d9ac087185f084cccb4b361332d100335))
+* **assertions:** remove deprecated "I see textarea has value" ([4f5af00](https://github.com/remarkablemark/cypress-cucumber-steps/commit/4f5af00625ee5c2745f9cd461e4613133f84a9db))
+
 ## [2.13.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.12.3...v2.13.0) (2023-09-27)
 
 
