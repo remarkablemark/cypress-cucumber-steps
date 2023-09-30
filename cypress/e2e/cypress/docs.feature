@@ -1,11 +1,16 @@
 Feature: Cypress docs
   Scenario: Alt text
-    Given I set viewport to "ipad-mini"
-    When I visit "https://docs.cypress.io/plugins/directory"
-      And I find elements by alt text "Cypress Logo"
-      And I find element by alt text "Cypress Logo"
+    Given I set viewport to "macbook-16"
+      And I visit "https://docs.cypress.io/plugins"
+    When I find elements by alt text "Cypress Logo"
+    Then I count 1 element
+    When I find element by alt text "Cypress Logo"
+    Then I count 1 element
+    When I find images by alt text "Cypress Logo"
+    Then I count 1 element
+    When I find image by alt text "Cypress Logo"
       And I click
-    Then I see URL contains "https://docs.cypress.io/"
+    Then I do not see URL "https://docs.cypress.io/plugins"
 
   Scenario: Go back and forward
     Given I visit "https://docs.cypress.io/api/commands/go"
