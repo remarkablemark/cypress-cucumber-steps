@@ -1,6 +1,7 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { setCypressElement } from '../utils';
+import { getCypressElement, setCypressElement } from '../utils';
+import { When_I_find_elements_by_alt_text } from './alt-texts';
 
 /**
  * When I find element by alt text:
@@ -9,7 +10,7 @@ import { setCypressElement } from '../utils';
  * When I find element by alt text {string}
  * ```
  *
- * This finds an element (`<img>`) that matches the `alt` text.
+ * Finds the first element (e.g., `<img>`) that matches the `alt` text.
  *
  * @example
  *
@@ -33,7 +34,8 @@ import { setCypressElement } from '../utils';
  * - {@link When_I_find_elements_by_alt_text | When I find elements by alt text}
  */
 export function When_I_find_element_by_alt_text(altText: string) {
-  setCypressElement(cy.get(`[alt='${altText}']:visible`).first());
+  When_I_find_elements_by_alt_text(altText);
+  setCypressElement(getCypressElement().first());
 }
 
 When('I find element by alt text {string}', When_I_find_element_by_alt_text);
