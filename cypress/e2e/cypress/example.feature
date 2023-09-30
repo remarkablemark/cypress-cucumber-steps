@@ -71,9 +71,21 @@ Feature: Cypress example
         | scrollBehavior | top |
         | timeout | 4000 |
         | waitForAnimations | true |
-    When I find element by placeholder text "Password"
+    When I find element by label text "Password"
       And I type "password"
+      And I find input by label text "Password"
+    Then I see value "password"
+    When I find input by label text "Password"
       And I clear
+      And I find input by label text "Password"
+    Then I see value ""
+
+  Scenario: Placeholder
+    Given I visit "https://example.cypress.io/commands/querying"
+    When I find elements by placeholder text "Name"
+    Then I count 1 element
+    When I find element by placeholder text "Name"
+    Then I count 1 element
 
   Scenario: Blur
     Given I visit "https://example.cypress.io/commands/actions"
