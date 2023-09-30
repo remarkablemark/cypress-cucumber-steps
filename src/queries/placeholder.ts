@@ -14,7 +14,7 @@ import {
  * When I find element by placeholder text {string}
  * ```
  *
- * > Placeholder is not a good substitute for label so prefer {@link When_I_find_element_by_label_text | "When I find element by label text "} instead.
+ * > A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
  *
  * @example
  *
@@ -58,7 +58,7 @@ When(
  * When I find input by placeholder text {string}
  * ```
  *
- * > Placeholder is not a good substitute for label so prefer {@link When_I_find_input_by_label_text | "When I find input by label text "} instead.
+ * > A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_input_by_label_text | "When I find input by label text"} instead.
  *
  * @example
  *
@@ -79,6 +79,7 @@ When(
  *
  * @see
  *
+ * - {@link When_I_find_element_by_placeholder_text | When I find element by placeholder text}
  * - {@link When_I_find_inputs_by_placeholder_text | When I find inputs by placeholder text}
  */
 /* eslint-enable tsdoc/syntax */
