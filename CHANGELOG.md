@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.3.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.2.0...v3.3.0) (2023-09-30)
+
+
+### Features
+
+* **queries:** add "When I find input by placeholder text" ([110130e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/110130eb379b3f21b3db902b243aa97c8546201b))
+* **queries:** add "When I find inputs by placeholder text" ([dfd5353](https://github.com/remarkablemark/cypress-cucumber-steps/commit/dfd53532c9de218016ac3047148c19b7b43eca85))
+
 ## [3.2.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.1.0...v3.2.0) (2023-09-30)
 
 
