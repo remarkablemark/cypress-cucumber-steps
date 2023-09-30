@@ -1,7 +1,10 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { getCypressElement, setCypressElement } from '../utils';
-import { When_I_find_elements_by_placeholder_text } from './placeholders';
+import {
+  When_I_find_elements_by_placeholder_text,
+  When_I_find_inputs_by_placeholder_text,
+} from './placeholders';
 
 /* eslint-disable tsdoc/syntax */
 /**
@@ -11,7 +14,7 @@ import { When_I_find_elements_by_placeholder_text } from './placeholders';
  * When I find element by placeholder text {string}
  * ```
  *
- * > Placeholder is not a good substitute for label so prefer {@link When_I_find_element_by_label_text | "When I find element by label text "} instead.
+ * > A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
  *
  * @example
  *
@@ -29,6 +32,10 @@ import { When_I_find_elements_by_placeholder_text } from './placeholders';
  * ```
  *
  * Inspired by Testing Library's [ByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext).
+ *
+ * @see
+ *
+ * - {@link When_I_find_elements_by_placeholder_text | When I find elements by placeholder text}
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_find_element_by_placeholder_text(
@@ -41,4 +48,47 @@ export function When_I_find_element_by_placeholder_text(
 When(
   'I find element by placeholder text {string}',
   When_I_find_element_by_placeholder_text,
+);
+
+/* eslint-disable tsdoc/syntax */
+/**
+ * When I find input by placeholder text:
+ *
+ * ```gherkin
+ * When I find input by placeholder text {string}
+ * ```
+ *
+ * > A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_input_by_label_text | "When I find input by label text"} instead.
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I find input by placeholder text "Text"
+ * ```
+ *
+ * @remarks
+ *
+ * This precedes steps like {@link When_I_type | "When I type"}. For example:
+ *
+ * ```gherkin
+ * When I find input by placeholder text "Password"
+ *   And I type "password"
+ * ```
+ *
+ * Inspired by Testing Library's [ByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext).
+ *
+ * @see
+ *
+ * - {@link When_I_find_element_by_placeholder_text | When I find element by placeholder text}
+ * - {@link When_I_find_inputs_by_placeholder_text | When I find inputs by placeholder text}
+ */
+/* eslint-enable tsdoc/syntax */
+export function When_I_find_input_by_placeholder_text(placeholderText: string) {
+  When_I_find_inputs_by_placeholder_text(placeholderText);
+  setCypressElement(getCypressElement().first());
+}
+
+When(
+  'I find input by placeholder text {string}',
+  When_I_find_input_by_placeholder_text,
 );
