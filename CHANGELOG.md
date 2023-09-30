@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.1.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.0.0...v3.1.0) (2023-09-30)
+
+
+### Features
+
+* **queries:** add "When I find image by alt text" ([b8b123f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/b8b123fe8f64569b91698e0cb94b3f14df70d217))
+* **queries:** add "When I find images by alt text" ([662dca1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/662dca1411e1ddce3127e61b99adefe7b4303160))
+
 ## [3.0.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v2.13.0...v3.0.0) (2023-09-28)
 
 ### ⚠ BREAKING CHANGES
