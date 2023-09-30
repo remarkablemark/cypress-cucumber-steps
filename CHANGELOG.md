@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.1.0...v3.2.0) (2023-09-30)
+
+
+### Features
+
+* **queries:** add "When I find elements by placeholder text" ([cf8b09e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/cf8b09e8ad5f78c6a9b6b38fa56f6df4debf7eaf))
+
 ## [3.1.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.0.0...v3.1.0) (2023-09-30)
 
 
