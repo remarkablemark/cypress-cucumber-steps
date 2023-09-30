@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.3.0...v3.3.1) (2023-09-30)
+
+
+### Bug Fixes
+
+* **utils:** filter visible labels in `setCypressElementsByLabelText` ([d123531](https://github.com/remarkablemark/cypress-cucumber-steps/commit/d123531172ea6c1e53a674ba4940c6916a463c36))
+
 ## [3.3.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.2.0...v3.3.0) (2023-09-30)
 
 
