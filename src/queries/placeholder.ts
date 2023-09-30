@@ -1,6 +1,7 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { setCypressElement } from '../utils';
+import { getCypressElement, setCypressElement } from '../utils';
+import { When_I_find_elements_by_placeholder_text } from './placeholders';
 
 /* eslint-disable tsdoc/syntax */
 /**
@@ -33,9 +34,8 @@ import { setCypressElement } from '../utils';
 export function When_I_find_element_by_placeholder_text(
   placeholderText: string,
 ) {
-  setCypressElement(
-    cy.get(`[placeholder='${placeholderText}']:visible`).first(),
-  );
+  When_I_find_elements_by_placeholder_text(placeholderText);
+  setCypressElement(getCypressElement().first());
 }
 
 When(
