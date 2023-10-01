@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.4.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.3.2...v3.4.0) (2023-10-01)
+
+
+### Features
+
+* **queries:** add "When I find element by name" ([2e2d9f1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2e2d9f16a586da16d444ad63f4dcad282fb618a0))
+* **queries:** add "When I find elements by name" ([ae8ffb1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ae8ffb1617ab85cd956c43a2f504e953a818f856))
+
 ## [3.3.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.3.1...v3.3.2) (2023-10-01)
 
 
