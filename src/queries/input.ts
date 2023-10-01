@@ -36,7 +36,14 @@ export function When_I_find_input_by_label_text(text: string) {
   const label = setCypressElementByLabelText(text);
 
   label.invoke('attr', 'for').then((forValue) => {
-    const input = forValue ? cy.get(`#${forValue}`) : label.find('input');
+    let input;
+
+    if (forValue) {
+      input = cy.get(`#${forValue}`);
+    } else {
+      input = setCypressElementByLabelText(text).find('input');
+    }
+
     return setCypressElement(input);
   });
 }
