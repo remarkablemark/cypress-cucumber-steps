@@ -109,9 +109,10 @@ Feature: Cypress example
       And I scroll window to "bottom-right"
       And I scroll window to "center"
       And I scroll window to "top-left"
-    When I find button by text "I'm Here"
-    Then I see element is not visible
-    When I scroll into view
+    Then I find element by text "I'm Here"
+      And I see element is not visible
+    When I get element by selector "#scroll-horizontal button"
+      And I scroll into view
     Then I see element is visible
 
   Scenario: Get nth element
