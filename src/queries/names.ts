@@ -27,6 +27,10 @@ import { setCypressElement } from '../utils';
  *   And I get 1st element
  *   And I type "password"
  * ```
+ *
+ * @see
+ *
+ * - {@link When_I_find_element_by_name | When I find element by name}
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_find_elements_by_name(name: string) {
