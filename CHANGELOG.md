@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.4.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.4.0...v3.4.1) (2023-10-01)
+
+
+### Bug Fixes
+
+* **queries:** find visible buttons in "When I find buttons by text" ([ca0eea0](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ca0eea0e71f94af44ca31d58de57b983d9563791))
+* **queries:** find visible links in "When I find links by text" ([f98b0f4](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f98b0f40f1fa5b8517557582061b08adb611fee2))
+
 ## [3.4.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.3.2...v3.4.0) (2023-10-01)
 
 
