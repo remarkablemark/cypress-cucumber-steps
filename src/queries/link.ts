@@ -1,6 +1,6 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { setCypressElement } from '../utils';
+import { getCypressElement, setCypressElement } from '../utils';
 
 /**
  * When I find links by text:
@@ -30,7 +30,7 @@ import { setCypressElement } from '../utils';
  * - {@link When_I_find_link_by_text | When I find link by text}
  */
 export function When_I_find_links_by_text(text: string) {
-  setCypressElement(cy.get(`a:contains('${text}')`));
+  setCypressElement(cy.get(`a:contains('${text}'):visible`));
 }
 
 When('I find links by text {string}', When_I_find_links_by_text);
@@ -64,7 +64,8 @@ When('I find links by text {string}', When_I_find_links_by_text);
  * - {@link When_I_find_links_by_text | When I find links by text}
  */
 export function When_I_find_link_by_text(text: string) {
-  setCypressElement(cy.contains('a', text));
+  When_I_find_links_by_text(text);
+  setCypressElement(getCypressElement().first());
 }
 
 When('I find link by text {string}', When_I_find_link_by_text);
