@@ -14,7 +14,6 @@ export * from './label';
 export * from './link';
 export * from './links';
 export * from './name';
-export * from './names';
 export * from './placeholder';
 export * from './placeholders';
 export * from './testid';
