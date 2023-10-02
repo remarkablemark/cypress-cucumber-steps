@@ -7,6 +7,7 @@ export * from './find';
 export * from './focused';
 export * from './form';
 export * from './get';
+export * from './heading';
 export * from './input';
 export * from './label';
 export * from './link';
