@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.6.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.5.0...v3.6.0) (2023-10-02)
+
+
+### Features
+
+* **queries:** add "When I find input by name" ([2a4c489](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2a4c4893f1cee4dd60002e416fe50982a3f4c660))
+* **queries:** add "When I find inputs by name" ([a8200a5](https://github.com/remarkablemark/cypress-cucumber-steps/commit/a8200a5d14f9d2c68960fe7a74456db83046cf15))
+
 ## [3.5.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.4.1...v3.5.0) (2023-10-02)
 
 
