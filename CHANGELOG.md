@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.5.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.4.1...v3.5.0) (2023-10-02)
+
+
+### Features
+
+* **queries:** add "When I find heading by text" ([0ee7722](https://github.com/remarkablemark/cypress-cucumber-steps/commit/0ee77226584b4d360dd1bce780b332ae7a9b371c))
+* **queries:** add "When I find headings by text" ([02aeb1c](https://github.com/remarkablemark/cypress-cucumber-steps/commit/02aeb1ca0b19e2b6ebb80407903204ebea9d4433))
+
 ## [3.4.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.4.0...v3.4.1) (2023-10-01)
 
 
