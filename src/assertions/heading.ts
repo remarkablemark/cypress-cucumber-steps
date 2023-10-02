@@ -1,5 +1,8 @@
 import { Then } from '@badeball/cypress-cucumber-preprocessor';
 
+import { When_I_find_heading_by_text } from '../queries';
+import { getCypressElement } from '../utils';
+
 /**
  * Then I see heading:
  *
@@ -22,10 +25,8 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_heading(text: string) {
-  const selector = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
-    .map((tag) => `${tag}:contains('${text}'):visible`)
-    .join(',');
-  cy.get(selector).should('exist');
+  When_I_find_heading_by_text(text);
+  getCypressElement().should('exist');
 }
 
 Then('I see heading {string}', Then_I_see_heading);
