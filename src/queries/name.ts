@@ -104,7 +104,7 @@ When('I find element by name {string}', When_I_find_element_by_name);
  *
  * @see
  *
- * - {@link When_I_find_elements_by_name | When I find elements by name}
+ * - {@link When_I_find_input_by_name | When I find input by name}
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_find_inputs_by_name(name: string) {
@@ -141,7 +141,7 @@ When('I find inputs by name {string}', When_I_find_inputs_by_name);
  *
  * @see
  *
- * - {@link When_I_find_elements_by_name | When I find elements by name}
+ * - {@link When_I_find_inputs_by_name | When I find inputs by name}
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_find_input_by_name(name: string) {
