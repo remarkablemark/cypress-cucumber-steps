@@ -1,5 +1,8 @@
 import { Then } from '@badeball/cypress-cucumber-preprocessor';
 
+import { When_I_find_button_by_text } from '../queries';
+import { getCypressElement } from '../utils';
+
 /**
  * Then I see button:
  *
@@ -22,7 +25,8 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_button(text: string) {
-  cy.contains('button:visible', text).should('exist');
+  When_I_find_button_by_text(text);
+  getCypressElement().should('exist');
 }
 
 Then('I see button {string}', Then_I_see_button);
