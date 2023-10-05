@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.6.0...v3.6.1) (2023-10-05)
+
+
+### Bug Fixes
+
+* **assertions:** filter value assertions ([f765f99](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f765f99214a5597d0206af214d9561d658ccd705))
+
 ## [3.6.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.5.0...v3.6.0) (2023-10-02)
 
 
