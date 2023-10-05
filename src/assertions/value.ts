@@ -50,7 +50,9 @@ Then('I see value {string}', Then_I_see_value);
  * - {@link Then_I_see_input_value_contains | Then I see input value contains}
  */
 export function Then_I_see_input_value(value: string) {
-  cy.get('input:visible').invoke('val').should('eq', value);
+  cy.get('input:visible')
+    .filter((index, element) => (element as HTMLInputElement).value === value)
+    .should('exist');
 }
 
 Then('I see input value {string}', Then_I_see_input_value);
@@ -75,7 +77,11 @@ Then('I see input value {string}', Then_I_see_input_value);
  * - {@link Then_I_see_input_value | Then I see input value}
  */
 export function Then_I_see_input_value_contains(value: string) {
-  cy.get('input:visible').invoke('val').should('include', value);
+  cy.get('input:visible')
+    .filter((index, element) =>
+      (element as HTMLInputElement).value.includes(value),
+    )
+    .should('exist');
 }
 
 Then('I see input value contains {string}', Then_I_see_input_value_contains);
@@ -100,7 +106,9 @@ Then('I see input value contains {string}', Then_I_see_input_value_contains);
  * - {@link Then_I_see_textarea_value_contains | Then I see textarea value contains}
  */
 export function Then_I_see_textarea_value(value: string) {
-  cy.get('textarea:visible').invoke('val').should('eq', value);
+  cy.get('textarea:visible')
+    .filter((index, element) => (element as HTMLInputElement).value === value)
+    .should('exist');
 }
 
 Then('I see textarea value {string}', Then_I_see_textarea_value);
@@ -125,7 +133,11 @@ Then('I see textarea value {string}', Then_I_see_textarea_value);
  * - {@link Then_I_see_textarea_value | Then I see textarea value}
  */
 export function Then_I_see_textarea_value_contains(value: string) {
-  cy.get('textarea:visible').invoke('val').should('include', value);
+  cy.get('textarea:visible')
+    .filter((index, element) =>
+      (element as HTMLInputElement).value.includes(value),
+    )
+    .should('exist');
 }
 
 Then(
