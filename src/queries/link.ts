@@ -30,7 +30,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * - {@link When_I_find_link_by_text | When I find link by text}
  */
 export function When_I_find_links_by_text(text: string) {
-  setCypressElement(cy.get(`a:contains('${text}'):visible`));
+  setCypressElement(cy.get(`a:contains(${JSON.stringify(text)}):visible`));
 }
 
 When('I find links by text {string}', When_I_find_links_by_text);

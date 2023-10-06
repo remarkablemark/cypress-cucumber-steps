@@ -34,7 +34,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  */
 /* eslint-enable tsdoc/syntax */
 export function When_I_find_elements_by_name(name: string) {
-  setCypressElement(cy.get(`[name='${name}']:visible`));
+  setCypressElement(cy.get(`[name=${JSON.stringify(name)}]:visible`));
 }
 
 When('I find elements by name {string}', When_I_find_elements_by_name);
