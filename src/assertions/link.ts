@@ -7,15 +7,13 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * Then I see link {string}
  * ```
  *
+ * Assert link with text **_exists_** and is **_visible_** in the screen.
+ *
  * @example
  *
  * ```gherkin
  * Then I see link "Link"
  * ```
- *
- * @remarks
- *
- * Assert that a link with text **_exists_** and is **_visible_** in the screen.
  *
  * @see
  *
@@ -33,6 +31,8 @@ Then('I see link {string}', Then_I_see_link);
  * ```gherkin
  * Then I do not see link {string}
  * ```
+ *
+ * Assert link with text **_does not exist_** in the screen.
  *
  * @example
  *
