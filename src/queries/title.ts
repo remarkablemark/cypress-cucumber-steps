@@ -30,8 +30,8 @@ import { setCypressElement } from '../utils';
  */
 export function When_I_find_element_by_title(title: string) {
   const selector = [
-    `svg title:contains('${title}')`,
-    `[title='${title}']`,
+    `svg title:contains(${JSON.stringify(title)})`,
+    `[title=${JSON.stringify(title)}]`,
   ].join(',');
   setCypressElement(cy.get(selector).first());
 }
