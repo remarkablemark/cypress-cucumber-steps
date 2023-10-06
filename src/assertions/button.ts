@@ -9,15 +9,13 @@ import { setCypressElementsByButtonText } from '../utils';
  * Then I see button {string}
  * ```
  *
+ * Assert button with text **_exists_** and is **_visible_** in the screen.
+ *
  * @example
  *
  * ```gherkin
  * Then I see button "Button"
  * ```
- *
- * @remarks
- *
- * This asserts that a button with text **_exists_** and is **_visible_** in the screen.
  *
  * @see
  *
@@ -35,6 +33,8 @@ Then('I see button {string}', Then_I_see_button);
  * ```gherkin
  * Then I do not see button {string}
  * ```
+ *
+ * Assert button with text **_does not exist_** in the screen.
  *
  * @example
  *
