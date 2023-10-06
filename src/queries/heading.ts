@@ -31,7 +31,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  */
 export function When_I_find_headings_by_text(text: string) {
   const selector = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
-    .map((tag) => `${tag}:contains('${text}'):visible`)
+    .map((tag) => `${tag}:contains(${JSON.stringify(text)}):visible`)
     .join(',');
   setCypressElement(cy.get(selector));
 }
