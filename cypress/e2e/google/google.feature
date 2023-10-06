@@ -12,6 +12,11 @@ Feature: Google
     When I find element by name "q"
     Then I count 1 element
 
+  Scenario: Button
+    Given I visit "https://www.google.com/"
+    Then I see button "I'm Feeling Lucky"
+      And I do not see button 'I\'m Not Feeling Lucky'
+
   Scenario: Visit does not fail on status code
     Given I visit "https://www.google.com/404"
       | failOnStatusCode | false |
