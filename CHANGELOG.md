@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.6.3...v3.7.0) (2023-10-06)
+
+
+### Features
+
+* **assertions:** add "Then I do not see button" ([d5901f7](https://github.com/remarkablemark/cypress-cucumber-steps/commit/d5901f7907e2b267b24093b45f41555c33efaa5d))
+
 ## [3.6.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.6.2...v3.6.3) (2023-10-06)
 
 
