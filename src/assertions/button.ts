@@ -1,7 +1,6 @@
 import { Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import { When_I_find_button_by_text } from '../queries';
-import { getCypressElement } from '../utils';
+import { setCypressElementsByButtonText } from '../utils';
 
 /**
  * Then I see button:
@@ -25,8 +24,30 @@ import { getCypressElement } from '../utils';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_button(text: string) {
-  When_I_find_button_by_text(text);
-  getCypressElement().should('exist');
+  setCypressElementsByButtonText(text).should('exist');
 }
 
 Then('I see button {string}', Then_I_see_button);
+
+/**
+ * Then I do not see button:
+ *
+ * ```gherkin
+ * Then I do not see button {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I do not see button "Button"
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_do_not_see_text | Then I do not see text}
+ */
+export function Then_I_do_not_see_button(text: string) {
+  setCypressElementsByButtonText(text).should('not.exist');
+}
+
+Then('I do not see button {string}', Then_I_do_not_see_button);
