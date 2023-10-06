@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.6.1...v3.6.2) (2023-10-06)
+
+
+### Bug Fixes
+
+* **queries:** include value and escape text in button steps ([2c9e170](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2c9e1700e5cddd4485b8c846f082424df8e334a9))
+
 ## [3.6.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.6.0...v3.6.1) (2023-10-05)
 
 
