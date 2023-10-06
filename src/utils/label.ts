@@ -27,9 +27,9 @@ import { setCypressElement } from '../utils';
  */
 export function setCypressElementsByLabelText(text: string) {
   const selector = [
-    `label:contains('${text}')`,
-    `[aria-labelledby='${text}']`,
-    `[aria-label='${text}']`,
+    `label:contains(${JSON.stringify(text)})`,
+    `[aria-labelledby=${JSON.stringify(text)}]`,
+    `[aria-label=${JSON.stringify(text)}]`,
   ].join(',');
   const elements = cy.get(selector).filter(':visible');
   setCypressElement(elements);
