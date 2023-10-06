@@ -1,6 +1,9 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, setCypressElement } from '../utils';
+import {
+  setCypressElementByButtonText,
+  setCypressElementsByButtonText,
+} from '../utils';
 
 /**
  * When I find buttons by text:
@@ -30,10 +33,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * - {@link When_I_find_button_by_text | When I find button by text}
  */
 export function When_I_find_buttons_by_text(text: string) {
-  const selector = ['button', "[type='button']", "[type='submit']"]
-    .map((value) => `${value}:contains('${text}'):visible`)
-    .join(',');
-  setCypressElement(cy.get(selector));
+  setCypressElementsByButtonText(text);
 }
 
 When('I find buttons by text {string}', When_I_find_buttons_by_text);
@@ -67,8 +67,7 @@ When('I find buttons by text {string}', When_I_find_buttons_by_text);
  * - {@link When_I_find_buttons_by_text | When I find buttons by text}
  */
 export function When_I_find_button_by_text(text: string) {
-  When_I_find_buttons_by_text(text);
-  setCypressElement(getCypressElement().first());
+  setCypressElementByButtonText(text);
 }
 
 When('I find button by text {string}', When_I_find_button_by_text);
