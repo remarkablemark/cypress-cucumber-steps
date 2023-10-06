@@ -35,7 +35,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * - {@link When_I_find_images_by_alt_text | When I find images by alt text}
  */
 export function When_I_find_elements_by_alt_text(altText: string) {
-  setCypressElement(cy.get(`[alt='${altText}']:visible`));
+  setCypressElement(cy.get(`[alt=${JSON.stringify(altText)}]:visible`));
 }
 
 When('I find elements by alt text {string}', When_I_find_elements_by_alt_text);
