@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.6.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.6.2...v3.6.3) (2023-10-06)
+
+
+### Bug Fixes
+
+* **queries:** escape string in "When I find element by test ID" ([e5edd72](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e5edd7236bc0088a5572b6e5f041e26c8279a5a4))
+* **queries:** escape string in "When I find element by title" ([8aa5860](https://github.com/remarkablemark/cypress-cucumber-steps/commit/8aa5860d2661d33d3af0e45d83c06f02cb6c0480))
+* **queries:** escape string in "When I find elements by alt text" ([2fe8a4d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2fe8a4d4580d37225d1026c6f4f86a2fc12a6506))
+* **queries:** escape string in "When I find elements by name" ([191037b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/191037b7bbd6a0d2721351b0599904893bef95ad))
+* **queries:** escape string in "When I find elements by placeholder text" ([948a43f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/948a43f16f8ab11a9342b9ce2eedb0b75cad5e62))
+* **queries:** escape string in "When I find headings by text" ([3e25598](https://github.com/remarkablemark/cypress-cucumber-steps/commit/3e25598d62792d1bac7e21b9829dbc1a7ae43d37))
+* **queries:** escape string in "When I find links by text" ([7510dad](https://github.com/remarkablemark/cypress-cucumber-steps/commit/7510dad1a7eca89baee27e7de8bff5d00c4b9d94))
+* **utils:** escape string in label steps ([f593284](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f593284a11292ba26e04d6f48c949cd8614b06d1))
+
 ## [3.6.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.6.1...v3.6.2) (2023-10-06)
 
 
