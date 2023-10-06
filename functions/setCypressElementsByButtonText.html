@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Then_I_see_text | cypress-cucumber-steps</title><meta name="description" content="Documentation for cypress-cucumber-steps"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css?cache=1696551084478"/><link rel="stylesheet" href="../assets/highlight.css?cache=1696551084478"/><script defer src="../assets/main.js?cache=1696551084478"></script><script async src="../assets/search.js?cache=1696551084478" id="tsd-search-script"></script><script async src="../assets/navigation.js?cache=1696551084478" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>setCypressElementsByButtonText | cypress-cucumber-steps</title><meta name="description" content="Documentation for cypress-cucumber-steps"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css?cache=1696551084478"/><link rel="stylesheet" href="../assets/highlight.css?cache=1696551084478"/><script defer src="../assets/main.js?cache=1696551084478"></script><script async src="../assets/search.js?cache=1696551084478" id="tsd-search-script"></script><script async src="../assets/navigation.js?cache=1696551084478" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,36 +13,39 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">cypress-cucumber-steps</a></li>
-<li><a href="Then_I_see_text.html">Then_I_see_text</a></li></ul>
-<h1>Function Then_I_see_text</h1></div>
+<li><a href="setCypressElementsByButtonText.html">setCypressElementsByButtonText</a></li></ul>
+<h1>Function setCypressElementsByButtonText<code class="tsd-tag ts-flagPrivate">Private</code> </h1></div>
 <section class="tsd-panel">
-<ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="Then_I_see_text"><span class="tsd-kind-call-signature">Then_<wbr/>I_<wbr/>see_<wbr/>text</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">text</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#Then_I_see_text" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Then I see text:</p>
-<pre><code class="language-gherkin"><span class="hl-1">Then </span><span class="hl-2">I see text {string}</span>
+<ul class="tsd-signatures tsd-is-private">
+<li class="tsd-signature tsd-anchor-link" id="setCypressElementsByButtonText"><span class="tsd-kind-call-signature">set<wbr/>Cypress<wbr/>Elements<wbr/>By<wbr/>Button<wbr/>Text</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">text</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Chainable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">JQuery</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">HTMLElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#setCypressElementsByButtonText" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description"><code class="tsd-tag ts-flagPrivate">Private</code> 
+<div class="tsd-comment tsd-typography"><p>Set Cypress elements by button text:</p>
+<pre><code class="language-ts"><span class="hl-9">setCypressElementsByButtonText</span><span class="hl-2">(</span><span class="hl-3">&#39;...&#39;</span><span class="hl-2">);</span>
 </code><button>Copy</button></pre>
-<p>Assert element with text <strong><em>exists</em></strong> and is <strong><em>visible</em></strong> in the screen.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">text</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<h5><span class="tsd-kind-parameter">text</span>: <span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Button text.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Chainable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">JQuery</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">HTMLElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><ul>
+<li>Cypress element.</li>
+</ul>
+
 <div class="tsd-comment tsd-typography">
-<h4>Example</h4><pre><code class="language-gherkin"><span class="hl-1">Then </span><span class="hl-2">I see text </span><span class="hl-3">&quot;Text&quot;</span>
+<h4>Example</h4><pre><code class="language-ts"><span class="hl-9">setCypressElementsByButtonText</span><span class="hl-2">(</span><span class="hl-3">&#39;Text&#39;</span><span class="hl-2">);</span>
 </code><button>Copy</button></pre>
 
 <h4>See</h4><ul>
-<li><a href="Then_I_see_button.html" class="tsd-kind-function">Then I see button</a></li>
-<li><a href="Then_I_see_heading.html" class="tsd-kind-function">Then I see heading</a></li>
-<li><a href="Then_I_see_label.html" class="tsd-kind-function">Then I see label</a></li>
-<li><a href="Then_I_see_link.html" class="tsd-kind-function">Then I see link</a></li>
+<li><a href="getCypressElement.html" class="tsd-kind-function">getCypressElement</a></li>
+<li><a href="setCypressElement.html" class="tsd-kind-function">setCypressElement</a></li>
 </ul>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/5d299f0f/src/assertions/text.ts#L25">assertions/text.ts:25</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/5d299f0f/src/utils/button.ts#L28">utils/button.ts:28</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
