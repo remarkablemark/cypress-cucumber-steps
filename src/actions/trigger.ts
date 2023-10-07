@@ -2,7 +2,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { getCypressElement } from '../utils';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I trigger event:
  *
@@ -18,7 +17,7 @@ import { getCypressElement } from '../utils';
  * When I trigger event "mouseover"
  * ```
  *
- * > The DOM element must be in an "interactable" state prior to the triggered event happening (it must be visible and not disabled).
+ * _The DOM element must be in an "interactable" state prior to the triggered event happening (it must be visible and not disabled)._
  *
  * @remarks
  *
@@ -31,7 +30,6 @@ import { getCypressElement } from '../utils';
  *
  * @param eventName - The name of the `event` to be triggered on the DOM element.
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_trigger_event(eventName: string) {
   getCypressElement().trigger(eventName);
 }

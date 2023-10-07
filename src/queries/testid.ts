@@ -2,7 +2,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { setCypressElement } from '../utils';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find element by test ID:
  *
@@ -16,7 +15,7 @@ import { setCypressElement } from '../utils';
  * <div data-testid="custom-element"></div>
  * ```
  *
- * > It's recommended to use this only after the other queries don't work for your use case. Using `data-testid` attributes do not resemble how your software is used and should be avoided if possible.
+ * _It's recommended to use this only after the other queries don't work for your use case. Using `data-testid` attributes do not resemble how your software is used and should be avoided if possible._
  *
  * @example
  *
@@ -35,7 +34,6 @@ import { setCypressElement } from '../utils';
  *
  * Inspired by Testing Library's [ByTestId](https://testing-library.com/docs/queries/bytestid).
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_element_by_testid(testId: string) {
   setCypressElement(
     cy.get(`[data-testid=${JSON.stringify(testId)}]:visible`).first(),

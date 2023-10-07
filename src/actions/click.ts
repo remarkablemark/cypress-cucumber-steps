@@ -40,7 +40,6 @@ export function When_I_click() {
 
 When('I click', When_I_click);
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I click on button:
  *
@@ -48,7 +47,7 @@ When('I click', When_I_click);
  * When I click on button {string}
  * ```
  *
- * > If multiple buttons are found, it will click on the first one.
+ * If multiple buttons are found, it will click on the first one.
  *
  * @example
  *
@@ -60,14 +59,12 @@ When('I click', When_I_click);
  *
  * - {@link When_I_click_on_text | When I click on text}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_click_on_button(text: string) {
   cy.contains('button', text).first().click();
 }
 
 When('I click on button {string}', When_I_click_on_button);
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I click on link:
  *
@@ -75,7 +72,7 @@ When('I click on button {string}', When_I_click_on_button);
  * When I click on link {string}
  * ```
  *
- * > If multiple links are found, it will click on the first one.
+ * If multiple links are found, it will click on the first one.
  *
  * @example
  *
@@ -87,7 +84,6 @@ When('I click on button {string}', When_I_click_on_button);
  *
  * - {@link When_I_click_on_text | When I click on text}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_click_on_link(text: string) {
   cy.contains('a', text).first().click();
 }

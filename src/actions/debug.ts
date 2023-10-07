@@ -2,7 +2,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { getCypressElement } from '../utils';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I debug:
  *
@@ -20,13 +19,12 @@ import { getCypressElement } from '../utils';
  *
  * Sets a `debugger` and logs what the previous command yields.
  *
- * > Developer Tools need to be open for `debug` to hit the breakpoint.
+ * _Developer Tools need to be open for `debug` to hit the breakpoint._
  *
  * @see
  *
  * - {@link When_I_pause | When I pause}
  */
-/* eslint-enable tsdoc/syntax */
 export async function When_I_debug() {
   try {
     getCypressElement().debug();

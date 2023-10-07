@@ -1,4 +1,3 @@
-/* eslint-disable tsdoc/syntax */
 const HYPHEN_REGEX = /-([a-z])/g;
 
 /**

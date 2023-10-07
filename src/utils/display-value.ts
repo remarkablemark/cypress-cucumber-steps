@@ -1,5 +1,3 @@
-/* eslint-disable tsdoc/syntax */
-
 /**
  * Get first Cypress element by display value.
  *

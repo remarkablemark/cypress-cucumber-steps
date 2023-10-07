@@ -1,6 +1,5 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I set Cypress config:
  *
@@ -22,13 +21,12 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  *
  * Cypress runs each spec file in isolation: the browser is exited between specs. Configuration changed in one spec won't be visible in other specs.
  *
- * > Not all configuration values can be changed during runtime.
+ * _Not all configuration values can be changed during runtime._
  *
  * @see
  *
  * See [Cypress configuration options](https://docs.cypress.io/guides/references/configuration#Options).
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_set_Cypress_config(
   name: keyof Cypress.TestConfigOverrides,
   value: string,

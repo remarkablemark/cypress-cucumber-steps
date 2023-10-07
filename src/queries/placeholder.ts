@@ -2,7 +2,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { getCypressElement, setCypressElement } from '../utils';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find elements by placeholder text:
  *
@@ -10,7 +9,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * When I find elements by placeholder text {string}
  * ```
  *
- * > A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
+ * _A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead._
  *
  * @example
  *
@@ -35,7 +34,6 @@ import { getCypressElement, setCypressElement } from '../utils';
  * - {@link When_I_find_element_by_placeholder_text | When I find element by placeholder text}
  * - {@link When_I_find_inputs_by_placeholder_text | When I find inputs by placeholder text}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_elements_by_placeholder_text(
   placeholderText: string,
 ) {
@@ -49,7 +47,6 @@ When(
   When_I_find_elements_by_placeholder_text,
 );
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find element by placeholder text:
  *
@@ -57,7 +54,7 @@ When(
  * When I find element by placeholder text {string}
  * ```
  *
- * > A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
+ * _A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead._
  *
  * @example
  *
@@ -80,7 +77,6 @@ When(
  *
  * - {@link When_I_find_elements_by_placeholder_text | When I find elements by placeholder text}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_element_by_placeholder_text(
   placeholderText: string,
 ) {
@@ -93,7 +89,6 @@ When(
   When_I_find_element_by_placeholder_text,
 );
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find inputs by placeholder text:
  *
@@ -101,7 +96,7 @@ When(
  * When I find inputs by placeholder text {string}
  * ```
  *
- * > A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_input_by_label_text | "When I find input by label text"} instead.
+ * _A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_input_by_label_text | "When I find input by label text"} instead._
  *
  * @example
  *
@@ -126,7 +121,6 @@ When(
  * - {@link When_I_find_elements_by_placeholder_text | When I find elements by placeholder text}
  * - {@link When_I_find_input_by_placeholder_text | When I find input by placeholder text}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_inputs_by_placeholder_text(
   placeholderText: string,
 ) {
@@ -139,7 +133,6 @@ When(
   When_I_find_inputs_by_placeholder_text,
 );
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find input by placeholder text:
  *
@@ -147,7 +140,7 @@ When(
  * When I find input by placeholder text {string}
  * ```
  *
- * > A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_input_by_label_text | "When I find input by label text"} instead.
+ * _A placeholder is not a good substitute for a label so you should generally use {@link When_I_find_input_by_label_text | "When I find input by label text"} instead._
  *
  * @example
  *
@@ -171,7 +164,6 @@ When(
  * - {@link When_I_find_element_by_placeholder_text | When I find element by placeholder text}
  * - {@link When_I_find_inputs_by_placeholder_text | When I find inputs by placeholder text}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_input_by_placeholder_text(placeholderText: string) {
   When_I_find_inputs_by_placeholder_text(placeholderText);
   setCypressElement(getCypressElement().first());

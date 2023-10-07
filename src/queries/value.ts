@@ -2,7 +2,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { getByDisplayValue, setCypressElement } from '../utils';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I get element by display value:
  *
@@ -12,7 +11,7 @@ import { getByDisplayValue, setCypressElement } from '../utils';
  *
  * Returns the `input`, `textarea`, or `select` element that has the matching display value.
  *
- * > This query will throw an error if no element is found and will not wait and retry.
+ * _This query will throw an error if no element is found and will not wait and retry._
  *
  * @example
  *
@@ -37,7 +36,6 @@ import { getByDisplayValue, setCypressElement } from '../utils';
  * - {@link When_I_find_select_by_display_value | When I find select by display value}
  * - {@link When_I_find_textarea_by_display_value | When I find textarea by display value}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_get_element_by_display_value(value: string) {
   cy.get('body').then(($body) => {
     if (hasDisplayValue($body, 'input', value)) {

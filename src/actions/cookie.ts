@@ -1,12 +1,13 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I clear cookie:
  *
  * ```gherkin
  * When I clear cookie {string}
  * ```
+ *
+ * Clears a specific browser cookie.
  *
  * @example
  *
@@ -18,13 +19,10 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  *
  * @remarks
  *
- * Clears a specific browser cookie.
+ * Cypress automatically clears all cookies _before_ each test to prevent state from being shared across tests when [test isolation](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation) is enabled.
  *
- * > Cypress automatically clears all cookies _before_ each test to prevent state from being shared across tests when [test isolation](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation) is enabled.
- * >
- * > You shouldn't need to use this command unless you're using it to clear a specific cookie inside a single test or test isolation is disabled.
+ * _You shouldn't need to use this command unless you're using it to clear a specific cookie inside a single test or test isolation is disabled._
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_clear_cookie(name: string) {
   cy.clearCookie(name);
 }

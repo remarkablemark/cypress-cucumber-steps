@@ -1,5 +1,3 @@
-/* eslint-disable tsdoc/syntax */
-
 /**
  * @private
  */

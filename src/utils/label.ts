@@ -1,5 +1,3 @@
-/* eslint-disable tsdoc/syntax */
-
 import { When_I_find_element_by_label_text } from '../queries';
 import { getCypressElement } from './element';
 

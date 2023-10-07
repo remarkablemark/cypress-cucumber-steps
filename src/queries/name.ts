@@ -2,7 +2,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { getCypressElement, setCypressElement } from '../utils';
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find elements by name:
  *
@@ -10,7 +9,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * When I find elements by name {string}
  * ```
  *
- * > A name is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
+ * _A name is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead._
  *
  * @example
  *
@@ -32,14 +31,12 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * - {@link When_I_find_element_by_name | When I find element by name}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_elements_by_name(name: string) {
   setCypressElement(cy.get(`[name=${JSON.stringify(name)}]:visible`));
 }
 
 When('I find elements by name {string}', When_I_find_elements_by_name);
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find element by name:
  *
@@ -47,7 +44,7 @@ When('I find elements by name {string}', When_I_find_elements_by_name);
  * When I find element by name {string}
  * ```
  *
- * > A name is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
+ * _A name is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead._
  *
  * @example
  *
@@ -68,7 +65,6 @@ When('I find elements by name {string}', When_I_find_elements_by_name);
  *
  * - {@link When_I_find_elements_by_name | When I find elements by name}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_element_by_name(name: string) {
   When_I_find_elements_by_name(name);
   setCypressElement(getCypressElement().first());
@@ -76,7 +72,6 @@ export function When_I_find_element_by_name(name: string) {
 
 When('I find element by name {string}', When_I_find_element_by_name);
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find inputs by name:
  *
@@ -84,7 +79,7 @@ When('I find element by name {string}', When_I_find_element_by_name);
  * When I find inputs by name {string}
  * ```
  *
- * > A name is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
+ * _A name is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead._
  *
  * @example
  *
@@ -106,7 +101,6 @@ When('I find element by name {string}', When_I_find_element_by_name);
  *
  * - {@link When_I_find_input_by_name | When I find input by name}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_inputs_by_name(name: string) {
   When_I_find_elements_by_name(name);
   setCypressElement(getCypressElement().filter('input'));
@@ -114,7 +108,6 @@ export function When_I_find_inputs_by_name(name: string) {
 
 When('I find inputs by name {string}', When_I_find_inputs_by_name);
 
-/* eslint-disable tsdoc/syntax */
 /**
  * When I find input by name:
  *
@@ -122,7 +115,7 @@ When('I find inputs by name {string}', When_I_find_inputs_by_name);
  * When I find input by name {string}
  * ```
  *
- * > A name is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead.
+ * _A name is not a good substitute for a label so you should generally use {@link When_I_find_element_by_label_text | "When I find element by label text"} instead._
  *
  * @example
  *
@@ -143,7 +136,6 @@ When('I find inputs by name {string}', When_I_find_inputs_by_name);
  *
  * - {@link When_I_find_inputs_by_name | When I find inputs by name}
  */
-/* eslint-enable tsdoc/syntax */
 export function When_I_find_input_by_name(name: string) {
   When_I_find_inputs_by_name(name);
   setCypressElement(getCypressElement().first());
