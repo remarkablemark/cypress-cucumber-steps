@@ -1,5 +1,6 @@
 {
   "entryPoints": ["src"],
   "plugin": ["typedoc-plugin-copy-code-to-clipboard"],
-  "cacheBust": true
+  "cacheBust": true,
+  "gaID": "G-C8Z4FEEJ9Q"
 }
