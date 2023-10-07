@@ -1,6 +1,7 @@
 import { Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, setCypressElementByLabelText } from '../utils';
+import { When_I_find_elements_by_label_text } from '../queries';
+import { getCypressElement } from '../utils';
 
 /**
  * Then I see label:
@@ -26,9 +27,8 @@ import { getCypressElement, setCypressElementByLabelText } from '../utils';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_label(text: string) {
-  setCypressElementByLabelText(text).then(() =>
-    getCypressElement().should('exist'),
-  );
+  When_I_find_elements_by_label_text(text);
+  getCypressElement().should('exist');
 }
 
 Then('I see label {string}', Then_I_see_label);

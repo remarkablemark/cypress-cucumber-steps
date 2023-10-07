@@ -1,10 +1,6 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import {
-  getCypressElement,
-  setCypressElement,
-  setCypressElementsByLabelText,
-} from '../utils';
+import { getCypressElement, setCypressElement } from '../utils';
 
 /**
  * When I find elements by label text:
@@ -38,7 +34,13 @@ import {
  * - {@link When_I_find_element_by_label_text | When I find element by label text }
  */
 export function When_I_find_elements_by_label_text(text: string) {
-  setCypressElementsByLabelText(text);
+  const selectors = [
+    `label:contains(${JSON.stringify(text)})`,
+    `[aria-labelledby=${JSON.stringify(text)}]`,
+    `[aria-label=${JSON.stringify(text)}]`,
+  ].map((selector) => `${selector}:visible`);
+
+  setCypressElement(cy.get(selectors.join(',')));
 }
 
 When(

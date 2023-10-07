@@ -1,6 +1,7 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, setCypressElementByLabelText } from '../utils';
+import { When_I_find_element_by_label_text } from '../queries';
+import { getCypressElement } from '../utils';
 
 /**
  * When I click:
@@ -140,7 +141,8 @@ When('I click on text {string}', When_I_click_on_text);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_label(text: string) {
-  setCypressElementByLabelText(text).then(() => getCypressElement().click());
+  When_I_find_element_by_label_text(text);
+  getCypressElement().click();
 }
 
 When('I click on label {string}', When_I_click_on_label);

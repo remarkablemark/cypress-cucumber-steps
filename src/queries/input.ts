@@ -1,6 +1,10 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { setCypressElement, setCypressElementByLabelText } from '../utils';
+import {
+  When_I_find_element_by_label_text,
+  When_I_get_element_by_selector,
+} from '../queries';
+import { getCypressElement, setCypressElement } from '../utils';
 
 /**
  * When I find input by label text:
@@ -33,18 +37,16 @@ import { setCypressElement, setCypressElementByLabelText } from '../utils';
  * - {@link When_I_find_element_by_label_text | When I find element by label text }
  */
 export function When_I_find_input_by_label_text(text: string) {
-  const label = setCypressElementByLabelText(text);
+  When_I_find_element_by_label_text(text);
+  const label = getCypressElement();
 
   label.invoke('attr', 'for').then((forValue) => {
-    let input;
-
     if (forValue) {
-      input = cy.get(`#${forValue}`);
+      When_I_get_element_by_selector(`#${forValue}`);
     } else {
-      input = setCypressElementByLabelText(text).find('input');
+      When_I_find_element_by_label_text(text);
+      setCypressElement(getCypressElement().find('input').first());
     }
-
-    return setCypressElement(input);
   });
 }
 
