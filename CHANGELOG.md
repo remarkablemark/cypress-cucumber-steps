@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.8.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.7.0...v3.8.0) (2023-10-07)
+
+
+### Features
+
+* **assertions:** add "Then I do not see heading" ([75d570b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/75d570b271314f616c5560cf1efd0bd5e9cf543a))
+
 ## [3.7.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.6.3...v3.7.0) (2023-10-06)
 
 
