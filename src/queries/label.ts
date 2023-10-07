@@ -13,7 +13,7 @@ import {
  * When I find elements by label text {string}
  * ```
  *
- * Finds all `label`, `aria-labelledby`, or `aria-label` that matches the text.
+ * Finds all visible `label`, `aria-labelledby`, or `aria-label` that matches the text.
  *
  * @example
  *
@@ -53,7 +53,7 @@ When(
  * When I find element by label text {string}
  * ```
  *
- * Finds the first `label`, `aria-labelledby`, or `aria-label` that matches the text.
+ * Finds the first visible `label`, `aria-labelledby`, or `aria-label` that matches the text.
  *
  * @example
  *
