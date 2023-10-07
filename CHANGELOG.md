@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.9.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.9.0...v3.9.1) (2023-10-07)
+
+
+### Bug Fixes
+
+* **queries:** fix label logic in "When I find input by label text" ([7121590](https://github.com/remarkablemark/cypress-cucumber-steps/commit/71215902f11f0b8cb459526a041c0ebc643433a0))
+
 ## [3.9.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.8.0...v3.9.0) (2023-10-07)
 
 
