@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.9.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.8.0...v3.9.0) (2023-10-07)
+
+
+### Features
+
+* **queries:** add "When I find elements by label text" ([f6df821](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f6df82196567ec135c7e3d9678a86eb868a49ebe))
+
 ## [3.8.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.7.0...v3.8.0) (2023-10-07)
 
 
