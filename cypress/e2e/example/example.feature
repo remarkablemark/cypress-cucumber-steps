@@ -4,15 +4,16 @@ Feature: Example
     Then I see document title "Example Domain"
       And I see document title contains "Example"
 
-  Scenario: See heading
+  Scenario: Heading
     Given I visit "http://example.com/"
     Then I see heading "Example Domain"
     When I find headings by text "Example Domain"
     Then I count 1 element
     When I find heading by text "Example Domain"
     Then I count 1 element
+      And I do not see heading "Foo"
 
-  Scenario: See and not see text
+  Scenario: Text
     Given I visit "http://example.com/"
     Then I see text "Example Domain"
       And I see text "More information"

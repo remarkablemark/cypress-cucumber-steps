@@ -1,6 +1,9 @@
 import { Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import { When_I_find_heading_by_text } from '../queries';
+import {
+  When_I_find_heading_by_text,
+  When_I_find_headings_by_text,
+} from '../queries';
 import { getCypressElement } from '../utils';
 
 /**
@@ -30,3 +33,29 @@ export function Then_I_see_heading(text: string) {
 }
 
 Then('I see heading {string}', Then_I_see_heading);
+
+/**
+ * Then I do not see heading:
+ *
+ * ```gherkin
+ * Then I do not see heading {string}
+ * ```
+ *
+ * Assert heading with text **_does not exist_** in the screen.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I do not see heading "Heading"
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_do_not_see_text | Then I do not see text}
+ */
+export function Then_I_do_not_see_heading(text: string) {
+  When_I_find_headings_by_text(text);
+  getCypressElement().should('not.exist');
+}
+
+Then('I do not see heading {string}', Then_I_do_not_see_heading);
