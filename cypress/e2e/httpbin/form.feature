@@ -17,6 +17,8 @@ Feature: httpbin
     When I click on label "Small"
       And I click on label "Bacon"
       And I click on label "Extra Cheese"
+    When I find elements by label text "Preferred delivery time"
+      And I count 1 element
     When I find element by label text "Preferred delivery time"
       And I type "12:00"
     When I find element by name "comments"
