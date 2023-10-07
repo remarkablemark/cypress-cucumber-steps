@@ -13,7 +13,7 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * When I screenshot {string}
  * ```
  *
- * The screenshot will be stored in the [screenshots folder](https://docs.cypress.io/guides/references/configuration#Folders-Files) (e.g., `cypress/screenshots`).
+ * The screenshot will be stored in the [screenshots folder](https://docs.cypress.io/guides/references/configuration#Folders--Files) (e.g., `cypress/screenshots`).
  *
  * @example
  *
