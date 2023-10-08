@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>When_I_find_headings_by_text | cypress-cucumber-steps</title><meta name="description" content="Documentation for cypress-cucumber-steps"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css?cache=1696784604285"/><link rel="stylesheet" href="../assets/highlight.css?cache=1696784604285"/><script defer src="../assets/main.js?cache=1696784604285"></script><script async src="../assets/search.js?cache=1696784604285" id="tsd-search-script"></script><script async src="../assets/navigation.js?cache=1696784604285" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>When_I_find_textarea_by_placeholder_text | cypress-cucumber-steps</title><meta name="description" content="Documentation for cypress-cucumber-steps"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css?cache=1696784604285"/><link rel="stylesheet" href="../assets/highlight.css?cache=1696784604285"/><script defer src="../assets/main.js?cache=1696784604285"></script><script async src="../assets/search.js?cache=1696784604285" id="tsd-search-script"></script><script async src="../assets/navigation.js?cache=1696784604285" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,36 +13,38 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">cypress-cucumber-steps</a></li>
-<li><a href="When_I_find_headings_by_text.html">When_I_find_headings_by_text</a></li></ul>
-<h1>Function When_I_find_headings_by_text</h1></div>
+<li><a href="When_I_find_textarea_by_placeholder_text.html">When_I_find_textarea_by_placeholder_text</a></li></ul>
+<h1>Function When_I_find_textarea_by_placeholder_text</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="When_I_find_headings_by_text"><span class="tsd-kind-call-signature">When_<wbr/>I_<wbr/>find_<wbr/>headings_<wbr/>by_<wbr/>text</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">text</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#When_I_find_headings_by_text" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="When_I_find_textarea_by_placeholder_text"><span class="tsd-kind-call-signature">When_<wbr/>I_<wbr/>find_<wbr/>textarea_<wbr/>by_<wbr/>placeholder_<wbr/>text</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">placeholderText</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#When_I_find_textarea_by_placeholder_text" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>When I find headings by text:</p>
-<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find headings by text {string}</span>
+<div class="tsd-comment tsd-typography"><p>When I find textarea by placeholder text:</p>
+<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find textarea by placeholder text {string}</span>
 </code><button>Copy</button></pre>
+<p><em>A placeholder is not a good substitute for a label so you should generally use <a href="When_I_find_textarea_by_label_text.html" class="tsd-kind-function">&quot;When I find textarea by label text&quot;</a> instead.</em></p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">text</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">placeholderText</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography">
-<h4>Example</h4><pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find headings by text </span><span class="hl-3">&quot;Heading&quot;</span>
+<h4>Example</h4><pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find textarea by placeholder text </span><span class="hl-3">&quot;Text&quot;</span>
 </code><button>Copy</button></pre>
 
-<h4>Remarks</h4><p>This precedes steps like <a href="When_I_click.html" class="tsd-kind-function">&quot;When I click&quot;</a>. For example:</p>
-<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find headings by text </span><span class="hl-3">&quot;Heading&quot;</span><br/><span class="hl-2">  </span><span class="hl-1">And </span><span class="hl-2">I get 1st element</span><br/><span class="hl-2">  </span><span class="hl-1">And </span><span class="hl-2">I click</span>
+<h4>Remarks</h4><p>This precedes steps like <a href="When_I_type.html" class="tsd-kind-function">&quot;When I type&quot;</a>. For example:</p>
+<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find textarea by placeholder text </span><span class="hl-3">&quot;Comments&quot;</span><br/><span class="hl-2">  </span><span class="hl-1">And </span><span class="hl-2">I type </span><span class="hl-3">&quot;Lorem ipsum&quot;</span>
 </code><button>Copy</button></pre>
+<p>Inspired by Testing Library&#39;s <a href="https://testing-library.com/docs/queries/byplaceholdertext">ByPlaceholderText</a>.</p>
 
 <h4>See</h4><ul>
-<li><a href="When_I_find_heading_by_text.html" class="tsd-kind-function">When I find heading by text</a></li>
+<li><a href="When_I_find_textareas_by_placeholder_text.html" class="tsd-kind-function">When I find textareas by placeholder text</a></li>
 </ul>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/3bdfc0de/src/queries/heading.ts#L32">queries/heading.ts:32</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/3bdfc0de/src/queries/placeholder.ts#L247">queries/placeholder.ts:247</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
