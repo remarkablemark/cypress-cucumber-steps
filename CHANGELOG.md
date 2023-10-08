@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.12.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.11.0...v3.12.0) (2023-10-08)
+
+
+### Features
+
+* **queries:** add "When I find textarea by placeholder text" ([a0de8e2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/a0de8e236d6ebb5596033f30338373f6dbad1d10))
+* **queries:** add "When I find textareas by placeholder text" ([7110a7d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/7110a7d6867d5023daa8805652ff75587a99c4c1))
+
 ## [3.11.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.10.0...v3.11.0) (2023-10-08)
 
 
