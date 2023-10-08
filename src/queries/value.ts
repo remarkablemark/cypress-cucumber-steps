@@ -73,7 +73,7 @@ function hasDisplayValue(
 ): boolean {
   let isFound = false;
 
-  $body.find(elementName).each((index, element) => {
+  $body.find(elementName).each((index, element: HTMLBodyElement) => {
     const $element = Cypress.$(element);
 
     switch (elementName) {

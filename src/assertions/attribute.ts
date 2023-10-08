@@ -30,7 +30,7 @@ import { getCypressElement } from '../utils';
  * - {@link Then_I_see_element_attribute_contains | Then I see element attribute contains}
  */
 export function Then_I_see_element_has_attribute(name: string) {
-  getCypressElement().should(($element) => {
+  getCypressElement().should(($element: Cypress.JQueryWithSelector) => {
     expect($element).to.have.attr(name);
   });
 }
@@ -68,7 +68,7 @@ export function Then_I_see_element_attribute_equals(
   name: string,
   value: string,
 ) {
-  getCypressElement().should(($element) => {
+  getCypressElement().should(($element: Cypress.JQueryWithSelector) => {
     expect($element).to.have.attr(name, value);
   });
 }
@@ -109,7 +109,7 @@ export function Then_I_see_element_attribute_contains(
   name: string,
   value: string,
 ) {
-  getCypressElement().should(($element) => {
+  getCypressElement().should(($element: Cypress.JQueryWithSelector) => {
     expect($element.attr(name)).to.include(value);
   });
 }

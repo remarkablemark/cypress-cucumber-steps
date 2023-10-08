@@ -26,7 +26,7 @@ import { getCypressElement } from '../utils';
  */
 export function When_I_set_value(value: string) {
   getCypressElement()
-    .then((element) => Cypress.$(element).val(value))
+    .then(($element: Cypress.JQueryWithSelector) => $element.val(value))
     .trigger('change');
 }
 
