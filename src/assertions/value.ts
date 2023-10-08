@@ -25,10 +25,42 @@ import { getCypressElement } from '../utils';
  * ```
  */
 export function Then_I_see_value(value: string) {
-  getCypressElement().invoke('val').should('eq', value);
+  getCypressElement().should(($element: Cypress.JQueryWithSelector) => {
+    expect($element).value(value);
+  });
 }
 
 Then('I see value {string}', Then_I_see_value);
+
+/**
+ * Then I do not see value:
+ *
+ * ```gherkin
+ * Then I do not see value {string}
+ * ```
+ *
+ * Assert element with exact value **_does not exist_** in the screen.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I do not see value "Value"
+ * ```
+ *
+ * A preceding step like {@link When_I_find_input_by_label_text | "When I find input by label text"} is required. For example:
+ *
+ * ```gherkin
+ * When I find input by label text "Input"
+ * Then I do not see value "Value"
+ * ```
+ */
+export function Then_I_do_not_see_value(value: string) {
+  getCypressElement().should(($element: Cypress.JQueryWithSelector) => {
+    expect($element.val()).to.not.eq(value);
+  });
+}
+
+Then('I do not see value {string}', Then_I_do_not_see_value);
 
 /**
  * Then I see input value:
@@ -51,7 +83,7 @@ Then('I see value {string}', Then_I_see_value);
  */
 export function Then_I_see_input_value(value: string) {
   cy.get('input:visible')
-    .filter((index, element) => (element as HTMLInputElement).value === value)
+    .filter((index, element: HTMLInputElement) => element.value === value)
     .should('exist');
 }
 
@@ -78,9 +110,7 @@ Then('I see input value {string}', Then_I_see_input_value);
  */
 export function Then_I_see_input_value_contains(value: string) {
   cy.get('input:visible')
-    .filter((index, element) =>
-      (element as HTMLInputElement).value.includes(value),
-    )
+    .filter((index, element: HTMLInputElement) => element.value.includes(value))
     .should('exist');
 }
 
@@ -107,7 +137,7 @@ Then('I see input value contains {string}', Then_I_see_input_value_contains);
  */
 export function Then_I_see_textarea_value(value: string) {
   cy.get('textarea:visible')
-    .filter((index, element) => (element as HTMLInputElement).value === value)
+    .filter((index, element: HTMLTextAreaElement) => element.value === value)
     .should('exist');
 }
 
@@ -134,8 +164,8 @@ Then('I see textarea value {string}', Then_I_see_textarea_value);
  */
 export function Then_I_see_textarea_value_contains(value: string) {
   cy.get('textarea:visible')
-    .filter((index, element) =>
-      (element as HTMLInputElement).value.includes(value),
+    .filter((index, element: HTMLTextAreaElement) =>
+      element.value.includes(value),
     )
     .should('exist');
 }
