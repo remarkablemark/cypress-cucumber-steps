@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>When_I_find_link_by_text | cypress-cucumber-steps</title><meta name="description" content="Documentation for cypress-cucumber-steps"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css?cache=1696789722072"/><link rel="stylesheet" href="../assets/highlight.css?cache=1696789722072"/><script defer src="../assets/main.js?cache=1696789722072"></script><script async src="../assets/search.js?cache=1696789722072" id="tsd-search-script"></script><script async src="../assets/navigation.js?cache=1696789722072" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Then_I_do_not_see_label | cypress-cucumber-steps</title><meta name="description" content="Documentation for cypress-cucumber-steps"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css?cache=1696789722072"/><link rel="stylesheet" href="../assets/highlight.css?cache=1696789722072"/><script defer src="../assets/main.js?cache=1696789722072"></script><script async src="../assets/search.js?cache=1696789722072" id="tsd-search-script"></script><script async src="../assets/navigation.js?cache=1696789722072" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,16 +13,16 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">cypress-cucumber-steps</a></li>
-<li><a href="When_I_find_link_by_text.html">When_I_find_link_by_text</a></li></ul>
-<h1>Function When_I_find_link_by_text</h1></div>
+<li><a href="Then_I_do_not_see_label.html">Then_I_do_not_see_label</a></li></ul>
+<h1>Function Then_I_do_not_see_label</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="When_I_find_link_by_text"><span class="tsd-kind-call-signature">When_<wbr/>I_<wbr/>find_<wbr/>link_<wbr/>by_<wbr/>text</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">text</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#When_I_find_link_by_text" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="Then_I_do_not_see_label"><span class="tsd-kind-call-signature">Then_<wbr/>I_<wbr/>do_<wbr/>not_<wbr/>see_<wbr/>label</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">text</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#Then_I_do_not_see_label" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>When I find link by text:</p>
-<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find link by text {string}</span>
+<div class="tsd-comment tsd-typography"><p>Then I do not see label:</p>
+<pre><code class="language-gherkin"><span class="hl-1">Then </span><span class="hl-2">I do not see label {string}</span>
 </code><button>Copy</button></pre>
-<p>Finds first link element that matches text.</p>
+<p>Assert label with text <strong><em>does not exist</em></strong> in the screen.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -31,19 +31,15 @@
 <h5><span class="tsd-kind-parameter">text</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography">
-<h4>Example</h4><pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find link by text </span><span class="hl-3">&quot;Link&quot;</span>
-</code><button>Copy</button></pre>
-
-<h4>Remarks</h4><p>This precedes steps like <a href="When_I_click.html" class="tsd-kind-function">&quot;When I click&quot;</a>. For example:</p>
-<pre><code class="language-gherkin"><span class="hl-1">When </span><span class="hl-2">I find link by text </span><span class="hl-3">&quot;Link&quot;</span><br/><span class="hl-2">  </span><span class="hl-1">And </span><span class="hl-2">I click</span>
+<h4>Example</h4><pre><code class="language-gherkin"><span class="hl-1">Then </span><span class="hl-2">I do not see label </span><span class="hl-3">&quot;Label&quot;</span>
 </code><button>Copy</button></pre>
 
 <h4>See</h4><ul>
-<li><a href="When_I_find_links_by_text.html" class="tsd-kind-function">When I find links by text</a></li>
+<li><a href="Then_I_do_not_see_text.html" class="tsd-kind-function">Then I do not see text</a></li>
 </ul>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/e8718447/src/queries/link.ts#L66">queries/link.ts:66</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/remarkablemark/cypress-cucumber-steps/blob/e8718447/src/assertions/label.ts#L51">assertions/label.ts:51</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -68,7 +64,7 @@
 <li><a href="Then_I_do_not_see_URL_contains.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>Then_I_do_not_see_URL_contains</a></li>
 <li><a href="Then_I_do_not_see_button.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>Then_I_do_not_see_button</a></li>
 <li><a href="Then_I_do_not_see_heading.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>Then_I_do_not_see_heading</a></li>
-<li><a href="Then_I_do_not_see_label.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>Then_I_do_not_see_label</a></li>
+<li><a href="Then_I_do_not_see_label.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>Then_I_do_not_see_label</a></li>
 <li><a href="Then_I_do_not_see_link.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>Then_I_do_not_see_link</a></li>
 <li><a href="Then_I_do_not_see_text.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>Then_I_do_not_see_text</a></li>
 <li><a href="Then_I_do_not_see_visible_text.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg>Then_I_do_not_see_visible_text</a></li>
