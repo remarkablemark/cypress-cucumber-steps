@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.10.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.9.1...v3.10.0) (2023-10-08)
+
+
+### Features
+
+* **queries:** add "When I find textarea by label text" ([6936fe8](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6936fe849800a8daaa3947b4b28abc87eb46c0bb))
+
 ## [3.9.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.9.0...v3.9.1) (2023-10-07)
 
 
