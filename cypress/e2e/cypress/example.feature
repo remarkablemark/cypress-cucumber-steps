@@ -91,6 +91,13 @@ Feature: Cypress example
     When I find input by placeholder text "Name"
     Then I count 1 element
 
+  Scenario: Test ID
+    Given I visit "https://example.cypress.io/commands/querying"
+    When I find elements by test ID "test-example"
+    Then I count 1 element
+    When I find element by test ID "test-example"
+    Then I count 1 element
+
   Scenario: Blur
     Given I visit "https://example.cypress.io/commands/actions"
       And I find element by text "Full Name"
@@ -190,7 +197,7 @@ Feature: Cypress example
       And I submit
     Then I see text "Your form has been submitted!"
 
-  Scenario: Get children and assert textarea value
+  Scenario: Form with textarea
     Given I visit "https://example.cypress.io/commands/misc"
     When I find form
       And I get children
