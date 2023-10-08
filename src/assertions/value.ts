@@ -17,6 +17,8 @@ import { getCypressElement } from '../utils';
  * Then I see value "Value"
  * ```
  *
+ * @remarks
+ *
  * A preceding step like {@link When_I_find_input_by_label_text | "When I find input by label text"} is required. For example:
  *
  * ```gherkin
@@ -46,6 +48,8 @@ Then('I see value {string}', Then_I_see_value);
  * ```gherkin
  * Then I do not see value "Value"
  * ```
+ *
+ * @remarks
  *
  * A preceding step like {@link When_I_find_input_by_label_text | "When I find input by label text"} is required. For example:
  *
