@@ -1,9 +1,6 @@
 import { Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import {
-  When_I_find_button_by_text,
-  When_I_find_buttons_by_text,
-} from '../queries';
+import { When_I_find_buttons_by_text } from '../queries';
 import { getCypressElement } from '../utils';
 
 /**
@@ -26,7 +23,7 @@ import { getCypressElement } from '../utils';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_button(text: string) {
-  When_I_find_button_by_text(text);
+  When_I_find_buttons_by_text(text);
   getCypressElement().should('exist');
 }
 
