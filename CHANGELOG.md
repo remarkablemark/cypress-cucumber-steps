@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.13.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.12.0...v3.13.0) (2023-10-08)
+
+
+### Features
+
+* **assertions:** add "Then I do not see label" ([989ab1a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/989ab1a9dbccfbf7166ec000d2f35ee18ff347c7))
+
 ## [3.12.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.11.0...v3.12.0) (2023-10-08)
 
 
