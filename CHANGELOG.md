@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.11.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.10.0...v3.11.0) (2023-10-08)
+
+
+### Features
+
+* **queries:** add "When I find elements by test ID" ([9b14256](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9b14256486c53d09f50a9314b62ad9d2c43a0415))
+
 ## [3.10.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.9.1...v3.10.0) (2023-10-08)
 
 
