@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.14.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.13.0...v3.14.0) (2023-10-08)
+
+
+### Features
+
+* **assertions:** add "Then I do not see value" ([3f94393](https://github.com/remarkablemark/cypress-cucumber-steps/commit/3f943930179a4c2dd9fd855d44e6f5571b399cae))
+
 ## [3.13.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.12.0...v3.13.0) (2023-10-08)
 
 
