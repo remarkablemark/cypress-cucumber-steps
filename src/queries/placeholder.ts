@@ -22,9 +22,9 @@ import { getCypressElement, setCypressElement } from '../utils';
  * This precedes steps like {@link When_I_type | "When I type"}. For example:
  *
  * ```gherkin
- * When I find elements by placeholder text "Password"
+ * When I find elements by placeholder text "Name"
  *   And I get 1st element
- *   And I type "password"
+ *   And I type "John Smith"
  * ```
  *
  * Inspired by Testing Library's [ByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext).
@@ -66,8 +66,8 @@ When(
  * This precedes steps like {@link When_I_type | "When I type"}. For example:
  *
  * ```gherkin
- * When I find element by placeholder text "Password"
- *   And I type "password"
+ * When I find element by placeholder text "Name"
+ *   And I type "John Smith"
  * ```
  *
  * Inspired by Testing Library's [ByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext).
@@ -191,9 +191,9 @@ When(
  * This precedes steps like {@link When_I_type | "When I type"}. For example:
  *
  * ```gherkin
- * When I find textareas by placeholder text "Password"
+ * When I find textareas by placeholder text "Comments"
  *   And I get 1st element
- *   And I type "password"
+ *   And I type "Lorem ipsum"
  * ```
  *
  * Inspired by Testing Library's [ByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext).
@@ -234,8 +234,8 @@ When(
  * This precedes steps like {@link When_I_type | "When I type"}. For example:
  *
  * ```gherkin
- * When I find input by placeholder text "Password"
- *   And I type "password"
+ * When I find textarea by placeholder text "Comments"
+ *   And I type "Lorem ipsum"
  * ```
  *
  * Inspired by Testing Library's [ByPlaceholderText](https://testing-library.com/docs/queries/byplaceholdertext).
