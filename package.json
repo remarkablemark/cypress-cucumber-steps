@@ -40,9 +40,9 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "18.0.6",
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.0",
-    "@commitlint/cli": "17.7.2",
-    "@commitlint/config-conventional": "17.7.0",
-    "@types/node": "20.8.4",
+    "@commitlint/cli": "17.8.0",
+    "@commitlint/config-conventional": "17.8.0",
+    "@types/node": "20.8.6",
     "@typescript-eslint/eslint-plugin": "6.7.5",
     "@typescript-eslint/parser": "6.7.5",
     "cypress": "13.3.1",
