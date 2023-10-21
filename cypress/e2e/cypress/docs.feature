@@ -16,6 +16,8 @@ Feature: Cypress docs
     Given I visit "https://docs.cypress.io/api/commands/go"
       And I click on link "cy.reload()"
     Then I see URL "https://docs.cypress.io/api/commands/reload"
+      | decode | true |
+      | timeout | 4000 |
     When I go back
     Then I see URL contains "go"
     When I go forward
