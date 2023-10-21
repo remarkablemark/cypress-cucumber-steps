@@ -23,6 +23,15 @@ import { getOptions } from '../utils';
  * Then I see URL "http://localhost:8080/index.html"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/url#Arguments):
+ *
+ * ```gherkin
+ * Then I see URL "/"
+ *   | decode | false |
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
  * @see
  *
  * - {@link Then_I_see_URL_contains | Then I see URL contains}
@@ -53,6 +62,15 @@ Then('I see URL {string}', Then_I_see_URL);
  *
  * ```gherkin
  * Then I see URL contains "http://localhost:8080/index.html"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/url#Arguments):
+ *
+ * ```gherkin
+ * Then I see URL contains "/"
+ *   | decode | false |
+ *   | log | true |
+ *   | timeout | 4000 |
  * ```
  *
  * @see
@@ -86,6 +104,15 @@ Then('I see URL contains {string}', Then_I_see_URL_contains);
  * Then I do not see URL "http://localhost:8080/index.html"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/url#Arguments):
+ *
+ * ```gherkin
+ * Then I do not see URL "/"
+ *   | decode | false |
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
  * @see
  *
  * - {@link Then_I_do_not_see_URL_contains | Then I do not see URL contains}
@@ -116,6 +143,15 @@ Then('I do not see URL {string}', Then_I_do_not_see_URL);
  *
  * ```gherkin
  * Then I do not see URL contains "http://localhost:8080/index.html"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/url#Arguments):
+ *
+ * ```gherkin
+ * Then I do not see URL contains "/"
+ *   | decode | false |
+ *   | log | true |
+ *   | timeout | 4000 |
  * ```
  *
  * @see
