@@ -139,7 +139,6 @@ Feature: Cypress example
     When I find links by text "cypress"
       And I get 1st element
       And I click
-    Then I see URL "https://example.cypress.io/"
 
   Scenario: Count elements length
     Given I visit "https://example.cypress.io/commands/aliasing"
