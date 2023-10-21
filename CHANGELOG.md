@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.15.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.14.0...v3.15.0) (2023-10-21)
+
+
+### Features
+
+* **assertions:** pass options to "I see URL" and "I do not see URL" ([ddbba19](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ddbba19632fcd28ddde9f3da31581d612a0488c3))
+
 ## [3.14.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.13.0...v3.14.0) (2023-10-08)
 
 
