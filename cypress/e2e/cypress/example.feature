@@ -51,6 +51,8 @@ Feature: Cypress example
 
   Scenario: Select option
     Given I visit "https://example.cypress.io/commands/actions"
+    Then I see option "--Select a fruit--"
+      And I do not see option "Invalid"
     When I select option "apples"
       And I get element by selector "select"
     Then I see value "fr-apples"
