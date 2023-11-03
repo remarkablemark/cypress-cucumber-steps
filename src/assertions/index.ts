@@ -6,6 +6,7 @@ export * from './heading';
 export * from './label';
 export * from './length';
 export * from './link';
+export * from './option';
 export * from './response';
 export * from './text';
 export * from './url';
