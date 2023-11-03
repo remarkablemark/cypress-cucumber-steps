@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.16.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.15.0...v3.16.0) (2023-11-03)
+
+
+### Features
+
+* **assertions:** add "Then I see option" and "Then I do not see option" ([067dc63](https://github.com/remarkablemark/cypress-cucumber-steps/commit/067dc63ddd8e2bff350f9a8061630d53b18edf27))
+
 ## [3.15.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.14.0...v3.15.0) (2023-10-21)
 
 
