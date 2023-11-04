@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.17.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.16.0...v3.17.0) (2023-11-04)
+
+
+### Features
+
+* **assertions:** pass options to "Then I see document title contains" ([f56126f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f56126fc5a61fad597b09583a5dbba4ef7e9d4dd))
+* **assertions:** pass options to "Then I see document title" ([0a73544](https://github.com/remarkablemark/cypress-cucumber-steps/commit/0a7354415686fff54d437ddae5094c0dc4836c48))
+
 ## [3.16.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.15.0...v3.16.0) (2023-11-03)
 
 
