@@ -1,4 +1,6 @@
-import { Then } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, Then } from '@badeball/cypress-cucumber-preprocessor';
+
+import { getOptions } from '../utils';
 
 /**
  * Then I see document title:
@@ -15,12 +17,20 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * Then I see document title "Title"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/title#Arguments):
+ *
+ * ```gherkin
+ * Then I see document title "Title"
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
  * @see
  *
  * - {@link Then_I_see_document_title_contains | Then I see document title contains}
  */
-export function Then_I_see_document_title(title: string) {
-  cy.title().should('equal', title);
+export function Then_I_see_document_title(title: string, options?: DataTable) {
+  cy.title(getOptions(options)).should('equal', title);
 }
 
 Then('I see document title {string}', Then_I_see_document_title);
