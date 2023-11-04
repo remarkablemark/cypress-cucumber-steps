@@ -2,7 +2,11 @@ Feature: Example
   Scenario: See document title
     Given I visit "http://example.com/"
     Then I see document title "Example Domain"
+      | log | true |
+      | timeout | 0 |
       And I see document title contains "Example"
+        | log | true |
+        | timeout | 0 |
 
   Scenario: Heading
     Given I visit "http://example.com/"
