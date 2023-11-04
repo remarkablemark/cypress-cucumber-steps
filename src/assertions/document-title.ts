@@ -50,12 +50,23 @@ Then('I see document title {string}', Then_I_see_document_title);
  * Then I see document title contains "Title"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/title#Arguments):
+ *
+ * ```gherkin
+ * Then I see document title contains "Title"
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
  * @see
  *
  * - {@link Then_I_see_document_title | Then I see document title}
  */
-export function Then_I_see_document_title_contains(title: string) {
-  cy.title().should('contain', title);
+export function Then_I_see_document_title_contains(
+  title: string,
+  options?: DataTable,
+) {
+  cy.title(getOptions(options)).should('contain', title);
 }
 
 Then(
