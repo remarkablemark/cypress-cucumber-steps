@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.19.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.18.0...v3.19.0) (2023-11-11)
+
+
+### Features
+
+* **actions:** pass options to "When I double click on text" ([23072ef](https://github.com/remarkablemark/cypress-cucumber-steps/commit/23072efea2f634d5775c685e9f8e2d0e9c632dca))
+* **actions:** pass options to "When I double click" ([f08e460](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f08e46028f1038ed18e03c434a65185d6d2d21fd))
+* **actions:** pass options to "When I right click on text" ([e4a3995](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e4a39950b4013a98d1c9b32f1cf027389df257e4))
+* **actions:** pass options to "When I right click" ([4b15fd4](https://github.com/remarkablemark/cypress-cucumber-steps/commit/4b15fd4f80a0f70c812c90ba8c029c56db77c703))
+
 ## [3.18.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.17.1...v3.18.0) (2023-11-11)
 
 
