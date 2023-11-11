@@ -73,13 +73,30 @@ When('I right-click', When_I_right_click);
  * When I right-click on text "Text"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/rightclick#Arguments):
+ *
+ * ```gherkin
+ * When I right-click on text "Text"
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | log | true |
+ *   | force | false |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ * ```
+ *
  * @see
  *
  * - {@link When_I_click_on_text | When I click on text}
  * - {@link When_I_double_click_on_text | When I double-click on text}
  */
-export function When_I_right_click_on_text(text: string) {
-  cy.contains(text).rightclick();
+export function When_I_right_click_on_text(text: string, options?: DataTable) {
+  cy.contains(text).rightclick(getOptions(options));
 }
 
 When('I right-click on text {string}', When_I_right_click_on_text);
