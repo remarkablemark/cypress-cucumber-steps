@@ -1,4 +1,5 @@
 export * from './blur';
+export * from './clear';
 export * from './click';
 export * from './config';
 export * from './cookie';

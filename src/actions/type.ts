@@ -3,40 +3,6 @@ import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 import { getCypressElement, getOptions } from '../utils';
 
 /**
- * When I clear:
- *
- * ```gherkin
- * When I clear
- * ```
- *
- * Alias for {@link When_I_type | "When I type"}:
- *
- * ```gherkin
- * When I type "{selectall}{backspace}"
- * ```
- *
- * @example
- *
- * ```gherkin
- * When I clear
- * ```
- *
- * @remarks
- *
- * A preceding step like {@link When_I_find_element_by_label_text | "When I find element by label text"} is required. For example:
- *
- * ```gherkin
- * When I find element by label text "Input"
- *   And I clear
- * ```
- */
-export function When_I_clear() {
-  getCypressElement().clear();
-}
-
-When('I clear', When_I_clear);
-
-/**
  * When I type:
  *
  * ```gherkin
@@ -49,7 +15,7 @@ When('I clear', When_I_clear);
  * When I type "Hello, world!"
  * ```
  *
- * [Options](https://docs.cypress.io/api/commands/type#Arguments):
+ * With [options](https://docs.cypress.io/api/commands/type#Arguments):
  *
  * ```gherkin
  * When I type "Hello, world!"
