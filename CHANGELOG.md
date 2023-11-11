@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.17.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.17.0...v3.17.1) (2023-11-11)
+
+
+### Bug Fixes
+
+* **actions:** improve "When I click on button" ([104b95e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/104b95e7bed7ff4933865dcdc6867d800ab33a38))
+
 ## [3.17.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.16.0...v3.17.0) (2023-11-04)
 
 
