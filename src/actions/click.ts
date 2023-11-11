@@ -162,14 +162,31 @@ When('I click on link {string}', When_I_click_on_link);
  * When I click on text "Text"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ *
+ * ```gherkin
+ * When I click on text "Text"
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | log | true |
+ *   | force | false |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ * ```
+ *
  * @see
  *
  * - {@link When_I_click_on_button | When I click on button}
  * - {@link When_I_click_on_label | When I click on label}
  * - {@link When_I_click_on_link | When I click on link}
  */
-export function When_I_click_on_text(text: string) {
-  cy.contains(text).click();
+export function When_I_click_on_text(text: string, options?: DataTable) {
+  cy.contains(text).click(getOptions(options));
 }
 
 When('I click on text {string}', When_I_click_on_text);
