@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.18.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.17.1...v3.18.0) (2023-11-11)
+
+
+### Features
+
+* **actions:** pass options to "When I blur" ([15002d0](https://github.com/remarkablemark/cypress-cucumber-steps/commit/15002d01c3de81f0860cc35efc3f8fb60a1856b2))
+* **actions:** pass options to "When I clear" ([19d713b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/19d713b7cb7fe86f059170f3f0c6eb0811438df6))
+* **actions:** pass options to "When I click on button" ([8a6955d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/8a6955dcddf893b49789a8e875155a043ced9d47))
+* **actions:** pass options to "When I click on label" ([1637c8d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1637c8d6f337b32505300b0c933cd0be27ccaf01))
+* **actions:** pass options to "When I click on link" ([c0e3aa2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/c0e3aa2d70ba0b5b1f3271bfaafcb6abf4f901e7))
+* **actions:** pass options to "When I click on text" ([293280e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/293280e447e30ec1c9bdc8f16e9d705591b87e0b))
+* **actions:** pass options to "When I click" ([01889e6](https://github.com/remarkablemark/cypress-cucumber-steps/commit/01889e6360e257cd25f6155dc69455eac866d99e))
+* **actions:** pass options to "When I focus" ([c6d1d1a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/c6d1d1ab475e5c95864679be534ed70fde560001))
+* **actions:** pass options to "When I submit" ([8055d13](https://github.com/remarkablemark/cypress-cucumber-steps/commit/8055d138941a6cd27b3e5a40cc2fdac479364a61))
+
 ## [3.17.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.17.0...v3.17.1) (2023-11-11)
 
 
