@@ -75,13 +75,30 @@ When('I click', When_I_click);
  * When I click on button "Button"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ *
+ * ```gherkin
+ * When I click on button "Button"
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | log | true |
+ *   | force | false |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ * ```
+ *
  * @see
  *
  * - {@link When_I_click_on_text | When I click on text}
  */
-export function When_I_click_on_button(text: string) {
+export function When_I_click_on_button(text: string, options?: DataTable) {
   When_I_find_button_by_text(text);
-  getCypressElement().click();
+  getCypressElement().click(getOptions(options));
 }
 
 When('I click on button {string}', When_I_click_on_button);
