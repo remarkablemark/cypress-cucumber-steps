@@ -204,13 +204,30 @@ When('I click on text {string}', When_I_click_on_text);
  * When I click on label "Label"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ *
+ * ```gherkin
+ * When I click on label "Label"
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | log | true |
+ *   | force | false |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ * ```
+ *
  * @see
  *
  * - {@link When_I_click_on_text | When I click on text}
  */
-export function When_I_click_on_label(text: string) {
+export function When_I_click_on_label(text: string, options?: DataTable) {
   When_I_find_element_by_label_text(text);
-  getCypressElement().click();
+  getCypressElement().click(getOptions(options));
 }
 
 When('I click on label {string}', When_I_click_on_label);
