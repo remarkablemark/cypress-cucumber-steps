@@ -1,6 +1,9 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { When_I_find_element_by_label_text } from '../queries';
+import {
+  When_I_find_button_by_text,
+  When_I_find_element_by_label_text,
+} from '../queries';
 import { getCypressElement } from '../utils';
 
 /**
@@ -60,7 +63,8 @@ When('I click', When_I_click);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_button(text: string) {
-  cy.contains('button', text).first().click();
+  When_I_find_button_by_text(text);
+  getCypressElement().click();
 }
 
 When('I click on button {string}', When_I_click_on_button);
