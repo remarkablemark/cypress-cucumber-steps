@@ -44,8 +44,9 @@ Feature: Cypress example
 
   Scenario: Checkbox and radio
     Given I visit "https://example.cypress.io/commands/actions"
-      And I click on text 'Checkbox one has value "checkbox1"'
-      And I click on text 'Checkbox one has value "checkbox1"'
+    When I find input by label text 'Checkbox one has value "checkbox1"'
+      And I check
+    When I click on text 'Checkbox one has value "checkbox1"'
       And I click on text 'Radio one has value "radio1"'
       And I click on text 'Radio two has value "radio2". When checked, it will uncheck Radio one.'
 
