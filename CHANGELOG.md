@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.20.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.19.0...v3.20.0) (2023-11-12)
+
+
+### Features
+
+* **actions:** add "When I check" ([685817e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/685817e2013573348fd0c672cbe23b66e9bccae6))
+* **actions:** add "When I uncheck" ([af70b03](https://github.com/remarkablemark/cypress-cucumber-steps/commit/af70b03ac01b985163c471560e73fb3eabcd3fad))
+
 ## [3.19.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.18.0...v3.19.0) (2023-11-11)
 
 
