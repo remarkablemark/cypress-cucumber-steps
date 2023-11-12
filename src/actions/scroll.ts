@@ -127,6 +127,17 @@ When('I scroll window to {string}', When_I_scroll_window_to_position);
  * When I scroll window to 0px and 500px
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/scrollto#Arguments):
+ *
+ * ```gherkin
+ * When I scroll window to 100px and 200px
+ *   | duration | 0 |
+ *   | easing | swing |
+ *   | ensureScrollable | true |
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
  * @remarks
  *
  * _Snapshots don't reflect scroll behavior._ To see the scrolling behavior in action, use {@link When_I_pause | "When I pause"}:
@@ -141,8 +152,12 @@ When('I scroll window to {string}', When_I_scroll_window_to_position);
  * - {@link When_I_scroll_into_view | When I scroll into view}
  * - {@link When_I_scroll_window_to_position | When I scroll window to position}
  */
-export function When_I_scroll_window_to_x_y_coordinates(x: number, y: number) {
-  cy.scrollTo(x, y);
+export function When_I_scroll_window_to_x_y_coordinates(
+  x: number,
+  y: number,
+  options?: DataTable,
+) {
+  cy.scrollTo(x, y, getOptions(options));
 }
 
 When(
