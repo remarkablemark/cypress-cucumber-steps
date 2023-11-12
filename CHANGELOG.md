@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.22.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.21.0...v3.22.0) (2023-11-12)
+
+
+### Features
+
+* **actions:** pass options to "When I scroll into view" ([ae87e6a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ae87e6a960557713d93aff7e16a21a6aa61c71b6))
+* **actions:** pass options to "When I scroll window to position" ([38ca4c9](https://github.com/remarkablemark/cypress-cucumber-steps/commit/38ca4c9cbcf631eefcf85b4a18aa34c497cd6364))
+* **actions:** pass options to "When I scroll window to x-y coordinates" ([237fb8f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/237fb8f6b7287fbf1fcb5d901bec0026ee27e22f))
+
 ## [3.21.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.20.0...v3.21.0) (2023-11-12)
 
 
