@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.21.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.20.0...v3.21.0) (2023-11-12)
+
+
+### Features
+
+* **actions:** add "When I check input" ([d4a27dd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/d4a27dd4aec7bec16519702f4a52f6e85a1c4090))
+* **actions:** add "When I uncheck input" ([5654f15](https://github.com/remarkablemark/cypress-cucumber-steps/commit/5654f15551f7377a35f5dc643737144e87ca18a0))
+
 ## [3.20.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.19.0...v3.20.0) (2023-11-12)
 
 
