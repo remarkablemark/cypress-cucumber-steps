@@ -69,6 +69,17 @@ When('I scroll into view', When_I_scroll_into_view);
  * When I scroll window to "top-right"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/scrollto#Arguments):
+ *
+ * ```gherkin
+ * When I scroll window to "top"
+ *   | duration | 0 |
+ *   | easing | swing |
+ *   | ensureScrollable | true |
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
  * @remarks
  *
  * _Snapshots don't reflect scroll behavior._ To see the scrolling behavior in action, use {@link When_I_pause | "When I pause"}:
@@ -94,8 +105,9 @@ export function When_I_scroll_window_to_position(
     | 'bottom-right'
     | 'top-left'
     | 'top-right',
+  options?: DataTable,
 ) {
-  cy.scrollTo(camelCase(position) as Cypress.PositionType);
+  cy.scrollTo(camelCase(position) as Cypress.PositionType, getOptions(options));
 }
 
 When('I scroll window to {string}', When_I_scroll_window_to_position);
