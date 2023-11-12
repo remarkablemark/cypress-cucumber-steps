@@ -25,6 +25,7 @@ export * from './submit';
 export * from './timer';
 export * from './trigger';
 export * from './type';
+export * from './uncheck';
 export * from './value';
 export * from './viewport';
 export * from './visit';
