@@ -1,18 +1,31 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { camelCase, getCypressElement } from '../utils';
+import { camelCase, getCypressElement, getOptions } from '../utils';
 
 /**
- * When I scroll element into view:
+ * When I scroll into view:
  *
  * ```gherkin
  * When I scroll into view
  * ```
  *
+ * Scroll an element into view.
+ *
  * @example
  *
  * ```gherkin
  * When I scroll into view
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/scrollintoview#Arguments):
+ *
+ * ```gherkin
+ * When I scroll into view
+ *   | duration | 0 |
+ *   | easing | swing |
+ *   | log | true |
+ *   | offset | { "top": 0, "left": 0 } |
+ *   | timeout | 4000 |
  * ```
  *
  * @remarks
@@ -29,8 +42,8 @@ import { camelCase, getCypressElement } from '../utils';
  * - {@link When_I_scroll_window_to_position | When I scroll window to position}
  * - {@link When_I_scroll_window_to_x_y_coordinates | When I scroll window to x-y coordinates}
  */
-export function When_I_scroll_into_view() {
-  getCypressElement().scrollIntoView();
+export function When_I_scroll_into_view(options?: DataTable) {
+  getCypressElement().scrollIntoView(getOptions(options));
 }
 
 When('I scroll into view', When_I_scroll_into_view);
