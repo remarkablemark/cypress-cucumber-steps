@@ -1,18 +1,31 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { camelCase, getCypressElement } from '../utils';
+import { camelCase, getCypressElement, getOptions } from '../utils';
 
 /**
- * When I scroll element into view:
+ * When I scroll into view:
  *
  * ```gherkin
  * When I scroll into view
  * ```
  *
+ * Scroll an element into view.
+ *
  * @example
  *
  * ```gherkin
  * When I scroll into view
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/scrollintoview#Arguments):
+ *
+ * ```gherkin
+ * When I scroll into view
+ *   | duration | 0 |
+ *   | easing | swing |
+ *   | log | true |
+ *   | offset | { "top": 0, "left": 0 } |
+ *   | timeout | 4000 |
  * ```
  *
  * @remarks
@@ -29,8 +42,8 @@ import { camelCase, getCypressElement } from '../utils';
  * - {@link When_I_scroll_window_to_position | When I scroll window to position}
  * - {@link When_I_scroll_window_to_x_y_coordinates | When I scroll window to x-y coordinates}
  */
-export function When_I_scroll_into_view() {
-  getCypressElement().scrollIntoView();
+export function When_I_scroll_into_view(options?: DataTable) {
+  getCypressElement().scrollIntoView(getOptions(options));
 }
 
 When('I scroll into view', When_I_scroll_into_view);
@@ -54,6 +67,17 @@ When('I scroll into view', When_I_scroll_into_view);
  * When I scroll window to "bottom-right"
  * When I scroll window to "top-left"
  * When I scroll window to "top-right"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/scrollto#Arguments):
+ *
+ * ```gherkin
+ * When I scroll window to "top"
+ *   | duration | 0 |
+ *   | easing | swing |
+ *   | ensureScrollable | true |
+ *   | log | true |
+ *   | timeout | 4000 |
  * ```
  *
  * @remarks
@@ -81,8 +105,9 @@ export function When_I_scroll_window_to_position(
     | 'bottom-right'
     | 'top-left'
     | 'top-right',
+  options?: DataTable,
 ) {
-  cy.scrollTo(camelCase(position) as Cypress.PositionType);
+  cy.scrollTo(camelCase(position) as Cypress.PositionType, getOptions(options));
 }
 
 When('I scroll window to {string}', When_I_scroll_window_to_position);
@@ -102,6 +127,17 @@ When('I scroll window to {string}', When_I_scroll_window_to_position);
  * When I scroll window to 0px and 500px
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/scrollto#Arguments):
+ *
+ * ```gherkin
+ * When I scroll window to 100px and 200px
+ *   | duration | 0 |
+ *   | easing | swing |
+ *   | ensureScrollable | true |
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
  * @remarks
  *
  * _Snapshots don't reflect scroll behavior._ To see the scrolling behavior in action, use {@link When_I_pause | "When I pause"}:
@@ -116,8 +152,12 @@ When('I scroll window to {string}', When_I_scroll_window_to_position);
  * - {@link When_I_scroll_into_view | When I scroll into view}
  * - {@link When_I_scroll_window_to_position | When I scroll window to position}
  */
-export function When_I_scroll_window_to_x_y_coordinates(x: number, y: number) {
-  cy.scrollTo(x, y);
+export function When_I_scroll_window_to_x_y_coordinates(
+  x: number,
+  y: number,
+  options?: DataTable,
+) {
+  cy.scrollTo(x, y, getOptions(options));
 }
 
 When(
