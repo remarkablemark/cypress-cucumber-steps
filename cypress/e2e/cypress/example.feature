@@ -48,6 +48,7 @@ Feature: Cypress example
       And I check
       And I check input 'Checkbox one has value "checkbox1"'
       And I uncheck
+      And I uncheck input 'Checkbox one has value "checkbox1"'
     When I click on text 'Radio one has value "radio1"'
       And I check input 'Radio one has value "radio1"'
       And I click on text 'Radio two has value "radio2". When checked, it will uncheck Radio one.'
