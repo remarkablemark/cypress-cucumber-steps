@@ -1,6 +1,6 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { camelCase, getOptions } from '../utils';
+import { camelCase, getCypressElement, getOptions } from '../utils';
 
 /**
  * When I scroll window to position:
@@ -118,3 +118,72 @@ When(
   'I scroll window to {int}px and {int}px',
   When_I_scroll_window_to_x_y_coordinates,
 );
+
+/**
+ * When I scroll to position:
+ *
+ * ```gherkin
+ * When I scroll to {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I scroll to "top"
+ * When I scroll to "left"
+ * When I scroll to "center"
+ * When I scroll to "right"
+ * When I scroll to "bottom"
+ * When I scroll to "bottom-left"
+ * When I scroll to "bottom-right"
+ * When I scroll to "top-left"
+ * When I scroll to "top-right"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/scrollto#Arguments):
+ *
+ * ```gherkin
+ * When I scroll to "top"
+ *   | duration | 0 |
+ *   | easing | swing |
+ *   | ensureScrollable | true |
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step like {@link When_I_get_element_by_selector | "When I get element by selector"} is required. For example:
+ *
+ * ```gherkin
+ * When I get element by selector "#scrollable"
+ *   And I scroll to "top"
+ * ```
+ *
+ * _Snapshots don't reflect scroll behavior._ To see the scrolling behavior in action, use {@link When_I_pause | "When I pause"}:
+ *
+ * ```gherkin
+ * When I scroll to "bottom"
+ *   And I pause
+ * ```
+ */
+export function When_I_scroll_to_position(
+  position:
+    | 'top'
+    | 'left'
+    | 'center'
+    | 'right'
+    | 'bottom'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'top-left'
+    | 'top-right',
+  options?: DataTable,
+) {
+  getCypressElement().scrollTo(
+    camelCase(position) as Cypress.PositionType,
+    getOptions(options),
+  );
+}
+
+When('I scroll to {string}', When_I_scroll_to_position);
