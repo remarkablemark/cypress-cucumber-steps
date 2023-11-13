@@ -166,6 +166,11 @@ When(
  * When I scroll to "bottom"
  *   And I pause
  * ```
+ *
+ * @see
+ *
+ * - {@link When_I_scroll_into_view | When I scroll into view}
+ * - {@link When_I_scroll_to_x_y_coordinates | When I scroll to x-y coordinates}
  */
 export function When_I_scroll_to_position(
   position:
@@ -187,3 +192,60 @@ export function When_I_scroll_to_position(
 }
 
 When('I scroll to {string}', When_I_scroll_to_position);
+
+/**
+ * When I scroll to x-y coordinates:
+ *
+ * ```gherkin
+ * When I scroll to {int}px and {int}px
+ * ```
+ *
+ * @example
+ *
+ * Scroll the element 500px down:
+ *
+ * ```gherkin
+ * When I scroll to 0px and 500px
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/scrollto#Arguments):
+ *
+ * ```gherkin
+ * When I scroll to 100px and 200px
+ *   | duration | 0 |
+ *   | easing | swing |
+ *   | ensureScrollable | true |
+ *   | log | true |
+ *   | timeout | 4000 |
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step like {@link When_I_get_element_by_selector | "When I get element by selector"} is required. For example:
+ *
+ * ```gherkin
+ * When I get element by selector "#scrollable"
+ *   And I scroll to 100px and 200px
+ * ```
+ *
+ * _Snapshots don't reflect scroll behavior._ To see the scrolling behavior in action, use {@link When_I_pause | "When I pause"}:
+ *
+ * ```gherkin
+ * When I scroll to 0px and 500px
+ *   And I pause
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_scroll_into_view | When I scroll into view}
+ * - {@link When_I_scroll_to_position | When I scroll to position}
+ */
+export function When_I_scroll_to_x_y_coordinates(
+  x: number,
+  y: number,
+  options?: DataTable,
+) {
+  getCypressElement().scrollTo(x, y, getOptions(options));
+}
+
+When('I scroll to {int}px and {int}px', When_I_scroll_to_x_y_coordinates);

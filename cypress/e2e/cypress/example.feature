@@ -137,6 +137,7 @@ Feature: Cypress example
     When I get element by selector "#scrollable-both button"
     Then I see element is not visible
     When I get element by selector "#scrollable-both"
+      And I scroll to 100px and 200px
       And I scroll to "center"
       And I get element by selector "#scrollable-both button"
     Then I see element is visible
