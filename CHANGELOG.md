@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.23.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.22.0...v3.23.0) (2023-11-13)
+
+
+### Features
+
+* **actions:** add "When I scroll to position" ([fedda03](https://github.com/remarkablemark/cypress-cucumber-steps/commit/fedda03e0bde766c5d2d381cb7be5de6795851dc))
+* **actions:** add "When I scroll to x-y coordinates" ([898a591](https://github.com/remarkablemark/cypress-cucumber-steps/commit/898a5911d3dd9372a6895762596ee85247108904))
+
 ## [3.22.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.21.0...v3.22.0) (2023-11-12)
 
 
