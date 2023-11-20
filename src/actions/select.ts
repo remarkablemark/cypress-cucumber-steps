@@ -41,15 +41,13 @@ When('I select {string}', When_I_select);
  * When I select option {string}
  * ```
  *
+ * Select the first option by display value.
+ *
  * @example
  *
  * ```gherkin
  * When I select option "Option"
  * ```
- *
- * @remarks
- *
- * Selects the first option by display value.
  *
  * @see
  *
