@@ -3,7 +3,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
 import { getCypressElement } from '../utils';
 
 /**
- * Then I count elements length:
+ * Then I count elements:
  *
  * ```gherkin
  * Then I count {int} elements
@@ -24,9 +24,9 @@ import { getCypressElement } from '../utils';
  * Then I count 1 element
  * ```
  */
-export function Then_I_count_elements_length(count: number) {
+export function Then_I_count_elements(count: number) {
   getCypressElement().should('have.length', count);
 }
 
-Then('I count {int} element', Then_I_count_elements_length);
-Then('I count {int} elements', Then_I_count_elements_length);
+Then('I count {int} element', Then_I_count_elements);
+Then('I count {int} elements', Then_I_count_elements);
