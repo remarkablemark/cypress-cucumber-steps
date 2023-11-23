@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.24.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.23.0...v3.24.0) (2023-11-23)
+
+
+### Features
+
+* **actions:** add "When I click position" ([5279aca](https://github.com/remarkablemark/cypress-cucumber-steps/commit/5279aca92e1598c84ea047f3d5f10c65fc3f711d))
+
 ## [3.23.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.22.0...v3.23.0) (2023-11-13)
 
 
