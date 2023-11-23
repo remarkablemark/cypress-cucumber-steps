@@ -1,6 +1,5 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import type { Position } from '../types';
 import { camelCase, getCypressElement, getOptions } from '../utils';
 
 /**
@@ -50,7 +49,16 @@ import { camelCase, getCypressElement, getOptions } from '../utils';
  * - {@link When_I_scroll_window_to_x_y_coordinates | When I scroll window to x-y coordinates}
  */
 export function When_I_scroll_window_to_position(
-  position: Position,
+  position:
+    | 'top'
+    | 'left'
+    | 'center'
+    | 'right'
+    | 'bottom'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'top-left'
+    | 'top-right',
   options?: DataTable,
 ) {
   cy.scrollTo(camelCase(position) as Cypress.PositionType, getOptions(options));
