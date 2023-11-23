@@ -4,7 +4,7 @@ import {
   When_I_find_button_by_text,
   When_I_find_element_by_label_text,
 } from '../queries';
-import { getCypressElement, getOptions } from '../utils';
+import { camelCase, getCypressElement, getOptions } from '../utils';
 
 /**
  * When I click:
@@ -15,6 +15,7 @@ import { getCypressElement, getOptions } from '../utils';
  *
  * Alternative:
  *
+ * - {@link When_I_click_position | When I click position}
  * - {@link When_I_click_on_text | When I click on text}
  *
  * @example
@@ -59,6 +60,86 @@ export function When_I_click(options?: DataTable) {
 }
 
 When('I click', When_I_click);
+
+/**
+ * When I click position:
+ *
+ * ```gherkin
+ * When I click {string}
+ * ```
+ *
+ * You can click on 9 specific positions of an element:
+ *
+ * ```
+ *  -------------------------------------
+ * | top-left        top       top-right |
+ * |                                     |
+ * |                                     |
+ * |                                     |
+ * | left          center          right |
+ * |                                     |
+ * |                                     |
+ * |                                     |
+ * | bottom-left   bottom   bottom-right |
+ *  -------------------------------------
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I click "top-left"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ *
+ * ```gherkin
+ * When I click "top"
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | log | true |
+ *   | force | false |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step like {@link When_I_find_element_by_text | "When I find element by text"} is required. For example:
+ *
+ * ```gherkin
+ * When I find element by text "Text"
+ *   And I click "top-right"
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_click | When I click}
+ */
+export function When_I_click_position(
+  position:
+    | 'top'
+    | 'left'
+    | 'center'
+    | 'right'
+    | 'bottom'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'top-left'
+    | 'top-right',
+  options?: DataTable,
+) {
+  getCypressElement().click(
+    camelCase(position) as Cypress.PositionType,
+    getOptions(options),
+  );
+}
+
+When('I click {string}', When_I_click_position);
 
 /**
  * When I click on button:
