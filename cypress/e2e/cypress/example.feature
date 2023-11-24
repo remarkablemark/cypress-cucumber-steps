@@ -31,9 +31,15 @@ Feature: Cypress example
   Scenario: Double-click text
     Given I visit "https://example.cypress.io/commands/actions"
       And I double-click on text "Double click to edit"
+    Then I find input by display value "Double click to edit"
     When I reload the page
       And I find element by text "Double click to edit"
       And I double-click
+    Then I find input by display value "Double click to edit"
+    When I reload the page
+      And I find element by text "Double click to edit"
+      And I double-click "top"
+    Then I find input by display value "Double click to edit"
 
   Scenario: Right-click text
     Given I visit "https://example.cypress.io/commands/actions"
