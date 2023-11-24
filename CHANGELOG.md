@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.25.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.24.0...v3.25.0) (2023-11-24)
+
+
+### Features
+
+* **actions:** add "When I double click position" ([fb04bf6](https://github.com/remarkablemark/cypress-cucumber-steps/commit/fb04bf68fc9fd94bfc6b8e53ee29626e5042cb2d))
+
 ## [3.24.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.23.0...v3.24.0) (2023-11-23)
 
 
