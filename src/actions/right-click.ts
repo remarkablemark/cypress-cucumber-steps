@@ -1,6 +1,6 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, getOptions } from '../utils';
+import { camelCase, getCypressElement, getOptions } from '../utils';
 
 /**
  * When I right-click:
@@ -11,6 +11,7 @@ import { getCypressElement, getOptions } from '../utils';
  *
  * Alternative:
  *
+ * - {@link When_I_right_click_position | When I right-click position}
  * - {@link When_I_right_click_on_text | When I right-click on text}
  *
  * @example
@@ -55,6 +56,86 @@ export function When_I_right_click(options?: DataTable) {
 }
 
 When('I right-click', When_I_right_click);
+
+/**
+ * When I right-click position:
+ *
+ * ```gherkin
+ * When I right-click {string}
+ * ```
+ *
+ * You can right-click on 9 specific positions of an element:
+ *
+ * ```
+ *  -------------------------------------
+ * | top-left        top       top-right |
+ * |                                     |
+ * |                                     |
+ * |                                     |
+ * | left          center          right |
+ * |                                     |
+ * |                                     |
+ * |                                     |
+ * | bottom-left   bottom   bottom-right |
+ *  -------------------------------------
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I right-click "top-left"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/rightclick#Arguments):
+ *
+ * ```gherkin
+ * When I right-click "top"
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | log | true |
+ *   | force | false |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step like {@link When_I_find_element_by_text | "When I find element by text"} is required. For example:
+ *
+ * ```gherkin
+ * When I find element by text "Text"
+ *   And I right-click "top-right"
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_right_click | When I right-click}
+ */
+export function When_I_right_click_position(
+  position:
+    | 'top'
+    | 'left'
+    | 'center'
+    | 'right'
+    | 'bottom'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'top-left'
+    | 'top-right',
+  options?: DataTable,
+) {
+  getCypressElement().rightclick(
+    camelCase(position) as Cypress.PositionType,
+    getOptions(options),
+  );
+}
+
+When('I right-click {string}', When_I_right_click_position);
 
 /**
  * When I right-click on text:
