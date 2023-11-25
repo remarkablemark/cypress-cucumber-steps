@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.27.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.26.0...v3.27.0) (2023-11-25)
+
+
+### Features
+
+* **actions:** add "When I click x-y coordinates" ([29f6a8b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/29f6a8bc7e22e9ebcb5dfc288bbaee818c320635))
+
 ## [3.26.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.25.0...v3.26.0) (2023-11-25)
 
 
