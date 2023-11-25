@@ -15,8 +15,9 @@ import { camelCase, getCypressElement, getOptions } from '../utils';
  *
  * Alternative:
  *
- * - {@link When_I_click_position | When I click position}
  * - {@link When_I_click_on_text | When I click on text}
+ * - {@link When_I_click_position | When I click position}
+ * - {@link When_I_click_x_y_coordinates | When I click x-y coordinates}
  *
  * @example
  *
@@ -119,6 +120,7 @@ When('I click', When_I_click);
  * @see
  *
  * - {@link When_I_click | When I click}
+ * - {@link When_I_click_x_y_coordinates | When I click x-y coordinates}
  */
 export function When_I_click_position(
   position:
@@ -140,6 +142,60 @@ export function When_I_click_position(
 }
 
 When('I click {string}', When_I_click_position);
+
+/**
+ * When I click x-y coordinates:
+ *
+ * ```gherkin
+ * When I click {int}px and {int}px
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I click 80px and 75px
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ *
+ * ```gherkin
+ * When I click 80px and 75px
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | log | true |
+ *   | force | false |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step like {@link When_I_find_element_by_text | "When I find element by text"} is required. For example:
+ *
+ * ```gherkin
+ * When I find element by text "Text"
+ *     And I click 80px and 75px
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_click | When I click}
+ * - {@link When_I_click_position | When I click position}
+ */
+export function When_I_click_x_y_coordinates(
+  x: number,
+  y: number,
+  options?: DataTable,
+) {
+  getCypressElement().click(x, y, getOptions(options));
+}
+
+When('I click {int}px and {int}px', When_I_click_x_y_coordinates);
 
 /**
  * When I click on button:
