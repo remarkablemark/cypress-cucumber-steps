@@ -154,6 +154,27 @@ Feature: Cypress example
       And I get element by selector "#scrollable-both button"
     Then I see element is visible
 
+  Scenario: Click position
+    Given I visit "https://example.cypress.io/commands/actions"
+    When I get element by selector "#action-canvas"
+      And I click "top-left"
+      And I click "top"
+      And I click "top-right"
+      And I click "left"
+      And I click "right"
+      And I click "bottom-left"
+      And I click "bottom"
+      And I click "bottom-right"
+    When I reload the page
+      And I get element by selector "#action-canvas"
+      And I click 80px and 75px
+      And I click 170px and 75px
+      And I click 80px and 165px
+      And I click 100px and 185px
+      And I click 125px and 190px
+      And I click 150px and 185px
+      And I click 170px and 165px
+
   Scenario: Get nth element
     Given I visit "https://example.cypress.io/commands/aliasing"
     When I find buttons by text "Change"
