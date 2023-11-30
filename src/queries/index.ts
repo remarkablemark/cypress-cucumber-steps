@@ -4,6 +4,7 @@ export * from './children';
 export * from './closest';
 export * from './element';
 export * from './find';
+export * from './first';
 export * from './focused';
 export * from './form';
 export * from './get';
