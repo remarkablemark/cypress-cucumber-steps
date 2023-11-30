@@ -11,6 +11,7 @@ export * from './get';
 export * from './heading';
 export * from './input';
 export * from './label';
+export * from './last';
 export * from './link';
 export * from './name';
 export * from './placeholder';
