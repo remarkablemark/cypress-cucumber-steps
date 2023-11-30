@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.28.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.27.0...v3.28.0) (2023-11-30)
+
+
+### Features
+
+* **queries:** pass options to "I get first element" ([22293b5](https://github.com/remarkablemark/cypress-cucumber-steps/commit/22293b5452d194309c713d824fa4600044052aae))
+* **queries:** pass options to "I get last element" ([2cec384](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2cec3848f4ddbd164a1ffe071478d28ba95420f6))
+
 ## [3.27.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.26.0...v3.27.0) (2023-11-25)
 
 
