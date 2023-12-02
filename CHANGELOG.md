@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.29.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.28.0...v3.29.0) (2023-12-02)
+
+
+### Features
+
+* **queries:** pass options to "I clear cookie" and "I set cookie" ([fc4ded2](https://github.com/remarkablemark/cypress-cucumber-steps/commit/fc4ded25409fa772f291a2b1a90972a5a364e132))
+
 ## [3.28.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.27.0...v3.28.0) (2023-11-30)
 
 
