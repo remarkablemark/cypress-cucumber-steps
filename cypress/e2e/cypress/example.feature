@@ -329,3 +329,6 @@ Feature: Cypress example
     When I set cookie "foo" to "bar"
       And I clear cookies
     Then I do not see cookie "foo"
+    When I set cookie "test" to "value"
+      And I clear all cookies
+    Then I do not see cookie "test"
