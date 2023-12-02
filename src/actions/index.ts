@@ -4,6 +4,7 @@ export * from './clear';
 export * from './click';
 export * from './config';
 export * from './cookie';
+export * from './cookies';
 export * from './debug';
 export * from './double-click';
 export * from './env';

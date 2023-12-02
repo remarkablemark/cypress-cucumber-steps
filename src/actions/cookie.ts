@@ -9,7 +9,7 @@ import { getOptions } from '../utils';
  * When I clear cookie {string}
  * ```
  *
- * Clears a specific browser cookie.
+ * Clear a specific browser cookie.
  *
  * @example
  *
@@ -30,12 +30,11 @@ import { getOptions } from '../utils';
  *
  * @remarks
  *
- * Cypress automatically clears all cookies _before_ each test to prevent state from being shared across tests when [test isolation](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation) is enabled.
- *
- * _You shouldn't need to use this command unless you're using it to clear a specific cookie inside a single test or test isolation is disabled._
+ * Cypress automatically clears all cookies _before_ each test to prevent state from being shared across tests when [test isolation](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Test-Isolation) is enabled. You shouldn't need to use this command unless you're using it to clear a specific cookie inside a single test or test isolation is disabled.
  *
  * @see
  *
+ * - {@link When_I_clear_cookies | When I clear cookies}
  * - {@link When_I_set_cookie | When I set cookie}
  */
 export function When_I_clear_cookie(name: string, options?: DataTable) {
