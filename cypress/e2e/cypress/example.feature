@@ -327,8 +327,10 @@ Feature: Cypress example
     When I clear cookie "name"
     Then I do not see cookie "name"
     When I set cookie "foo" to "bar"
-      And I clear cookies
+    Then I see cookie "foo" has value "bar"
+    When I clear cookies
     Then I do not see cookie "foo"
-    When I set cookie "test" to "value"
-      And I clear all cookies
+    When I click on button "Set Cookie"
+    Then I see cookie "token" has value "123ABC"
+    When I clear all cookies
     Then I do not see cookie "test"
