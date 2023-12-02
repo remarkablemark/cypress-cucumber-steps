@@ -28,6 +28,7 @@ import { getOptions } from '../utils';
  *
  * @see
  *
+ * - {@link Then_I_see_cookie_has_value | Then I see cookie has value}
  * - {@link Then_I_do_not_see_cookie | Then I do not see cookie}
  */
 export function Then_I_see_cookie(name: string, options?: DataTable) {
