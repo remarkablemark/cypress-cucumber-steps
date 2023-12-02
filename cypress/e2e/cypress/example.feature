@@ -319,3 +319,10 @@ Feature: Cypress example
   Scenario: Set environment variable
     Given I visit "https://example.cypress.io/cypress-api"
     When I set environment variable "api_server" to "http://localhost:8888/v2/"
+
+  Scenario: Cookie
+    Given I visit "https://example.cypress.io/commands/cookies"
+    When I set cookie "name" to "value"
+    Then I see cookie "name"
+    When I clear cookie "name"
+    Then I do not see cookie "name"

@@ -1,5 +1,6 @@
 export * from './attribute';
 export * from './button';
+export * from './cookie';
 export * from './count';
 export * from './document-title';
 export * from './hash';
