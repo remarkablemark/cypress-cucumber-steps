@@ -25,6 +25,10 @@ import { getOptions } from '../utils';
  *   | log | true |
  *   | timeout | 3000 |
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_do_not_see_cookie | Then I do not see cookie}
  */
 export function Then_I_see_cookie(name: string, options?: DataTable) {
   cy.getCookie(name, getOptions(options)).should('exist');
@@ -55,6 +59,10 @@ Then('I see cookie {string}', Then_I_see_cookie);
  *   | log | true |
  *   | timeout | 3000 |
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_cookie | Then I see cookie}
  */
 export function Then_I_do_not_see_cookie(name: string, options?: DataTable) {
   cy.getCookie(name, getOptions(options)).should('not.exist');
