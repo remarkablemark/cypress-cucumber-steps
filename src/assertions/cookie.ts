@@ -37,6 +37,46 @@ export function Then_I_see_cookie(name: string, options?: DataTable) {
 Then('I see cookie {string}', Then_I_see_cookie);
 
 /**
+ * Then I see cookie has value:
+ *
+ * ```gherkin
+ * Then I see cookie {string} has value {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see cookie "name" has value "value
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/getcookie#Arguments):
+ *
+ * ```gherkin
+ * Then I see cookie "name" has value "value
+ *   | domain | example.com |
+ *   | log | true |
+ *   | timeout | 3000 |
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_cookie | Then I see cookie}
+ */
+export function Then_I_see_cookie_has_value(
+  name: string,
+  value: string,
+  options?: DataTable,
+) {
+  cy.getCookie(name, getOptions(options)).should(
+    'have.property',
+    'value',
+    value,
+  );
+}
+
+Then('I see cookie {string} has value {string}', Then_I_see_cookie_has_value);
+
+/**
  * Then I do not see cookie:
  *
  * ```gherkin
