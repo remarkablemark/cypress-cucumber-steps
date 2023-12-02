@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.32.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.31.0...v3.32.0) (2023-12-02)
+
+
+### Features
+
+* **actions:** add "When I clear all cookies" ([1b8da91](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1b8da916d119295543ee53c80bfb95ad320dc7a4))
+
 ## [3.31.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.30.0...v3.31.0) (2023-12-02)
 
 
