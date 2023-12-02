@@ -55,10 +55,6 @@ Feature: Example
     Then I screenshot
       And I screenshot "path/to/screenshot"
 
-  Scenario: Cookie
-    Given I visit "http://example.com/"
-    When I set cookie "cookie_name" to "cookie_value"
-
   Scenario: Log
     Then I log "Hello, world!"
 
@@ -71,9 +67,6 @@ Feature: Example
   Scenario: Local storage
     When I clear local storage
       And I clear local storage "key"
-
-  Scenario: Cookie
-    When I clear cookie "authId"
 
   Scenario: Session storage
     When I clear session storage
