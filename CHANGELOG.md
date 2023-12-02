@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.30.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.29.0...v3.30.0) (2023-12-02)
+
+
+### Features
+
+* **assertions:** add "Then I do not see cookie" ([ca9fb19](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ca9fb19e4b7ca963eceaca8589676696a737e778))
+* **assertions:** add "Then I see cookie" ([ca45a71](https://github.com/remarkablemark/cypress-cucumber-steps/commit/ca45a71ad7a1ebb1bc860a1aeb694e12715ea5ae))
+
 ## [3.29.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.28.0...v3.29.0) (2023-12-02)
 
 
