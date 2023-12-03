@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.38.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.37.0...v3.38.0) (2023-12-03)
+
+
+### Features
+
+* **assertions:** add "Then I see local storage item equals" ([878adeb](https://github.com/remarkablemark/cypress-cucumber-steps/commit/878adeb31d7c72e819e2e24aa18b7428c198e8f4))
+
 ## [3.37.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.36.0...v3.37.0) (2023-12-03)
 
 
