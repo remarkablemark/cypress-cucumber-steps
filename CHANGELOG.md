@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.40.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.39.0...v3.40.0) (2023-12-03)
+
+
+### Features
+
+* **actions:** add "When I set local storage item" ([e01b8ec](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e01b8ec878f9b4e0a89f577511defe071115bbcb))
+
 ## [3.39.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.38.0...v3.39.0) (2023-12-03)
 
 
