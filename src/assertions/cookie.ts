@@ -44,6 +44,8 @@ Then('I see cookie {string}', Then_I_see_cookie);
  * Then I see cookie {string} has value {string}
  * ```
  *
+ * Assert cookie value has exact match.
+ *
  * @example
  *
  * ```gherkin
@@ -83,6 +85,8 @@ Then('I see cookie {string} has value {string}', Then_I_see_cookie_has_value);
  * ```gherkin
  * Then I see cookie {string} contains value {string}
  * ```
+ *
+ * Assert cookie value has partial match.
  *
  * @example
  *
