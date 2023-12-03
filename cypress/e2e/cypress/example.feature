@@ -339,6 +339,10 @@ Feature: Cypress example
     Given I visit "https://example.cypress.io/commands/storage"
     When I click on button "Populate localStorage and sessionStorage"
     Then I see local storage item "prop1"
+    When I clear local storage "prop1"
+    Then I do not see local storage item "prop1"
     When I clear local storage
-      And I clear local storage "key"
+    Then I do not see local storage item "prop2"
+    When I click on button "Populate localStorage and sessionStorage"
       And I clear all local storage
+    Then I do not see local storage item "prop3"
