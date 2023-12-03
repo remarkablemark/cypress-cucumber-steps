@@ -354,5 +354,6 @@ Feature: Cypress example
     Given I visit "https://example.cypress.io/commands/storage"
     When I click on button "Populate localStorage and sessionStorage"
     Then I see session storage item "prop5"
+      And I see session storage item "prop5" equals "yellow"
     When I clear session storage
     Then I do not see local storage item "prop5"
