@@ -64,10 +64,6 @@ Feature: Example
       And I set viewport to "ipad-mini" and "landscape"
       And I set viewport to 800px by 600px
 
-  Scenario: Local storage
-    When I clear local storage
-      And I clear local storage "key"
-
   Scenario: Session storage
     When I clear session storage
 
