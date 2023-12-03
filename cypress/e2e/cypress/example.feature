@@ -345,6 +345,7 @@ Feature: Cypress example
     Then I do not see local storage item "prop1"
     When I clear local storage
     Then I do not see local storage item "prop2"
-    When I click on button "Populate localStorage and sessionStorage"
-      And I clear all local storage
-    Then I do not see local storage item "prop3"
+    When I set local storage item "foo" to "bar"
+      Then I see local storage item "foo" equals "bar"
+    When I clear all local storage
+    Then I do not see local storage item "foo"
