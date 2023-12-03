@@ -17,6 +17,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  *
  * @see
  *
+ * - {@link Then_I_see_session_storage_item_equals | Then I see session storage item equals}
  * - {@link Then_I_do_not_see_session_storage_item | Then I do not see session storage item}
  */
 export function Then_I_see_session_storage_item(key: string) {
@@ -26,6 +27,39 @@ export function Then_I_see_session_storage_item(key: string) {
 }
 
 Then('I see session storage item {string}', Then_I_see_session_storage_item);
+
+/**
+ * Then I see session storage item equals:
+ *
+ * ```gherkin
+ * Then I see session storage item {string} equals {string}
+ * ```
+ *
+ * Assert session storage item has exact value.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see session storage item "key" equals "value"
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_session_storage_item | Then I see session storage item}
+ */
+export function Then_I_see_session_storage_item_equals(
+  key: string,
+  value: string,
+) {
+  cy.wrap({}).should(() => {
+    expect(sessionStorage.getItem(key)).to.equal(value);
+  });
+}
+
+Then(
+  'I see session storage item {string} equals {string}',
+  Then_I_see_session_storage_item_equals,
+);
 
 /**
  * Then I do not see session storage item:
