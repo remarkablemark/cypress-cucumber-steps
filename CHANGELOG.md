@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.36.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.35.0...v3.36.0) (2023-12-03)
+
+
+### Features
+
+* **assertions:** add "Then I see local storage item" ([08dd097](https://github.com/remarkablemark/cypress-cucumber-steps/commit/08dd09730cc209d836304fc4547b5f31084fb968))
+
 ## [3.35.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.34.0...v3.35.0) (2023-12-03)
 
 
