@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.34.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.33.0...v3.34.0) (2023-12-03)
+
+
+### Features
+
+* **assertions:** add "Then I see cookie contains value" ([f09f5bd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f09f5bd1515ecd0c6491c096b83b93cd43c67937))
+
 ## [3.33.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.32.0...v3.33.0) (2023-12-02)
 
 
