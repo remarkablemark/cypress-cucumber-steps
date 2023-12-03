@@ -340,6 +340,7 @@ Feature: Cypress example
     When I click on button "Populate localStorage and sessionStorage"
     Then I see local storage item "prop1"
       And I see local storage item "prop1" equals "red"
+      And I see local storage item "prop3" contains "gen"
     When I clear local storage "prop1"
     Then I do not see local storage item "prop1"
     When I clear local storage

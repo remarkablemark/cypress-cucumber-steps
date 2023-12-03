@@ -45,6 +45,7 @@ Then('I see local storage item {string}', Then_I_see_local_storage_item);
  *
  * @see
  *
+ * - {@link Then_I_see_local_storage_item_contains | Then I see local storage item contains}
  * - {@link Then_I_see_local_storage_item | Then I see local storage item}
  */
 export function Then_I_see_local_storage_item_equals(
@@ -59,6 +60,40 @@ export function Then_I_see_local_storage_item_equals(
 Then(
   'I see local storage item {string} equals {string}',
   Then_I_see_local_storage_item_equals,
+);
+
+/**
+ * Then I see local storage item contains:
+ *
+ * ```gherkin
+ * Then I see local storage item {string} contains {string}
+ * ```
+ *
+ * Assert local storage item has partial value.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see local storage item "key" contains "value"
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_local_storage_item_equals | Then I see local storage item equals}
+ * - {@link Then_I_see_local_storage_item | Then I see local storage item}
+ */
+export function Then_I_see_local_storage_item_contains(
+  key: string,
+  value: string,
+) {
+  cy.wrap({}).should(() => {
+    expect(localStorage.getItem(key)).to.include(value);
+  });
+}
+
+Then(
+  'I see local storage item {string} contains {string}',
+  Then_I_see_local_storage_item_contains,
 );
 
 /**
