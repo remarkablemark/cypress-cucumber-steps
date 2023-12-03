@@ -45,6 +45,7 @@ Then('I see session storage item {string}', Then_I_see_session_storage_item);
  *
  * @see
  *
+ * - {@link Then_I_see_session_storage_item_contains | Then I see session storage item contains}
  * - {@link Then_I_see_session_storage_item | Then I see session storage item}
  */
 export function Then_I_see_session_storage_item_equals(
@@ -59,6 +60,40 @@ export function Then_I_see_session_storage_item_equals(
 Then(
   'I see session storage item {string} equals {string}',
   Then_I_see_session_storage_item_equals,
+);
+
+/**
+ * Then I see session storage item contains:
+ *
+ * ```gherkin
+ * Then I see session storage item {string} contains {string}
+ * ```
+ *
+ * Assert session storage item has partial value.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see session storage item "key" contains "value"
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_session_storage_item_equals | Then I see session storage item equals}
+ * - {@link Then_I_see_session_storage_item | Then I see session storage item}
+ */
+export function Then_I_see_session_storage_item_contains(
+  key: string,
+  value: string,
+) {
+  cy.wrap({}).should(() => {
+    expect(sessionStorage.getItem(key)).to.include(value);
+  });
+}
+
+Then(
+  'I see session storage item {string} contains {string}',
+  Then_I_see_session_storage_item_contains,
 );
 
 /**
