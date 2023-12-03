@@ -7,6 +7,7 @@ export * from './hash';
 export * from './heading';
 export * from './label';
 export * from './link';
+export * from './local-storage';
 export * from './option';
 export * from './response';
 export * from './text';

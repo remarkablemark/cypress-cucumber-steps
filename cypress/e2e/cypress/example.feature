@@ -337,6 +337,8 @@ Feature: Cypress example
 
   Scenario: Local storage
     Given I visit "https://example.cypress.io/commands/storage"
+    When I click on button "Populate localStorage and sessionStorage"
+    Then I see local storage item "prop1"
     When I clear local storage
       And I clear local storage "key"
       And I clear all local storage
