@@ -17,6 +17,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  *
  * @see
  *
+ * - {@link Then_I_see_local_storage_item_equals | Then I see local storage item equals}
  * - {@link Then_I_do_not_see_local_storage_item | Then I do not see local storage item}
  */
 export function Then_I_see_local_storage_item(key: string) {
@@ -26,6 +27,39 @@ export function Then_I_see_local_storage_item(key: string) {
 }
 
 Then('I see local storage item {string}', Then_I_see_local_storage_item);
+
+/**
+ * Then I see local storage item equals:
+ *
+ * ```gherkin
+ * Then I see local storage item {string} equals {string}
+ * ```
+ *
+ * Assert local storage item has exact value.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see local storage item "key" equals "value"
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_local_storage_item | Then I see local storage item}
+ */
+export function Then_I_see_local_storage_item_equals(
+  key: string,
+  value: string,
+) {
+  cy.wrap({}).should(() => {
+    expect(localStorage.getItem(key)).to.equal(value);
+  });
+}
+
+Then(
+  'I see local storage item {string} equals {string}',
+  Then_I_see_local_storage_item_equals,
+);
 
 /**
  * Then I do not see local storage item:
