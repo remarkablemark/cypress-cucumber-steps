@@ -334,3 +334,9 @@ Feature: Cypress example
     Then I see cookie "token" contains value "123"
     When I clear all cookies
     Then I do not see cookie "test"
+
+  Scenario: Local storage
+    Given I visit "https://example.cypress.io/commands/storage"
+    When I clear local storage
+      And I clear local storage "key"
+      And I clear all local storage
