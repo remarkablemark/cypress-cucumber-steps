@@ -355,5 +355,6 @@ Feature: Cypress example
     When I click on button "Populate localStorage and sessionStorage"
     Then I see session storage item "prop5"
       And I see session storage item "prop5" equals "yellow"
+      And I see session storage item "prop4" contains "cy"
     When I clear session storage
     Then I do not see local storage item "prop5"
