@@ -64,9 +64,6 @@ Feature: Example
       And I set viewport to "ipad-mini" and "landscape"
       And I set viewport to 800px by 600px
 
-  Scenario: Session storage
-    When I clear session storage
-
   Scenario: Get selector
     Given I visit "http://example.com/"
     When I get element by selector "p"

@@ -10,6 +10,7 @@ export * from './link';
 export * from './local-storage';
 export * from './option';
 export * from './response';
+export * from './session-storage';
 export * from './text';
 export * from './url';
 export * from './value';
