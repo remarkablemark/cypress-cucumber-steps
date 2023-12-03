@@ -331,6 +331,6 @@ Feature: Cypress example
     When I clear cookies
     Then I do not see cookie "foo"
     When I click on button "Set Cookie"
-    Then I see cookie "token" has value "123ABC"
+    Then I see cookie "token" contains value "123"
     When I clear all cookies
     Then I do not see cookie "test"

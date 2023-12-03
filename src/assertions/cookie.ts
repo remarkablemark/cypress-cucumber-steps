@@ -44,16 +44,18 @@ Then('I see cookie {string}', Then_I_see_cookie);
  * Then I see cookie {string} has value {string}
  * ```
  *
+ * Assert cookie value has exact match.
+ *
  * @example
  *
  * ```gherkin
- * Then I see cookie "name" has value "value
+ * Then I see cookie "name" has value "value"
  * ```
  *
  * With [options](https://docs.cypress.io/api/commands/getcookie#Arguments):
  *
  * ```gherkin
- * Then I see cookie "name" has value "value
+ * Then I see cookie "name" has value "value"
  *   | domain | example.com |
  *   | log | true |
  *   | timeout | 3000 |
@@ -61,7 +63,7 @@ Then('I see cookie {string}', Then_I_see_cookie);
  *
  * @see
  *
- * - {@link Then_I_see_cookie | Then I see cookie}
+ * - {@link Then_I_see_cookie_contains_value | Then I see cookie contains value}
  */
 export function Then_I_see_cookie_has_value(
   name: string,
@@ -76,6 +78,49 @@ export function Then_I_see_cookie_has_value(
 }
 
 Then('I see cookie {string} has value {string}', Then_I_see_cookie_has_value);
+
+/**
+ * Then I see cookie contains value:
+ *
+ * ```gherkin
+ * Then I see cookie {string} contains value {string}
+ * ```
+ *
+ * Assert cookie value has partial match.
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see cookie "name" contains value "value"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/getcookie#Arguments):
+ *
+ * ```gherkin
+ * Then I see cookie "name" contains value "value"
+ *   | domain | example.com |
+ *   | log | true |
+ *   | timeout | 3000 |
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_cookie_has_value | Then I see cookie has value}
+ */
+export function Then_I_see_cookie_contains_value(
+  name: string,
+  value: string,
+  options?: DataTable,
+) {
+  cy.getCookie(name, getOptions(options)).should((cookie) => {
+    expect(cookie?.value).to.include(value);
+  });
+}
+
+Then(
+  'I see cookie {string} contains value {string}',
+  Then_I_see_cookie_contains_value,
+);
 
 /**
  * Then I do not see cookie:
