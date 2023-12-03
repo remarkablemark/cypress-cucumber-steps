@@ -355,3 +355,4 @@ Feature: Cypress example
     When I click on button "Populate localStorage and sessionStorage"
     Then I see session storage item "prop5"
     When I clear session storage
+    Then I do not see local storage item "prop5"
