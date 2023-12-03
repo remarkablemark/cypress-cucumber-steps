@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.41.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.40.0...v3.41.0) (2023-12-03)
+
+
+### Features
+
+* **assertions:** add "Then I see session storage item" ([0182dcd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/0182dcda064222b452ac811951023ccf101e430a))
+
 ## [3.40.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.39.0...v3.40.0) (2023-12-03)
 
 
