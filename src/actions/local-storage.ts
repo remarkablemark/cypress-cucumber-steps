@@ -67,3 +67,31 @@ export function When_I_clear_all_local_storage() {
 }
 
 When('I clear all local storage', When_I_clear_all_local_storage);
+
+/**
+ * When I set local storage item:
+ *
+ * ```gherkin
+ * When I set local storage item {string} to {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I set local storage item "key" to "value"
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_clear_local_storage | When I clear local storage}
+ */
+export function When_I_set_local_storage_item(key: string, value: string) {
+  cy.wrap({}).then(() => {
+    localStorage.setItem(key, value);
+  });
+}
+
+When(
+  'I set local storage item {string} to {string}',
+  When_I_set_local_storage_item,
+);
