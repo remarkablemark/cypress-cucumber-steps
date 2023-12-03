@@ -349,3 +349,9 @@ Feature: Cypress example
       Then I see local storage item "foo" equals "bar"
     When I clear all local storage
     Then I do not see local storage item "foo"
+
+  Scenario: Session storage
+    Given I visit "https://example.cypress.io/commands/storage"
+    When I click on button "Populate localStorage and sessionStorage"
+    Then I see session storage item "prop5"
+    When I clear session storage
