@@ -14,6 +14,10 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  * ```gherkin
  * Then I see local storage item "key"
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_do_not_see_local_storage_item | Then I do not see local storage item}
  */
 export function Then_I_see_local_storage_item(key: string) {
   cy.wrap({}).should(() => {
@@ -37,6 +41,10 @@ Then('I see local storage item {string}', Then_I_see_local_storage_item);
  * ```gherkin
  * Then I do not see local storage item "key"
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_local_storage_item | Then I see local storage item}
  */
 export function Then_I_do_not_see_local_storage_item(key: string) {
   cy.wrap({}).should(() => {
