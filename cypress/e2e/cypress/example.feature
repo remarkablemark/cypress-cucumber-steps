@@ -358,3 +358,8 @@ Feature: Cypress example
       And I see session storage item "prop4" contains "cy"
     When I clear session storage
     Then I do not see local storage item "prop5"
+
+  Scenario: Role
+    Given I visit "https://example.cypress.io/commands/querying"
+    When I find elements by role "button"
+      And I find element by role "button"
