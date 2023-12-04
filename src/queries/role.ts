@@ -1,6 +1,6 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getOptions, setCypressElement } from '../utils';
+import { getCypressElement, getOptions, setCypressElement } from '../utils';
 
 /**
  * When I find elements by role:
@@ -39,6 +39,10 @@ import { getOptions, setCypressElement } from '../utils';
  * ```
  *
  * Inspired by Testing Library's [ByRole](https://testing-library.com/docs/queries/byrole/).
+ *
+ * @see
+ *
+ * - {@link When_I_find_element_by_role | When I find element by role}
  */
 export function When_I_find_elements_by_role(
   role: string,
@@ -50,3 +54,51 @@ export function When_I_find_elements_by_role(
 }
 
 When('I find elements by role {string}', When_I_find_elements_by_role);
+
+/**
+ * When I find element by role:
+ *
+ * ```gherkin
+ * When I find element by role {string}
+ * ```
+ *
+ * Queries for the first element with the given role.
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I find element by role "progressbar"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ *
+ * ```gherkin
+ * When I find element by role "progressbar"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
+ * ```
+ *
+ * @remarks
+ *
+ * This precedes steps like {@link When_I_click | "When I click"}. For example:
+ *
+ * ```gherkin
+ * When I find element by role "progressbar"
+ *   And I click
+ * ```
+ *
+ * Inspired by Testing Library's [ByRole](https://testing-library.com/docs/queries/byrole/).
+ *
+ * @see
+ *
+ * - {@link When_I_find_elements_by_role | When I find elements by role}
+ */
+export function When_I_find_element_by_role(role: string, options?: DataTable) {
+  When_I_find_elements_by_role(role, options);
+  setCypressElement(getCypressElement().first());
+}
+
+When('I find element by role {string}', When_I_find_element_by_role);
