@@ -15,6 +15,7 @@ export * from './last';
 export * from './link';
 export * from './name';
 export * from './placeholder';
+export * from './role';
 export * from './testid';
 export * from './text';
 export * from './textarea';
