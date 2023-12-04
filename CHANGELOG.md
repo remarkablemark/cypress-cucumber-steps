@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.45.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.44.0...v3.45.0) (2023-12-04)
+
+
+### Features
+
+* **queries:** add "When I find element by role" ([f69aca6](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f69aca6e03571fd13670dadd879badad6aea92ef))
+* **queries:** add "When I find elements by role" ([9f08b6b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9f08b6b883e86062844254dda8787d9a18978bed))
+
 ## [3.44.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.43.0...v3.44.0) (2023-12-03)
 
 
