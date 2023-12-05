@@ -1,6 +1,6 @@
-import { Then } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement } from '../utils';
+import { getCypressElement, getOptions } from '../utils';
 
 /**
  * Then I see element is visible:
@@ -9,10 +9,19 @@ import { getCypressElement } from '../utils';
  * Then I see element is visible
  * ```
  *
+ * Assert element **_is visible_** in the screen.
+ *
  * @example
  *
  * ```gherkin
  * Then I see element is visible
+ * ```
+ *
+ * With options:
+ *
+ * ```gherkin
+ * Then I see element is visible
+ *   | timeout | 4000 |
  * ```
  *
  * @remarks
@@ -29,8 +38,8 @@ import { getCypressElement } from '../utils';
  * - {@link Then_I_see_element_is_not_visible | Then I see element is not visible}
  * - {@link Then_I_see_text | Then I see text}
  */
-export function Then_I_see_element_is_visible() {
-  getCypressElement().should('be.visible');
+export function Then_I_see_element_is_visible(options?: DataTable) {
+  getCypressElement().should('be.visible', getOptions(options));
 }
 
 Then('I see element is visible', Then_I_see_element_is_visible);
@@ -42,10 +51,19 @@ Then('I see element is visible', Then_I_see_element_is_visible);
  * Then I see element is not visible
  * ```
  *
+ * Assert element **_is not visible_** in the screen.
+ *
  * @example
  *
  * ```gherkin
  * Then I see element is not visible
+ * ```
+ *
+ * With options:
+ *
+ * ```gherkin
+ * Then I see element is visible
+ *   | timeout | 4000 |
  * ```
  *
  * @remarks
@@ -61,10 +79,11 @@ Then('I see element is visible', Then_I_see_element_is_visible);
  *
  * - {@link Then_I_do_not_see_text | Then I do not see text}
  * - {@link Then_I_do_not_see_visible_text | Then I do not see visible text}
+ * - {@link Then_I_see_element_does_not_exist | Then I see element does not exist}
  * - {@link Then_I_see_element_is_visible | Then I see element is visible}
  */
-export function Then_I_see_element_is_not_visible() {
-  getCypressElement().should('not.be.visible');
+export function Then_I_see_element_is_not_visible(options?: DataTable) {
+  getCypressElement().should('not.be.visible', getOptions(options));
 }
 
 Then('I see element is not visible', Then_I_see_element_is_not_visible);
