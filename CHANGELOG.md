@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.46.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.45.0...v3.46.0) (2023-12-05)
+
+
+### Features
+
+* **assertions:** add "Then I see element does not exist" ([dff01f1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/dff01f1b0b9189b6f08ab1f5a99d33cc6179a84e))
+* **assertions:** add "Then I see element exists" ([2c78e9d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2c78e9d12cd510e619fbe816cdadb55c90461cc2))
+* **assertions:** pass options to "I see element is visible" ([4992df7](https://github.com/remarkablemark/cypress-cucumber-steps/commit/4992df77b55cf681af80083bf4bd01f1a6e6ff88))
+* **queries:** pass options to "I get elements by selector" ([913dde5](https://github.com/remarkablemark/cypress-cucumber-steps/commit/913dde524b3caa80d87ca1a30b070c20473659b4))
+
 ## [3.45.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.44.0...v3.45.0) (2023-12-04)
 
 
