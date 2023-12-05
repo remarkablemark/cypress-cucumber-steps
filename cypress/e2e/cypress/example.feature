@@ -21,6 +21,10 @@ Feature: Cypress example
       And I see button "Click to toggle popover"
     When I click on button "Click to toggle popover"
     Then I see text "This popover shows up on click"
+      And I find elements by role "tooltip"
+    When I click on text "Click to toggle popover"
+      And I wait 500 milliseconds
+    Then I see element does not exist
 
   Scenario: See, click, and type label
     Given I visit "https://example.cypress.io/commands/actions"
@@ -362,4 +366,6 @@ Feature: Cypress example
   Scenario: Role
     Given I visit "https://example.cypress.io/commands/querying"
     When I find elements by role "button"
-      And I find element by role "button"
+    Then I see element exists
+    When I find element by role "button"
+    Then I see element is visible

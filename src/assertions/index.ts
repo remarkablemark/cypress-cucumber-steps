@@ -3,6 +3,7 @@ export * from './button';
 export * from './cookie';
 export * from './count';
 export * from './document-title';
+export * from './exist';
 export * from './hash';
 export * from './heading';
 export * from './label';
