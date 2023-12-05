@@ -35,6 +35,7 @@ import { getCypressElement, getOptions } from '../utils';
  *
  * @see
  *
+ * - {@link Then_I_see_element_is_visible | Then I see element is visible}
  * - {@link Then_I_see_element_does_not_exist | Then I see element does not exist}
  */
 export function Then_I_see_element_exists(options?: DataTable) {
@@ -76,6 +77,7 @@ Then('I see element exists', Then_I_see_element_exists);
  *
  * @see
  *
+ * - {@link Then_I_see_element_is_not_visible | Then I see element is not visible}
  * - {@link Then_I_see_element_exists | Then I see element exists}
  */
 export function Then_I_see_element_does_not_exist(options?: DataTable) {
