@@ -1,6 +1,6 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { setCypressElement } from '../utils';
+import { getCypressElement, getOptions, setCypressElement } from '../utils';
 
 /**
  * When I get element by selector:
@@ -19,13 +19,27 @@ import { setCypressElement } from '../utils';
  * When I get element by selector ".list > li"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I get element by selector ".dropdown-menu"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
+ * ```
+ *
  * @see
  *
  * - {@link When_I_get_elements_by_selector | When I get elements by selector}
  * - {@link When_I_find_element_by_selector | When I find element by selector}
  */
-export function When_I_get_element_by_selector(selector: string) {
-  setCypressElement(cy.get(selector).first());
+export function When_I_get_element_by_selector(
+  selector: string,
+  options?: DataTable,
+) {
+  When_I_get_elements_by_selector(selector, options);
+  setCypressElement(getCypressElement().first());
 }
 
 When('I get element by selector {string}', When_I_get_element_by_selector);
@@ -47,12 +61,25 @@ When('I get element by selector {string}', When_I_get_element_by_selector);
  * When I get elements by selector ".list > li"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I get element by selector ".dropdown-menu"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
+ * ```
+ *
  * @see
  *
  * - {@link When_I_get_element_by_selector | When I get element by selector}
  */
-export function When_I_get_elements_by_selector(selector: string) {
-  setCypressElement(cy.get(selector));
+export function When_I_get_elements_by_selector(
+  selector: string,
+  options?: DataTable,
+) {
+  setCypressElement(cy.get(selector, getOptions(options)));
 }
 
 When('I get elements by selector {string}', When_I_get_elements_by_selector);
