@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.47.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.46.0...v3.47.0) (2023-12-06)
+
+
+### Features
+
+* **assertions:** add "Then I do not see role" ([db8ad7a](https://github.com/remarkablemark/cypress-cucumber-steps/commit/db8ad7ad0ad0ac8fea376ae4e06931c196487ac4))
+* **assertions:** add "Then I see role" ([90c18b4](https://github.com/remarkablemark/cypress-cucumber-steps/commit/90c18b4a2cd7bb6843ef5c317f30aae82053cafe))
+
 ## [3.46.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.45.0...v3.46.0) (2023-12-05)
 
 
