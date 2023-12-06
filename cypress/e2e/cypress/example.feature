@@ -369,3 +369,5 @@ Feature: Cypress example
     Then I see element exists
     When I find element by role "button"
     Then I see element is visible
+      And I see role "button"
+      And I do not see role "tooltip"
