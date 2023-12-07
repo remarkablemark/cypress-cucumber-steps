@@ -1,4 +1,4 @@
-import { Then } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, Then } from '@badeball/cypress-cucumber-preprocessor';
 
 import { When_I_find_buttons_by_text } from '../queries';
 import { getCypressElement } from '../utils';
@@ -18,12 +18,22 @@ import { getCypressElement } from '../utils';
  * Then I see button "Button"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * Then I see button "Button"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
+ * ```
+ *
  * @see
  *
  * - {@link Then_I_see_text | Then I see text}
  */
-export function Then_I_see_button(text: string) {
-  When_I_find_buttons_by_text(text);
+export function Then_I_see_button(text: string, options?: DataTable) {
+  When_I_find_buttons_by_text(text, options);
   getCypressElement().should('exist');
 }
 
@@ -44,12 +54,22 @@ Then('I see button {string}', Then_I_see_button);
  * Then I do not see button "Button"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * Then I do not see button "Button"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
+ * ```
+ *
  * @see
  *
  * - {@link Then_I_do_not_see_text | Then I do not see text}
  */
-export function Then_I_do_not_see_button(text: string) {
-  When_I_find_buttons_by_text(text);
+export function Then_I_do_not_see_button(text: string, options?: DataTable) {
+  When_I_find_buttons_by_text(text, options);
   getCypressElement().should('not.exist');
 }
 

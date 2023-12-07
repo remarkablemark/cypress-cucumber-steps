@@ -1,6 +1,6 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, setCypressElement } from '../utils';
+import { getCypressElement, getOptions, setCypressElement } from '../utils';
 
 /**
  * When I find buttons by text:
@@ -13,6 +13,16 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * ```gherkin
  * When I find buttons by text "Button"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I find buttons by text "Button"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
  * ```
  *
  * @remarks
@@ -29,7 +39,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * - {@link When_I_find_button_by_text | When I find button by text}
  */
-export function When_I_find_buttons_by_text(text: string) {
+export function When_I_find_buttons_by_text(text: string, options?: DataTable) {
   const buttons = [
     'button',
     "[type='button']",
@@ -45,7 +55,7 @@ export function When_I_find_buttons_by_text(text: string) {
     .map((selector) => `${selector}[value=${JSON.stringify(text)}]:visible`)
     .join(',');
 
-  setCypressElement(cy.get(`${selector1},${selector2}`));
+  setCypressElement(cy.get(`${selector1},${selector2}`, getOptions(options)));
 }
 
 When('I find buttons by text {string}', When_I_find_buttons_by_text);
@@ -65,6 +75,16 @@ When('I find buttons by text {string}', When_I_find_buttons_by_text);
  * When I find button by text "Button"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I find button by text "Button"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
+ * ```
+ *
  * @remarks
  *
  * This precedes steps like {@link When_I_click | "When I click"}. For example:
@@ -78,8 +98,8 @@ When('I find buttons by text {string}', When_I_find_buttons_by_text);
  *
  * - {@link When_I_find_buttons_by_text | When I find buttons by text}
  */
-export function When_I_find_button_by_text(text: string) {
-  When_I_find_buttons_by_text(text);
+export function When_I_find_button_by_text(text: string, options?: DataTable) {
+  When_I_find_buttons_by_text(text, options);
   setCypressElement(getCypressElement().first());
 }
 
