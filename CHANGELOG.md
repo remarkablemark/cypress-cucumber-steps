@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.49.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.48.0...v3.49.0) (2023-12-07)
+
+
+### Features
+
+* **assertions:** pass options to "I see button" and "I do not see button" ([fa58f79](https://github.com/remarkablemark/cypress-cucumber-steps/commit/fa58f79b01ec8526beade7d28bb07c95c9ee4231))
+* **queries:** pass options to "When I find buttons by text" ([e4695ee](https://github.com/remarkablemark/cypress-cucumber-steps/commit/e4695ee85872c3f8212645562cd1e3a037f646f9))
+
 ## [3.48.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.47.0...v3.48.0) (2023-12-07)
 
 
