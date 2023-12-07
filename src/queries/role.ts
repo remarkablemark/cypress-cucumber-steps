@@ -19,7 +19,6 @@ import { getCypressElement, getOptions, setCypressElement } from '../utils';
  *
  * With [options](https://docs.cypress.io/api/commands/get#Arguments):
  *
- *
  * ```gherkin
  * When I find elements by role "progressbar"
  *   | log | true |
@@ -71,7 +70,6 @@ When('I find elements by role {string}', When_I_find_elements_by_role);
  * ```
  *
  * With [options](https://docs.cypress.io/api/commands/get#Arguments):
- *
  *
  * ```gherkin
  * When I find element by role "progressbar"
