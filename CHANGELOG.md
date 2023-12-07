@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.48.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.47.0...v3.48.0) (2023-12-07)
+
+
+### Features
+
+* **assertions:** pass options to "I see link" and "I do not see link" ([339c094](https://github.com/remarkablemark/cypress-cucumber-steps/commit/339c0943e3aa10f42940d9d6acc3f71387c3411a))
+* **assertions:** pass options to "I see text" and "I do not see text" ([4afea19](https://github.com/remarkablemark/cypress-cucumber-steps/commit/4afea19ae07f6abc26210e314f34c0352fd19a9d))
+
 ## [3.47.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.46.0...v3.47.0) (2023-12-06)
 
 
