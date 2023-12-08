@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.50.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.49.0...v3.50.0) (2023-12-08)
+
+
+### Features
+
+* **assertions:** pass options to "I see label" and "I do not see label" ([417ae1f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/417ae1f8860303e4a8dff9353b20ea19da7dde77))
+* **queries:** pass options to "When I find elements by label text" ([2ad8bad](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2ad8bad80695e0df6efade01df30af81a7f51318))
+
+
+### Bug Fixes
+
+* **actions:** fix options in click steps ([aa60988](https://github.com/remarkablemark/cypress-cucumber-steps/commit/aa609883d09b166363b2131081910663ae03aebe))
+
 ## [3.49.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.48.0...v3.49.0) (2023-12-07)
 
 
