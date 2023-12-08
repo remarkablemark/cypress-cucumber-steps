@@ -212,21 +212,14 @@ When('I click {int}px and {int}px', When_I_click_x_y_coordinates);
  * When I click on button "Button"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
  *
  * ```gherkin
  * When I click on button "Button"
- *   | altKey | false |
- *   | animationDistanceThreshold | 5 |
- *   | ctrlKey | false |
  *   | log | true |
- *   | force | false |
- *   | metaKey | false |
- *   | multiple | false |
- *   | scrollBehavior | top |
- *   | shiftKey | false |
  *   | timeout | 4000 |
- *   | waitForAnimations | true |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
  * ```
  *
  * @see
@@ -234,8 +227,8 @@ When('I click {int}px and {int}px', When_I_click_x_y_coordinates);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_button(text: string, options?: DataTable) {
-  When_I_find_button_by_text(text);
-  getCypressElement().click(getOptions(options));
+  When_I_find_button_by_text(text, options);
+  getCypressElement().click();
 }
 
 When('I click on button {string}', When_I_click_on_button);
@@ -255,21 +248,14 @@ When('I click on button {string}', When_I_click_on_button);
  * When I click on link "Link"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ * With [options](https://docs.cypress.io/api/commands/contains#Arguments):
  *
  * ```gherkin
  * When I click on link "Link"
- *   | altKey | false |
- *   | animationDistanceThreshold | 5 |
- *   | ctrlKey | false |
+ *   | matchCase | true |
  *   | log | true |
- *   | force | false |
- *   | metaKey | false |
- *   | multiple | false |
- *   | scrollBehavior | top |
- *   | shiftKey | false |
  *   | timeout | 4000 |
- *   | waitForAnimations | true |
+ *   | includeShadowDom | false |
  * ```
  *
  * @see
@@ -277,7 +263,7 @@ When('I click on button {string}', When_I_click_on_button);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_link(text: string, options?: DataTable) {
-  cy.contains('a', text).first().click(getOptions(options));
+  cy.contains('a', text, getOptions(options)).first().click();
 }
 
 When('I click on link {string}', When_I_click_on_link);
@@ -299,21 +285,14 @@ When('I click on link {string}', When_I_click_on_link);
  * When I click on text "Text"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ * With [options](https://docs.cypress.io/api/commands/contains#Arguments):
  *
  * ```gherkin
  * When I click on text "Text"
- *   | altKey | false |
- *   | animationDistanceThreshold | 5 |
- *   | ctrlKey | false |
+ *   | matchCase | true |
  *   | log | true |
- *   | force | false |
- *   | metaKey | false |
- *   | multiple | false |
- *   | scrollBehavior | top |
- *   | shiftKey | false |
  *   | timeout | 4000 |
- *   | waitForAnimations | true |
+ *   | includeShadowDom | false |
  * ```
  *
  * @see
@@ -323,7 +302,7 @@ When('I click on link {string}', When_I_click_on_link);
  * - {@link When_I_click_on_link | When I click on link}
  */
 export function When_I_click_on_text(text: string, options?: DataTable) {
-  cy.contains(text).click(getOptions(options));
+  cy.contains(text, getOptions(options)).click();
 }
 
 When('I click on text {string}', When_I_click_on_text);
@@ -341,21 +320,14 @@ When('I click on text {string}', When_I_click_on_text);
  * When I click on label "Label"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/click#Arguments):
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
  *
  * ```gherkin
  * When I click on label "Label"
- *   | altKey | false |
- *   | animationDistanceThreshold | 5 |
- *   | ctrlKey | false |
  *   | log | true |
- *   | force | false |
- *   | metaKey | false |
- *   | multiple | false |
- *   | scrollBehavior | top |
- *   | shiftKey | false |
  *   | timeout | 4000 |
- *   | waitForAnimations | true |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
  * ```
  *
  * @see
@@ -363,8 +335,8 @@ When('I click on text {string}', When_I_click_on_text);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_label(text: string, options?: DataTable) {
-  When_I_find_element_by_label_text(text);
-  getCypressElement().click(getOptions(options));
+  When_I_find_element_by_label_text(text, options);
+  getCypressElement().click();
 }
 
 When('I click on label {string}', When_I_click_on_label);

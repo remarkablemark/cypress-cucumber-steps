@@ -1,6 +1,6 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, setCypressElement } from '../utils';
+import { getCypressElement, getOptions, setCypressElement } from '../utils';
 
 /**
  * When I find elements by label text:
@@ -9,12 +9,22 @@ import { getCypressElement, setCypressElement } from '../utils';
  * When I find elements by label text {string}
  * ```
  *
- * Finds all visible `label`, `aria-labelledby`, or `aria-label` that matches the text.
+ * Find all visible `label`, `aria-labelledby`, or `aria-label` that matches the text.
  *
  * @example
  *
  * ```gherkin
  * When I find elements by label text "Email"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I find elements by label text "Email"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
  * ```
  *
  * @remarks
@@ -33,14 +43,17 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * - {@link When_I_find_element_by_label_text | When I find element by label text }
  */
-export function When_I_find_elements_by_label_text(text: string) {
+export function When_I_find_elements_by_label_text(
+  text: string,
+  options?: DataTable,
+) {
   const selectors = [
     `label:contains(${JSON.stringify(text)})`,
     `[aria-labelledby=${JSON.stringify(text)}]`,
     `[aria-label=${JSON.stringify(text)}]`,
   ].map((selector) => `${selector}:visible`);
 
-  setCypressElement(cy.get(selectors.join(',')));
+  setCypressElement(cy.get(selectors.join(','), getOptions(options)));
 }
 
 When(
@@ -55,12 +68,22 @@ When(
  * When I find element by label text {string}
  * ```
  *
- * Finds the first visible `label`, `aria-labelledby`, or `aria-label` that matches the text.
+ * Find the first visible `label`, `aria-labelledby`, or `aria-label` that matches the text.
  *
  * @example
  *
  * ```gherkin
  * When I find element by label text "Email"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I find element by label text "Email"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
  * ```
  *
  * @remarks
@@ -78,8 +101,11 @@ When(
  *
  * - {@link When_I_find_elements_by_label_text | When I find elements by label text }
  */
-export function When_I_find_element_by_label_text(text: string) {
-  When_I_find_elements_by_label_text(text);
+export function When_I_find_element_by_label_text(
+  text: string,
+  options?: DataTable,
+) {
+  When_I_find_elements_by_label_text(text, options);
   setCypressElement(getCypressElement().first());
 }
 
