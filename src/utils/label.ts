@@ -1,5 +1,9 @@
+import { DataTable } from '@badeball/cypress-cucumber-preprocessor';
+
+import { PseudoSelector } from '../constants';
 import { When_I_find_element_by_label_text } from '../queries';
 import { getCypressElement } from './element';
+import { getOptions } from './options';
 
 /**
  * Get first Cypress element by label text.
@@ -37,4 +41,32 @@ export function getByLabelText(element: 'input' | 'textarea', text: string) {
 
     throw new Error(`Unable to get ${element} by label text: ${text}`);
   });
+}
+
+/**
+ * Get label elements.
+ *
+ * @param text - Label text.
+ * @param selector - Pseudo selector.
+ * @returns - Cypress element.
+ * @private
+ */
+export function getLabelElements(
+  text: string,
+  selector?: PseudoSelector,
+  options?: DataTable,
+) {
+  let labelSelectors = [
+    `label:contains(${JSON.stringify(text)})`,
+    `[aria-labelledby=${JSON.stringify(text)}]`,
+    `[aria-label=${JSON.stringify(text)}]`,
+  ];
+
+  if (selector) {
+    labelSelectors = labelSelectors.map(
+      (labelSelector) => `${labelSelector}:${selector}`,
+    );
+  }
+
+  return cy.get(labelSelectors.join(','), getOptions(options));
 }

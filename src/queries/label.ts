@@ -1,6 +1,7 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, getOptions, setCypressElement } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getLabelElements, setCypressElement } from '../utils';
 
 /**
  * When I find elements by label text:
@@ -47,13 +48,7 @@ export function When_I_find_elements_by_label_text(
   text: string,
   options?: DataTable,
 ) {
-  const selectors = [
-    `label:contains(${JSON.stringify(text)})`,
-    `[aria-labelledby=${JSON.stringify(text)}]`,
-    `[aria-label=${JSON.stringify(text)}]`,
-  ].map((selector) => `${selector}:visible`);
-
-  setCypressElement(cy.get(selectors.join(','), getOptions(options)));
+  setCypressElement(getLabelElements(text, PseudoSelector.visible, options));
 }
 
 When(
@@ -105,8 +100,9 @@ export function When_I_find_element_by_label_text(
   text: string,
   options?: DataTable,
 ) {
-  When_I_find_elements_by_label_text(text, options);
-  setCypressElement(getCypressElement().first());
+  setCypressElement(
+    getLabelElements(text, PseudoSelector.visible, options).first(),
+  );
 }
 
 When(
