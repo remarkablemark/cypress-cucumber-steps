@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.51.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.50.0...v3.51.0) (2023-12-18)
+
+
+### Features
+
+* **assertions:** pass options to "Then I do not see heading" ([0a95c5d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/0a95c5dea242227edf6e8fe2c90c48ed124b1972))
+* **assertions:** pass options to "Then I see heading" ([5cb402b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/5cb402b63ef7d45a1d0548d6e1f30757ebb1bf83))
+* **queries:** pass options to "When I find heading by text" ([9dfc233](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9dfc233ae4a7b26351e7a85f4ee9ba7c78385ca8))
+* **queries:** pass options to "When I find headings by text" ([f735a19](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f735a19873c4dea27aaa31567cfea53e260c32b4))
+
 ## [3.50.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.49.0...v3.50.0) (2023-12-08)
 
 
