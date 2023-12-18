@@ -1,6 +1,7 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, getOptions, setCypressElement } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getHeadingElements, setCypressElement } from '../utils';
 
 /**
  * When I find headings by text:
@@ -43,10 +44,7 @@ export function When_I_find_headings_by_text(
   text: string,
   options?: DataTable,
 ) {
-  const selector = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
-    .map((tag) => `${tag}:contains(${JSON.stringify(text)}):visible`)
-    .join(',');
-  setCypressElement(cy.get(selector, getOptions(options)));
+  setCypressElement(getHeadingElements(text, PseudoSelector.visible, options));
 }
 
 When('I find headings by text {string}', When_I_find_headings_by_text);
@@ -90,8 +88,9 @@ When('I find headings by text {string}', When_I_find_headings_by_text);
  * - {@link When_I_find_headings_by_text | When I find headings by text}
  */
 export function When_I_find_heading_by_text(text: string, options?: DataTable) {
-  When_I_find_headings_by_text(text, options);
-  setCypressElement(getCypressElement().first());
+  setCypressElement(
+    getHeadingElements(text, PseudoSelector.visible, options).first(),
+  );
 }
 
 When('I find heading by text {string}', When_I_find_heading_by_text);

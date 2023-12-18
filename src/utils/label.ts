@@ -56,17 +56,15 @@ export function getLabelElements(
   selector?: PseudoSelector,
   options?: DataTable,
 ) {
-  let labelSelectors = [
+  let selectors = [
     `label:contains(${JSON.stringify(text)})`,
     `[aria-labelledby=${JSON.stringify(text)}]`,
     `[aria-label=${JSON.stringify(text)}]`,
   ];
 
   if (selector) {
-    labelSelectors = labelSelectors.map(
-      (labelSelector) => `${labelSelector}:${selector}`,
-    );
+    selectors = selectors.map((label) => `${label}:${selector}`);
   }
 
-  return cy.get(labelSelectors.join(','), getOptions(options));
+  return cy.get(selectors.join(','), getOptions(options));
 }
