@@ -66,6 +66,16 @@ When('I find headings by text {string}', When_I_find_headings_by_text);
  * When I find heading by text "Heading"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I find heading by text "Heading"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
+ * ```
+ *
  * @remarks
  *
  * This precedes steps like {@link When_I_click | "When I click"}. For example:
@@ -79,8 +89,8 @@ When('I find headings by text {string}', When_I_find_headings_by_text);
  *
  * - {@link When_I_find_headings_by_text | When I find headings by text}
  */
-export function When_I_find_heading_by_text(text: string) {
-  When_I_find_headings_by_text(text);
+export function When_I_find_heading_by_text(text: string, options?: DataTable) {
+  When_I_find_headings_by_text(text, options);
   setCypressElement(getCypressElement().first());
 }
 
