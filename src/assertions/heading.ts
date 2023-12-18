@@ -1,7 +1,7 @@
 import { DataTable, Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import { When_I_find_headings_by_text } from '../queries';
-import { getCypressElement } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getHeadingElements } from '../utils';
 
 /**
  * Then I see heading:
@@ -33,8 +33,7 @@ import { getCypressElement } from '../utils';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_heading(text: string, options?: DataTable) {
-  When_I_find_headings_by_text(text, options);
-  getCypressElement().should('exist');
+  getHeadingElements(text, PseudoSelector.visible, options).should('exist');
 }
 
 Then('I see heading {string}', Then_I_see_heading);
@@ -69,8 +68,7 @@ Then('I see heading {string}', Then_I_see_heading);
  * - {@link Then_I_do_not_see_text | Then I do not see text}
  */
 export function Then_I_do_not_see_heading(text: string, options?: DataTable) {
-  When_I_find_headings_by_text(text, options);
-  getCypressElement().should('not.exist');
+  getHeadingElements(text, PseudoSelector.visible, options).should('not.exist');
 }
 
 Then('I do not see heading {string}', Then_I_do_not_see_heading);
