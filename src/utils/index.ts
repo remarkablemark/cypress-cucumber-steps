@@ -5,4 +5,5 @@ export * from './heading';
 export * from './label';
 export * from './link';
 export * from './options';
+export * from './role';
 export * from './string';

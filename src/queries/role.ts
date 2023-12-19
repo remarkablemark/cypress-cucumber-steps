@@ -1,6 +1,7 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, getOptions, setCypressElement } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getRoleElements, setCypressElement } from '../utils';
 
 /**
  * When I find elements by role:
@@ -47,9 +48,7 @@ export function When_I_find_elements_by_role(
   role: string,
   options?: DataTable,
 ) {
-  setCypressElement(
-    cy.get(`[role=${JSON.stringify(role)}]:visible`, getOptions(options)),
-  );
+  setCypressElement(getRoleElements(role, PseudoSelector.visible, options));
 }
 
 When('I find elements by role {string}', When_I_find_elements_by_role);
@@ -95,8 +94,9 @@ When('I find elements by role {string}', When_I_find_elements_by_role);
  * - {@link When_I_find_elements_by_role | When I find elements by role}
  */
 export function When_I_find_element_by_role(role: string, options?: DataTable) {
-  When_I_find_elements_by_role(role, options);
-  setCypressElement(getCypressElement().first());
+  setCypressElement(
+    getRoleElements(role, PseudoSelector.visible, options).first(),
+  );
 }
 
 When('I find element by role {string}', When_I_find_element_by_role);
