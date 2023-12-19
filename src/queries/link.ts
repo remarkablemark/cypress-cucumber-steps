@@ -1,6 +1,7 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, setCypressElement } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getLinkElements, setCypressElement } from '../utils';
 
 /**
  * When I find links by text:
@@ -30,7 +31,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * - {@link When_I_find_link_by_text | When I find link by text}
  */
 export function When_I_find_links_by_text(text: string) {
-  setCypressElement(cy.get(`a:contains(${JSON.stringify(text)}):visible`));
+  setCypressElement(getLinkElements(text, PseudoSelector.visible));
 }
 
 When('I find links by text {string}', When_I_find_links_by_text);
@@ -64,8 +65,7 @@ When('I find links by text {string}', When_I_find_links_by_text);
  * - {@link When_I_find_links_by_text | When I find links by text}
  */
 export function When_I_find_link_by_text(text: string) {
-  When_I_find_links_by_text(text);
-  setCypressElement(getCypressElement().first());
+  setCypressElement(getLinkElements(text, PseudoSelector.visible).first());
 }
 
 When('I find link by text {string}', When_I_find_link_by_text);
