@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.52.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.51.0...v3.52.0) (2023-12-19)
+
+
+### Features
+
+* **queries:** pass options to "When I find link by text" ([260417c](https://github.com/remarkablemark/cypress-cucumber-steps/commit/260417c0977e2e65a687878e5acf2d5b5c91383c))
+* **queries:** pass options to "When I find links by text" ([1e02101](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1e02101813a90dcfd212929fc280c85f79ba1546))
+
 ## [3.51.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.50.0...v3.51.0) (2023-12-18)
 
 
