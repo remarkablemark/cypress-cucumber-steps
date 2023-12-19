@@ -61,6 +61,16 @@ When('I find links by text {string}', When_I_find_links_by_text);
  * When I find link by text "Link"
  * ```
  *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I find link by text "Link"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
+ * ```
+ *
  * @remarks
  *
  * This precedes steps like {@link When_I_click | "When I click"}. For example:
@@ -74,8 +84,10 @@ When('I find links by text {string}', When_I_find_links_by_text);
  *
  * - {@link When_I_find_links_by_text | When I find links by text}
  */
-export function When_I_find_link_by_text(text: string) {
-  setCypressElement(getLinkElements(text, PseudoSelector.visible).first());
+export function When_I_find_link_by_text(text: string, options?: DataTable) {
+  setCypressElement(
+    getLinkElements(text, PseudoSelector.visible, options).first(),
+  );
 }
 
 When('I find link by text {string}', When_I_find_link_by_text);
