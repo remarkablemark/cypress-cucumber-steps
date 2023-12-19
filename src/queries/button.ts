@@ -1,6 +1,7 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, getOptions, setCypressElement } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getButtonElements, setCypressElement } from '../utils';
 
 /**
  * When I find buttons by text:
@@ -40,22 +41,7 @@ import { getCypressElement, getOptions, setCypressElement } from '../utils';
  * - {@link When_I_find_button_by_text | When I find button by text}
  */
 export function When_I_find_buttons_by_text(text: string, options?: DataTable) {
-  const buttons = [
-    'button',
-    "[type='button']",
-    "[type='submit']",
-    "[role='button']",
-  ];
-
-  const selector1 = buttons
-    .map((selector) => `${selector}:contains(${JSON.stringify(text)}):visible`)
-    .join(',');
-
-  const selector2 = buttons
-    .map((selector) => `${selector}[value=${JSON.stringify(text)}]:visible`)
-    .join(',');
-
-  setCypressElement(cy.get(`${selector1},${selector2}`, getOptions(options)));
+  setCypressElement(getButtonElements(text, PseudoSelector.visible, options));
 }
 
 When('I find buttons by text {string}', When_I_find_buttons_by_text);
@@ -99,8 +85,9 @@ When('I find buttons by text {string}', When_I_find_buttons_by_text);
  * - {@link When_I_find_buttons_by_text | When I find buttons by text}
  */
 export function When_I_find_button_by_text(text: string, options?: DataTable) {
-  When_I_find_buttons_by_text(text, options);
-  setCypressElement(getCypressElement().first());
+  setCypressElement(
+    getButtonElements(text, PseudoSelector.visible, options).first(),
+  );
 }
 
 When('I find button by text {string}', When_I_find_button_by_text);
