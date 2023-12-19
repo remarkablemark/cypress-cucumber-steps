@@ -1,7 +1,7 @@
 import { DataTable, Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import { When_I_find_elements_by_role } from '../queries';
-import { getCypressElement } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getRoleElements } from '../utils';
 
 /**
  * Then I see role:
@@ -35,8 +35,7 @@ import { getCypressElement } from '../utils';
  * - {@link Then_I_do_not_see_role | Then I do not see role}
  */
 export function Then_I_see_role(role: string, options?: DataTable) {
-  When_I_find_elements_by_role(role, options);
-  getCypressElement().should('exist');
+  getRoleElements(role, PseudoSelector.visible, options).should('exist');
 }
 
 Then('I see role {string}', Then_I_see_role);
@@ -73,8 +72,7 @@ Then('I see role {string}', Then_I_see_role);
  * - {@link Then_I_see_role | Then I see role}
  */
 export function Then_I_do_not_see_role(role: string, options?: DataTable) {
-  When_I_find_elements_by_role(role, options);
-  getCypressElement().should('not.exist');
+  getRoleElements(role, PseudoSelector.visible, options).should('not.exist');
 }
 
 Then('I do not see role {string}', Then_I_do_not_see_role);
