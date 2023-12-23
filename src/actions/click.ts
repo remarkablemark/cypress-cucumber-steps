@@ -1,11 +1,11 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { PseudoSelector } from '../constants';
-import { When_I_find_element_by_label_text } from '../queries';
 import {
   camelCase,
   getButtonElements,
   getCypressElement,
+  getLabelElements,
   getLinkElements,
   getOptions,
 } from '../utils';
@@ -338,8 +338,7 @@ When('I click on text {string}', When_I_click_on_text);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_label(text: string, options?: DataTable) {
-  When_I_find_element_by_label_text(text, options);
-  getCypressElement().click();
+  getLabelElements(text, PseudoSelector.visible, options).first().click();
 }
 
 When('I click on label {string}', When_I_click_on_label);
