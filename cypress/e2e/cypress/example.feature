@@ -126,10 +126,10 @@ Feature: Cypress example
       And I type "About to blur"
       And I blur
 
-  Scenario: Visible text
-    Given I visit "https://example.cypress.io/commands/actions"
-    Then I do not see visible text "I'm Here"
-    When I find element by text "I'm Here"
+  Scenario: Hidden text
+    Given I visit "https://example.cypress.io/cypress-api"
+    Then I do not see visible text "I'm hiding!"
+    When I find element by text "I'm hiding!"
     Then I see element is not visible
 
   Scenario: Scroll window
