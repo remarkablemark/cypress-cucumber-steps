@@ -48,15 +48,18 @@ Feature: Cypress example
   Scenario: Right-click text
     Given I visit "https://example.cypress.io/commands/actions"
       And I right-click on text "Right click to edit"
-    Then I find input by display value "Right click to edit"
+    Then I do not see visible text "Right click to edit"
+      And I see input value "Right click to edit"
     When I reload the page
       And I find element by text "Right click to edit"
       And I right-click
-    Then I find input by display value "Right click to edit"
+    Then I do not see visible text "Right click to edit"
+      And I see input value contains "Right click to edit"
     When I reload the page
       And I find element by text "Right click to edit"
       And I right-click "top"
-    Then I find input by display value "Right click to edit"
+    Then I do not see visible text "Right click to edit"
+      And I find input by display value "Right click to edit"
 
   Scenario: Checkbox and radio
     Given I visit "https://example.cypress.io/commands/actions"
