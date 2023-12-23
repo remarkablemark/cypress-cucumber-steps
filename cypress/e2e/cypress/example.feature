@@ -32,6 +32,15 @@ Feature: Cypress example
     When I click on label "Email address"
       And I type "test@example.com"
 
+  Scenario: Force click
+    Given I visit "https://example.cypress.io/commands/actions"
+    Then I click on button "I'm being covered"
+      | force | true |
+    When I reload the page
+      And I find button by text "I'm being covered"
+    Then I click
+      | force | true |
+
   Scenario: Double-click
     Given I visit "https://example.cypress.io/commands/actions"
       And I double-click on text "Double click to edit"
