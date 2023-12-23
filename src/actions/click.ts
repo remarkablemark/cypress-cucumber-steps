@@ -216,14 +216,23 @@ When('I click {int}px and {int}px', When_I_click_x_y_coordinates);
  * When I click on button "Button"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ * With options:
  *
  * ```gherkin
  * When I click on button "Button"
- *   | log | true |
- *   | timeout | 4000 |
- *   | withinSubject | null |
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | force | false |
  *   | includeShadowDom | false |
+ *   | log | true |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ *   | withinSubject | null |
  * ```
  *
  * @see
@@ -231,7 +240,9 @@ When('I click {int}px and {int}px', When_I_click_x_y_coordinates);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_button(text: string, options?: DataTable) {
-  getButtonElements(text, PseudoSelector.visible, options).first().click();
+  getButtonElements(text, PseudoSelector.visible, options)
+    .first()
+    .click(getOptions(options));
 }
 
 When('I click on button {string}', When_I_click_on_button);
