@@ -1,10 +1,13 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
+import { PseudoSelector } from '../constants';
+import { When_I_find_element_by_label_text } from '../queries';
 import {
-  When_I_find_button_by_text,
-  When_I_find_element_by_label_text,
-} from '../queries';
-import { camelCase, getCypressElement, getOptions } from '../utils';
+  camelCase,
+  getButtonElements,
+  getCypressElement,
+  getOptions,
+} from '../utils';
 
 /**
  * When I click:
@@ -227,8 +230,7 @@ When('I click {int}px and {int}px', When_I_click_x_y_coordinates);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_button(text: string, options?: DataTable) {
-  When_I_find_button_by_text(text, options);
-  getCypressElement().click();
+  getButtonElements(text, PseudoSelector.visible, options).first().click();
 }
 
 When('I click on button {string}', When_I_click_on_button);
