@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.53.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.52.0...v3.53.0) (2023-12-23)
+
+
+### Features
+
+* **actions:** pass click options to "When I click on button" ([9c3c824](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9c3c8240204c63e25d440fe53d5d5c3ab96b6e5e))
+* **actions:** pass click options to "When I click on label" ([1d97bdc](https://github.com/remarkablemark/cypress-cucumber-steps/commit/1d97bdcc3fc485b9f9a00310a95383bff71ffa40))
+* **actions:** pass click options to "When I click on link" ([2c8039f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2c8039fee635bcffe35e75f7ad925f7a329b5917))
+* **actions:** pass click options to "When I click on text" ([962f64e](https://github.com/remarkablemark/cypress-cucumber-steps/commit/962f64eb447e7b7769b7ae96ef7c3a1b9afa0102))
+
 ## [3.52.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.51.0...v3.52.0) (2023-12-19)
 
 
