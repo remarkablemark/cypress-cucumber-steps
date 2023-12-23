@@ -310,14 +310,23 @@ When('I click on link {string}', When_I_click_on_link);
  * When I click on text "Text"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/contains#Arguments):
+ * With options:
  *
  * ```gherkin
  * When I click on text "Text"
- *   | matchCase | true |
- *   | log | true |
- *   | timeout | 4000 |
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | force | false |
  *   | includeShadowDom | false |
+ *   | log | true |
+ *   | matchCase | true |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
  * ```
  *
  * @see
@@ -327,7 +336,8 @@ When('I click on link {string}', When_I_click_on_link);
  * - {@link When_I_click_on_link | When I click on link}
  */
 export function When_I_click_on_text(text: string, options?: DataTable) {
-  cy.contains(text, getOptions(options)).click();
+  const opts = getOptions(options);
+  cy.contains(text, opts).click(opts);
 }
 
 When('I click on text {string}', When_I_click_on_text);
