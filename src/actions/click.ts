@@ -6,6 +6,7 @@ import {
   camelCase,
   getButtonElements,
   getCypressElement,
+  getLinkElements,
   getOptions,
 } from '../utils';
 
@@ -265,7 +266,7 @@ When('I click on button {string}', When_I_click_on_button);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_link(text: string, options?: DataTable) {
-  cy.contains('a', text, getOptions(options)).first().click();
+  getLinkElements(text, PseudoSelector.visible, options).first().click();
 }
 
 When('I click on link {string}', When_I_click_on_link);
