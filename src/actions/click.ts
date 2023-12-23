@@ -262,14 +262,23 @@ When('I click on button {string}', When_I_click_on_button);
  * When I click on link "Link"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/contains#Arguments):
+ * With options:
  *
  * ```gherkin
  * When I click on link "Link"
- *   | matchCase | true |
- *   | log | true |
- *   | timeout | 4000 |
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | force | false |
  *   | includeShadowDom | false |
+ *   | log | true |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ *   | withinSubject | null |
  * ```
  *
  * @see
@@ -277,7 +286,9 @@ When('I click on button {string}', When_I_click_on_button);
  * - {@link When_I_click_on_text | When I click on text}
  */
 export function When_I_click_on_link(text: string, options?: DataTable) {
-  getLinkElements(text, PseudoSelector.visible, options).first().click();
+  getLinkElements(text, PseudoSelector.visible, options)
+    .first()
+    .click(getOptions(options));
 }
 
 When('I click on link {string}', When_I_click_on_link);
