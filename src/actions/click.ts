@@ -355,14 +355,23 @@ When('I click on text {string}', When_I_click_on_text);
  * When I click on label "Label"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ * With options:
  *
  * ```gherkin
  * When I click on label "Label"
- *   | log | true |
- *   | timeout | 4000 |
- *   | withinSubject | null |
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | force | false |
  *   | includeShadowDom | false |
+ *   | log | true |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ *   | withinSubject | null |
  * ```
  *
  * @see
@@ -371,7 +380,7 @@ When('I click on text {string}', When_I_click_on_text);
  */
 export function When_I_click_on_label(text: string, options?: DataTable) {
   When_I_find_element_by_label_text(text, options);
-  getCypressElement().click();
+  getCypressElement().click(getOptions(options));
 }
 
 When('I click on label {string}', When_I_click_on_label);
