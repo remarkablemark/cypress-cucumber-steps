@@ -1,3 +1,4 @@
+export * from './attribute';
 export * from './blur';
 export * from './check';
 export * from './clear';
