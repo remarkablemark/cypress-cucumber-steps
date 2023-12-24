@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.54.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.53.0...v3.54.0) (2023-12-24)
+
+
+### Features
+
+* **actions:** add "When I set attribute" ([6323041](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6323041322607b1d91fc78a0d2367cbf7cf456b9))
+
 ## [3.53.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.52.0...v3.53.0) (2023-12-23)
 
 
