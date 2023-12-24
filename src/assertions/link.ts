@@ -1,6 +1,7 @@
 import { DataTable, Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getOptions } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getLinkElements } from '../utils';
 
 /**
  * Then I see link:
@@ -32,7 +33,7 @@ import { getOptions } from '../utils';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_link(text: string, options?: DataTable) {
-  cy.contains('a:visible', text, getOptions(options)).should('exist');
+  getLinkElements(text, PseudoSelector.visible, options).should('exist');
 }
 
 Then('I see link {string}', Then_I_see_link);
@@ -67,7 +68,7 @@ Then('I see link {string}', Then_I_see_link);
  * - {@link Then_I_do_not_see_text | Then I do not see text}
  */
 export function Then_I_do_not_see_link(text: string, options?: DataTable) {
-  cy.contains('a:visible', text, getOptions(options)).should('not.exist');
+  getLinkElements(text, PseudoSelector.visible, options).should('not.exist');
 }
 
 Then('I do not see link {string}', Then_I_do_not_see_link);
