@@ -9,7 +9,7 @@ import { getCypressElement } from '../utils';
  * When I set attribute {string} to {string}
  * ```
  *
- * **_DO NOT USE THIS TO CHANGE THE BEHAVIOR OF YOUR TESTS._**
+ * [**_GENERALLY DO NOT USE THIS AND PREFER STEPS THAT RESEMBLE HOW USERS USE YOUR SITE._**](https://testing-library.com/docs/guiding-principles/)
  *
  * @example
  *
