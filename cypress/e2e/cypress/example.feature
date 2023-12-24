@@ -32,6 +32,12 @@ Feature: Cypress example
     When I click on label "Email address"
       And I type "test@example.com"
 
+  Scenario: Hidden link
+    Given I visit "https://example.cypress.io/"
+    When I find link by text "Cypress.io"
+      And I set attribute "style" to "visibility: hidden"
+    Then I do not see link "Cypress.io"
+
   Scenario: Force click
     Given I visit "https://example.cypress.io/commands/actions"
     Then I click on button "I'm being covered"
