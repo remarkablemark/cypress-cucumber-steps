@@ -51,7 +51,7 @@ Then('I see element is visible', Then_I_see_element_is_visible);
  * Then I see element is not visible
  * ```
  *
- * Assert element **_is not visible_** in the screen.
+ * Assert element **_exists_** but is **_hidden** in the screen.
  *
  * @example
  *
