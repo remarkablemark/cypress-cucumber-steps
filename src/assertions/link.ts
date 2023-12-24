@@ -18,13 +18,13 @@ import { getLinkElements } from '../utils';
  * Then I see link "Link"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/contains#Arguments):
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
  *
  * ```gherkin
  * Then I see link "Link"
- *   | matchCase | true |
  *   | log | true |
  *   | timeout | 4000 |
+ *   | withinSubject | null |
  *   | includeShadowDom | false |
  * ```
  *
@@ -53,13 +53,13 @@ Then('I see link {string}', Then_I_see_link);
  * Then I do not see link "Link"
  * ```
  *
- * With [options](https://docs.cypress.io/api/commands/contains#Arguments):
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
  *
  * ```gherkin
  * Then I do not see link "Link"
- *   | matchCase | true |
  *   | log | true |
  *   | timeout | 4000 |
+ *   | withinSubject | null |
  *   | includeShadowDom | false |
  * ```
  *
