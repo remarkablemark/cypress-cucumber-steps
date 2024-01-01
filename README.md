@@ -14,11 +14,11 @@
 
 ## Setup
 
-Follow the [setup instructions](https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Setup).
+Follow [setup instructions](https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Setup).
 
 ## Usage
 
-Use cypress-cucumber-steps in your feature files:
+Use `cypress-cucumber-steps` in your feature files:
 
 ```gherkin
 # cypress/e2e/example.feature
@@ -30,11 +30,11 @@ See [docs](https://b.remarkabl.org/cypress-cucumber-steps) and [examples](https:
 
 ## Migration
 
-See the [migration guide](https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Migration).
+See [migration guide](https://github.com/remarkablemark/cypress-cucumber-steps/wiki/Migration).
 
 ## Contributing
 
-Contributions are welcome! Check out [contributing](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md).
+See [contributing](https://github.com/remarkablemark/cypress-cucumber-steps/blob/master/.github/CONTRIBUTING.md).
 
 ## License
 
