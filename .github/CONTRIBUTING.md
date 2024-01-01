@@ -11,7 +11,7 @@
 
 </details>
 
-All pull requests are welcome! By participating in this project, you
+Pull requests are welcome! By participating in this project, you
 agree to abide by our **[code of conduct]**.
 
 [code of conduct]: https://github.com/remarkablemark/.github/blob/master/CODE_OF_CONDUCT.md
@@ -28,7 +28,13 @@ git clone git@github.com:<USER>/cypress-cucumber-steps.git
 cd cypress-cucumber-steps
 ```
 
-Install the package dependencies:
+Use [nvm](https://github.com/nvm-sh/nvm#intro) to set the Node.js version:
+
+```sh
+nvm use
+```
+
+Install the dependencies:
 
 ```sh
 npm install
@@ -38,7 +44,13 @@ Make your changes. Add tests and/or documentation. Ensure all tests and lint pas
 
 ```sh
 npm test
+```
+
+```sh
 npm run lint
+```
+
+```sh
 npm run lint:tsc
 ```
 
@@ -49,6 +61,8 @@ Write a commit message that follows the [Conventional Commits][commit] specifica
 - **perf**: A code change that improves performance
 - **refactor**: A code change that neither fixes a bug nor adds a feature
 - **test**: Adding missing tests or correcting existing tests
+- **build**: Changes that affect the build system or external dependencies
+- **ci**: Changes to our CI configuration files and scripts
 - **docs**: Documentation only changes
 
 The commit message will be linted during the pre-commit Git hook.
