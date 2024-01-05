@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.55.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.54.0...v3.55.0) (2024-01-05)
+
+
+### Features
+
+* **actions:** add "When I set Cypress config" ([7c44fbc](https://github.com/remarkablemark/cypress-cucumber-steps/commit/7c44fbcabafd3f615d86ed196c184a26e4ab5668))
+
 ## [3.54.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.53.0...v3.54.0) (2023-12-24)
 
 
