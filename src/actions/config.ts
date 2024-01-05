@@ -1,4 +1,6 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
+
+import { getOptions } from '../utils';
 
 /**
  * When I set Cypress config:
@@ -13,6 +15,13 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  *
  * ```gherkin
  * When I set Cypress config "defaultCommandTimeout" to "10000"
+ * ```
+ *
+ * Set multiple configuration options:
+ *
+ * ```gherkin
+ * When I set Cypress config
+ *   | defaultCommandTimeout | 10000 |
  * ```
  *
  * @remarks
@@ -31,6 +40,12 @@ export function When_I_set_Cypress_config(
   name: keyof Cypress.TestConfigOverrides,
   value: string,
 ) {
+  if ((name as unknown) instanceof DataTable) {
+    const options = getOptions(name as unknown as DataTable);
+    Cypress.config(options as Cypress.TestConfigOverrides);
+    return;
+  }
+
   switch (value) {
     case 'true':
       Cypress.config(name, true);
@@ -54,4 +69,5 @@ export function When_I_set_Cypress_config(
   }
 }
 
+When('I set Cypress config', When_I_set_Cypress_config);
 When('I set Cypress config {string} to {string}', When_I_set_Cypress_config);

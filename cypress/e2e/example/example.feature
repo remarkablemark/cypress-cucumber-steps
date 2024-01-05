@@ -67,4 +67,8 @@ Feature: Example
   Scenario: Get selector
     Given I visit "https://example.com/"
     When I get element by selector "p"
-    Then I count 1 element
+
+  Scenario: Cypress config
+    When I set Cypress config "defaultCommandTimeout" to "10000"
+      And I set Cypress config
+        | defaultCommandTimeout | 10000 |
