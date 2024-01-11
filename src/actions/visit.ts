@@ -23,7 +23,7 @@ import { getOptions } from '../utils';
  * When I visit "/"
  * ```
  *
- * Cypress [`baseUrl`](https://docs.cypress.io/guides/references/configuration#e2e) must be defined for relative URL.
+ * Cypress [`baseUrl`](https://docs.cypress.io/guides/references/configuration#e2e) must be defined for relative URL to work.
  *
  * @remarks
  *
