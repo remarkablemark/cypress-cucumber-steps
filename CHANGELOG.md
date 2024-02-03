@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.59.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.58.0...v3.59.0) (2024-02-03)
+
+
+### Features
+
+* **assertions:** add "Then I see pathname" & "Then I see pathname contains" ([6a64b96](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6a64b967268e2a3e6973ca6cb3372c626a20ed99))
+
 ## [3.58.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.57.0...v3.58.0) (2024-02-03)
 
 
