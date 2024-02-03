@@ -12,6 +12,7 @@ export * from './local-storage';
 export * from './option';
 export * from './response';
 export * from './role';
+export * from './search';
 export * from './session-storage';
 export * from './text';
 export * from './url';
