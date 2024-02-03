@@ -45,6 +45,19 @@ Feature: Example
     Then I do not see URL "https://example.com/index.htm"
       And I do not see URL contains "foo"
 
+  Scenario: Location
+    Given I visit "https://example.com/?key=value#hash"
+    Then I see location
+      | hash | #hash |
+      | host | example.com |
+      | hostname | example.com |
+      | href | https://example.com/?key=value#hash |
+      | origin | https://example.com |
+      | pathname | / |
+      | port | |
+      | protocol | https: |
+      | search | ?key=value |
+
   Scenario: Hash
     Given I visit "https://example.com/#foobar"
     Then I see hash "#foobar"
