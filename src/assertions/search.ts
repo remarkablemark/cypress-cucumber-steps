@@ -33,7 +33,7 @@ import { getOptions } from '../utils';
  */
 export function Then_I_see_search(search: string, options?: DataTable) {
   cy.location(getOptions(options)).should((location) => {
-    expect(location.search).to.eq(search);
+    expect(location.search).to.equal(search);
   });
 }
 

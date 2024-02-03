@@ -26,7 +26,7 @@ import { getCypressElement } from '../utils';
  */
 export function Then_I_see_response_status(code: number) {
   getCypressElement().should((response: Cypress.Response<object>) => {
-    expect(response.status).to.eq(code);
+    expect(response.status).to.equal(code);
   });
 }
 
@@ -59,7 +59,7 @@ export function Then_I_see_response_body(body: string) {
     if (typeof response.body === 'object') {
       expect(response.body).to.eql(JSON.parse(body));
     } else {
-      expect(response.body).to.eq(body);
+      expect(response.body).to.equal(body);
     }
   });
 }

@@ -60,7 +60,7 @@ Then('I see value {string}', Then_I_see_value);
  */
 export function Then_I_do_not_see_value(value: string) {
   getCypressElement().should(($element: Cypress.JQueryWithSelector) => {
-    expect($element.val()).to.not.eq(value);
+    expect($element.val()).to.not.equal(value);
   });
 }
 
