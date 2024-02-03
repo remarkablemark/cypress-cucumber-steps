@@ -13,9 +13,8 @@
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
     "lint:fix": "npm run lint -- --fix",
     "lint:tsc": "tsc --noEmit",
-    "postinstall": "husky install",
-    "postpublish": "pinst --enable",
-    "prepublishOnly": "pinst --disable && npm run lint && npm run lint:tsc && npm run clean && npm run build",
+    "prepare": "husky",
+    "prepublishOnly": "npm run lint && npm run lint:tsc && npm run clean && npm run build",
     "test": "cypress run --browser chrome"
   },
   "repository": {
@@ -52,7 +51,6 @@
     "eslint-plugin-tsdoc": "0.2.17",
     "husky": "9.0.10",
     "lint-staged": "15.2.1",
-    "pinst": "3.0.0",
     "prettier": "3.2.4",
     "typedoc": "0.25.7",
     "typedoc-plugin-copy-code-to-clipboard": "1.1.0",
