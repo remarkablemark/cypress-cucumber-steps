@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.58.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.57.0...v3.58.0) (2024-02-03)
+
+
+### Features
+
+* **assertions:** add "Then I see location" ([2099ce9](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2099ce93989f71abf07941514f99f35600d7359a))
+
 ## [3.57.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.56.0...v3.57.0) (2024-02-03)
 
 
