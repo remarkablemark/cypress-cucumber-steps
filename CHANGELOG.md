@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.57.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.56.0...v3.57.0) (2024-02-03)
+
+
+### Features
+
+* **assertions:** pass options to hash steps ([2b6fd4d](https://github.com/remarkablemark/cypress-cucumber-steps/commit/2b6fd4d0a85e5b6ea38ae24bc4ee0b16a1e6fd5d))
+
 ## [3.56.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.55.0...v3.56.0) (2024-02-03)
 
 
