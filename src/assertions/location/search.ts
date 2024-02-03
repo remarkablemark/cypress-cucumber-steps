@@ -69,7 +69,7 @@ export function Then_I_see_search_contains(
   options?: DataTable,
 ) {
   cy.location(getOptions(options)).should((location) => {
-    expect(location.search).to.include(search);
+    expect(location.search).to.contain(search);
   });
 }
 

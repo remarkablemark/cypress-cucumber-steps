@@ -110,7 +110,7 @@ export function Then_I_see_element_attribute_contains(
   value: string,
 ) {
   getCypressElement().should(($element: Cypress.JQueryWithSelector) => {
-    expect($element.attr(name)).to.include(value);
+    expect($element.attr(name)).to.contain(value);
   });
 }
 

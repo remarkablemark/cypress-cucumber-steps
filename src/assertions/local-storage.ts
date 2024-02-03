@@ -87,7 +87,7 @@ export function Then_I_see_local_storage_item_contains(
   value: string,
 ) {
   cy.wrap({}).should(() => {
-    expect(localStorage.getItem(key)).to.include(value);
+    expect(localStorage.getItem(key)).to.contain(value);
   });
 }
 

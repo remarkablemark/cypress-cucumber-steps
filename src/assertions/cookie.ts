@@ -113,7 +113,7 @@ export function Then_I_see_cookie_contains_value(
   options?: DataTable,
 ) {
   cy.getCookie(name, getOptions(options)).should((cookie) => {
-    expect(cookie?.value).to.include(value);
+    expect(cookie?.value).to.contains(value);
   });
 }
 
