@@ -1,6 +1,6 @@
 import { DataTable, Then } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getOptions } from '../utils';
+import { getOptions } from '../../utils';
 
 /**
  * Then I see search:
