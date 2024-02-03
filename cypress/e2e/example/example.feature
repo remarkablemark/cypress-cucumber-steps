@@ -50,6 +50,11 @@ Feature: Example
     Then I see hash "#foobar"
       And I see hash contains "bar"
 
+  Scenario: Search
+    Given I visit "https://example.com/?key=value"
+    Then I see search "?key=value"
+      And I see search contains "key=value"
+
   Scenario: Screenshot
     Given I visit "https://example.com/"
     Then I screenshot
