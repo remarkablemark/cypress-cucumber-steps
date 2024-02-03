@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.56.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.55.0...v3.56.0) (2024-02-03)
+
+
+### Features
+
+* **assertions:** add "Then I see search" & "Then I see search contains" ([f0810cd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f0810cdaadb3cbad7b61c213a53d6ca8b94c8f9b))
+
 ## [3.55.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.54.0...v3.55.0) (2024-01-05)
 
 
