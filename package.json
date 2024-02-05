@@ -51,7 +51,7 @@
     "eslint-plugin-tsdoc": "0.2.17",
     "husky": "9.0.10",
     "lint-staged": "15.2.1",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "typedoc": "0.25.7",
     "typedoc-plugin-copy-code-to-clipboard": "1.1.0",
     "typescript": "5.3.3"
