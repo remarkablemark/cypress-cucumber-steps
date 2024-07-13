@@ -9,14 +9,14 @@ import { getCypressElement, setCypressElement } from '../utils';
  * When I find elements by test ID {string}
  * ```
  *
- * Finds all elements that have the matching `data-testid` or `data-test-id` attribute:
+ * Finds all elements that matches the `data-testid` or `data-test-id` attribute:
  *
  * ```html
  * <div data-testid="test"></div>
  * <div data-test-id="test"></div>
  * ```
  *
- * _It's recommended to use this only after the other queries don't work for your use case. Using `data-testid` or `data-test-id` attributes don't resemble how your software is used and should be avoided if possible._
+ * _Use this only if the other queries don't work. `data-testid` or `data-test-id` don't resemble how your software is used and should be avoided if possible._
  *
  * @example
  *
@@ -64,7 +64,7 @@ When('I find elements by test ID {string}', When_I_find_elements_by_testid);
  * <div data-test-id="test"></div>
  * ```
  *
- * _It's recommended to use this only after the other queries don't work for your use case. Using `data-testid` or `data-test-id` attributes don't resemble how your software is used and should be avoided if possible._
+ * _Use this only if the other queries don't work. `data-testid` or `data-test-id` don't resemble how your software is used and should be avoided if possible._
  *
  * @example
  *
