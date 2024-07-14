@@ -140,6 +140,7 @@ Feature: Cypress example
     Then I count 1 element
     When I find element by test ID "test-example"
     Then I count 1 element
+      And I click on test ID "test-example"
 
   Scenario: Blur
     Given I visit "https://example.cypress.io/commands/actions"

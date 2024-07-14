@@ -8,6 +8,7 @@ import {
   getCypressElement,
   getLinkElements,
   getOptions,
+  getTestIdElements,
 } from '../utils';
 
 /**
@@ -384,3 +385,56 @@ export function When_I_click_on_label(text: string, options?: DataTable) {
 }
 
 When('I click on label {string}', When_I_click_on_label);
+
+/**
+ * When I click on test ID:
+ *
+ * ```gherkin
+ * When I click on test ID {string}
+ * ```
+ *
+ * Clicks on first element that matches the `data-testid` or `data-test-id` attribute:
+ *
+ * ```html
+ * <div data-testid="test"></div>
+ * <div data-test-id="test"></div>
+ * ```
+ *
+ * _Use this only if the other actions don't work. `data-testid` or `data-test-id` don't resemble how your software is used and should be avoided if possible._
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I click on test ID "testID"
+ * ```
+ *
+ * With options:
+ *
+ * ```gherkin
+ * When I click on test ID "testID"
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | force | false |
+ *   | includeShadowDom | false |
+ *   | log | true |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ *   | withinSubject | null |
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_click_on_text | When I click on text}
+ */
+export function When_I_click_on_testid(testId: string, options?: DataTable) {
+  getTestIdElements(testId, PseudoSelector.visible, options)
+    .first()
+    .click(getOptions(options));
+}
+
+When('I click on test ID {string}', When_I_click_on_testid);
