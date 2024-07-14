@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.60.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.59.0...v3.60.0) (2024-07-14)
+
+
+### Features
+
+* **actions:** add "When I click on test ID" ([cea6fc1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/cea6fc158ca353cc3162149fd214a5bdc5961139))
+* **queries:** pass options to testid ([f8ba3b9](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f8ba3b99255fbcb9a3c54324392d39f7063bb122))
+
 ## [3.59.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.58.0...v3.59.0) (2024-02-03)
 
 
