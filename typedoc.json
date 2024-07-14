@@ -1,5 +1,19 @@
 {
+  "cacheBust": true,
   "entryPoints": ["src"],
-  "plugin": ["typedoc-plugin-copy-code-to-clipboard"],
-  "cacheBust": true
+  "highlightLanguages": [
+    "bash",
+    "bash",
+    "console",
+    "css",
+    "gherkin",
+    "html",
+    "javascript",
+    "json",
+    "json5",
+    "jsonc",
+    "tsx",
+    "typescript"
+  ],
+  "plugin": ["typedoc-plugin-copy-code-to-clipboard"]
 }
