@@ -1,6 +1,7 @@
-import { When } from '@badeball/cypress-cucumber-preprocessor';
+import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { getCypressElement, setCypressElement } from '../utils';
+import { PseudoSelector } from '../constants';
+import { getTestIdElements, setCypressElement } from '../utils';
 
 /**
  * When I find elements by test ID:
@@ -21,7 +22,17 @@ import { getCypressElement, setCypressElement } from '../utils';
  * @example
  *
  * ```gherkin
- * When I find elements by test ID "test"
+ * When I find elements by test ID "testID"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I find elements by test ID "testID"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
  * ```
  *
  * @remarks
@@ -29,7 +40,7 @@ import { getCypressElement, setCypressElement } from '../utils';
  * This precedes steps like {@link When_I_click | "When I click"}. For example:
  *
  * ```gherkin
- * When I find elements by test ID "test"
+ * When I find elements by test ID "testID"
  *   And I get 1st element
  *   And I click
  * ```
@@ -40,12 +51,11 @@ import { getCypressElement, setCypressElement } from '../utils';
  *
  * - {@link When_I_find_element_by_testid | When I find element by test ID}
  */
-export function When_I_find_elements_by_testid(testId: string) {
-  const selectors = [
-    `[data-testid=${JSON.stringify(testId)}]`,
-    `[data-test-id=${JSON.stringify(testId)}]`,
-  ].map((selector) => `${selector}:visible`);
-  setCypressElement(cy.get(selectors.join(',')));
+export function When_I_find_elements_by_testid(
+  testId: string,
+  options?: DataTable,
+) {
+  setCypressElement(getTestIdElements(testId, PseudoSelector.visible, options));
 }
 
 When('I find elements by test ID {string}', When_I_find_elements_by_testid);
@@ -69,7 +79,17 @@ When('I find elements by test ID {string}', When_I_find_elements_by_testid);
  * @example
  *
  * ```gherkin
- * When I find element by test ID "test"
+ * When I find element by test ID "testID"
+ * ```
+ *
+ * With [options](https://docs.cypress.io/api/commands/get#Arguments):
+ *
+ * ```gherkin
+ * When I find element by test ID "testID"
+ *   | log | true |
+ *   | timeout | 4000 |
+ *   | withinSubject | null |
+ *   | includeShadowDom | false |
  * ```
  *
  * @remarks
@@ -77,7 +97,7 @@ When('I find elements by test ID {string}', When_I_find_elements_by_testid);
  * This precedes steps like {@link When_I_click | "When I click"}. For example:
  *
  * ```gherkin
- * When I find element by test ID "test"
+ * When I find element by test ID "testID"
  *   And I click
  * ```
  *
@@ -87,9 +107,13 @@ When('I find elements by test ID {string}', When_I_find_elements_by_testid);
  *
  * - {@link When_I_find_elements_by_testid | When I find elements by test ID}
  */
-export function When_I_find_element_by_testid(testId: string) {
-  When_I_find_elements_by_testid(testId);
-  setCypressElement(getCypressElement().first());
+export function When_I_find_element_by_testid(
+  testId: string,
+  options?: DataTable,
+) {
+  setCypressElement(
+    getTestIdElements(testId, PseudoSelector.visible, options).first(),
+  );
 }
 
 When('I find element by test ID {string}', When_I_find_element_by_testid);
