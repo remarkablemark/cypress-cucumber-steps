@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.61.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.60.0...v3.61.0) (2024-07-21)
+
+
+### Features
+
+* **assertions:** add "Then I see test ID" & "Then I do not see test ID" ([9c971d7](https://github.com/remarkablemark/cypress-cucumber-steps/commit/9c971d79a6468174ea9e768dbe7e10097f374a88))
+
 ## [3.60.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.59.0...v3.60.0) (2024-07-14)
 
 
