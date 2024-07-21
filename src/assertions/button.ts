@@ -10,7 +10,7 @@ import { getButtonElements } from '../utils';
  * Then I see button {string}
  * ```
  *
- * Assert button with text **_exists_** and is **_visible_** in the screen.
+ * Asserts button with text **_exists_** and is **_visible_** in the screen.
  *
  * @example
  *
@@ -45,7 +45,7 @@ Then('I see button {string}', Then_I_see_button);
  * Then I do not see button {string}
  * ```
  *
- * Assert button with text **_does not exist_** in the screen.
+ * Asserts button with text **_does not exist_** or **_is not visible_** in the screen.
  *
  * @example
  *
