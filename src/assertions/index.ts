@@ -13,6 +13,7 @@ export * from './option';
 export * from './response';
 export * from './role';
 export * from './session-storage';
+export * from './testid';
 export * from './text';
 export * from './url';
 export * from './value';

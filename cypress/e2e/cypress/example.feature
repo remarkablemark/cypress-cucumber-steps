@@ -136,6 +136,8 @@ Feature: Cypress example
 
   Scenario: Test ID
     Given I visit "https://example.cypress.io/commands/querying"
+    Then I see test ID "test-example"
+      And I do not see test ID "test-invalid"
     When I find elements by test ID "test-example"
     Then I count 1 element
     When I find element by test ID "test-example"
