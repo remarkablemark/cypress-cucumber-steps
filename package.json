@@ -52,7 +52,7 @@
     "husky": "9.1.1",
     "lint-staged": "15.2.7",
     "prettier": "3.3.3",
-    "typedoc": "0.26.4",
+    "typedoc": "0.26.5",
     "typedoc-plugin-copy-code-to-clipboard": "1.1.1",
     "typescript": "5.5.3"
   },
