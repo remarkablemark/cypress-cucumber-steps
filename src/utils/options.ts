@@ -16,6 +16,7 @@ export function getOptions(table?: DataTable) {
     (result, [key, value]) => {
       try {
         result[key] = JSON.parse(value);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         result[key] = value;
       }

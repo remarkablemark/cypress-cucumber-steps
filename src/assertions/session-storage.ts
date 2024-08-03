@@ -22,6 +22,7 @@ import { Then } from '@badeball/cypress-cucumber-preprocessor';
  */
 export function Then_I_see_session_storage_item(key: string) {
   cy.wrap({}).should(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     expect(sessionStorage.getItem(key)).to.exist;
   });
 }
@@ -117,6 +118,7 @@ Then(
  */
 export function Then_I_do_not_see_session_storage_item(key: string) {
   cy.wrap({}).should(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     expect(sessionStorage.getItem(key)).to.not.exist;
   });
 }
