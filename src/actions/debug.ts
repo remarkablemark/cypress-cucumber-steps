@@ -28,6 +28,7 @@ import { getCypressElement } from '../utils';
 export async function When_I_debug() {
   try {
     getCypressElement().debug();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     cy.debug();
   }

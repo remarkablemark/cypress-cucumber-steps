@@ -103,6 +103,7 @@ When('I intercept URL {string}', When_I_intercept_URL);
 export function When_I_intercept_URL_and_stub_body(url: string, body: string) {
   try {
     body = JSON.parse(body);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     // pass
   }
