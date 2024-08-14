@@ -41,7 +41,7 @@
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.2",
     "@commitlint/cli": "19.4.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@types/node": "22.2.0",
+    "@types/node": "22.3.0",
     "@typescript-eslint/eslint-plugin": "8.1.0",
     "@typescript-eslint/parser": "8.1.0",
     "cypress": "13.13.2",
