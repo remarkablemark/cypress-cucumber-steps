@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.61.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.61.0...v3.61.1) (2024-08-29)
+
+
+### Continuous Integration
+
+* **github:** publish package to npm registry with provenance ([cbdcb02](https://github.com/remarkablemark/cypress-cucumber-steps/commit/cbdcb020a006c69ef846804fcaf9f271fcdb7043))
+
 ## [3.61.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.60.0...v3.61.0) (2024-07-21)
 
 
