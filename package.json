@@ -58,7 +58,7 @@
     "prettier": "3.3.3",
     "typedoc": "0.26.7",
     "typedoc-plugin-copy-code-to-clipboard": "1.1.2",
-    "typescript": "5.5.4"
+    "typescript": "5.6.2"
   },
   "peerDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "*",
