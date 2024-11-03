@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.62.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.61.1...v3.62.0) (2024-11-03)
+
+
+### Features
+
+* pass options to label assertions and queries ([a7ec38b](https://github.com/remarkablemark/cypress-cucumber-steps/commit/a7ec38bc79265f160dbec882a782255122f6045a))
+
 ## [3.61.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.61.0...v3.61.1) (2024-08-29)
 
 
