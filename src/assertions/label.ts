@@ -1,7 +1,7 @@
 import { DataTable, Then } from '@badeball/cypress-cucumber-preprocessor';
 
 import { PseudoSelector } from '../constants';
-import { getLabelElements } from '../utils';
+import { getLabelElements, getOptions } from '../utils';
 
 /**
  * Then I see label:
@@ -33,7 +33,10 @@ import { getLabelElements } from '../utils';
  * - {@link Then_I_see_text | Then I see text}
  */
 export function Then_I_see_label(text: string, options?: DataTable) {
-  getLabelElements(text, PseudoSelector.visible, options).should('exist');
+  getLabelElements(text, {
+    pseudoSelector: PseudoSelector.visible,
+    ...getOptions(options),
+  }).should('exist');
 }
 
 Then('I see label {string}', Then_I_see_label);
@@ -68,7 +71,10 @@ Then('I see label {string}', Then_I_see_label);
  * - {@link Then_I_do_not_see_text | Then I do not see text}
  */
 export function Then_I_do_not_see_label(text: string, options?: DataTable) {
-  getLabelElements(text, PseudoSelector.visible, options).should('not.exist');
+  getLabelElements(text, {
+    pseudoSelector: PseudoSelector.visible,
+    ...getOptions(options),
+  }).should('not.exist');
 }
 
 Then('I do not see label {string}', Then_I_do_not_see_label);

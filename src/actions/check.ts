@@ -72,11 +72,12 @@ When('I check', When_I_check);
  *   | scrollBehavior | top |
  *   | timeout | 4000 |
  *   | waitForAnimations | true |
+ *   | pseudoSelector | visible |
  * ```
  */
 export function When_I_check_input(text: string, options?: DataTable) {
-  When_I_find_input_by_label_text(text);
-  getCypressElement().check(getOptions(options));
+  When_I_find_input_by_label_text(text, options);
+  When_I_check(options);
 }
 
 When('I check input {string}', When_I_check_input);
