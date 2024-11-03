@@ -1,7 +1,7 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { PseudoSelector } from '../constants';
-import { getLabelElements, setCypressElement } from '../utils';
+import { getLabelElements, getOptions, setCypressElement } from '../utils';
 
 /**
  * When I find elements by label text:
@@ -26,6 +26,7 @@ import { getLabelElements, setCypressElement } from '../utils';
  *   | timeout | 4000 |
  *   | withinSubject | null |
  *   | includeShadowDom | false |
+ *   | pseudoSelector | visible |
  * ```
  *
  * @remarks
@@ -48,7 +49,12 @@ export function When_I_find_elements_by_label_text(
   text: string,
   options?: DataTable,
 ) {
-  setCypressElement(getLabelElements(text, PseudoSelector.visible, options));
+  setCypressElement(
+    getLabelElements(text, {
+      pseudoSelector: PseudoSelector.visible,
+      ...getOptions(options),
+    }),
+  );
 }
 
 When(
@@ -79,6 +85,7 @@ When(
  *   | timeout | 4000 |
  *   | withinSubject | null |
  *   | includeShadowDom | false |
+ *   | pseudoSelector | visible |
  * ```
  *
  * @remarks
@@ -101,7 +108,10 @@ export function When_I_find_element_by_label_text(
   options?: DataTable,
 ) {
   setCypressElement(
-    getLabelElements(text, PseudoSelector.visible, options).first(),
+    getLabelElements(text, {
+      pseudoSelector: PseudoSelector.visible,
+      ...getOptions(options),
+    }).first(),
   );
 }
 

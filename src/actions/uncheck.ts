@@ -40,6 +40,11 @@ import { getCypressElement, getOptions } from '../utils';
  * When I find input by label text "Checkbox"
  *   And I uncheck
  * ```
+ *
+ * @see
+ *
+ * - {@link When_I_uncheck_input | When I uncheck input}
+ * - {@link When_I_check | When I check}
  */
 export function When_I_uncheck(options?: DataTable) {
   getCypressElement().uncheck(getOptions(options));
@@ -72,11 +77,17 @@ When('I uncheck', When_I_uncheck);
  *   | scrollBehavior | top |
  *   | timeout | 4000 |
  *   | waitForAnimations | true |
+ *   | pseudoSelector | visible |
  * ```
+ *
+ * @see
+ *
+ * - {@link When_I_uncheck | When I uncheck}
+ * - {@link When_I_check_input | When I check input}
  */
 export function When_I_uncheck_input(text: string, options?: DataTable) {
-  When_I_find_input_by_label_text(text);
-  getCypressElement().uncheck(getOptions(options));
+  When_I_find_input_by_label_text(text, options);
+  When_I_uncheck();
 }
 
 When('I uncheck input {string}', When_I_uncheck_input);

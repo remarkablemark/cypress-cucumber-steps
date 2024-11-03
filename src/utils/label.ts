@@ -1,6 +1,6 @@
 import { DataTable } from '@badeball/cypress-cucumber-preprocessor';
 
-import { PseudoSelector } from '../constants';
+import { Element } from '../constants';
 import { When_I_find_element_by_label_text } from '../queries';
 import { getCypressElement } from './element';
 import { getOptions } from './options';
@@ -10,11 +10,16 @@ import { getOptions } from './options';
  *
  * @param element - Element name.
  * @param text - Label text.
+ * @param options - Options.
  * @returns - Cypress element.
  * @private
  */
-export function getByLabelText(element: 'input' | 'textarea', text: string) {
-  When_I_find_element_by_label_text(text);
+export function getByLabelText(
+  element: Element,
+  text: string,
+  options?: DataTable,
+) {
+  When_I_find_element_by_label_text(text, options);
 
   return getCypressElement().then(($element: Cypress.JQueryWithSelector) => {
     const tagName = $element.prop('tagName').toLowerCase();
@@ -47,14 +52,13 @@ export function getByLabelText(element: 'input' | 'textarea', text: string) {
  * Get label elements.
  *
  * @param text - Label text.
- * @param selector - Pseudo selector.
+ * @param options - Options.
  * @returns - Cypress element.
  * @private
  */
 export function getLabelElements(
   text: string,
-  selector?: PseudoSelector,
-  options?: DataTable,
+  options?: ReturnType<typeof getOptions>,
 ) {
   let selectors = [
     `label:contains(${JSON.stringify(text)})`,
@@ -62,9 +66,12 @@ export function getLabelElements(
     `[aria-label=${JSON.stringify(text)}]`,
   ];
 
-  if (selector) {
-    selectors = selectors.map((label) => `${label}:${selector}`);
+  // @ts-expect-error Property 'pseudoSelector' does not exist on type 'object | undefined'.
+  const { pseudoSelector, ...opts } = options;
+
+  if (pseudoSelector) {
+    selectors = selectors.map((label) => `${label}:${pseudoSelector}`);
   }
 
-  return cy.get(selectors.join(','), getOptions(options));
+  return cy.get(selectors.join(','), opts);
 }
