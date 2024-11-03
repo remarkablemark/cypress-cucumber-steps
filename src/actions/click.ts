@@ -373,6 +373,7 @@ When('I click on text {string}', When_I_click_on_text);
  *   | timeout | 4000 |
  *   | waitForAnimations | true |
  *   | withinSubject | null |
+ *   | pseudoSelector | visible |
  * ```
  *
  * @see
@@ -381,7 +382,7 @@ When('I click on text {string}', When_I_click_on_text);
  */
 export function When_I_click_on_label(text: string, options?: DataTable) {
   When_I_find_element_by_label_text(text, options);
-  getCypressElement().click(getOptions(options));
+  When_I_click(options);
 }
 
 When('I click on label {string}', When_I_click_on_label);
