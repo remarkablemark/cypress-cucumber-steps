@@ -2,9 +2,6 @@
   "cacheBust": true,
   "entryPoints": ["src"],
   "highlightLanguages": [
-    "bash",
-    "bash",
-    "console",
     "css",
     "gherkin",
     "html",
@@ -12,8 +9,8 @@
     "json",
     "json5",
     "jsonc",
+    "shellscript",
     "tsx",
     "typescript"
-  ],
-  "plugin": ["typedoc-plugin-copy-code-to-clipboard"]
+  ]
 }
