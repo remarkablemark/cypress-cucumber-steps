@@ -1,24 +1,39 @@
 name: cypress
 on: [push, pull_request]
 
+concurrency:
+  group: ${{ github.workflow_ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+
 jobs:
   cypress:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        shard: [0, 1, 2]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: npm
-          node-version-file: .nvmrc
+      - name: Split specs
+        id: specs
+        run: |
+          SPECS=specs
+          find cypress/e2e -type f -name '*.feature' > $SPECS
+          SPECS_COUNT=$(wc -l < $SPECS)
+          LINES=$(( ($SPECS_COUNT + 1) / ${{ strategy.job-total }} ))
+          split -d -l $LINES $SPECS spec
+          echo "SPECS<<EOF" >> $GITHUB_OUTPUT
+          cat spec0${{ matrix.shard }} >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
+          spec: |
+            ${{ steps.specs.outputs.SPECS }}
 
       - name: Record failed screenshots
         uses: actions/upload-artifact@v4
