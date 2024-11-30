@@ -5,7 +5,9 @@ Feature: Google
     Then I count 1 element
     When I find element by title "Search"
       And I type "title{selectAll}{backspace}"
-      And I type "title{enter}"
+      And I type "title"
+      And I find button by text "Google Search"
+      And I trigger event "click"
 
   Scenario: Name
     Given I visit "https://www.google.com/"

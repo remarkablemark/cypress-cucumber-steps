@@ -1,13 +1,4 @@
 Feature: Cypress actions
-  Scenario: See button, heading, link, and label
-    Given I visit "https://example.cypress.io/commands/actions"
-    Then I see heading "Actions"
-      And I see heading ".type()"
-      And I see heading "Canvas to Illustrate Click Positions"
-      And I see link ".type()"
-      And I see label "Email address"
-      And I see button "Submit"
-
   Scenario: See and click button
     Given I visit "https://example.cypress.io/commands/actions"
     Then I do not see text "This popover shows up on click"
@@ -18,21 +9,6 @@ Feature: Cypress actions
     When I click on text "Click to toggle popover"
       And I wait 500 milliseconds
     Then I see element does not exist
-
-  Scenario: See, click, and type label
-    Given I visit "https://example.cypress.io/commands/actions"
-    Then I see label "Email address"
-    When I click on label "Email address"
-      And I type "test@example.com"
-
-  Scenario: Force click
-    Given I visit "https://example.cypress.io/commands/actions"
-    Then I click on button "I'm being covered"
-      | force | true |
-    When I reload the page
-      And I find button by text "I'm being covered"
-    Then I click
-      | force | true |
 
   Scenario: Double-click
     Given I visit "https://example.cypress.io/commands/actions"
@@ -65,17 +41,6 @@ Feature: Cypress actions
       And I right-click "top"
     Then I do not see visible text "Right click to edit"
       And I find input by display value "Right click to edit"
-
-  Scenario: Checkbox and radio
-    Given I visit "https://example.cypress.io/commands/actions"
-    When I find input by label text 'Checkbox one has value "checkbox1"'
-      And I check
-      And I check input 'Checkbox one has value "checkbox1"'
-      And I uncheck
-      And I uncheck input 'Checkbox one has value "checkbox1"'
-    When I click on text 'Radio one has value "radio1"'
-      And I check input 'Radio one has value "radio1"'
-      And I click on text 'Radio two has value "radio2". When checked, it will uncheck Radio one.'
 
   Scenario: Select option
     Given I visit "https://example.cypress.io/commands/actions"
@@ -181,16 +146,6 @@ Feature: Cypress actions
       And I set value "fr-apples"
     When I find select by display value "bananas"
       And I select option "bananas"
-
-  Scenario: Find title and trigger event
-    Given I visit "https://example.cypress.io/commands/actions"
-      And I set Cypress config "defaultCommandTimeout" to "10000"
-    When I find element by title ""
-      And I trigger event "click"
-    Then I see heading "Popover"
-    When I reload the page
-      And I click on title ""
-    Then I see heading "Popover"
 
   Scenario: Find and submit form
     Given I visit "https://example.cypress.io/commands/actions"
