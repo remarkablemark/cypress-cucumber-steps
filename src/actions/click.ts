@@ -1,7 +1,10 @@
 import { DataTable, When } from '@badeball/cypress-cucumber-preprocessor';
 
 import { PseudoSelector } from '../constants';
-import { When_I_find_element_by_label_text } from '../queries';
+import {
+  When_I_find_element_by_label_text,
+  When_I_find_element_by_title,
+} from '../queries';
 import {
   camelCase,
   getButtonElements,
@@ -439,3 +442,47 @@ export function When_I_click_on_testid(testId: string, options?: DataTable) {
 }
 
 When('I click on test ID {string}', When_I_click_on_testid);
+
+/**
+ * When I click on title:
+ *
+ * ```gherkin
+ * When I click on title {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * When I click on title "Title"
+ * ```
+ *
+ * With options:
+ *
+ * ```gherkin
+ * When I click on title "Title"
+ *   | altKey | false |
+ *   | animationDistanceThreshold | 5 |
+ *   | ctrlKey | false |
+ *   | force | false |
+ *   | includeShadowDom | false |
+ *   | log | true |
+ *   | metaKey | false |
+ *   | multiple | false |
+ *   | scrollBehavior | top |
+ *   | shiftKey | false |
+ *   | timeout | 4000 |
+ *   | waitForAnimations | true |
+ *   | withinSubject | null |
+ *   | pseudoSelector | visible |
+ * ```
+ *
+ * @see
+ *
+ * - {@link When_I_click_on_text | When I click on text}
+ */
+export function When_I_click_on_title(text: string, options?: DataTable) {
+  When_I_find_element_by_title(text, options);
+  When_I_click(options);
+}
+
+When('I click on title {string}', When_I_click_on_title);
