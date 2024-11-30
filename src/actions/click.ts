@@ -21,6 +21,8 @@ import {
  * When I click
  * ```
  *
+ * Clicks on the element found in the previous step.
+ *
  * Alternative:
  *
  * - {@link When_I_click_on_text | When I click on text}
@@ -76,6 +78,8 @@ When('I click', When_I_click);
  * ```gherkin
  * When I click {string}
  * ```
+ *
+ * Clicks on the position of the element found in the previous step.
  *
  * You can click on 9 specific positions of an element:
  *
@@ -158,6 +162,8 @@ When('I click {string}', When_I_click_position);
  * When I click {int}px and {int}px
  * ```
  *
+ * Clicks on the x-y coordinates of the element found in the previous step.
+ *
  * @example
  *
  * ```gherkin
@@ -212,7 +218,7 @@ When('I click {int}px and {int}px', When_I_click_x_y_coordinates);
  * When I click on button {string}
  * ```
  *
- * If multiple buttons are found, it will click on the first one.
+ * Clicks on the first button with the matching text.
  *
  * @example
  *
@@ -258,7 +264,7 @@ When('I click on button {string}', When_I_click_on_button);
  * When I click on link {string}
  * ```
  *
- * If multiple links are found, it will click on the first one.
+ * Clicks on the first link with the matching text.
  *
  * @example
  *
@@ -303,6 +309,8 @@ When('I click on link {string}', When_I_click_on_link);
  * ```gherkin
  * When I click on text {string}
  * ```
+ *
+ * Clicks on the first element with the matching text.
  *
  * Alternative:
  *
@@ -353,6 +361,8 @@ When('I click on text {string}', When_I_click_on_text);
  * When I click on label {string}
  * ```
  *
+ * Clicks on the first label with the matching text.
+ *
  * @example
  *
  * ```gherkin
@@ -397,7 +407,7 @@ When('I click on label {string}', When_I_click_on_label);
  * When I click on test ID {string}
  * ```
  *
- * Clicks on first element that matches the `data-testid` or `data-test-id` attribute:
+ * Clicks on the first element with the matching `data-testid` or `data-test-id` attribute:
  *
  * ```html
  * <div data-testid="test"></div>
@@ -449,6 +459,8 @@ When('I click on test ID {string}', When_I_click_on_testid);
  * ```gherkin
  * When I click on title {string}
  * ```
+ *
+ * Clicks on the first element with the matching title.
  *
  * @example
  *
