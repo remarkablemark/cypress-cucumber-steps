@@ -7,19 +7,21 @@ import { getOptions } from './options';
  * Get test ID elements.
  *
  * @param testId - Test ID.
- * @param selector - Pseudo selector.
+ * @param pseudoSelector - Pseudo selector.
  * @returns - Cypress element.
  * @private
  */
 export function getTestIdElements(
   testId: string,
-  selector?: PseudoSelector,
+  pseudoSelector?: PseudoSelector,
   options?: DataTable,
 ) {
-  const queries = [
+  const selectors = [
     `[data-testid=${JSON.stringify(testId)}]`,
     `[data-test-id=${JSON.stringify(testId)}]`,
-  ].map((query) => (selector ? `${query}:${selector}` : query));
+  ].map((selector) =>
+    pseudoSelector ? `${selector}:${pseudoSelector}` : selector,
+  );
 
-  return cy.get(queries.join(','), getOptions(options));
+  return cy.get(selectors.join(','), getOptions(options));
 }
