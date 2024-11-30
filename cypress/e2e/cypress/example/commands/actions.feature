@@ -1,11 +1,4 @@
-Feature: Cypress example
-  Scenario: Click and see text
-    Given I visit "https://example.cypress.io/"
-    Then I see text "Kitchen Sink"
-      And I do not see text "cy.get()"
-    When I click on text "get"
-    Then I see text "cy.get()"
-
+Feature: Cypress actions
   Scenario: See button, heading, link, and label
     Given I visit "https://example.cypress.io/commands/actions"
     Then I see heading "Actions"
@@ -31,12 +24,6 @@ Feature: Cypress example
     Then I see label "Email address"
     When I click on label "Email address"
       And I type "test@example.com"
-
-  Scenario: Hidden link
-    Given I visit "https://example.cypress.io/"
-    When I find link by text "Cypress.io"
-      And I set attribute "style" to "visibility: hidden"
-    Then I do not see link "Cypress.io"
 
   Scenario: Force click
     Given I visit "https://example.cypress.io/commands/actions"
@@ -123,38 +110,11 @@ Feature: Cypress example
       And I find input by label text "Password"
     Then I see value ""
 
-  Scenario: Placeholder
-    Given I visit "https://example.cypress.io/commands/querying"
-    When I find elements by placeholder text "Name"
-    Then I count 1 element
-    When I find element by placeholder text "Name"
-    Then I count 1 element
-    When I find inputs by placeholder text "Name"
-    Then I count 1 element
-    When I find input by placeholder text "Name"
-    Then I count 1 element
-
-  Scenario: Test ID
-    Given I visit "https://example.cypress.io/commands/querying"
-    Then I see test ID "test-example"
-      And I do not see test ID "test-invalid"
-    When I find elements by test ID "test-example"
-    Then I count 1 element
-    When I find element by test ID "test-example"
-    Then I count 1 element
-      And I click on test ID "test-example"
-
   Scenario: Blur
     Given I visit "https://example.cypress.io/commands/actions"
       And I find element by text "Full Name"
       And I type "About to blur"
       And I blur
-
-  Scenario: Hidden text
-    Given I visit "https://example.cypress.io/cypress-api"
-    Then I do not see visible text "I'm hiding!"
-    When I find element by text "I'm hiding!"
-    Then I see element is not visible
 
   Scenario: Scroll window
     Given I visit "https://example.cypress.io/commands/actions"
@@ -203,39 +163,6 @@ Feature: Cypress example
       And I click 150px and 185px
       And I click 170px and 165px
 
-  Scenario: Get nth element
-    Given I visit "https://example.cypress.io/commands/aliasing"
-    When I find buttons by text "Change"
-      And I get first element
-      And I click "top-right"
-    Then I find buttons by text "Changed"
-      And I count 1 element
-    When I find buttons by text "Change"
-      And I get 2nd element
-      And I click "top"
-    Then I find buttons by text "Changed"
-      And I count 2 elements
-    When I find buttons by text "Change"
-      And I get 3rd element
-      And I click "bottom-right"
-    Then I find buttons by text "Changed"
-      And I count 3 elements
-    When I find buttons by text "Change"
-      And I get last element
-      And I click "bottom-left"
-    Then I find buttons by text "Changed"
-      And I count 4 elements
-    When I find links by text "cypress"
-      And I get 1st element
-      And I click "center"
-
-  Scenario: Count elements length
-    Given I visit "https://example.cypress.io/commands/aliasing"
-    When I find buttons by text "Get Comment"
-    Then I count 1 element
-    When I find buttons by text "Change"
-    Then I count 4 elements
-
   Scenario: Find and set input value
     Given I visit "https://example.cypress.io/commands/actions"
     When I double-click on text "Double click to edit"
@@ -265,15 +192,6 @@ Feature: Cypress example
       And I click on title ""
     Then I see heading "Popover"
 
-  Scenario: Focus on element
-    Given I visit "https://example.cypress.io/commands/traversal"
-    When I get element by display value "Submit"
-      And I focus
-      And I get focused element
-    Then I see element has attribute "type"
-      And I get focused element
-      And I see element attribute "type" equals "submit"
-
   Scenario: Find and submit form
     Given I visit "https://example.cypress.io/commands/actions"
     When I find form
@@ -287,114 +205,3 @@ Feature: Cypress example
       And I find closest element "form"
       And I submit
     Then I see text "Your form has been submitted!"
-
-  Scenario: Form with textarea
-    Given I visit "https://example.cypress.io/commands/misc"
-    When I find form
-      And I get children
-      And I get last element
-      And I click
-      And I type "children"
-    Then I see textarea value "children"
-      And I see textarea value contains "child"
-
-  Scenario: Assert input value
-    Given I visit "https://example.cypress.io/commands/misc"
-    When I find element by label text "Name"
-      And I type "John Smith"
-    Then I see input value "John Smith"
-      And I see input value contains "John"
-    When I find input by label text "Name"
-    Then I see value "John Smith"
-
-  Scenario: Timers
-    Given I visit "https://example.cypress.io/commands/spies-stubs-clocks"
-    When I use fake timers
-      And I set system time to 1234567890000
-      And I click on text "Click for current time!"
-    Then I see text "1234567890"
-    When I reload the page
-      And I set system time to "2020-02-02"
-      And I click on text "Click for current time!"
-    Then I see text "1580601600"
-    When I advance timers by 300 milliseconds
-      And I advance timers by 1 millisecond
-      And I advance timers by 3 seconds
-      And I advance timers by 1 second
-      And I use real timers
-      And I click on text "Click for current time!"
-    Then I do not see text "15806016000"
-
-  Scenario: Intercept network requests
-    Given I visit "https://example.cypress.io/commands/network-requests"
-    When I intercept URL "/comments/1" and stub body '{"body":"Test 1"}'
-      And I click on button "Get Comment"
-    Then I see text "Test 1"
-    When I intercept URL "/comments/1"
-      | auth | {"username":"user","password":"pass"} |
-      | body | {"body":"Test 2"} |
-      | headers | {"X-Requested-With":"exampleClient"} |
-      | hostname | localhost |
-      | https | true |
-      | method | GET |
-      | middleware | false |
-      | path | /api/commands/intercept?foo=bar |
-      | pathname | /api/commands/intercept |
-      | port | 8080 |
-      | query | {"foo":"bar"} |
-      | resourceType | fetch |
-      | times | 1 |
-      And I click on button "Get Comment"
-    Then I see text "Test 2"
-
-  Scenario: Set environment variable
-    Given I visit "https://example.cypress.io/cypress-api"
-    When I set environment variable "api_server" to "http://localhost:8888/v2/"
-
-  Scenario: Cookie
-    Given I visit "https://example.cypress.io/commands/cookies"
-    When I set cookie "name" to "value"
-    Then I see cookie "name"
-    When I clear cookie "name"
-    Then I do not see cookie "name"
-    When I set cookie "foo" to "bar"
-    Then I see cookie "foo" has value "bar"
-    When I clear cookies
-    Then I do not see cookie "foo"
-    When I click on button "Set Cookie"
-    Then I see cookie "token" contains value "123"
-    When I clear all cookies
-    Then I do not see cookie "test"
-
-  Scenario: Local storage
-    Given I visit "https://example.cypress.io/commands/storage"
-    When I click on button "Populate localStorage and sessionStorage"
-    Then I see local storage item "prop1"
-      And I see local storage item "prop1" equals "red"
-      And I see local storage item "prop3" contains "gen"
-    When I clear local storage "prop1"
-    Then I do not see local storage item "prop1"
-    When I clear local storage
-    Then I do not see local storage item "prop2"
-    When I set local storage item "foo" to "bar"
-      Then I see local storage item "foo" equals "bar"
-    When I clear all local storage
-    Then I do not see local storage item "foo"
-
-  Scenario: Session storage
-    Given I visit "https://example.cypress.io/commands/storage"
-    When I click on button "Populate localStorage and sessionStorage"
-    Then I see session storage item "prop5"
-      And I see session storage item "prop5" equals "yellow"
-      And I see session storage item "prop4" contains "cy"
-    When I clear session storage
-    Then I do not see local storage item "prop5"
-
-  Scenario: Role
-    Given I visit "https://example.cypress.io/commands/querying"
-    When I find elements by role "button"
-    Then I see element exists
-    When I find element by role "button"
-    Then I see element is visible
-      And I see role "button"
-      And I do not see role "tooltip"
