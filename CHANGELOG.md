@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.63.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.62.0...v3.63.0) (2024-11-30)
+
+
+### Features
+
+* **actions:** add "When I click on title" ([f3637b1](https://github.com/remarkablemark/cypress-cucumber-steps/commit/f3637b1e6b1194222caa7fb09c6bdd1636958d67))
+* **queries:** add "When I find elements by title" ([74c24bd](https://github.com/remarkablemark/cypress-cucumber-steps/commit/74c24bdd94950329c32eff95679474b6a071d81b))
+
 ## [3.62.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.61.1...v3.62.0) (2024-11-03)
 
 
