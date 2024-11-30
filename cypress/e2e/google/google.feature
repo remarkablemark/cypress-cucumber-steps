@@ -1,6 +1,8 @@
 Feature: Google
   Scenario: Title
     Given I visit "https://www.google.com/"
+    When I find elements by title "Search"
+    Then I count 1 element
     When I find element by title "Search"
       And I type "title{selectAll}{backspace}"
       And I type "title{enter}"
