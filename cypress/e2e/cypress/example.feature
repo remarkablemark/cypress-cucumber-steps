@@ -261,6 +261,9 @@ Feature: Cypress example
     When I find element by title ""
       And I trigger event "click"
     Then I see heading "Popover"
+    When I reload the page
+      And I click on title ""
+    Then I see heading "Popover"
 
   Scenario: Focus on element
     Given I visit "https://example.cypress.io/commands/traversal"
