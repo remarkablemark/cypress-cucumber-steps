@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/remarkablemark/cypress-cucumber-steps"
+    "url": "git+https://github.com/remarkablemark/cypress-cucumber-steps.git"
   },
   "bugs": {
     "url": "https://github.com/remarkablemark/cypress-cucumber-steps/issues"
