@@ -37,7 +37,7 @@
     "test"
   ],
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "22.0.0",
+    "@badeball/cypress-cucumber-preprocessor": "22.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.4",
     "@commitlint/cli": "19.7.1",
     "@commitlint/config-conventional": "19.7.1",
