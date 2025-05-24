@@ -53,6 +53,10 @@ Then('I see response status {int}', Then_I_see_response_status);
  * When I make a "GET" request to "/user.json"
  * Then I see response body '{"name":"Mark"}'
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_response_body_contains | Then I see response body contains}
  */
 export function Then_I_see_response_body(body: string) {
   getCypressElement().should((response: Cypress.Response<object>) => {
@@ -87,6 +91,10 @@ Then('I see response body {string}', Then_I_see_response_body);
  * When I make a "GET" request to "/user.json"
  * Then I see response body contains '{"name":"Mark"}'
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_response_body | Then I see response body}
  */
 export function Then_I_see_response_body_contains(body: string) {
   getCypressElement().should((response: Cypress.Response<object>) => {
