@@ -42,7 +42,7 @@ Then('I see response status {int}', Then_I_see_response_status);
  * @example
  *
  * ```gherkin
- * Then I see response body "OK
+ * Then I see response body "OK"
  * ```
  *
  * @remarks
@@ -51,13 +51,17 @@ Then('I see response status {int}', Then_I_see_response_status);
  *
  * ```gherkin
  * When I make a "GET" request to "/user.json"
- * Then I see response body '{"name":"Mark"}'
+ * Then I see response body '{"id":1,"name":"Mark"}'
  * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_response_body_contains | Then I see response body contains}
  */
 export function Then_I_see_response_body(body: string) {
   getCypressElement().should((response: Cypress.Response<object>) => {
     if (typeof response.body === 'object') {
-      expect(response.body).to.eql(JSON.parse(body));
+      expect(response.body).to.deep.equal(JSON.parse(body));
     } else {
       expect(response.body).to.equal(body);
     }
@@ -65,3 +69,44 @@ export function Then_I_see_response_body(body: string) {
 }
 
 Then('I see response body {string}', Then_I_see_response_body);
+
+/**
+ * Then I see response body contains:
+ *
+ * ```gherkin
+ * Then I see response body contains {string}
+ * ```
+ *
+ * @example
+ *
+ * ```gherkin
+ * Then I see response body contains "OK"
+ * ```
+ *
+ * @remarks
+ *
+ * A preceding step like {@link When_I_make_a_request | "When I make a request"} is required. For example:
+ *
+ * ```gherkin
+ * When I make a "GET" request to "/user.json"
+ * Then I see response body contains '{"name":"Mark"}'
+ * ```
+ *
+ * @see
+ *
+ * - {@link Then_I_see_response_body | Then I see response body}
+ */
+export function Then_I_see_response_body_contains(body: string) {
+  getCypressElement().should((response: Cypress.Response<object>) => {
+    if (typeof response.body === 'object') {
+      expect(response.body).to.deep.include(JSON.parse(body));
+    } else {
+      expect(response.body).to.include(body);
+    }
+  });
+}
+
+Then(
+  'I see response body contains {string}',
+  Then_I_see_response_body_contains,
+);
