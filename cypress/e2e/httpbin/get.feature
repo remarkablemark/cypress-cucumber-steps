@@ -6,3 +6,4 @@ Feature: httpbin
   Scenario: GET response body
     Given I make a "GET" request to "https://httpbin.org/base64/SFRUUEJJTiBpcyBhd2Vzb21l"
     Then I see response body "HTTPBIN is awesome"
+      And I see response body contains "awesome"
