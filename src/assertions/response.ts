@@ -51,7 +51,7 @@ Then('I see response status {int}', Then_I_see_response_status);
  *
  * ```gherkin
  * When I make a "GET" request to "/user.json"
- * Then I see response body '{"name":"Mark"}'
+ * Then I see response body '{"id":1,"name":"Mark"}'
  * ```
  *
  * @see
