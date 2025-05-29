@@ -32,7 +32,7 @@ jobs:
           spec: |
             ${{ steps.specs.outputs.files }}
 
-      - name: Record failed screenshots
+      - name: Record screenshots
         uses: actions/upload-artifact@v4
         if: failure()
         with:
