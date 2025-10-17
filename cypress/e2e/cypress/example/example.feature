@@ -32,10 +32,9 @@ Feature: Cypress example
 
   Scenario: See document title
     Given I visit "https://example.cypress.io/"
-      And I wait 300 milliseconds
     Then I see document title "Cypress.io: Kitchen Sink"
       | log | true |
-      | timeout | 0 |
+      | timeout | 4000 |
       And I see document title contains "Cypress.io"
         | log | true |
         | timeout | 0 |
