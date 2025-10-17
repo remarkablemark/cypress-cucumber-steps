@@ -47,7 +47,7 @@
     "@types/node": "24.8.1",
     "@typescript-eslint/eslint-plugin": "8.46.1",
     "@typescript-eslint/parser": "8.46.1",
-    "cypress": "14.5.4",
+    "cypress": "15.4.0",
     "eslint": "9.38.0",
     "eslint-plugin-prettier": "5.5.4",
     "eslint-plugin-simple-import-sort": "12.1.1",
