@@ -29,3 +29,21 @@ Feature: Cypress example
       And I see element attribute "href" equals "https://www.cypress.io"
     When I find link by text "docs.cypress.io"
     Then I see element attribute "href" contains "docs.cypress.io"
+
+  Scenario: See document title
+    Given I visit "https://example.cypress.io/"
+    Then I see document title "Cypress.io: Kitchen Sink"
+      | log | true |
+      | timeout | 0 |
+      And I see document title contains "Cypress.io"
+        | log | true |
+        | timeout | 0 |
+
+  Scenario: Reload and assert URL
+    Given I visit "https://example.cypress.io/"
+      And I reload the page
+      And I wait 1 millisecond
+    Then I see URL "https://example.cypress.io/"
+      And I see URL contains "cypress"
+    Then I do not see URL "https://example.cypress.io/foo"
+      And I do not see URL contains "foo"
