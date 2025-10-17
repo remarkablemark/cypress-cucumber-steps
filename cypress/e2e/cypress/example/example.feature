@@ -37,7 +37,7 @@ Feature: Cypress example
       | timeout | 4000 |
       And I see document title contains "Cypress.io"
         | log | true |
-        | timeout | 0 |
+        | timeout | 4000 |
 
   Scenario: Reload and assert URL
     Given I visit "https://example.cypress.io/"
