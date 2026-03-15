@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.64.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.64.0...v3.64.1) (2026-03-15)
+
+### Documentation
+
+- **actions:** add `@deprecated` to "When I set environment variable" ([d7d1faa](https://github.com/remarkablemark/cypress-cucumber-steps/commit/d7d1faa76a8620a74706633b0ba28f3ecff7d008))
+
 ## [3.64.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.63.0...v3.64.0) (2025-05-24)
 
 ### Features
