@@ -12,16 +12,15 @@ export function getOptions(table?: DataTable) {
     return;
   }
 
-  return Object.entries(table.rowsHash()).reduce(
+  return Object.entries(table.rowsHash()).reduce<Record<string, unknown>>(
     (result, [key, value]) => {
       try {
-        result[key] = JSON.parse(value);
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      } catch (error) {
+        result[key] = JSON.parse(value) as unknown;
+      } catch {
         result[key] = value;
       }
       return result;
     },
-    {} as Record<string, string | number | boolean>,
+    {},
   );
 }
