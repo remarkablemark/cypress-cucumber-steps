@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-deprecated */
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 /**
+ * @deprecated `Cypress.env()` was deprecated in Cypress `15.10.0` and will be removed in a future major version.
+ *
  * When I set environment variable:
  *
  * ```gherkin
@@ -28,7 +31,6 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * In Cypress, "environment variables" are variables that are accessible via `Cypress.env`. These are not the same as OS-level environment variables. However, **it is possible to set Cypress environment variables from OS-level environment variables**.
  */
 export function When_I_set_environment_variable(key: string, value: string) {
-  // eslint-disable-next-line @typescript-eslint/no-deprecated
   Cypress.env(key, value);
 }
 
