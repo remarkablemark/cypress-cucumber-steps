@@ -12,5 +12,6 @@
     "shellscript",
     "tsx",
     "typescript"
-  ]
+  ],
+  "tsconfig": "tsconfig.build.json"
 }
