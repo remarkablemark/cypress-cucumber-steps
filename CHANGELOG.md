@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.64.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.64.1...v3.64.2) (2026-03-15)
+
+
+### Continuous Integration
+
+* **github:** set up trusted publishing for npm in release-please.yml ([108478f](https://github.com/remarkablemark/cypress-cucumber-steps/commit/108478f7c60e8479aa43efe1573683b945bb6c83))
+
 ## [3.64.1](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.64.0...v3.64.1) (2026-03-15)
 
 ### Documentation
