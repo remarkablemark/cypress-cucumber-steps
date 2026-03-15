@@ -101,13 +101,15 @@ When('I intercept URL {string}', When_I_intercept_URL);
  * - {@link When_I_intercept_URL | When I intercept URL}
  */
 export function When_I_intercept_URL_and_stub_body(url: string, body: string) {
+  let parsedBody: unknown = body;
+
   try {
-    body = JSON.parse(body);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (error) {
+    parsedBody = JSON.parse(body) as unknown;
+  } catch {
     // pass
   }
-  cy.intercept(url, { body });
+
+  cy.intercept(url, { body: parsedBody });
 }
 
 When(

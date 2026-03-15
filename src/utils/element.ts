@@ -1,10 +1,9 @@
 /**
  * @private
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type CypressChainableElement = Cypress.Chainable<any>;
+export type CypressChainableElement = Cypress.Chainable;
 
-let cypressElement: CypressChainableElement;
+let cypressElement: CypressChainableElement | undefined;
 
 /**
  * Set Cypress element:
@@ -57,7 +56,7 @@ export function setCypressElement(element: CypressChainableElement) {
 export function getCypressElement(): CypressChainableElement {
   if (!Cypress.isCy(cypressElement)) {
     throw new Error(
-      `The element you are chaining off is ${cypressElement}.
+      `The element you are chaining off is ${String(cypressElement)}.
 
 Add a preceding step "When I find element by ..."`,
     );

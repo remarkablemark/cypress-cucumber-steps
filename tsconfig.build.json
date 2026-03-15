@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.build.tsbuildinfo",
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es5", "dom"],
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "outDir": "lib",
+    "skipLibCheck": true,
+    "types": ["cypress", "node"],
+    "noImplicitThis": false
+  },
+  "include": ["src"]
+}

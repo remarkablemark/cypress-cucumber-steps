@@ -37,7 +37,7 @@ import { getOptions } from '../utils';
  * - {@link Then_I_see_URL_contains | Then I see URL contains}
  */
 export function Then_I_see_URL(url: string, options?: DataTable) {
-  url = (Cypress.config().baseUrl || '') + url;
+  url = (Cypress.config().baseUrl ?? '') + url;
   cy.url(getOptions(options)).should('equal', url);
 }
 
@@ -118,7 +118,7 @@ Then('I see URL contains {string}', Then_I_see_URL_contains);
  * - {@link Then_I_do_not_see_URL_contains | Then I do not see URL contains}
  */
 export function Then_I_do_not_see_URL(url: string, options?: DataTable) {
-  url = (Cypress.config().baseUrl || '') + url;
+  url = (Cypress.config().baseUrl ?? '') + url;
   cy.url(getOptions(options)).should('not.equal', url);
 }
 

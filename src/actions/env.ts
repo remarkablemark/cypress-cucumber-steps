@@ -28,6 +28,7 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  * In Cypress, "environment variables" are variables that are accessible via `Cypress.env`. These are not the same as OS-level environment variables. However, **it is possible to set Cypress environment variables from OS-level environment variables**.
  */
 export function When_I_set_environment_variable(key: string, value: string) {
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   Cypress.env(key, value);
 }
 

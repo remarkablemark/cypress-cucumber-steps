@@ -25,11 +25,10 @@ import { getCypressElement } from '../utils';
  *
  * - {@link When_I_pause | When I pause}
  */
-export async function When_I_debug() {
+export function When_I_debug() {
   try {
     getCypressElement().debug();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (error) {
+  } catch {
     cy.debug();
   }
 }

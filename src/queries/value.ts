@@ -39,15 +39,18 @@ import { getByDisplayValue, setCypressElement } from '../utils';
 export function When_I_get_element_by_display_value(value: string) {
   cy.get('body').then(($body) => {
     if (hasDisplayValue($body, 'input', value)) {
-      return When_I_find_input_by_display_value(value);
+      When_I_find_input_by_display_value(value);
+      return;
     }
 
     if (hasDisplayValue($body, 'textarea', value)) {
-      return When_I_find_textarea_by_display_value(value);
+      When_I_find_textarea_by_display_value(value);
+      return;
     }
 
     if (hasDisplayValue($body, 'option', value)) {
-      return When_I_find_select_by_display_value(value);
+      When_I_find_select_by_display_value(value);
+      return;
     }
 
     throw new Error(`Unable to get element by display value: ${value}`);
