@@ -5,7 +5,7 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc --project tsconfig.build.json --target es5",
+    "build": "tsc --project tsconfig.build.json",
     "clean": "rm -rf cypress/{downloads,screenshots,videos} docs lib",
     "cypress:open": "cypress open",
     "docs": "typedoc",
