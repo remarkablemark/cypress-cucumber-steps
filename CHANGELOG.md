@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.64.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.64.2...v3.64.3) (2026-05-25)
+
+
+### Build System
+
+* **tsconfig:** change output target from es5 to es6 ([db060e7](https://github.com/remarkablemark/cypress-cucumber-steps/commit/db060e7ca3c4cca620b05a074943793e9178b9bd))
+
 ## [3.64.2](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.64.1...v3.64.2) (2026-03-15)
 
 
