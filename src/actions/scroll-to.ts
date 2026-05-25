@@ -61,7 +61,7 @@ export function When_I_scroll_window_to_position(
     | 'top-right',
   options?: DataTable,
 ) {
-  cy.scrollTo(camelCase(position) as Cypress.PositionType, getOptions(options));
+  cy.scrollTo(camelCase(position), getOptions(options));
 }
 
 When('I scroll window to {string}', When_I_scroll_window_to_position);
@@ -185,10 +185,7 @@ export function When_I_scroll_to_position(
     | 'top-right',
   options?: DataTable,
 ) {
-  getCypressElement().scrollTo(
-    camelCase(position) as Cypress.PositionType,
-    getOptions(options),
-  );
+  getCypressElement().scrollTo(camelCase(position), getOptions(options));
 }
 
 When('I scroll to {string}', When_I_scroll_to_position);
