@@ -21,7 +21,6 @@ let cypressElement: CypressChainableElement | undefined;
  * @see
  *
  * - {@link getCypressElement}
- * - {@link setCypressElementByLabelText}
  *
  * @param element - Cypress element.
  * @returns - Cypress element.
