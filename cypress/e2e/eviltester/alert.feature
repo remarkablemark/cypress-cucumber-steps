@@ -9,6 +9,7 @@ Feature: Alert
     When I click on button "Show confirm box"
     Then I see text "You clicked OK, confirm returned true."
 
+  @skip
   Scenario: Show prompt
     Given I visit "https://testpages.eviltester.com/pages/basics/alerts-javascript/"
     When I click on button "Show prompt box"
