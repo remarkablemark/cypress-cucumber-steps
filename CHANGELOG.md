@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.64.3...v4.0.0) (2026-11-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **actions:** Update "When I set environment variable" to use `Cypress.expose` instead of `Cypress.env` (removed in Cypress 16)
+
+### Features
+
+* **actions:** use `Cypress.expose` in "When I set environment variable" ([#1454](https://github.com/remarkablemark/cypress-cucumber-steps/issues/1454)) ([6c2bb37](https://github.com/remarkablemark/cypress-cucumber-steps/commit/6c2bb37f2557590bc0861215b9324d252af8261e))
+
 ## [3.64.3](https://github.com/remarkablemark/cypress-cucumber-steps/compare/v3.64.2...v3.64.3) (2026-05-25)
 
 
