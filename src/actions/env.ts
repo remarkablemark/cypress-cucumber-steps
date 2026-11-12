@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/no-deprecated */
 import { When } from '@badeball/cypress-cucumber-preprocessor';
 
 /**
- * @deprecated `Cypress.env()` was deprecated in Cypress `15.10.0` and will be removed in a future major version.
- *
  * When I set environment variable:
  *
  * ```gherkin
@@ -20,18 +17,14 @@ import { When } from '@badeball/cypress-cucumber-preprocessor';
  *
  * @remarks
  *
- * **Scope**
+ * **_Security considerations_**
  *
- * Environment variables set using `Cypress.env` _are only in scope for the current spec file_.
+ * [Cypress.expose()](https://docs.cypress.io/api/cypress-api/expose) is intended for **public/non-sensitive** configuration values only. Values set with [Cypress.expose()](https://docs.cypress.io/api/cypress-api/expose) are accessible in the browser context, including to application code, third-party scripts, and browser extensions.
  *
- * Cypress runs each spec file in isolation: the browser is exited between specs. Environment variables added or changed in one spec won't be visible in other specs.
- *
- * **Difference between OS-level and Cypress environment variables**
- *
- * In Cypress, "environment variables" are variables that are accessible via `Cypress.env`. These are not the same as OS-level environment variables. However, **it is possible to set Cypress environment variables from OS-level environment variables**.
+ * **Do NOT** store sensitive data (API keys, passwords, tokens, etc.) using [Cypress.expose()](https://docs.cypress.io/api/cypress-api/expose). Use [cy.env()](https://docs.cypress.io/api/commands/env) for sensitive values.
  */
 export function When_I_set_environment_variable(key: string, value: string) {
-  Cypress.env(key, value);
+  Cypress.expose(key, value);
 }
 
 When(
