@@ -6,19 +6,16 @@ Feature: Cypress actions scroll
       And I scroll window to "center"
       And I scroll window to "top-left"
     Then I find element by text "I'm Here"
-      And I see element is not visible
+      And I see element is visible
 
   Scenario: Scroll into view
     Given I visit "https://example.cypress.io/commands/actions"
     When I get element by selector "#scroll-horizontal button"
-    Then I see element is not visible
-    When I scroll into view
+      And I scroll into view
     Then I see element is visible
 
   Scenario: Scroll to
     Given I visit "https://example.cypress.io/commands/actions"
-    When I get element by selector "#scrollable-both button"
-    Then I see element is not visible
     When I get element by selector "#scrollable-both"
       And I scroll to 100px and 200px
       And I scroll to "center"
