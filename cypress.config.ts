@@ -24,4 +24,5 @@ export default defineConfig({
   retries: {
     runMode: 3,
   },
+  video: true,
 });
